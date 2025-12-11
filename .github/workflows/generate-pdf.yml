@@ -1,0 +1,71 @@
+name: Generate PDF from Markdown
+
+on:
+  push:
+    branches: [ main, master ]
+    paths:
+      - 'Playwright_Guide_Reorganized.md'
+  pull_request:
+    branches: [ main, master ]
+    paths:
+      - 'Playwright_Guide_Reorganized.md'
+  workflow_dispatch:
+
+jobs:
+  generate-pdf:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Install pandoc and LaTeX
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y pandoc texlive-latex-base texlive-fonts-recommended texlive-extra-utils texlive-latex-extra
+
+    - name: Generate PDF from Markdown
+      run: |
+        pandoc Playwright_Guide_Reorganized.md \
+          -o Playwright_Complete_Guide.pdf \
+          --pdf-engine=pdflatex \
+          --variable geometry:margin=1in \
+          --variable fontsize=11pt \
+          --variable colorlinks=true \
+          --variable linkcolor=blue \
+          --variable urlcolor=blue \
+          --variable toc \
+          --variable toc-depth=2 \
+          --variable title="Playwright Test Framework - Complete Guide" \
+          --variable author="Generated from GitHub Actions"
+
+    - name: Upload PDF as artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: playwright-guide-pdf
+        path: Playwright_Complete_Guide.pdf
+        retention-days: 30
+
+    - name: Create Release (on main branch push)
+      if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+      uses: softprops/action-gh-release@v1
+      with:
+        files: Playwright_Complete_Guide.pdf
+        tag_name: latest-pdf
+        name: Latest PDF Guide
+        body: |
+          📚 **Playwright Test Framework - Complete Guide**
+
+          Automatically generated PDF from the latest Markdown source.
+
+          ## What's included:
+          - Complete Playwright installation guide
+          - Writing and running tests
+          - Debugging and CI/CD setup
+          - VS Code integration
+          - Quick reference and best practices
+
+          Download the PDF for offline reading or sharing.
+        prerelease: false
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
