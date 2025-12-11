@@ -19,53 +19,55 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
 
-    - name: Install pandoc and PDF tools
+    - name: Install pandoc and LaTeX
       run: |
         sudo apt-get update
-        sudo apt-get install -y pandoc wkhtmltopdf texlive-latex-base texlive-fonts-recommended texlive-extra-utils texlive-latex-extra
+        sudo apt-get install -y pandoc texlive-latex-extra texlive-fonts-recommended texlive-lang-all
 
     - name: Generate PDF from Markdown
       run: |
-        # Try to generate PDF with LaTeX first, fallback to wkhtmltopdf
-        if command -v pdflatex &> /dev/null || command -v xelatex &> /dev/null; then
-          echo "Using LaTeX engine for PDF generation..."
-          PDF_ENGINE="pdflatex"
-          if command -v xelatex &> /dev/null; then
-            PDF_ENGINE="xelatex"
-          fi
-          pandoc Playwright_Guide_Reorganized.md \
-            -o Playwright_Complete_Guide.pdf \
-            --pdf-engine=$PDF_ENGINE \
-            --variable geometry:margin=1in \
-            --variable fontsize=11pt \
-            --variable colorlinks=true \
-            --variable linkcolor=blue \
-            --variable urlcolor=blue \
-            --variable toc \
-            --variable toc-depth=2 \
-            --variable title="Playwright Test Framework - Complete Guide" \
-            --variable author="Generated from GitHub Actions"
-        else
-          echo "LaTeX not available, using wkhtmltopdf..."
-          # Convert markdown to HTML first, then to PDF
-          pandoc Playwright_Guide_Reorganized.md \
-            -o temp_guide.html \
-            --self-contained \
-            --css=https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.2.0/github-markdown.min.css \
-            --variable title="Playwright Test Framework - Complete Guide"
+        echo "Generating PDF using LaTeX..."
 
-          wkhtmltopdf \
-            --margin-top 20 \
-            --margin-bottom 20 \
-            --margin-left 20 \
-            --margin-right 20 \
-            --page-size A4 \
-            --enable-local-file-access \
-            temp_guide.html \
-            Playwright_Complete_Guide.pdf
-
-          rm temp_guide.html
+        # Check LaTeX availability
+        if ! command -v pdflatex &> /dev/null && ! command -v xelatex &> /dev/null; then
+          echo "Error: No LaTeX engine found"
+          exit 1
         fi
+
+        # Prefer xelatex if available, fallback to pdflatex
+        PDF_ENGINE="pdflatex"
+        if command -v xelatex &> /dev/null; then
+          PDF_ENGINE="xelatex"
+          echo "Using xelatex engine"
+        else
+          echo "Using pdflatex engine"
+        fi
+
+        # Generate PDF with error handling
+        set -e
+        pandoc Playwright_Guide_Reorganized.md \
+          -o Playwright_Complete_Guide.pdf \
+          --pdf-engine=$PDF_ENGINE \
+          --variable geometry:margin=1in \
+          --variable fontsize=11pt \
+          --variable colorlinks=true \
+          --variable linkcolor=blue \
+          --variable urlcolor=blue \
+          --variable toc \
+          --variable toc-depth=2 \
+          --variable title="Playwright Test Framework - Complete Guide" \
+          --variable author="Generated from GitHub Actions"
+
+        echo "PDF generated successfully"
+        ls -la Playwright_Complete_Guide.pdf
+
+    - name: Verify PDF exists
+      run: |
+        if [ ! -f "Playwright_Complete_Guide.pdf" ]; then
+          echo "Error: PDF file not found"
+          exit 1
+        fi
+        echo "PDF file size: $(du -h Playwright_Complete_Guide.pdf | cut -f1)"
 
     - name: Upload PDF as artifact
       uses: actions/upload-artifact@v4
