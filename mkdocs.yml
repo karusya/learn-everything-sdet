@@ -3,7 +3,6 @@ site_description: Knowledge base for SDET, Playwright, Selenium, API, and QA str
 site_url: https://vanvo19870515.github.io/learn-everything-for-me
 repo_url: https://github.com/vanvo19870515/learn-everything-for-me
 repo_name: vanvo19870515/learn-everything-for-me
-docs_dir: .
 use_directory_urls: true
 
 theme:
@@ -43,7 +42,7 @@ markdown_extensions:
   - pymdownx.emoji
 
 nav:
-  - Home: README.md
+  - Home: index.md
   - Guides:
       - Playwright Guide: Playwright_Guide_Reorganized.md
       - Test Automation Pyramid: Test_Automation_Pyramid_Guide.md
