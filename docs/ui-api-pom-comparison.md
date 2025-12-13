@@ -71,6 +71,7 @@ export class HomePage extends BasePage {
 ```
 
 **🧠 Golden Rule of UI POM**
+
 - ❌ No expect/assertions
 - ❌ No test logic
 - ✅ Only locator + action
@@ -285,6 +286,7 @@ export class HomePage extends BasePage {
 ```
 
 **🧠 Quy tắc vàng của UI POM**
+
 - ❌ Không expect/không assertion
 - ❌ Không logic test
 - ✅ Chỉ locator + action
@@ -444,11 +446,13 @@ Test = orchestration (điều phối)
 ### ✅ **Clear Separation = Clear Understanding**
 
 **UI POM Structure:**
+
 - `src/ui/pages/` - Page Objects (locators + actions only)
 - `src/ui/components/` - Reusable UI components
 - `src/tests/ui/` - UI-only tests
 
 **API POM Structure:**
+
 - `src/api/clients/` - API client classes (endpoints + methods)
 - `src/api/models/` - Data contracts/interfaces
 - `src/tests/api/` - API-only tests
