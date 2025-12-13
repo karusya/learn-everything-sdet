@@ -52,11 +52,6 @@ Individuals who want to integrate Hybrid Testing (using the API for data setup, 
 - **Logging**: Pino logger
 - **CI/CD**: GitHub Actions ready
 
-#### What This Framework IS For:
-- QA moving from Manual to Automation
-- SDET/Senior QA needing unified API+UI runner
-- Teams wanting Allure reporting with grep/tag friendly Mocha
-
 #### What This Framework is NOT:
 - Load/performance testing replacement
 - Low-code/no-code solution
@@ -248,11 +243,6 @@ Muốn tích hợp kiểm thử Hybrid (dùng API để chuẩn bị dữ liệu
 - **Reporting**: Allure reports
 - **Logging**: Pino logger
 - **CI/CD**: GitHub Actions ready
-
-#### Framework NÀY DÀNH CHO:
-- QA chuyển từ Manual sang Automation
-- SDET/Senior QA cần unified API+UI runner
-- Teams muốn Allure reporting với grep/tag friendly
 
 #### Framework NÀY KHÔNG PHẢI:
 - Thay thế load/perf testing tools
