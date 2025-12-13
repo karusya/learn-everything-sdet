@@ -96,7 +96,8 @@ QA asks the right questions during refinement → Product updates rules → dev 
   - Will the new password have complexity rules?
 
 **Impact:**
-- ✅ The Product Owner added missing requirements
+
+- ✅ Product Owner added missing requirements
 - ✅ Developers implemented the correct logic from the beginning
 - ✅ QA prepared test cases and automation scripts before development finished
 - ✅ When the feature was ready, automation passed on the first run
