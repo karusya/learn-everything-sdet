@@ -57,6 +57,7 @@ nav:
       - SQL Roadmap: sql-roadmap.md
   - QA Resources:
       - QA & Automation Roadmap: qa-roadmap.md
+      - Core Principles Framework: sdet-framework-foundation.md
   - Data Resources:
       - Elasticsearch Roadmap: elasticsearch-roadmap.md
       - Elasticsearch Query Deep Dive: elasticsearch-query-deepdive.md
