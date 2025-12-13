@@ -64,6 +64,7 @@ nav:
   - Testing Strategy:
       - Test Automation Pyramid: Test_Automation_Pyramid_Guide.md
       - Flaky Test Guide: Flaky_Test_Guide.md
+      - UI POM vs API POM: ui-api-pom-comparison.md
   - SDET Prep:
       - SDET Interview Preparation: SDET_Interview_Preparation_Guide.md
       - Experienced Automation Tester Q&A: Experienced_Automation_Tester_QA.md
