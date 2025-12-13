@@ -4,6 +4,21 @@
 
 ---
 
+## 📚 Framework Repository
+
+**GitHub Repository:** [vanvo19870515/playwright-sdet-framework](https://github.com/vanvo19870515/playwright-sdet-framework)
+
+**Clone for Learning:**
+```bash
+git clone https://github.com/vanvo19870515/playwright-sdet-framework.git
+cd playwright-sdet-framework
+npm install
+npx playwright install --with-deps
+TEST_ENV=dev npm run demo:with-report
+```
+
+---
+
 ## 🌍 ENGLISH VERSION
 
 ### I. 🎯 Who is This Framework For? (Target Audience)
@@ -17,9 +32,74 @@ Those looking to set up a scalable and robust testing environment by unifying AP
 **Dev/Testers:**
 Individuals who want to integrate Hybrid Testing (using the API for data setup, using the UI for flow confirmation) to reduce flakiness and increase test speed.
 
-### II. 🧱 Architecture and Philosophy: Why is this an SDET-Standard Framework?
+### II. 🎯 Framework Goals & Stack
 
-Instead of just listing files, we explain the role and purpose of each code layer.
+#### Core Goals:
+- **TypeScript Stack**: Modern, type-safe development
+- **UI**: Playwright + Page Object Model (POM)
+- **API**: Axios clients with models/validators
+- **Tests**: Mocha (parallel execution), Allure reports
+- **Hybrid**: API + UI integration, optional visual testing
+- **Environment**: Multi-env support via `.env.<env>`
+- **Anti-Flaky**: Retries, stable locators, no shared browser/page
+
+#### Tech Stack Summary:
+- **Language**: TypeScript
+- **UI Testing**: Playwright + POM
+- **API Testing**: Axios client with models
+- **Test Runner**: Mocha (parallel)
+- **Reporting**: Allure reports
+- **Logging**: Pino logger
+- **CI/CD**: GitHub Actions ready
+
+#### What This Framework IS For:
+- QA moving from Manual to Automation
+- SDET/Senior QA needing unified API+UI runner
+- Teams wanting Allure reporting with grep/tag friendly Mocha
+
+#### What This Framework is NOT:
+- Load/performance testing replacement
+- Low-code/no-code solution
+- Wrapper of Playwright Test runner (uses Mocha by design)
+
+### III. 🏗️ Detailed Architecture & Project Structure
+
+#### Project Structure Overview:
+```
+playwright-sdet-framework/
+├── src/
+│   ├── api/
+│   │   ├── clients/        # API clients (user.api.ts)
+│   │   ├── models/         # Data models (user.model.ts)
+│   │   ├── validators/     # API validators
+│   │   └── waits/          # API wait helpers
+│   │
+│   ├── ui/
+│   │   ├── pages/          # POM pages (BasePage.ts, BasicFormPage.ts)
+│   │   ├── actions/        # UI actions library
+│   │   ├── components/     # Complex widget placeholders
+│   │   └── waits/          # Navigation/visual waits
+│   │
+│   ├── tests/
+│   │   ├── api/            # API-only tests
+│   │   ├── ui/             # UI-only tests
+│   │   └── hybrid/         # Hybrid API+UI tests
+│   │
+│   ├── utils/              # Shared utilities
+│   │   ├── config.ts       # Configuration
+│   │   ├── env.ts          # Environment handling
+│   │   ├── retry.ts        # Retry mechanisms
+│   │   └── logger.ts       # Pino logger
+│   │
+│   ├── reporting/          # Allure helpers
+│   └── fixtures/           # testContext (per-test browser/page)
+│
+├── docs/architecture.md   # Architecture documentation
+├── playwright.config.ts   # Playwright configuration
+├── .github/workflows/ci.yml # CI/CD pipeline
+├── .env.dev/.env.staging/.env.prod  # Environment configs
+└── package.json
+```
 
 #### A. The Golden Rule: Separation of Concerns (SoC)
 
@@ -48,13 +128,78 @@ We use simplified analogies to eliminate the fear of complex technical terms:
 These principles are core to understanding why the architecture is designed this way:
 
 **Anti-Flaky:** We implement 3 golden rules for stable tests:
-- **Stable Locators**: Use reliable selectors that don't break easily
-- **Controlled Retries**: Smart retry mechanisms for flaky operations
-- **State-based Waits**: Avoid `waitForTimeout()` - use condition-based waits
+- **Stable Locators**: Use reliable selectors (`getByRole`, `data-testid`) that don't break easily
+- **Controlled Retries**: Smart retry mechanisms (`this.retries(2)`) for flaky operations
+- **State-based Waits**: Avoid `waitForTimeout()` - use `waitForLoadState('networkidle')`
 
 **Parallel/Worker:** The Framework runs multiple tests simultaneously (Mocha `--parallel`) but absolutely does not share the Page/Browser between Workers to prevent random failures.
 
 **Security/Performance Guardrail:** The Framework is not a Load Test tool, but it includes quick checks (guardrail) for Security Headers and Basic Page Load Time to catch fundamental issues early.
+
+### IV. ⚡ Scripts & Quick Start Guide
+
+#### Available Scripts:
+- `npm test` : Run all Mocha tests (parallel per file)
+- `npm run test:ui` : UI tests only
+- `npm run test:api` : API tests only
+- `npm run test:hybrid` : Hybrid API+UI tests
+- `npm run test:allure` : Run tests + generate Allure results
+- `npm run allure:serve` : Open Allure report
+- `npm run demo:with-report` : Complete demo (signup API + security + perf + Allure auto-open)
+
+#### Quick Start (Local Development):
+```bash
+# Clone the repository
+git clone https://github.com/vanvo19870515/playwright-sdet-framework.git
+cd playwright-sdet-framework
+
+# Install dependencies
+npm install
+
+# Install Playwright browsers
+npx playwright install --with-deps
+
+# Run demo with full report
+TEST_ENV=dev npm run demo:with-report
+```
+
+#### Demo Test Cases:
+
+**🏆 Complete Demo (Recommended First Run):**
+```bash
+npm run demo:with-report
+```
+*Includes: API signup, security headers check, performance guardrail, Allure report auto-open*
+
+**🔌 API Only:**
+```bash
+TEST_ENV=dev npm run test:api
+```
+
+**🖥️ UI Only:**
+```bash
+TEST_ENV=dev npm run test:ui
+```
+
+**🔀 Hybrid E2E:**
+```bash
+TEST_ENV=dev npm run test:hybrid
+```
+
+#### Environment Configuration:
+
+**Example `.env.dev`:**
+```bash
+BASE_URL=https://testpages.eviltester.com
+API_URL=https://thinking-tester-contact-list.herokuapp.com
+LOG_LEVEL=info
+VISUAL_ENABLED=false
+```
+
+**Environment Switching:**
+- Set `TEST_ENV=dev|staging|prod`
+- Variables loaded from `.env.<env>` file
+- Supports different URLs and configs per environment
 
 ### III. ⌨️ Code Approach Guide (Advice for Juniors)
 
@@ -84,9 +229,75 @@ Muốn thiết lập một môi trường kiểm thử scalable (có thể mở 
 **Dev/Tester:**
 Muốn tích hợp kiểm thử Hybrid (dùng API để chuẩn bị dữ liệu, dùng UI để xác nhận flow) để giảm độ flaky và tăng tốc độ test.
 
-### II. 🧱 Kiến Trúc và Tư Duy: Tại Sao Framework Này Lại Chuẩn SDET?
+### II. 🎯 Mục Tiêu & Tech Stack
 
-Thay vì chỉ liệt kê các file, chúng ta giải thích vai trò của từng lớp code.
+#### Mục tiêu cốt lõi:
+- **Ngôn ngữ**: TypeScript (type-safe, modern)
+- **UI**: Playwright + Page Object Model (POM)
+- **API**: Axios client với models/validators
+- **Test Runner**: Mocha (parallel execution)
+- **Reporting**: Allure reports
+- **Hybrid**: API + UI integration, Visual testing optional
+- **Environment**: Multi-env support qua `.env.<env>`
+- **Anti-flaky**: Retry, locator stable, không share page/browser
+
+#### Tech Stack tổng quan:
+- **Language**: TypeScript
+- **UI Testing**: Playwright + POM
+- **API Testing**: Axios client với models
+- **Test Runner**: Mocha (parallel)
+- **Reporting**: Allure reports
+- **Logging**: Pino logger
+- **CI/CD**: GitHub Actions ready
+
+#### Framework NÀY DÀNH CHO:
+- QA chuyển từ Manual sang Automation
+- SDET/Senior QA cần unified API+UI runner
+- Teams muốn Allure reporting với grep/tag friendly
+
+#### Framework NÀY KHÔNG PHẢI:
+- Thay thế load/perf testing tools
+- Low-code/no-code solution
+- Wrapper của Playwright Test runner (dùng Mocha by design)
+
+### III. 🏗️ Kiến Trúc Chi Tiết & Cấu Trúc Project
+
+#### Cấu trúc Project Tổng quan:
+```
+playwright-sdet-framework/
+├── src/
+│   ├── api/
+│   │   ├── clients/        # API clients (user.api.ts)
+│   │   ├── models/         # Data models (user.model.ts)
+│   │   ├── validators/     # API validators
+│   │   └── waits/          # API wait helpers
+│   │
+│   ├── ui/
+│   │   ├── pages/          # POM pages (BasePage.ts, BasicFormPage.ts)
+│   │   ├── actions/        # UI actions library
+│   │   ├── components/     # Complex widget placeholders
+│   │   └── waits/          # Navigation/visual waits
+│   │
+│   ├── tests/
+│   │   ├── api/            # API-only tests
+│   │   ├── ui/             # UI-only tests
+│   │   └── hybrid/         # Hybrid API+UI tests
+│   │
+│   ├── utils/              # Shared utilities
+│   │   ├── config.ts       # Configuration
+│   │   ├── env.ts          # Environment handling
+│   │   ├── retry.ts        # Retry mechanisms
+│   │   └── logger.ts       # Pino logger
+│   │
+│   ├── reporting/          # Allure helpers
+│   └── fixtures/           # testContext (per-test browser/page)
+│
+├── docs/architecture.md   # Tài liệu architecture
+├── playwright.config.ts   # Playwright configuration
+├── .github/workflows/ci.yml # CI/CD pipeline
+├── .env.dev/.env.staging/.env.prod  # Environment configs
+└── package.json
+```
 
 #### A. Nguyên Tắc Vàng: Tách Biệt Trách Nhiệm (Separation of Concerns)
 
@@ -113,13 +324,78 @@ Sử dụng bảng giải mã đơn giản hóa để loại bỏ sự sợ hãi
 Những điểm này là cốt lõi để người mới hiểu tại sao họ phải làm "phức tạp":
 
 **Anti-Flaky:** Chúng tôi áp dụng 3 nguyên tắc vàng để test luôn ổn định:
-- **Locator ổn định:** Sử dụng selectors đáng tin cậy, không dễ vỡ
-- **Retry có kiểm soát:** Cơ chế retry thông minh cho operations flaky
-- **Wait theo trạng thái:** Tránh `waitForTimeout()` - dùng wait theo điều kiện
+- **Locator ổn định:** Sử dụng selectors (`getByRole`, `data-testid`) đáng tin cậy, không dễ vỡ
+- **Retry có kiểm soát:** Cơ chế retry thông minh (`this.retries(2)`) cho operations flaky
+- **Wait theo trạng thái:** Tránh `waitForTimeout()` - dùng `waitForLoadState('networkidle')`
 
 **Parallel/Worker:** Framework chạy nhiều test cùng lúc (Mocha `--parallel`) nhưng tuyệt đối không chia sẻ Page/Browser giữa các Worker để tránh lỗi ngẫu nhiên.
 
 **Mở rộng Bảo mật/Hiệu năng (Guardrail):** Framework không thay thế công cụ Load Test, nhưng nó có thể kiểm tra nhanh (guardrail) Security Headers và Thời gian tải trang cơ bản để phát hiện lỗi sớm.
+
+### IV. ⚡ Scripts & Hướng Dẫn Quick Start
+
+#### Các Scripts có sẵn:
+- `npm test` : Chạy tất cả Mocha tests (song song theo file)
+- `npm run test:ui` : UI tests only
+- `npm run test:api` : API tests only
+- `npm run test:hybrid` : Hybrid API+UI tests
+- `npm run test:allure` : Chạy tests + generate Allure results
+- `npm run allure:serve` : Mở Allure report
+- `npm run demo:with-report` : Demo hoàn chỉnh (signup API + security + perf + Allure auto-open)
+
+#### Quick Start (Local Development):
+```bash
+# Clone repository
+git clone https://github.com/vanvo19870515/playwright-sdet-framework.git
+cd playwright-sdet-framework
+
+# Cài đặt dependencies
+npm install
+
+# Cài đặt Playwright browsers
+npx playwright install --with-deps
+
+# Chạy demo với full report
+TEST_ENV=dev npm run demo:with-report
+```
+
+#### Demo Test Cases:
+
+**🏆 Demo Hoàn Chỉnh (Khuyến nghị chạy đầu tiên):**
+```bash
+npm run demo:with-report
+```
+*Bao gồm: API signup, security headers check, performance guardrail, Allure report auto-open*
+
+**🔌 API Only:**
+```bash
+TEST_ENV=dev npm run test:api
+```
+
+**🖥️ UI Only:**
+```bash
+TEST_ENV=dev npm run test:ui
+```
+
+**🔀 Hybrid E2E:**
+```bash
+TEST_ENV=dev npm run test:hybrid
+```
+
+#### Cấu hình Environment:
+
+**Ví dụ `.env.dev`:**
+```bash
+BASE_URL=https://testpages.eviltester.com
+API_URL=https://thinking-tester-contact-list.herokuapp.com
+LOG_LEVEL=info
+VISUAL_ENABLED=false
+```
+
+**Environment Switching:**
+- Set `TEST_ENV=dev|staging|prod`
+- Biến được load từ file `.env.<env>`
+- Hỗ trợ URLs và configs khác nhau cho từng environment
 
 ### III. ⌨️ Hướng Dẫn Tiếp Cận Code (Lời khuyên cho Junior)
 
