@@ -128,13 +128,13 @@ We use simplified analogies to eliminate the fear of complex technical terms:
 These principles are core to understanding why the architecture is designed this way:
 
 **Anti-Flaky:** We implement 3 golden rules for stable tests:
-- **Stable Locators**: Use reliable selectors (`getByRole`, `data-testid`) that don't break easily
-- **Controlled Retries**: Smart retry mechanisms (`this.retries(2)`) for flaky operations
-- **State-based Waits**: Avoid `waitForTimeout()` - use `waitForLoadState('networkidle')`
 
-**Parallel/Worker:** The Framework runs multiple tests simultaneously (Mocha `--parallel`) but absolutely does not share the Page/Browser between Workers to prevent random failures.
+- **Stable Locators:** Use reliable selectors (`getByRole`, `data-testid`) that don't break easily
+- **Controlled Retries:** Smart retry mechanisms (`this.retries(2)`) for flaky operations
+- **State-based Waits:** Avoid `waitForTimeout()` — use `waitForLoadState('networkidle')`
 
-**Security/Performance Guardrail:** The Framework is not a Load Test tool, but it includes quick checks (guardrail) for Security Headers and Basic Page Load Time to catch fundamental issues early.
+- **Parallel/Worker:** Run multiple tests simultaneously (Mocha `--parallel`) but never share the Page/Browser between workers to avoid random failures.
+- **Security/Performance Guardrail:** Not a load-test tool, but includes quick guardrails for Security Headers and basic Page Load Time to catch issues early.
 
 ### IV. ⚡ Scripts & Quick Start Guide
 
@@ -324,13 +324,13 @@ Sử dụng bảng giải mã đơn giản hóa để loại bỏ sự sợ hãi
 Những điểm này là cốt lõi để người mới hiểu tại sao họ phải làm "phức tạp":
 
 **Anti-Flaky:** Chúng tôi áp dụng 3 nguyên tắc vàng để test luôn ổn định:
+
 - **Locator ổn định:** Sử dụng selectors (`getByRole`, `data-testid`) đáng tin cậy, không dễ vỡ
 - **Retry có kiểm soát:** Cơ chế retry thông minh (`this.retries(2)`) cho operations flaky
-- **Wait theo trạng thái:** Tránh `waitForTimeout()` - dùng `waitForLoadState('networkidle')`
+- **Wait theo trạng thái:** Tránh `waitForTimeout()` — dùng `waitForLoadState('networkidle')`
 
-**Parallel/Worker:** Framework chạy nhiều test cùng lúc (Mocha `--parallel`) nhưng tuyệt đối không chia sẻ Page/Browser giữa các Worker để tránh lỗi ngẫu nhiên.
-
-**Mở rộng Bảo mật/Hiệu năng (Guardrail):** Framework không thay thế công cụ Load Test, nhưng nó có thể kiểm tra nhanh (guardrail) Security Headers và Thời gian tải trang cơ bản để phát hiện lỗi sớm.
+- **Parallel/Worker:** Framework chạy nhiều test cùng lúc (Mocha `--parallel`) nhưng tuyệt đối không chia sẻ Page/Browser giữa các Worker để tránh lỗi ngẫu nhiên.
+- **Mở rộng Bảo mật/Hiệu năng (Guardrail):** Framework không thay thế công cụ Load Test, nhưng có guardrail kiểm tra nhanh Security Headers và thời gian tải trang cơ bản để phát hiện lỗi sớm.
 
 ### IV. ⚡ Scripts & Hướng Dẫn Quick Start
 
