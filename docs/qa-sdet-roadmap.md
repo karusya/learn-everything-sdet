@@ -133,9 +133,10 @@ Risk = Probability (Chance of occurrence) × Impact (Consequences)
 ##### **HIGH-QUALITY BUG REPORT TEMPLATE**
 
 **Title**
-|Severity| Module/Feature |Brief description of issue|
+
+|**Severity**| **Module/Feature** |**Brief description of issue**|
 |--|--|--|
-|Major| Checkout| User cannot proceed to payment when using gift card
+|Major| Checkout| User cannot proceed to payment when using gift card|
 
 
 **Description**
@@ -218,7 +219,7 @@ Advantages:
  DECISION: Choose Option 1 (TypeScript + Playwright)
  Reason: Modern, many jobs, easy to learn for those with coding background
 ```
-### 🥈 PHASE 2: BUILDING AUTOMATION FRAMEWORK (Weeks 5-10)**
+### 🥈 PHASE 2: BUILDING AUTOMATION FRAMEWORK (Weeks 5-10)
 
 #### **Week 5: Web Automation Basics with Playwright**
 #### **Day 1: Installation & Hello World**
@@ -1155,6 +1156,7 @@ Current Status: In Progress
 - ***Tech Stack:*** *TypeScript, Playwright, POM, Allure, GitHub Actions*
 
 **Features:**
+
 - ✅ 50+ automated test cases
 - ✅ Page Object Model architecture
 - ✅ Data-driven testing
@@ -1265,8 +1267,8 @@ Technical Skills
 
 Projects
 - E-commerce Automation Framework
-- Tech:** TypeScript, Playwright, POM, GitHub Actions, Allure
-- GitHub:** github.com/yourusername/ecommerce-automation
+- Tech: TypeScript, Playwright, POM, GitHub Actions, Allure
+- GitHub: github.com/yourusername/ecommerce-automation
 - Built framework from scratch with 60+ test cases
 - Implemented Page Object Model for maintainability
 - Integrated CI/CD running automatically on each commit
@@ -1278,7 +1280,7 @@ API Testing Suite
 - Tested 20+ API endpoints of RESTful service
 - Implemented data-driven testing with JSON/YAML
 - Created performance tests with Locust
-- **Coverage:** 95% of API endpoints automated
+- Coverage: 95% of API endpoints automated
 
 Professional Experience
 - Technical Support Specialist | ABC Company | 2020-2023
