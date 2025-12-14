@@ -4,8 +4,8 @@ A dual-language, step-by-step plan for transitioning into QA Engineer / Automati
 
 ---
 
-## A/SDET TRANSITION ROADMAP - ULTRA DETAILED ENGLISH VERSION
-### 🎯 FINAL GOALS (3-6 Months)
+## **SDET TRANSITION ROADMAP - ULTRA DETAILED ENGLISH VERSION**
+### 🎯 ***FINAL GOALS (3-6 Months)***
 **After 3-6 months, you will have:**
 
 - GitHub Portfolio with at least 1 complete automation project
