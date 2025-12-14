@@ -877,6 +877,7 @@ Verify that a registered user can complete checkout process using credit card pa
 5. Test credit card credentials are available
 ```
 **Test Data**
+
 |User|Credit Card|Expiry|CVV|Shipping Address|
 |--|--|--|--|--|
 |testuser@example.com / Password123!| 4111 1111 1111 1111| 12/2025 |123 |[Valid US address]|
@@ -913,11 +914,13 @@ Verify that a registered user can complete checkout process using credit card pa
 - Screenshot: order_confirmation.png
 - Email: order_confirmation_email.png
 ```
+
 |**Risk Level**| **Priority** | **Automation**|
 |--|--|--|
 |**High**|**P1** |**Yes** (Automated in checkout.spec.ts)|
 
-#### **Day 3-4: Complex Feature Test Cases**\
+#### **Day 3-4: Complex Feature Test Cases**
+
 **COMPLEX TEST CASE: MULTI-STEP CHECKOUT WITH PROMO CODE**
 
 **Scenario: Apply expired promo code during checkout**
@@ -1126,6 +1129,7 @@ Current Status: In Progress
 |- **P3:** Fix when resources available|
 
 ## Decision Matrix
+
 | Severity ↓ | Priority → | P0 | P1 | P2 | P3 |
 |------------|------------|----|----|----|----|
 | **Critical** | **Always P0** | ✓ | | | |
