@@ -60,6 +60,7 @@ nav:
       - QA & Automation Roadmap: qa-roadmap.md
       - Core Principles Framework: sdet-framework-foundation.md
       - SDET Framework Introduction: playwright-sdet-framework-intro.md
+      - QA Load Test with K6: k6_performance_testing.md
   - Data Resources:
       - Elasticsearch Roadmap: elasticsearch-roadmap.md
       - Elasticsearch Query Deep Dive: elasticsearch-query-deepdive.md

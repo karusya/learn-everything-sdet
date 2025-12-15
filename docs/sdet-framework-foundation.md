@@ -280,28 +280,57 @@ A failed test without detailed information is useless.
 | **Allure/HTML Report** | Understand that Report is more than just PASS/FAIL. It must display Allure Steps, Screenshot on Fail, and Logs/Payloads so non-coders can easily understand the failure root cause |
 
 ---
+## 6. 🎭 Flexibility - Adapting Frameworks Based on Project Requirements
+### 6.1. Standard Frameworks Are "Principles", Not "Rigid Templates"
+A common misconception among juniors is that all projects must have every layer (ui/, api/, utils/...). In reality, a skilled SDET knows when to simplify and when to expand.
 
-## 🎯 Conclusion: Early Investment - Long-term Harvest
+***Examples of Flexibility:***
 
-### Standard Framework = **"Solid Foundation"**
+|**Project Type / Requirements**|	**How the Framework Can Be Adapted**|	**Why**|
+|---|---|---|
+|**MVP (Minimum Viable Product)**<br>Small, fast-changing, team of 1-2 people|	• Can combine pages/ and tests/ simply.<br>• Skip complex reporting (Allure), use basic HTML report.<br>• Prioritize simple POM over complex Component Model.|	***Speed is more important than perfection. Need to validate ideas quickly.***|
+|**API-First Applications**<br>(Backend services, Microservices)|	• Focus on api/ layer, build Client Model thoroughly.<br>• ui/ layer can be minimal or nonexistent.<br>• Invest heavily in data-driven testing and contract testing.|	***Testing effort should focus on areas with highest risk and business logic.***|
+**Legacy Applications**<br>Unstable UI, no data-testid available|	• May need wrapper functions to handle complex waits and retries.<br>• May accept using XPath if no better options exist.<br>• Prioritize capture screenshot and video recording for debugging.	|***Stability (anti-flaky) is top priority; some "clean code" principles can be sacrificed.***|
+|**Large Enterprise Projects**<br>Team >10 people, multiple modules|	• Need clear, complete layer structure.<br>• Need Component Model (BasePage, BaseComponent) for maximum reuse.<br>• Must have configuration management and detailed reporting (Allure).|	***Scalability, maintainability, and team collaboration are most important.***|
+|**Proof of Concept (POC) for New Tools**<br>(e.g., Visual Testing evaluation)	|• Can write standalone tests outside main framework.<br>• Focus on utils/ layer to integrate new tools.<br>• Minimal structure, easy to discard if POC fails.|	***Goal is tool evaluation, not building long-term systems.***|
 
-- **Initially:** Seems "complicated" and "time-consuming"
-- **Later:** Saves **hundreds of hours** in maintenance and debugging
-- **Result:** Become a real SDET, not just "QA running scripts"
+### 6.2. Questions to Help You "Adapt" Your Framework Appropriately
+***Before starting, ask yourself:***
 
-### Final Advice for Juniors:
+>1. ***Project scale & lifespan? (2 months or 2 years?)***
+>2. ***What's the testing focus? (UI, API, Performance, Security?)***
+>3. ***Team size and experience? (Solo or team of 10? Junior or Senior?)***
+>4. ***Product development speed? (Does UI change frequently?)***
+>5. ***Reporting and integration requirements? (Need Allure for PM reports? Need Slack notifications?)***
 
-**"Don't hesitate to invest 2-3 weeks initially for standard Framework. You won't regret it!"**
+**Real Example:**
 
-### 🚀 Next Steps:
+>"My Project A was a small internal tool with only 5 screens, maintained by a single tester (myself). I chose a simplified version: still separating pages/ and tests/, but skipping the api/ layer (unneeded) and using simple console.log instead of complex Winston. The framework remained 'standard' in separation principles but was streamlined for context."
 
-1. **Learn Theory:** Master the principles above
-2. **Practice:** Start with small project, apply each layer
-3. **Expand:** Add advanced features gradually
-4. **Share:** Share experience with community
+### 6.3. Advice: Start with Principles, Adapt to Reality
 
----
+>>1. Always start with core principles: Separation of Concerns (SoC), Anti-Flakky, Configuration Management. These are **"non-negotiable hardware".**
+>>2. Be flexible with implementation: Number of layers, POM complexity, logging/reporting tools can be **"adjustable software".**
+>>3. Design for change: Your code should be modular so when the project grows, you can easily **"upgrade"** the framework (e.g., add Allure, separate Component Model) without rewriting.
 
+#### 🎯 Key Takeaway for this section:
+>***"A good framework isn't one that has everything, but one that BEST FITS the current needs of your project, and is DESIGNED TO ADAPT EASILY when those needs change."***
+
+#### 🎯 Conclusion: Early Investment - Long-term Harvest
+>Standard Framework = "Solid Foundation"
+Initially: Seems "complicated" and "time-consuming"
+Later: Saves hundreds of hours in maintenance and debugging
+Result: Become a real SDET, not just "QA running scripts"
+
+#### *****Final Advice for Juniors:*****
+>**"Don't hesitate to invest 2-3 weeks initially to learn and apply standard principles. Be adaptable: Use these principles as a compass, not a rigid map. Adjust implementation to fit your project's scale, complexity, and goals. The best framework isn't the most complex one, but the one that fits best and remains sustainable in your specific context!"**
+
+#### 🚀 Next Steps:
+```text
+1. Learn Theory: Master the principles above
+2. Practice: Start with small project, apply each layer
+3. Expand: Add advanced features gradually
+```
 *Standard Framework is not the destination - but the journey. Start today!* 🎯
 
 ---
@@ -580,25 +609,48 @@ Test thất bại mà không có thông tin chi tiết là vô dụng.
 | **Allure/HTML Report** | Hiểu rằng Report không chỉ là PASS/FAIL, mà là nơi hiển thị Allure Step, Screenshot on Fail, và Log/Payload để người không biết code cũng hiểu chuyện gì đã xảy ra |
 
 ---
+**"Trước khi kết thúc, có một góc nhìn tinh tế mà các bạn Junior nên cân nhắc. Xây dựng một framework 'chuẩn' không có nghĩa là áp dụng cứng nhắc một khuôn mẫu. Một kỹ năng quan trọng của SDET là biết điều chỉnh và thích ứng framework dựa trên yêu cầu thực tế của từng dự án. Phần dưới đây sẽ giúp bạn hiểu khi nào cần đơn giản hóa và khi nào cần mở rộng"**
 
-## 🎯 Kết luận: Đầu tư sớm - Gặt hái lâu dài
+## 6. 🎭 Tính Linh Hoạt - Điều Chỉnh Framework Theo Yêu Cầu Dự Án
+### 6.1. Framework Chuẩn Là "Nguyên Tắc", Không Phải "Khuôn Mẫu" Cứng Nhắc
+Một hiểu lầm phổ biến của Junior là nghĩ rằng tất cả dự án đều phải có đầy đủ mọi layer (ui/, api/, utils/...). Thực tế, một SDET giỏi biết khi nào cần đơn giản hóa và khi nào cần mở rộng.
 
-### Framework chuẩn = **"Chân móng vững chắc"**
+***Ví dụ về sự linh hoạt:**
 
-- **Ban đầu:** Có vẻ "phức tạp" và "tốn thời gian"
-- **Sau này:** Tiết kiệm **hàng trăm giờ** maintain và debug
-- **Kết quả:** Trở thành SDET thực thụ, không chỉ là "QA chạy script"
+|**Loại Dự Án / Yêu Cầu**|	**Framework Có Thể Được Điều Chỉnh Thế Nào?**|	**Lý Do**|
+|---|---|---|
+|**MVP (Sản phẩm thử nghiệm)**<br>Nhỏ, thay đổi nhanh, team 1-2 người	| - Có thể gộp pages và tests/ đơn giản.<br>- Tạm bỏ qua complex reporting (Allure), dùng HTML report cơ bản.<br>- Ưu tiên POM đơn giản hơn là Component Model phức tạp.|	***Tốc độ quan trọng hơn sự hoàn hảo. Cần validate ý tưởng nhanh***|
+|**Ứng dụng chủ yếu là AP**<br>(Backend service, Microservices)|	- Tập trung vào api/ layer, xây dựng Client Model kỹ.<br>- ui/ layer có thể rất nhỏ hoặc không có.<br>- Đầu tư mạnh vào data-driven testing và contract testing.| ***Testing effort nên tập trung vào nơi có rủi ro và logic nghiệp vụ chính.***|
+|**Ứng dụng Legacy (Cũ)**<br>UI không ổn định, không có **data-testid**|-	Có thể cần Wrapper functions để handle wait và retry phức tạp hơn.<br>- Có thể chấp nhận dùng XPath nếu không còn lựa chọn nào khác.<br>- Ưu tiên capture screenshot và video recording để debug.	| ***Tính ổn định (anti-flaky) là ưu tiên số 1, có thể hy sinh một phần tính "clean code".***| 
+|**Dự án Enterprise Lớn**<br> Team >10 người, nhiều module|- Cần cấu trúc rõ ràng, đầy đủ các layer.<br>- Cần Component Model (BasePage, BaseComponent) để tái sử dụng tối đa.<br>- Bắt buộc có Configuration management và Detailed Reporting (Allure).| ***Khả năng mở rộng, bảo trì và hợp tác trong team là quan trọng nhất.***|
+|**Proof of Concept (POC) cho Tool mới**<br>(VD: thử nghiệm Visual Testing)	| - Có thể viết test độc lập, ngoài framework chính.<br>- Tập trung layer utils/ để tích hợp tool mới.<br>- Cấu trúc tối giản, dễ dàng bỏ đi nếu POC thất bại.|	***Mục tiêu là đánh giá tool, không phải xây dựng hệ thống lâu dài.***|
 
-### Lời khuyên cuối cùng cho Junior:
+### 6.2. Các Câu Hỏi Giúp Bạn "Điều Chỉnh" Framework Phù Hợp
+***Trước khi bắt đầu, hãy tự hỏi:***
+```yaml
+- Quy mô & Thời gian sống của dự án? (2 tháng hay 2 năm?)
+- Đâu là trọng tâm testing? (UI, API, Performance, Security?)
+- Team size và kinh nghiệm? (Một mình hay team 10 người? Junior hay Senior?)
+- Tốc độ phát triển sản phẩm? (UI có hay thay đổi không?)
+- Yêu cầu về báo cáo và tích hợp? (Cần Allure để report cho PM? Cần tích hợp Slack notification?)
+```
+***Ví dụ thực tế:***
 
-**"Đừng ngại đầu tư 2-3 tuần ban đầu để xây Framework chuẩn. Bạn sẽ không hối tiếc!"**
+*****"Dự án A của tôi là một internal tool nhỏ, chỉ có 5 màn hình, chạy bởi 1 tester duy nhất (chính tôi). Tôi đã chọn một phiên bản đơn giản: vẫn có pages/ và tests/ tách biệt, nhưng bỏ qua api/ layer (vì không cần) và dùng console.log đơn giản thay vì Winston phức tạp. Framework vẫn 'chuẩn' ở nguyên tắc tách biệt, nhưng được tinh gọn cho phù hợp bối cảnh."*****
+|---|
 
-### 🚀 Next Steps:
+### 6.3. Lời Khuyên: Bắt Đầu Từ Nguyên Tắc, Điều Chỉnh Theo Thực Tế
 
-1. **Học lý thuyết:** Nắm vững các nguyên tắc trên
-2. **Thực hành:** Bắt đầu với project nhỏ, áp dụng từng layer
-3. **Mở rộng:** Thêm tính năng nâng cao dần dần
-4. **Share:** Chia sẻ kinh nghiệm với cộng đồng
+1. ***Luôn bắt đầu với các nguyên tắc cốt lõi: Tách biệt (SoC), Chống Flaky, Quản lý cấu hình. Đây là "phần cứng" không nên thỏa hiệp.***
+2. ***Linh hoạt với việc triển khai (implementation): Số lượng layer, độ phức tạp của POM, công cụ logging/reporting có thể là "phần mềm" để điều chỉnh.***
+3. ***Thiết kế để dễ thay đổi: Code của bạn nên được module hóa để khi dự án phát triển, bạn có thể dễ dàng "nâng cấp" framework (ví dụ: thêm Allure, tách Component Model) mà không phải viết lại.***
+
+#### 🎯 Key Takeaway cho phần này:
+***"Một Framework tốt không phải là Framework có mọi thứ, mà là Framework PHÙ HỢP NHẤT với nhu cầu hiện tại của dự án, và được THIẾT KẾ ĐỂ DỄ DÀNG THÍCH ỨNG khi nhu cầu đó thay đổi."***
+
+|*****"Final Advice for Juniors:*****|
+|----|
+|1. *****Đừng ngại đầu tư 2-3 tuần ban đầu để học và áp dụng các nguyên tắc chuẩn.*****<br>2. *****Hãy linh hoạt: Sử dụng các nguyên tắc đó như một la bàn, không phải một bản đồ cứng nhắc. Điều chỉnh việc triển khai cho phù hợp với quy mô, độ phức tạp và mục tiêu của dự án bạn đang làm.*****<br>3. *****Framework tốt nhất không phải là framework phức tạp nhất, mà là framework phù hợp nhất và bền vững nhất cho hoàn cảnh của bạn."*****
 
 ---
 
