@@ -308,9 +308,10 @@ A common misconception among juniors is that all projects must have every layer 
 >"My Project A was a small internal tool with only 5 screens, maintained by a single tester (myself). I chose a simplified version: still separating pages/ and tests/, but skipping the api/ layer (unneeded) and using simple console.log instead of complex Winston. The framework remained 'standard' in separation principles but was streamlined for context."
 
 ### 6.3. Advice: Start with Principles, Adapt to Reality
-1. *****Always start with core principles:***** Separation of Concerns (SoC), Anti-Flakky, Configuration Management. These are **"non-negotiable hardware".**
-2. *****Be flexible with implementation:***** Number of layers, POM complexity, logging/reporting tools can be **"adjustable software".**
-3. *****Design for change:***** Your code should be modular so when the project grows, you can easily **"upgrade"** the framework (e.g., add Allure, separate Component Model) without rewriting.
+
+>>1. Always start with core principles: Separation of Concerns (SoC), Anti-Flakky, Configuration Management. These are **"non-negotiable hardware".**
+>>2. Be flexible with implementation: Number of layers, POM complexity, logging/reporting tools can be **"adjustable software".**
+>>3. Design for change: Your code should be modular so when the project grows, you can easily **"upgrade"** the framework (e.g., add Allure, separate Component Model) without rewriting.
 
 #### 🎯 Key Takeaway for this section:
 >***"A good framework isn't one that has everything, but one that BEST FITS the current needs of your project, and is DESIGNED TO ADAPT EASILY when those needs change."***
