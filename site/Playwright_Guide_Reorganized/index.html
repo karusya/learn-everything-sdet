@@ -1,0 +1,2879 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Knowledge base for SDET, Playwright, Selenium, API, and QA strategy by karusya">
+      
+      
+      
+        <link rel="canonical" href="https://karusya.github.io/learn-everything-for-me/Playwright_Guide_Reorganized/">
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../playwright-agents/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/avatar-32.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Playwright Guide - Learn Everything For Me</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#playwright-test-framework-complete-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Learn Everything For Me" class="md-header__button md-logo" aria-label="Learn Everything For Me" data-md-component="logo">
+      
+  <img src="../assets/avatar.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Learn Everything For Me
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Playwright Guide
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="amber"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="pink" data-md-color-accent="amber"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/karusya/learn-everything-for-me" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    karusya/learn-everything-for-me
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Learn Everything For Me" class="md-nav__button md-logo" aria-label="Learn Everything For Me" data-md-component="logo">
+      
+  <img src="../assets/avatar.png" alt="logo">
+
+    </a>
+    Learn Everything For Me
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/karusya/learn-everything-for-me" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    karusya/learn-everything-for-me
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Playwright
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Playwright
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Playwright Guide
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Playwright Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📖 Introduction
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚀 Installation &amp; Setup
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚀 Installation &amp; Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#system-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System Requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quick-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick Installation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alternative-installation-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Alternative Installation Methods
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#whats-installed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What's Installed
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#writing-your-first-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✍️ Writing Your First Tests
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="✍️ Writing Your First Tests">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-test-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic Test Structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#core-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Concepts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core Concepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔍 Actions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assertions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Assertions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-isolation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧩 Test Isolation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-hooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎣 Test Hooks
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-debugging-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ▶️ Running &amp; Debugging Tests
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="▶️ Running &amp; Debugging Tests">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic Commands
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui-mode-recommended-for-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UI Mode (Recommended for Development)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debugging-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Debugging Options
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Debugging Options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#playwright-inspector" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Playwright Inspector
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vs-code-debugging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VS Code Debugging
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#html-test-reports" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTML Test Reports
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛠️ Advanced Features
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛠️ Advanced Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test-generation-with-codegen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Test Generation with Codegen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trace-viewer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trace Viewer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cicd-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CI/CD Setup
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CI/CD Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#github-actions-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GitHub Actions Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#publishing-reports-to-azure-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Publishing Reports to Azure Storage
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vs-code-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💻 VS Code Integration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="💻 VS Code Integration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Getting Started
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#core-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Features
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test-execution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Test Execution
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debugging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Debugging
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-generation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Test Generation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-vs-code-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advanced VS Code Features
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📋 Quick Reference
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📋 Quick Reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cli-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CLI Commands
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration Options
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔗 Additional Resources
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../playwright-agents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Canary & Agentic Workflow
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../playwright-fixtures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fixtures & Config
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../playwright-assertions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Assertions Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../playwright-reporter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reporter API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../playwright-library/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Library vs Test Runner
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../migration-guides/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Migration Guides
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API Testing
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    API Testing
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api-testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API Testing Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testing Strategy
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Testing Strategy
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Test_Automation_Pyramid_Guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test Automation Pyramid
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../test-techniques/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test Techniques
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Flaky_Test_Guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Flaky Test Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ui-api-pom-comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UI POM vs API POM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shift-left-testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Shift-Left Testing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mutation-testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mutation Testing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QA Resources
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    QA Resources
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../qa-sdet-roadmap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QA/SDET Transition Roadmap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../qa-roadmap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QA & Automation Roadmap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sdet-framework-foundation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Core Principles Framework
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../playwright-sdet-framework-intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SDET Framework Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../k6_performance_testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QA Load Test with K6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Resources
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Data Resources
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../elasticsearch-roadmap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Elasticsearch Roadmap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../elasticsearch-query-deepdive/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Elasticsearch Query Deep Dive
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../http-caching/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HTTP Caching Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../web3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Web3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SDET Prep
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    SDET Prep
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SDET_Interview_Preparation_Guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SDET Interview Preparation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Experienced_Automation_Tester_QA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Experienced Automation Tester Q&A
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Automation_Interview_QA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Automation Interview Q&A
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java-oop-concepts.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Java OOP Concepts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📖 Introduction
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚀 Installation &amp; Setup
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚀 Installation &amp; Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#system-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System Requirements
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quick-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick Installation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alternative-installation-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Alternative Installation Methods
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#whats-installed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What's Installed
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#writing-your-first-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✍️ Writing Your First Tests
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="✍️ Writing Your First Tests">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-test-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic Test Structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#core-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Concepts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core Concepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔍 Actions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assertions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Assertions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-isolation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧩 Test Isolation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-hooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎣 Test Hooks
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-debugging-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ▶️ Running &amp; Debugging Tests
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="▶️ Running &amp; Debugging Tests">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic Commands
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ui-mode-recommended-for-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UI Mode (Recommended for Development)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debugging-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Debugging Options
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Debugging Options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#playwright-inspector" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Playwright Inspector
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vs-code-debugging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VS Code Debugging
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#html-test-reports" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTML Test Reports
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛠️ Advanced Features
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛠️ Advanced Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test-generation-with-codegen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Test Generation with Codegen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trace-viewer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Trace Viewer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cicd-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CI/CD Setup
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CI/CD Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#github-actions-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GitHub Actions Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#publishing-reports-to-azure-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Publishing Reports to Azure Storage
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vs-code-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💻 VS Code Integration
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="💻 VS Code Integration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Getting Started
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#core-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Features
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test-execution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Test Execution
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debugging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Debugging
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-generation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Test Generation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#advanced-vs-code-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Advanced VS Code Features
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📋 Quick Reference
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📋 Quick Reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cli-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CLI Commands
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configuration-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuration Options
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔗 Additional Resources
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="playwright-test-framework-complete-guide">Playwright Test Framework - Complete Guide<a class="headerlink" href="#playwright-test-framework-complete-guide" title="Permanent link">&para;</a></h1>
+<h2 id="introduction">📖 Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
+<p>Playwright Test is a modern end-to-end testing framework that bundles test runner, assertions, isolation, parallelization, and rich tooling. It supports Chromium, Firefox, and WebKit browsers on Windows, Linux, and macOS, with native mobile emulation.</p>
+<p><strong>Key Features:</strong>
+- Cross-browser testing (Chrome, Firefox, Safari)
+- Headless and headed modes
+- Parallel test execution
+- Auto-waiting and resilient assertions
+- Rich debugging tools
+- Mobile emulation
+- CI/CD integration</p>
+<hr />
+<h2 id="installation-setup">🚀 Installation &amp; Setup<a class="headerlink" href="#installation-setup" title="Permanent link">&para;</a></h2>
+<h3 id="system-requirements">System Requirements<a class="headerlink" href="#system-requirements" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Node.js</strong>: Latest 20.x, 22.x, or 24.x</li>
+<li><strong>OS</strong>: Windows 11+, macOS 14+, Debian 12/13, Ubuntu 22.04/24.04</li>
+</ul>
+<h3 id="quick-installation">Quick Installation<a class="headerlink" href="#quick-installation" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Initialize new project or add to existing</span>
+npm<span class="w"> </span>init<span class="w"> </span>playwright@latest
+</code></pre></div>
+<p><strong>Configuration Options:</strong>
+- ✅ TypeScript or JavaScript
+- ✅ Tests folder name (default: <code>tests</code> or <code>e2e</code>)
+- ✅ GitHub Actions workflow (recommended for CI)
+- ✅ Install browser binaries</p>
+<h3 id="alternative-installation-methods">Alternative Installation Methods<a class="headerlink" href="#alternative-installation-methods" title="Permanent link">&para;</a></h3>
+<p><strong>Using VS Code Extension:</strong>
+1. Install "Playwright Test for VS Code" extension
+2. Run <code>Test: Install Playwright</code> from Command Palette
+3. Select browsers and configuration</p>
+<p><strong>Manual Installation:</strong>
+<div class="highlight"><pre><span></span><code>npm<span class="w"> </span>install<span class="w"> </span>-D<span class="w"> </span>@playwright/test
+npx<span class="w"> </span>playwright<span class="w"> </span>install<span class="w"> </span>--with-deps
+</code></pre></div></p>
+<h3 id="whats-installed">What's Installed<a class="headerlink" href="#whats-installed" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>playwright.config.ts    # Test configuration
+package.json           # Dependencies
+tests/                 # Test files
+  example.spec.ts      # Sample test
+</code></pre></div>
+<hr />
+<h2 id="writing-your-first-tests">✍️ Writing Your First Tests<a class="headerlink" href="#writing-your-first-tests" title="Permanent link">&para;</a></h2>
+<h3 id="basic-test-structure">Basic Test Structure<a class="headerlink" href="#basic-test-structure" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">test</span><span class="p">,</span><span class="w"> </span><span class="nx">expect</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@playwright/test&#39;</span><span class="p">;</span>
+
+<span class="nx">test</span><span class="p">(</span><span class="s1">&#39;has title&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="w"> </span><span class="nx">page</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="kr">goto</span><span class="p">(</span><span class="s1">&#39;https://playwright.dev/&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="k">await</span><span class="w"> </span><span class="nx">expect</span><span class="p">(</span><span class="nx">page</span><span class="p">).</span><span class="nx">toHaveTitle</span><span class="p">(</span><span class="sr">/Playwright/</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="nx">test</span><span class="p">(</span><span class="s1">&#39;get started link&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="w"> </span><span class="nx">page</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="kr">goto</span><span class="p">(</span><span class="s1">&#39;https://playwright.dev/&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">getByRole</span><span class="p">(</span><span class="s1">&#39;link&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Get started&#39;</span><span class="w"> </span><span class="p">}).</span><span class="nx">click</span><span class="p">();</span>
+<span class="w">  </span><span class="k">await</span><span class="w"> </span><span class="nx">expect</span><span class="p">(</span><span class="nx">page</span><span class="p">.</span><span class="nx">getByRole</span><span class="p">(</span><span class="s1">&#39;heading&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Installation&#39;</span><span class="w"> </span><span class="p">})).</span><span class="nx">toBeVisible</span><span class="p">();</span>
+<span class="p">});</span>
+</code></pre></div>
+<h3 id="core-concepts">Core Concepts<a class="headerlink" href="#core-concepts" title="Permanent link">&para;</a></h3>
+<h4 id="actions">🔍 Actions<a class="headerlink" href="#actions" title="Permanent link">&para;</a></h4>
+<p>Playwright automatically waits for elements to be actionable:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Navigation</span>
+<span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="kr">goto</span><span class="p">(</span><span class="s1">&#39;https://example.com&#39;</span><span class="p">);</span>
+
+<span class="c1">// Interactions</span>
+<span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">getByRole</span><span class="p">(</span><span class="s1">&#39;link&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Get started&#39;</span><span class="w"> </span><span class="p">}).</span><span class="nx">click</span><span class="p">();</span>
+<span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">locator</span><span class="p">(</span><span class="s1">&#39;#username&#39;</span><span class="p">).</span><span class="nx">fill</span><span class="p">(</span><span class="s1">&#39;user@example.com&#39;</span><span class="p">);</span>
+<span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">locator</span><span class="p">(</span><span class="s1">&#39;#password&#39;</span><span class="p">).</span><span class="nx">fill</span><span class="p">(</span><span class="s1">&#39;password&#39;</span><span class="p">);</span>
+<span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">locator</span><span class="p">(</span><span class="s1">&#39;#submit&#39;</span><span class="p">).</span><span class="nx">click</span><span class="p">();</span>
+</code></pre></div>
+<p><strong>Common Actions:</strong>
+- <code>locator.click()</code> - Click element
+- <code>locator.fill(text)</code> - Fill input field
+- <code>locator.check()</code> / <code>locator.uncheck()</code> - Checkboxes
+- <code>locator.selectOption(value)</code> - Dropdown selection
+- <code>locator.hover()</code> - Mouse hover
+- <code>locator.press(key)</code> - Keyboard input</p>
+<h4 id="assertions">✅ Assertions<a class="headerlink" href="#assertions" title="Permanent link">&para;</a></h4>
+<p>Playwright includes async matchers that wait for conditions:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Page assertions</span>
+<span class="k">await</span><span class="w"> </span><span class="nx">expect</span><span class="p">(</span><span class="nx">page</span><span class="p">).</span><span class="nx">toHaveTitle</span><span class="p">(</span><span class="sr">/Playwright/</span><span class="p">);</span>
+<span class="k">await</span><span class="w"> </span><span class="nx">expect</span><span class="p">(</span><span class="nx">page</span><span class="p">).</span><span class="nx">toHaveURL</span><span class="p">(</span><span class="s1">&#39;https://playwright.dev/&#39;</span><span class="p">);</span>
+
+<span class="c1">// Element assertions</span>
+<span class="k">await</span><span class="w"> </span><span class="nx">expect</span><span class="p">(</span><span class="nx">locator</span><span class="p">).</span><span class="nx">toBeVisible</span><span class="p">();</span>
+<span class="k">await</span><span class="w"> </span><span class="nx">expect</span><span class="p">(</span><span class="nx">locator</span><span class="p">).</span><span class="nx">toContainText</span><span class="p">(</span><span class="s1">&#39;Welcome&#39;</span><span class="p">);</span>
+<span class="k">await</span><span class="w"> </span><span class="nx">expect</span><span class="p">(</span><span class="nx">locator</span><span class="p">).</span><span class="nx">toHaveValue</span><span class="p">(</span><span class="s1">&#39;expected value&#39;</span><span class="p">);</span>
+<span class="k">await</span><span class="w"> </span><span class="nx">expect</span><span class="p">(</span><span class="nx">locator</span><span class="p">).</span><span class="nx">toBeChecked</span><span class="p">();</span>
+<span class="k">await</span><span class="w"> </span><span class="nx">expect</span><span class="p">(</span><span class="nx">locator</span><span class="p">).</span><span class="nx">toHaveCount</span><span class="p">(</span><span class="mf">3</span><span class="p">);</span>
+</code></pre></div>
+<h4 id="test-isolation">🧩 Test Isolation<a class="headerlink" href="#test-isolation" title="Permanent link">&para;</a></h4>
+<p>Each test runs in its own browser context (isolated profile):</p>
+<div class="highlight"><pre><span></span><code><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;test 1&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="w"> </span><span class="nx">page</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// Fresh browser context</span>
+<span class="p">});</span>
+
+<span class="nx">test</span><span class="p">(</span><span class="s1">&#39;test 2&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="w"> </span><span class="nx">page</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// Completely isolated from test 1</span>
+<span class="p">});</span>
+</code></pre></div>
+<h4 id="test-hooks">🎣 Test Hooks<a class="headerlink" href="#test-hooks" title="Permanent link">&para;</a></h4>
+<p>Organize tests with hooks:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">test</span><span class="p">.</span><span class="nx">describe</span><span class="p">(</span><span class="s1">&#39;User Authentication&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">test</span><span class="p">.</span><span class="nx">beforeEach</span><span class="p">(</span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="w"> </span><span class="nx">page</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="kr">goto</span><span class="p">(</span><span class="s1">&#39;https://example.com/login&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="p">});</span>
+
+<span class="w">  </span><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;login with valid credentials&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="w"> </span><span class="nx">page</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Test implementation</span>
+<span class="w">  </span><span class="p">});</span>
+
+<span class="w">  </span><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;login with invalid credentials&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="w"> </span><span class="nx">page</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Test implementation</span>
+<span class="w">  </span><span class="p">});</span>
+<span class="p">});</span>
+</code></pre></div>
+<hr />
+<h2 id="running-debugging-tests">▶️ Running &amp; Debugging Tests<a class="headerlink" href="#running-debugging-tests" title="Permanent link">&para;</a></h2>
+<h3 id="basic-commands">Basic Commands<a class="headerlink" href="#basic-commands" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Run all tests</span>
+npx<span class="w"> </span>playwright<span class="w"> </span><span class="nb">test</span>
+
+<span class="c1"># Run specific test file</span>
+npx<span class="w"> </span>playwright<span class="w"> </span><span class="nb">test</span><span class="w"> </span>tests/example.spec.ts
+
+<span class="c1"># Run tests matching pattern</span>
+npx<span class="w"> </span>playwright<span class="w"> </span><span class="nb">test</span><span class="w"> </span>-g<span class="w"> </span><span class="s2">&quot;login test&quot;</span>
+
+<span class="c1"># Run on specific browser</span>
+npx<span class="w"> </span>playwright<span class="w"> </span><span class="nb">test</span><span class="w"> </span>--project<span class="w"> </span>chromium
+
+<span class="c1"># Run in headed mode (visible browser)</span>
+npx<span class="w"> </span>playwright<span class="w"> </span><span class="nb">test</span><span class="w"> </span>--headed
+
+<span class="c1"># Run failed tests only</span>
+npx<span class="w"> </span>playwright<span class="w"> </span><span class="nb">test</span><span class="w"> </span>--last-failed
+</code></pre></div>
+<h3 id="ui-mode-recommended-for-development">UI Mode (Recommended for Development)<a class="headerlink" href="#ui-mode-recommended-for-development" title="Permanent link">&para;</a></h3>
+<p>Interactive testing interface with step-by-step debugging:</p>
+<div class="highlight"><pre><span></span><code>npx<span class="w"> </span>playwright<span class="w"> </span><span class="nb">test</span><span class="w"> </span>--ui
+</code></pre></div>
+<p><strong>Features:</strong>
+- Step-by-step test execution
+- Live locator picker
+- Watch mode
+- Visual debugging
+- Time travel debugging</p>
+<h3 id="debugging-options">Debugging Options<a class="headerlink" href="#debugging-options" title="Permanent link">&para;</a></h3>
+<h4 id="playwright-inspector">Playwright Inspector<a class="headerlink" href="#playwright-inspector" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># Debug all tests</span>
+npx<span class="w"> </span>playwright<span class="w"> </span><span class="nb">test</span><span class="w"> </span>--debug
+
+<span class="c1"># Debug specific test</span>
+npx<span class="w"> </span>playwright<span class="w"> </span><span class="nb">test</span><span class="w"> </span>tests/example.spec.ts<span class="w"> </span>--debug
+</code></pre></div>
+<h4 id="vs-code-debugging">VS Code Debugging<a class="headerlink" href="#vs-code-debugging" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Set breakpoint in test</li>
+<li>Right-click test → "Debug Test"</li>
+<li>Use live debugging features</li>
+</ol>
+<h3 id="html-test-reports">HTML Test Reports<a class="headerlink" href="#html-test-reports" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Show latest report</span>
+npx<span class="w"> </span>playwright<span class="w"> </span>show-report
+</code></pre></div>
+<p><strong>Features:</strong>
+- Filter by browser, status, duration
+- Detailed error information
+- Test execution timeline
+- Export and sharing options</p>
+<hr />
+<h2 id="advanced-features">🛠️ Advanced Features<a class="headerlink" href="#advanced-features" title="Permanent link">&para;</a></h2>
+<h3 id="test-generation-with-codegen">Test Generation with Codegen<a class="headerlink" href="#test-generation-with-codegen" title="Permanent link">&para;</a></h3>
+<p>Record tests by interacting with your application:</p>
+<div class="highlight"><pre><span></span><code>npx<span class="w"> </span>playwright<span class="w"> </span>codegen<span class="w"> </span>demo.playwright.dev/todomvc
+</code></pre></div>
+<p><strong>Features:</strong>
+- Automatic locator generation
+- Assertion recording
+- Mobile emulation
+- Authentication state preservation</p>
+<h3 id="trace-viewer">Trace Viewer<a class="headerlink" href="#trace-viewer" title="Permanent link">&para;</a></h3>
+<p>Visual debugging with execution traces:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// playwright.config.ts</span>
+<span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="nx">defineConfig</span><span class="p">({</span>
+<span class="w">  </span><span class="nx">use</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">trace</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;on-first-retry&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Record on failure</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="p">});</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># Force trace recording</span>
+npx<span class="w"> </span>playwright<span class="w"> </span><span class="nb">test</span><span class="w"> </span>--trace<span class="w"> </span>on
+
+<span class="c1"># View traces in HTML report</span>
+npx<span class="w"> </span>playwright<span class="w"> </span>show-report
+</code></pre></div>
+<p><strong>Trace Features:</strong>
+- Step-by-step execution timeline
+- DOM snapshots at each step
+- Network request monitoring
+- Console logs and errors
+- Browser DevTools integration</p>
+<h3 id="cicd-setup">CI/CD Setup<a class="headerlink" href="#cicd-setup" title="Permanent link">&para;</a></h3>
+<h4 id="github-actions-example">GitHub Actions Example<a class="headerlink" href="#github-actions-example" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># .github/workflows/playwright.yml</span>
+<span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Playwright Tests</span>
+<span class="nt">on</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">push</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">branches</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="nv">main</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">master</span><span class="w"> </span><span class="p p-Indicator">]</span>
+<span class="w">  </span><span class="nt">pull_request</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">branches</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="w"> </span><span class="nv">main</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">master</span><span class="w"> </span><span class="p p-Indicator">]</span>
+
+<span class="nt">jobs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">test</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
+<span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v5</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/setup-node@v5</span>
+<span class="w">        </span><span class="nt">with</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">node-version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">lts/*</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Install dependencies</span>
+<span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">npm ci</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Install Playwright Browsers</span>
+<span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">npx playwright install --with-deps</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Run Playwright tests</span>
+<span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">npx playwright test</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/upload-artifact@v4</span>
+<span class="w">        </span><span class="nt">if</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ !cancelled() }}</span>
+<span class="w">        </span><span class="nt">with</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">playwright-report</span>
+<span class="w">          </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">playwright-report/</span>
+<span class="w">          </span><span class="nt">retention-days</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">30</span>
+</code></pre></div>
+<h4 id="publishing-reports-to-azure-storage">Publishing Reports to Azure Storage<a class="headerlink" href="#publishing-reports-to-azure-storage" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Upload HTML report to Azure</span>
+<span class="w">  </span><span class="nt">shell</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bash</span>
+<span class="w">  </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">    </span><span class="no">REPORT_DIR=&#39;run-${{ github.run_id }}-${{ github.run_attempt }}&#39;</span>
+<span class="w">    </span><span class="no">azcopy cp --recursive &quot;./playwright-report/*&quot; &quot;https://YOUR_STORAGE.blob.core.windows.net/\$web/$REPORT_DIR&quot;</span>
+<span class="w">    </span><span class="no">echo &quot;::notice title=HTML report url::https://YOUR_STORAGE.z1.web.core.windows.net/$REPORT_DIR/index.html&quot;</span>
+<span class="w">  </span><span class="nt">env</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">AZCOPY_AUTO_LOGIN_TYPE</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SPN</span>
+<span class="w">    </span><span class="nt">AZCOPY_SPA_APPLICATION_ID</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;${{</span><span class="nv"> </span><span class="s">secrets.AZCOPY_SPA_APPLICATION_ID</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">    </span><span class="nt">AZCOPY_SPA_CLIENT_SECRET</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;${{</span><span class="nv"> </span><span class="s">secrets.AZCOPY_SPA_CLIENT_SECRET</span><span class="nv"> </span><span class="s">}}&#39;</span>
+<span class="w">    </span><span class="nt">AZCOPY_TENANT_ID</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;${{</span><span class="nv"> </span><span class="s">secrets.AZCOPY_TENANT_ID</span><span class="nv"> </span><span class="s">}}&#39;</span>
+</code></pre></div>
+<hr />
+<h2 id="vs-code-integration">💻 VS Code Integration<a class="headerlink" href="#vs-code-integration" title="Permanent link">&para;</a></h2>
+<h3 id="getting-started">Getting Started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Install "Playwright Test for VS Code" extension</li>
+<li>Run <code>Test: Install Playwright</code> command</li>
+<li>Select browsers and configuration</li>
+</ol>
+<h3 id="core-features">Core Features<a class="headerlink" href="#core-features" title="Permanent link">&para;</a></h3>
+<h4 id="test-execution">Test Execution<a class="headerlink" href="#test-execution" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Click ▶️ next to any test to run it</li>
+<li>View results in Test Explorer sidebar</li>
+<li>Run all tests or specific test files</li>
+<li>Multi-browser project selection</li>
+</ul>
+<h4 id="debugging">Debugging<a class="headerlink" href="#debugging" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Set breakpoints directly in test code</li>
+<li>Live element highlighting</li>
+<li>AI-powered error suggestions (Copilot)</li>
+<li>Trace viewer integration</li>
+</ul>
+<h4 id="test-generation">Test Generation<a class="headerlink" href="#test-generation" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Record New Test</strong>: Click "Record new" in sidebar</li>
+<li><strong>Record at Cursor</strong>: Add actions to existing tests</li>
+<li><strong>Pick Locator</strong>: Generate optimal locators</li>
+</ul>
+<h4 id="advanced-vs-code-features">Advanced VS Code Features<a class="headerlink" href="#advanced-vs-code-features" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Project dependencies for setup tests</li>
+<li>Global setup/teardown management</li>
+<li>Multiple configuration file support</li>
+<li>Real-time test status updates</li>
+</ul>
+<hr />
+<h2 id="quick-reference">📋 Quick Reference<a class="headerlink" href="#quick-reference" title="Permanent link">&para;</a></h2>
+<h3 id="cli-commands">CLI Commands<a class="headerlink" href="#cli-commands" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Installation</span>
+npm<span class="w"> </span>init<span class="w"> </span>playwright@latest
+npx<span class="w"> </span>playwright<span class="w"> </span>install<span class="w"> </span>--with-deps
+
+<span class="c1"># Running Tests</span>
+npx<span class="w"> </span>playwright<span class="w"> </span><span class="nb">test</span><span class="w">                           </span><span class="c1"># All tests</span>
+npx<span class="w"> </span>playwright<span class="w"> </span><span class="nb">test</span><span class="w"> </span>--ui<span class="w">                      </span><span class="c1"># UI mode</span>
+npx<span class="w"> </span>playwright<span class="w"> </span><span class="nb">test</span><span class="w"> </span>--headed<span class="w">                  </span><span class="c1"># Headed mode</span>
+npx<span class="w"> </span>playwright<span class="w"> </span><span class="nb">test</span><span class="w"> </span>--project<span class="w"> </span>chromium<span class="w">        </span><span class="c1"># Specific browser</span>
+npx<span class="w"> </span>playwright<span class="w"> </span><span class="nb">test</span><span class="w"> </span>-g<span class="w"> </span><span class="s2">&quot;test name&quot;</span><span class="w">            </span><span class="c1"># Match test name</span>
+npx<span class="w"> </span>playwright<span class="w"> </span><span class="nb">test</span><span class="w"> </span>tests/file.spec.ts<span class="w">        </span><span class="c1"># Specific file</span>
+
+<span class="c1"># Debugging</span>
+npx<span class="w"> </span>playwright<span class="w"> </span><span class="nb">test</span><span class="w"> </span>--debug<span class="w">                   </span><span class="c1"># Inspector mode</span>
+npx<span class="w"> </span>playwright<span class="w"> </span><span class="nb">test</span><span class="w"> </span>--trace<span class="w"> </span>on<span class="w">                </span><span class="c1"># Force tracing</span>
+
+<span class="c1"># Reports</span>
+npx<span class="w"> </span>playwright<span class="w"> </span>show-report<span class="w">                    </span><span class="c1"># HTML report</span>
+
+<span class="c1"># Code Generation</span>
+npx<span class="w"> </span>playwright<span class="w"> </span>codegen<span class="w"> </span><span class="o">[</span>url<span class="o">]</span><span class="w">                  </span><span class="c1"># Record tests</span>
+
+<span class="c1"># Utilities</span>
+npx<span class="w"> </span>playwright<span class="w"> </span>--version<span class="w">                      </span><span class="c1"># Version info</span>
+</code></pre></div>
+<h3 id="configuration-options">Configuration Options<a class="headerlink" href="#configuration-options" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1">// playwright.config.ts</span>
+<span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">defineConfig</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@playwright/test&#39;</span><span class="p">;</span>
+
+<span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="nx">defineConfig</span><span class="p">({</span>
+<span class="w">  </span><span class="c1">// Test directory</span>
+<span class="w">  </span><span class="nx">testDir</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;./tests&#39;</span><span class="p">,</span>
+
+<span class="w">  </span><span class="c1">// Timeout settings</span>
+<span class="w">  </span><span class="nx">timeout</span><span class="o">:</span><span class="w"> </span><span class="kt">30</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">1000</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">expect</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">timeout</span><span class="o">:</span><span class="w"> </span><span class="kt">5000</span><span class="w"> </span><span class="p">},</span>
+
+<span class="w">  </span><span class="c1">// Browser projects</span>
+<span class="w">  </span><span class="nx">projects</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;chromium&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">use</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="nx">devices</span><span class="p">[</span><span class="s1">&#39;Desktop Chrome&#39;</span><span class="p">]</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;firefox&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">use</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="nx">devices</span><span class="p">[</span><span class="s1">&#39;Desktop Firefox&#39;</span><span class="p">]</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;webkit&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">use</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="nx">devices</span><span class="p">[</span><span class="s1">&#39;Desktop Safari&#39;</span><span class="p">]</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">},</span>
+<span class="w">  </span><span class="p">],</span>
+
+<span class="w">  </span><span class="c1">// Retry and tracing</span>
+<span class="w">  </span><span class="nx">retries</span><span class="o">:</span><span class="w"> </span><span class="kt">process.env.CI</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="nx">2</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="kt">0</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">use</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">trace</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;on-first-retry&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">screenshot</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;only-on-failure&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="p">},</span>
+
+<span class="w">  </span><span class="c1">// Reporters</span>
+<span class="w">  </span><span class="nx">reporter</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">[</span><span class="s1">&#39;html&#39;</span><span class="p">],</span>
+<span class="w">    </span><span class="p">[</span><span class="s1">&#39;junit&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">outputFile</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;results.xml&#39;</span><span class="w"> </span><span class="p">}]</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="p">});</span>
+</code></pre></div>
+<h3 id="best-practices">Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Use semantic locators (<code>getByRole</code>, <code>getByLabel</code>)</li>
+<li>Leverage auto-waiting capabilities</li>
+<li>Keep tests isolated and independent</li>
+<li>Use descriptive test names</li>
+<li>Configure retries for CI environments</li>
+<li>Enable tracing for debugging</li>
+<li>Use page objects for complex applications</li>
+<li>Run tests in parallel when possible</li>
+</ul>
+<hr />
+<h2 id="additional-resources">🔗 Additional Resources<a class="headerlink" href="#additional-resources" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://playwright.dev/docs/intro">Official Documentation</a></li>
+<li><a href="https://playwright.dev/docs/api/class-playwright">API Reference</a></li>
+<li><a href="https://github.com/microsoft/playwright-examples">Example Projects</a></li>
+<li><a href="https://aka.ms/playwright/discord">Community Discord</a></li>
+<li><a href="https://github.com/microsoft/playwright">GitHub Repository</a></li>
+</ul>
+<hr />
+<p><em>This guide was reorganized from the official Playwright documentation for better readability and logical flow.</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.expand", "navigation.sections", "navigation.top", "content.code.copy", "content.code.annotate", "search.highlight", "search.suggest"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
