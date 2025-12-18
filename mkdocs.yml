@@ -1,17 +1,20 @@
 site_name: Learn Everything For Me
-site_description: Knowledge base for SDET, Playwright, Selenium, API, and QA strategy
-site_url: https://vanvo19870515.github.io/learn-everything-for-me
-repo_url: https://github.com/vanvo19870515/learn-everything-for-me
-repo_name: vanvo19870515/learn-everything-for-me
+site_description: Knowledge base for SDET, Playwright, Selenium, API, and QA strategy by karusya
+site_url: https://karusya.github.io/learn-everything-for-me
+
+repo_url: https://github.com/karusya/learn-everything-for-me
+repo_name: karusya/learn-everything-for-me
+
 docs_dir: docs
 site_dir: site
 use_directory_urls: true
 
 theme:
   name: material
+  language: en
   logo: assets/avatar.png
   favicon: assets/avatar-32.png
-  language: en
+
   features:
     - navigation.expand
     - navigation.sections
@@ -20,16 +23,20 @@ theme:
     - content.code.annotate
     - search.highlight
     - search.suggest
+
   palette:
     - scheme: default
-      primary: blue
-      accent: light blue
+      primary: pink
+      accent: amber
     - scheme: slate
-      primary: blue
-      accent: light blue
+      primary: pink
+      accent: amber
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
+
+extra_css:
+  - stylesheets/extra.css
 
 plugins:
   - search
@@ -45,6 +52,7 @@ markdown_extensions:
 
 nav:
   - Home: index.md
+
   - Playwright:
       - Playwright Guide: Playwright_Guide_Reorganized.md
       - Canary & Agentic Workflow: playwright-agents.md
@@ -53,24 +61,31 @@ nav:
       - Reporter API: playwright-reporter.md
       - Library vs Test Runner: playwright-library.md
       - Migration Guides: migration-guides.md
-  - SQL Resources:
-      - SQL Roadmap: sql-roadmap.md
+
+  - API Testing:
+      - API Testing Guide: api-testing.md
+
+  - Testing Strategy:
+      - Test Automation Pyramid: Test_Automation_Pyramid_Guide.md
+      - Test Techniques: test-techniques.md
+      - Flaky Test Guide: Flaky_Test_Guide.md
+      - UI POM vs API POM: ui-api-pom-comparison.md
+      - Shift-Left Testing: shift-left-testing.md
+      - Mutation Testing: mutation-testing.md
+
   - QA Resources:
       - QA/SDET Transition Roadmap: qa-sdet-roadmap.md
       - QA & Automation Roadmap: qa-roadmap.md
       - Core Principles Framework: sdet-framework-foundation.md
       - SDET Framework Introduction: playwright-sdet-framework-intro.md
       - QA Load Test with K6: k6_performance_testing.md
+
   - Data Resources:
       - Elasticsearch Roadmap: elasticsearch-roadmap.md
       - Elasticsearch Query Deep Dive: elasticsearch-query-deepdive.md
       - HTTP Caching Guide: http-caching.md
-  - Testing Strategy:
-      - Test Automation Pyramid: Test_Automation_Pyramid_Guide.md
-      - Flaky Test Guide: Flaky_Test_Guide.md
-      - UI POM vs API POM: ui-api-pom-comparison.md
-      - Shift-Left Testing: shift-left-testing.md
-      - Mutation Testing: mutation-testing.md
+      - Web3: web3.md
+
   - SDET Prep:
       - SDET Interview Preparation: SDET_Interview_Preparation_Guide.md
       - Experienced Automation Tester Q&A: Experienced_Automation_Tester_QA.md

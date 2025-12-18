@@ -5,20 +5,21 @@
 ### Ngày 1-2: Tổng quan về Load Testing với k6
 
 ```javascript
- 1. Hiểu vì sao cần load testing
- - Đo lường hiệu năng hệ thống
- - Tìm điểm tắc nghẽn (bottleneck)
- - Kiểm tra khả năng mở rộng (scalability)
- - Đảm bảo SLA (Service Level Agreement)
+ 1. Understand why load testing is needed
+ - Measure system performance
+ - Identify bottlenecks
+ - Test scalability
+ - Ensure SLA compliance (Service Level Agreement)
 
- 2. Cài đặt k6
+ 2. Install k6
  -  macOS: brew install k6
  -  Windows: choco install k6
  -  Linux: sudo apt-get install k6
 
- 3. Cấu trúc script k6 cơ bản
+ 3. Basic k6 script structure
 import http from 'k6/http';
 import { check, sleep } from 'k6';
+
 
 export const options = {
   vus: 10, // Virtual Users
@@ -1447,3 +1448,39 @@ k6-project/
 ***Thực hành hàng ngày: Chạy ít nhất 1 test mỗi ngày***
 
 ***Document lại: Ghi chép các vấn đề gặp phải và cách giải quyết***
+
+
+Virtual Users (VUs)
+
+Simulate concurrent users.
+
+Execute the default function in a loop.
+
+✔ Stages / Scenarios
+
+Stages → simple ramping pattern.
+
+Scenarios → multiple types of traffic, each with its own executor.
+
+✔ Metrics
+
+Business metrics → revenue, orders, users.
+
+System metrics → response time, error rate, throughput.
+
+✔ Thresholds
+
+Business thresholds → revenue, orders, users.
+
+System thresholds → response time, error rate, throughput.
+
+✔ Executors (critical for interviews)
+
+Be able to explain when you'd use each:
+
+Executor	What it does	When it's used
+constant-vus	Fixed number of VUs	Steady load tests
+ramping-vus	Gradually increase/decrease VUs	Stress tests / Soak tests
+constant-arrival-rate	Fixed RPS, not tied to VUs	API throughput tests
+shared-iterations	Shared fixed number of iterations	Quick smoke/perf checks
+per-vu-iterations	Each VU runs X iterations	Flows with deterministic paths
