@@ -1,0 +1,2018 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Knowledge base for SDET, Playwright, Selenium, API, and QA strategy by karusya">
+      
+      
+      
+        <link rel="canonical" href="https://karusya.github.io/learn-everything-for-me/Experienced_Automation_Tester_QA/">
+      
+      
+        <link rel="prev" href="../SDET_Interview_Preparation_Guide/">
+      
+      
+        <link rel="next" href="../Automation_Interview_QA/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/avatar-32.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Experienced Automation Tester Q&A - Learn Everything For Me</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#interview-questions-answers-for-experienced-automation-testers" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Learn Everything For Me" class="md-header__button md-logo" aria-label="Learn Everything For Me" data-md-component="logo">
+      
+  <img src="../assets/avatar.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Learn Everything For Me
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Experienced Automation Tester Q&A
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="amber"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="pink" data-md-color-accent="amber"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/karusya/learn-everything-for-me" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    karusya/learn-everything-for-me
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Learn Everything For Me" class="md-nav__button md-logo" aria-label="Learn Everything For Me" data-md-component="logo">
+      
+  <img src="../assets/avatar.png" alt="logo">
+
+    </a>
+    Learn Everything For Me
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/karusya/learn-everything-for-me" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    karusya/learn-everything-for-me
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Playwright
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Playwright
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Playwright_Guide_Reorganized/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Playwright Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../playwright-agents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Canary & Agentic Workflow
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../playwright-fixtures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fixtures & Config
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../playwright-assertions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Assertions Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../playwright-reporter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reporter API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../playwright-library/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Library vs Test Runner
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../migration-guides/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Migration Guides
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API Testing
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    API Testing
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api-testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API Testing Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testing Strategy
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Testing Strategy
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Test_Automation_Pyramid_Guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test Automation Pyramid
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../test-techniques/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test Techniques
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Flaky_Test_Guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Flaky Test Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ui-api-pom-comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UI POM vs API POM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shift-left-testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Shift-Left Testing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mutation-testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mutation Testing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QA Resources
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    QA Resources
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../qa-sdet-roadmap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QA/SDET Transition Roadmap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../qa-roadmap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QA & Automation Roadmap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sdet-framework-foundation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Core Principles Framework
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../playwright-sdet-framework-intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SDET Framework Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../k6_performance_testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QA Load Test with K6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Resources
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Data Resources
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../elasticsearch-roadmap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Elasticsearch Roadmap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../elasticsearch-query-deepdive/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Elasticsearch Query Deep Dive
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../http-caching/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HTTP Caching Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../web3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Web3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SDET Prep
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    SDET Prep
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SDET_Interview_Preparation_Guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SDET Interview Preparation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Experienced Automation Tester Q&A
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Experienced Automation Tester Q&A
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#section-1-selenium-webdriver-20-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 1: Selenium WebDriver (20 Questions)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-2-core-java-20-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 2: Core Java (20 Questions)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-3-java-collections-framework-15-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 3: Java Collections Framework (15 Questions)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-4-testng-framework-16-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 4: TestNG Framework (16 Questions)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-5-cucumber-bdd-16-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 5: Cucumber BDD (16 Questions)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-6-rest-api-automation-16-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 6: REST API Automation (16 Questions)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-7-common-framework-design-best-practices-10-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 7: Common Framework Design &amp; Best Practices (10 Questions)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Automation_Interview_QA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Automation Interview Q&A
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java-oop-concepts.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Java OOP Concepts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#section-1-selenium-webdriver-20-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 1: Selenium WebDriver (20 Questions)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-2-core-java-20-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 2: Core Java (20 Questions)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-3-java-collections-framework-15-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 3: Java Collections Framework (15 Questions)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-4-testng-framework-16-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 4: TestNG Framework (16 Questions)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-5-cucumber-bdd-16-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 5: Cucumber BDD (16 Questions)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-6-rest-api-automation-16-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 6: REST API Automation (16 Questions)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-7-common-framework-design-best-practices-10-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Section 7: Common Framework Design &amp; Best Practices (10 Questions)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="interview-questions-answers-for-experienced-automation-testers">Interview Questions &amp; Answers for Experienced Automation Testers<a class="headerlink" href="#interview-questions-answers-for-experienced-automation-testers" title="Permanent link">&para;</a></h1>
+<h2 id="section-1-selenium-webdriver-20-questions">Section 1: Selenium WebDriver (20 Questions)<a class="headerlink" href="#section-1-selenium-webdriver-20-questions" title="Permanent link">&para;</a></h2>
+<p><strong>Q1. What are different types of waits in Selenium?</strong><br />
+Selenium provides three types of waits to handle synchronization:
+- <strong>Implicit Wait</strong>: Sets a default waiting time for all elements.
+  <div class="highlight"><pre><span></span><code><span class="n">driver</span><span class="p">.</span><span class="na">manage</span><span class="p">().</span><span class="na">timeouts</span><span class="p">().</span><span class="na">implicitlyWait</span><span class="p">(</span><span class="n">Duration</span><span class="p">.</span><span class="na">ofSeconds</span><span class="p">(</span><span class="mi">10</span><span class="p">));</span>
+</code></pre></div>
+- <strong>Explicit Wait</strong>: Waits for specific conditions on particular elements.
+  <div class="highlight"><pre><span></span><code><span class="n">WebDriverWait</span><span class="w"> </span><span class="n">wait</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">WebDriverWait</span><span class="p">(</span><span class="n">driver</span><span class="p">,</span><span class="w"> </span><span class="n">Duration</span><span class="p">.</span><span class="na">ofSeconds</span><span class="p">(</span><span class="mi">10</span><span class="p">));</span>
+<span class="n">wait</span><span class="p">.</span><span class="na">until</span><span class="p">(</span><span class="n">ExpectedConditions</span><span class="p">.</span><span class="na">visibilityOfElementLocated</span><span class="p">(</span><span class="n">By</span><span class="p">.</span><span class="na">id</span><span class="p">(</span><span class="s">&quot;submitBtn&quot;</span><span class="p">)));</span>
+</code></pre></div>
+- <strong>Fluent Wait</strong>: Custom polling and exception handling.
+  <div class="highlight"><pre><span></span><code><span class="n">Wait</span><span class="o">&lt;</span><span class="n">WebDriver</span><span class="o">&gt;</span><span class="w"> </span><span class="n">wait</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FluentWait</span><span class="o">&lt;&gt;</span><span class="p">(</span><span class="n">driver</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="na">withTimeout</span><span class="p">(</span><span class="n">Duration</span><span class="p">.</span><span class="na">ofSeconds</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+<span class="w">    </span><span class="p">.</span><span class="na">pollingEvery</span><span class="p">(</span><span class="n">Duration</span><span class="p">.</span><span class="na">ofMillis</span><span class="p">(</span><span class="mi">500</span><span class="p">))</span>
+<span class="w">    </span><span class="p">.</span><span class="na">ignoring</span><span class="p">(</span><span class="n">NoSuchElementException</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+<span class="n">wait</span><span class="p">.</span><span class="na">until</span><span class="p">(</span><span class="n">ExpectedConditions</span><span class="p">.</span><span class="na">visibilityOfElementLocated</span><span class="p">(</span><span class="n">By</span><span class="p">.</span><span class="na">id</span><span class="p">(</span><span class="s">&quot;element&quot;</span><span class="p">)));</span>
+</code></pre></div></p>
+<p><strong>Q2. Explain the difference between <code>findElement()</code> and <code>findElements()</code>.</strong><br />
+- <code>findElement()</code>: Returns a single <code>WebElement</code>; throws <code>NoSuchElementException</code> if not found.<br />
+  <div class="highlight"><pre><span></span><code><span class="n">WebElement</span><span class="w"> </span><span class="n">element</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">driver</span><span class="p">.</span><span class="na">findElement</span><span class="p">(</span><span class="n">By</span><span class="p">.</span><span class="na">id</span><span class="p">(</span><span class="s">&quot;username&quot;</span><span class="p">));</span>
+</code></pre></div>
+- <code>findElements()</code>: Returns a <code>List&lt;WebElement&gt;</code>; returns empty list if none found.<br />
+  <div class="highlight"><pre><span></span><code><span class="n">List</span><span class="o">&lt;</span><span class="n">WebElement</span><span class="o">&gt;</span><span class="w"> </span><span class="n">elements</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">driver</span><span class="p">.</span><span class="na">findElements</span><span class="p">(</span><span class="n">By</span><span class="p">.</span><span class="na">className</span><span class="p">(</span><span class="s">&quot;item&quot;</span><span class="p">));</span>
+</code></pre></div>
+Use <code>findElement()</code> when exactly one element is expected; <code>findElements()</code> for zero-or-many.</p>
+<p><strong>Q3. What are XPath and CSS Selector? When to use each?</strong><br />
+- <strong>XPath</strong>: Powerful, can traverse both directions.<br />
+<code>By.xpath("//button[@id='submit' and @class='primary']")</code><br />
+<code>By.xpath("//div[contains(@class, 'error-message')]")</code>
+- <strong>CSS Selector</strong>: Faster, concise for most cases.<br />
+<code>By.cssSelector("button#submit.primary")</code><br />
+<code>By.cssSelector("div.error-message")</code>
+Use CSS for simple stable locators; XPath for complex relations or when traversing parents/siblings.</p>
+<p><strong>Q4. How to handle dynamic elements / changing IDs?</strong><br />
+Strategies:
+1. Partial attribute match<br />
+<code>By.xpath("//button[starts-with(@id, 'btn_')]")</code><br />
+<code>By.cssSelector("button[id*='dynamic']")</code>
+2. Relative XPath by text<br />
+<code>By.xpath("//button[contains(text(), 'Submit')]")</code><br />
+<code>By.xpath("//label[text()='Username']/following::input")</code>
+3. Wait for presence/clickable<br />
+   <div class="highlight"><pre><span></span><code><span class="n">WebDriverWait</span><span class="w"> </span><span class="n">wait</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">WebDriverWait</span><span class="p">(</span><span class="n">driver</span><span class="p">,</span><span class="w"> </span><span class="n">Duration</span><span class="p">.</span><span class="na">ofSeconds</span><span class="p">(</span><span class="mi">10</span><span class="p">));</span>
+<span class="n">wait</span><span class="p">.</span><span class="na">until</span><span class="p">(</span><span class="n">ExpectedConditions</span><span class="p">.</span><span class="na">presenceOfElementLocated</span><span class="p">(</span>
+<span class="w">    </span><span class="n">By</span><span class="p">.</span><span class="na">xpath</span><span class="p">(</span><span class="s">&quot;//button[contains(@class, &#39;dynamic&#39;)]&quot;</span><span class="p">)));</span>
+</code></pre></div>
+4. Explicit wait then interact<br />
+   <div class="highlight"><pre><span></span><code><span class="n">WebElement</span><span class="w"> </span><span class="n">element</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">wait</span><span class="p">.</span><span class="na">until</span><span class="p">(</span>
+<span class="w">    </span><span class="n">ExpectedConditions</span><span class="p">.</span><span class="na">elementToBeClickable</span><span class="p">(</span><span class="n">By</span><span class="p">.</span><span class="na">xpath</span><span class="p">(</span><span class="s">&quot;//button[@onclick*=&#39;submit&#39;]&quot;</span><span class="p">)));</span>
+<span class="n">element</span><span class="p">.</span><span class="na">click</span><span class="p">();</span>
+</code></pre></div></p>
+<p><strong>Q5. Explain the Page Object Model (POM) pattern and its advantages.</strong><br />
+Each page = class; locators + actions encapsulated.
+<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">LoginPage</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">private</span><span class="w"> </span><span class="n">WebDriver</span><span class="w"> </span><span class="n">driver</span><span class="p">;</span>
+<span class="w">  </span><span class="kd">private</span><span class="w"> </span><span class="n">By</span><span class="w"> </span><span class="n">username</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">By</span><span class="p">.</span><span class="na">id</span><span class="p">(</span><span class="s">&quot;username&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="kd">private</span><span class="w"> </span><span class="n">By</span><span class="w"> </span><span class="n">password</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">By</span><span class="p">.</span><span class="na">id</span><span class="p">(</span><span class="s">&quot;password&quot;</span><span class="p">);</span>
+<span class="w">  </span><span class="kd">private</span><span class="w"> </span><span class="n">By</span><span class="w"> </span><span class="n">loginBtn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">By</span><span class="p">.</span><span class="na">id</span><span class="p">(</span><span class="s">&quot;loginBtn&quot;</span><span class="p">);</span>
+
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="nf">LoginPage</span><span class="p">(</span><span class="n">WebDriver</span><span class="w"> </span><span class="n">driver</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">driver</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">driver</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">enterUsername</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">u</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">driver</span><span class="p">.</span><span class="na">findElement</span><span class="p">(</span><span class="n">username</span><span class="p">).</span><span class="na">sendKeys</span><span class="p">(</span><span class="n">u</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">enterPassword</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">p</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">driver</span><span class="p">.</span><span class="na">findElement</span><span class="p">(</span><span class="n">password</span><span class="p">).</span><span class="na">sendKeys</span><span class="p">(</span><span class="n">p</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="n">DashboardPage</span><span class="w"> </span><span class="nf">clickLogin</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">driver</span><span class="p">.</span><span class="na">findElement</span><span class="p">(</span><span class="n">loginBtn</span><span class="p">).</span><span class="na">click</span><span class="p">();</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DashboardPage</span><span class="p">(</span><span class="n">driver</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+Advantages: centralized locators, maintainability, reduced duplication, readable tests, separation of concerns.</p>
+<p><strong>Q6. Difference between Actions class and direct element methods?</strong><br />
+- Direct: simple interactions (<code>click()</code>, <code>sendKeys()</code>).
+- Actions: complex gestures (hover, drag-drop, right-click, key chords).
+<div class="highlight"><pre><span></span><code><span class="n">Actions</span><span class="w"> </span><span class="n">actions</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Actions</span><span class="p">(</span><span class="n">driver</span><span class="p">);</span>
+<span class="n">actions</span><span class="p">.</span><span class="na">moveToElement</span><span class="p">(</span><span class="n">el</span><span class="p">).</span><span class="na">click</span><span class="p">().</span><span class="na">perform</span><span class="p">();</span>
+<span class="n">actions</span><span class="p">.</span><span class="na">dragAndDrop</span><span class="p">(</span><span class="n">src</span><span class="p">,</span><span class="w"> </span><span class="n">dst</span><span class="p">).</span><span class="na">perform</span><span class="p">();</span>
+<span class="n">actions</span><span class="p">.</span><span class="na">keyDown</span><span class="p">(</span><span class="n">Keys</span><span class="p">.</span><span class="na">SHIFT</span><span class="p">).</span><span class="na">click</span><span class="p">(</span><span class="n">el</span><span class="p">).</span><span class="na">keyUp</span><span class="p">(</span><span class="n">Keys</span><span class="p">.</span><span class="na">SHIFT</span><span class="p">).</span><span class="na">perform</span><span class="p">();</span>
+</code></pre></div></p>
+<p><strong>Q7. How do you handle <code>StaleElementReferenceException</code>?</strong><br />
+- Re-locate element after DOM change.
+- Use explicit waits for presence/visibility.
+- Retry on stale within a loop.
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">attempts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">attempts</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">try</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">driver</span><span class="p">.</span><span class="na">findElement</span><span class="p">(</span><span class="n">By</span><span class="p">.</span><span class="na">id</span><span class="p">(</span><span class="s">&quot;element&quot;</span><span class="p">)).</span><span class="na">click</span><span class="p">();</span><span class="w"> </span><span class="k">break</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">StaleElementReferenceException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">attempts</span><span class="o">++</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<p><strong>Q8. Locator strategies and reliability order.</strong><br />
+1) ID, 2) Name, 3) CSS, 4) XPath, 5) LinkText/Partial, 6) ClassName, 7) TagName.<br />
+Prefer ID/CSS; avoid brittle complex XPaths.</p>
+<p><strong>Q9. Differences: <code>driver.navigate()</code>, <code>driver.get()</code>, <code>driver.switchTo()</code></strong><br />
+- <code>get(url)</code>: Loads URL, waits for load.<br />
+- <code>navigate().to/back/forward/refresh()</code>: Adds history control.<br />
+- <code>switchTo()</code>: Change context (frames, windows, alerts).</p>
+<p><strong>Q10. Handling pop-ups, alerts, dialogs.</strong><br />
+- Alerts: <code>Alert alert = driver.switchTo().alert(); alert.accept();</code><br />
+- Windows: store main handle, iterate <code>getWindowHandles()</code>, switch.<br />
+- Frames: <code>switchTo().frame(name|index|element)</code>, then <code>defaultContent()</code> / <code>parentFrame()</code>.</p>
+<p><strong>Q11. Implicit vs Explicit vs Fluent Wait (practical).</strong><br />
+| Scenario | Wait Type | Example |
+| --- | --- | --- |
+| Page-wide default wait | Implicit | <code>implicitlyWait(10s)</code> |
+| Specific element condition | Explicit | <code>new WebDriverWait(...).until(visibilityOf(...))</code> |
+| Custom polling/ignores | Fluent | <code>new FluentWait(...).pollingEvery(500ms)...</code> |
+Best practice: avoid mixing implicit with explicit; prefer explicit/fluent.</p>
+<p><strong>Q12. Screenshots and visual reports.</strong><br />
+<div class="highlight"><pre><span></span><code><span class="n">File</span><span class="w"> </span><span class="n">shot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">((</span><span class="n">TakesScreenshot</span><span class="p">)</span><span class="n">driver</span><span class="p">).</span><span class="na">getScreenshotAs</span><span class="p">(</span><span class="n">OutputType</span><span class="p">.</span><span class="na">FILE</span><span class="p">);</span>
+<span class="n">FileUtils</span><span class="p">.</span><span class="na">copyFile</span><span class="p">(</span><span class="n">shot</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">File</span><span class="p">(</span><span class="s">&quot;./screenshots/test_&quot;</span><span class="o">+</span><span class="n">System</span><span class="p">.</span><span class="na">currentTimeMillis</span><span class="p">()</span><span class="o">+</span><span class="s">&quot;.png&quot;</span><span class="p">));</span>
+<span class="c1">// Element screenshot (Selenium 4)</span>
+<span class="n">File</span><span class="w"> </span><span class="n">elem</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">element</span><span class="p">.</span><span class="na">getScreenshotAs</span><span class="p">(</span><span class="n">OutputType</span><span class="p">.</span><span class="na">FILE</span><span class="p">);</span>
+</code></pre></div>
+For reports, integrate ExtentReports / Allure and attach images (path or Base64).</p>
+<p><strong>Q13. Handling SSL certificate errors.</strong><br />
+<div class="highlight"><pre><span></span><code><span class="n">ChromeOptions</span><span class="w"> </span><span class="n">opt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ChromeOptions</span><span class="p">();</span><span class="w"> </span><span class="n">opt</span><span class="p">.</span><span class="na">setAcceptInsecureCerts</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+<span class="n">WebDriver</span><span class="w"> </span><span class="n">driver</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ChromeDriver</span><span class="p">(</span><span class="n">opt</span><span class="p">);</span>
+<span class="c1">// Similar for FirefoxOptions/EdgeOptions</span>
+</code></pre></div></p>
+<p><strong>Q14. Keyboard and mouse interactions.</strong><br />
+<div class="highlight"><pre><span></span><code><span class="n">Actions</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Actions</span><span class="p">(</span><span class="n">driver</span><span class="p">);</span>
+<span class="n">a</span><span class="p">.</span><span class="na">sendKeys</span><span class="p">(</span><span class="n">Keys</span><span class="p">.</span><span class="na">ENTER</span><span class="p">).</span><span class="na">perform</span><span class="p">();</span>
+<span class="n">a</span><span class="p">.</span><span class="na">click</span><span class="p">(</span><span class="n">element</span><span class="p">).</span><span class="na">doubleClick</span><span class="p">(</span><span class="n">element</span><span class="p">).</span><span class="na">contextClick</span><span class="p">(</span><span class="n">element</span><span class="p">).</span><span class="na">perform</span><span class="p">();</span>
+<span class="n">a</span><span class="p">.</span><span class="na">dragAndDrop</span><span class="p">(</span><span class="n">src</span><span class="p">,</span><span class="w"> </span><span class="n">dst</span><span class="p">).</span><span class="na">perform</span><span class="p">();</span>
+</code></pre></div></p>
+<p><strong>Q15. <code>switchTo()</code> for frames/windows.</strong><br />
+- Frames: <code>frame(index|name|element)</code>, <code>parentFrame()</code>, <code>defaultContent()</code>.<br />
+- Windows: iterate handles, <code>switchTo().window(handle)</code>, return to main.</p>
+<p><strong>Q16. File uploads / downloads.</strong><br />
+- Upload: <code>element.sendKeys("C:\\path\\file.txt");</code><br />
+- Downloads: set browser prefs to auto-download; verify file exists in download dir.</p>
+<p><strong>Q17. Common ExpectedConditions (WebDriverWait).</strong><br />
+<code>presenceOfElementLocated</code>, <code>visibilityOfElementLocated</code>, <code>elementToBeClickable</code>, <code>textToBePresentInElement</code>, <code>stalenessOf</code>, <code>invisibilityOfElementLocated</code>, <code>numberOfElementsToBeMoreThan</code>, <code>urlContains</code>, <code>alertIsPresent</code>.</p>
+<p><strong>Q18. Execute JavaScript in Selenium.</strong><br />
+<div class="highlight"><pre><span></span><code><span class="n">JavascriptExecutor</span><span class="w"> </span><span class="n">js</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">JavascriptExecutor</span><span class="p">)</span><span class="w"> </span><span class="n">driver</span><span class="p">;</span>
+<span class="n">js</span><span class="p">.</span><span class="na">executeScript</span><span class="p">(</span><span class="s">&quot;arguments[0].click();&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">element</span><span class="p">);</span>
+<span class="n">js</span><span class="p">.</span><span class="na">executeScript</span><span class="p">(</span><span class="s">&quot;arguments[0].scrollIntoView(true);&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">element</span><span class="p">);</span>
+<span class="n">String</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="p">)</span><span class="w"> </span><span class="n">js</span><span class="p">.</span><span class="na">executeScript</span><span class="p">(</span><span class="s">&quot;return arguments[0].textContent;&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">element</span><span class="p">);</span>
+</code></pre></div></p>
+<p><strong>Q19. Headless browser testing (pros/cons).</strong><br />
+- Pros: faster, lower resource, CI-friendly, good for parallel.<br />
+- Cons: no visuals, some JS/CSS differences, harder debug.<br />
+<div class="highlight"><pre><span></span><code><span class="n">ChromeOptions</span><span class="w"> </span><span class="n">o</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ChromeOptions</span><span class="p">();</span><span class="w"> </span><span class="n">o</span><span class="p">.</span><span class="na">addArguments</span><span class="p">(</span><span class="s">&quot;--headless=new&quot;</span><span class="p">);</span>
+<span class="n">WebDriver</span><span class="w"> </span><span class="n">driver</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ChromeDriver</span><span class="p">(</span><span class="n">o</span><span class="p">);</span>
+</code></pre></div></p>
+<p><strong>Q20. Test data &amp; env configuration.</strong><br />
+Use properties/JSON, config reader, env-specific files.<br />
+<div class="highlight"><pre><span></span><code><span class="n">Properties</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Properties</span><span class="p">();</span>
+<span class="n">p</span><span class="p">.</span><span class="na">load</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">FileInputStream</span><span class="p">(</span><span class="s">&quot;./config.properties&quot;</span><span class="p">));</span>
+<span class="n">String</span><span class="w"> </span><span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="na">getProperty</span><span class="p">(</span><span class="s">&quot;base.url&quot;</span><span class="p">);</span>
+</code></pre></div></p>
+<hr />
+<h2 id="section-2-core-java-20-questions">Section 2: Core Java (20 Questions)<a class="headerlink" href="#section-2-core-java-20-questions" title="Permanent link">&para;</a></h2>
+<p><strong>Q21. OOP concepts: Encapsulation, Inheritance, Polymorphism, Abstraction.</strong><br />
+- Encapsulation: hide data via accessors.<br />
+- Inheritance: reuse / IS-A.<br />
+- Polymorphism: overloading/overriding.<br />
+- Abstraction: abstract classes/interfaces.</p>
+<p><strong>Q22. Static vs non-static members.</strong><br />
+Static: class-level, single copy, accessed via class, hidden not overridden.<br />
+Non-static: per-instance, can be overridden.</p>
+<p><strong>Q23. Exception hierarchy &amp; handling.</strong><br />
+<code>Throwable -&gt; Error / Exception -&gt; (Checked / Runtime)</code>. Use try-catch-finally, multi-catch, try-with-resources, <code>throw/throws</code>.</p>
+<p><strong>Q24. Checked vs unchecked exceptions.</strong><br />
+Checked must be declared/caught (e.g., IOException); unchecked extend RuntimeException (e.g., NPE).</p>
+<p><strong>Q25. String vs StringBuilder vs StringBuffer.</strong><br />
+Immutable vs mutable; thread-safety (StringBuffer synchronized); performance.</p>
+<p><strong>Q26. Access modifiers scope.</strong><br />
+<code>public</code> (anywhere), <code>protected</code> (package + subclasses), default (package), <code>private</code> (class).</p>
+<p><strong>Q27. Interfaces vs abstract classes.</strong><br />
+Interface = contract (single/multiple), default/static methods allowed. Abstract class = partial impl, state + behavior, single inheritance.</p>
+<p><strong>Q28. Overloading vs overriding.</strong><br />
+Overloading: same name, different params (compile-time). Overriding: subclass redefines (runtime).</p>
+<p><strong>Q29. <code>final</code> keyword uses.</strong><br />
+Final class (no extend), final method (no override), final variable (const).</p>
+<p><strong>Q30. Pass-by-value in Java.</strong><br />
+Primitives copy value; object references copied (object mutable, reference reassignment not reflected).</p>
+<p><strong>Q31. Constructors: default, parameterized, copy.</strong><br />
+Used for initialization; copy constructor to clone state.</p>
+<p><strong>Q32. <code>this</code> and <code>super</code>.</strong><br />
+<code>this</code> current instance; <code>super</code> parent access/constructor.</p>
+<p><strong>Q33. <code>instanceof</code> usage.</strong><br />
+Type checking before casting; e.g., driver instanceof ChromeDriver.</p>
+<p><strong>Q34. Memory management &amp; GC; leaks.</strong><br />
+Heap vs Stack; eligible for GC when unreferenced; avoid static collections holding onto objects.</p>
+<p><strong>Q35. Wrapper classes, auto-boxing/unboxing.</strong><br />
+Primitives to objects and back; needed for generics/collections.</p>
+<p><strong>Q36. <code>==</code> vs <code>.equals()</code>.</strong><br />
+<code>==</code> reference (objects) / value (primitives); <code>.equals()</code> content (override for custom).</p>
+<p><strong>Q37. Immutability &amp; creating immutable classes.</strong><br />
+Final class, final fields, no setters, defensive copies.</p>
+<p><strong>Q38. Generics for type safety.</strong><br />
+Compile-time checks, no casting; bounded generics.</p>
+<p><strong>Q39. HashMap vs Hashtable.</strong><br />
+HashMap not synchronized, allows null; Hashtable synchronized, legacy.</p>
+<p><strong>Q40. Lambda expressions &amp; functional interfaces.</strong><br />
+Single Abstract Method (SAM); use Predicate, Function, Consumer, Supplier; method refs.</p>
+<hr />
+<h2 id="section-3-java-collections-framework-15-questions">Section 3: Java Collections Framework (15 Questions)<a class="headerlink" href="#section-3-java-collections-framework-15-questions" title="Permanent link">&para;</a></h2>
+<p><strong>Q41. Collection hierarchy; Collection vs Collections.</strong><br />
+Collection = root interface (List/Set/Queue). Collections = utility class (static helpers).</p>
+<p><strong>Q42. ArrayList vs LinkedList vs Vector.</strong><br />
+ArrayList: random access, dynamic array. LinkedList: fast insert/delete mid, queue/deque. Vector: legacy synchronized.</p>
+<p><strong>Q43. HashSet vs TreeSet vs LinkedHashSet.</strong><br />
+HashSet: no order, O(1). TreeSet: sorted, O(log n), no null. LinkedHashSet: insertion order.</p>
+<p><strong>Q44. HashMap vs TreeMap vs LinkedHashMap.</strong><br />
+HashMap: no order, allows null. TreeMap: sorted by key, no null key. LinkedHashMap: insertion order.</p>
+<p><strong>Q45. Comparable vs Comparator.</strong><br />
+Comparable = natural ordering inside class; Comparator = external multiple orderings.</p>
+<p><strong>Q46. Iterator and safe removal.</strong><br />
+Use iterator.remove() or <code>removeIf</code>; avoid modifying during enhanced for.</p>
+<p><strong>Q47. Fail-fast vs fail-safe iterators.</strong><br />
+Fail-fast (ArrayList, HashMap) throw CME on modification. Fail-safe (ConcurrentHashMap, CopyOnWriteArrayList) work on snapshot.</p>
+<p><strong>Q48. <code>stream()</code> vs <code>parallelStream()</code>.</strong><br />
+Sequential vs parallel processing; order guarantees differ; use parallel for large CPU-bound tasks when order not critical.</p>
+<p><strong>Q49. Queue, Deque, PriorityQueue.</strong><br />
+Queue FIFO; Deque double-ended; PriorityQueue ordered by priority/comparator.</p>
+<p><strong>Q50. Map.Entry iteration methods.</strong><br />
+<code>entrySet()</code>, <code>keySet()</code>, <code>values()</code>, <code>forEach</code>, streams.</p>
+<p><strong>Q51. Fail-fast vs fail-safe collections (expanded).</strong><br />
+Fail-fast throw CME on concurrent modification; fail-safe use copy/snapshot (no CME, may not reflect latest).</p>
+<p><strong>Q52. Stream ops: filter/map/flatMap/reduce/collect.</strong><br />
+Examples for even filter, mapping, flattening, reducing sum/product, collecting to list/set/map/grouping.</p>
+<p><strong>Q53. Array vs ArrayList.</strong><br />
+Fixed vs dynamic size; primitives allowed in arrays; ArrayList objects only; richer API.</p>
+<p><strong>Q54. Difference List vs Set vs Map.</strong><br />
+List ordered/duplicates; Set unique; Map key-value with unique keys.</p>
+<p><strong>Q55. Collectors common methods.</strong><br />
+<code>toList</code>, <code>toSet</code>, <code>toMap</code>, <code>groupingBy</code>, <code>partitioningBy</code>, <code>joining</code>, <code>counting</code>, <code>averaging</code>, <code>summarizingInt</code>, <code>maxBy/minBy</code>.</p>
+<hr />
+<h2 id="section-4-testng-framework-16-questions">Section 4: TestNG Framework (16 Questions)<a class="headerlink" href="#section-4-testng-framework-16-questions" title="Permanent link">&para;</a></h2>
+<p><strong>Q56. What is TestNG and how does it differ from JUnit?</strong><br />
+Richer annotations, groups, dependencies, parallelism, DataProvider, suites.</p>
+<p><strong>Q57. TestNG annotations lifecycle.</strong><br />
+<code>@BeforeSuite</code>, <code>@BeforeTest</code>, <code>@BeforeClass</code>, <code>@BeforeMethod</code>, <code>@Test</code>, and corresponding <code>@After*</code>; know scope/frequency.</p>
+<p><strong>Q58. <code>@Test</code> attributes (<code>invocationCount</code>, <code>timeOut</code>, <code>expectedExceptions</code>, <code>description</code>, <code>enabled</code>, <code>dependsOnMethods</code>, <code>alwaysRun</code>, <code>priority</code>).</strong></p>
+<p><strong>Q59. TestNG assertions vs standard.</strong><br />
+Hard assertions stop on failure; SoftAssert collects then <code>assertAll()</code>.</p>
+<p><strong>Q60. DataProvider for parameterization.</strong><br />
+Returns Object[][] / Iterator<Object[]>; supports parallel, external data (CSV/JSON/DB).</p>
+<p><strong>Q61. testng.xml configuration and execution.</strong><br />
+Define suites/tests/classes/methods, params, groups; run via <code>testng.xml</code> or Maven Surefire.</p>
+<p><strong>Q62. Listeners (ITestListener, ISuiteListener, etc.).</strong><br />
+Implement for hooks like onTestStart/Success/Failure; use for screenshots, logging, reporting; register in XML or programmatically.</p>
+<p><strong>Q63. Test grouping and running specific groups.</strong><br />
+Use <code>groups</code> on @Test; include/exclude in XML or via <code>-Dgroups</code>.</p>
+<p><strong>Q64. Parallel execution in TestNG.</strong><br />
+Parallel at suite/test/class/method/instances; configure <code>parallel</code> and <code>thread-count</code> in XML or Surefire; ensure thread-safe WebDriver (ThreadLocal).</p>
+<p><strong>Q65. Test dependencies with <code>dependsOnMethods</code> and <code>alwaysRun</code>.</strong></p>
+<p><strong>Q66. Reporting: built-in + ExtentReports/Allure integration.</strong></p>
+<p><strong>Q67. Soft vs hard assertions (SoftAssert vs Assert).</strong></p>
+<p><strong>Q68. <code>@DataProvider</code> attributes (name, parallel, context/method params).</strong></p>
+<p><strong>Q69. Skipping tests (<code>enabled=false</code>, <code>SkipException</code>, XML exclude, conditional in hooks).</strong></p>
+<p><strong>Q70. Suite/Test/Class/Method hooks (<code>@BeforeSuite</code>, <code>@AfterSuite</code>, <code>@BeforeTest</code>, <code>@AfterTest</code>).</strong></p>
+<p><strong>Q71. @Test attributes: priority, groups, alwaysRun, timeOut, dependsOn, description.</strong></p>
+<hr />
+<h2 id="section-5-cucumber-bdd-16-questions">Section 5: Cucumber BDD (16 Questions)<a class="headerlink" href="#section-5-cucumber-bdd-16-questions" title="Permanent link">&para;</a></h2>
+<p><strong>Q72. What is Cucumber/BDD? Gherkin syntax.</strong><br />
+Feature/Scenario/Scenario Outline, Given/When/Then/And/But, Background, Examples.</p>
+<p><strong>Q73. Step definitions creation.</strong><br />
+Map steps with annotations (<code>@Given</code>, <code>@When</code>, <code>@Then</code>); parameter types; use Page Objects.</p>
+<p><strong>Q74. Hooks (@Before/@After) and tag-specific hooks with order.</strong><br />
+Use for setup/teardown; attach screenshots on failure.</p>
+<p><strong>Q75. Tags and running specific tags.</strong><br />
+Tag expressions: <code>@smoke</code>, <code>@smoke or @regression</code>, <code>@smoke and @critical</code>, <code>not @skip</code>.</p>
+<p><strong>Q76. Data Tables usage.</strong><br />
+<code>DataTable</code> to maps/lists/custom objects; single/multi-column tables.</p>
+<p><strong>Q77. Scenario Outline with Examples.</strong><br />
+Template-driven scenarios; placeholders <code>&lt;var&gt;</code> replaced by Examples rows.</p>
+<p><strong>Q78. Cucumber runner configuration.</strong><br />
+<code>@CucumberOptions</code> with features, glue, plugins (pretty/html/json/junit/allure), tags, dryRun, monochrome, snippets.</p>
+<p><strong>Q79. Background steps execution.</strong><br />
+Common setup before each scenario in a feature.</p>
+<p><strong>Q80. Passing parameters in steps (string/int/float/double/word/regex/DataTable).</strong></p>
+<p><strong>Q81. Cucumber reports (HTML/JSON/JUnit/Allure) and plugin setup.</strong></p>
+<p><strong>Q82. Skipping scenarios (tags + <code>SkipException</code> + tag filters).</strong></p>
+<p><strong>Q83. World/Context object for shared state (PicoContainer DI).</strong></p>
+<p><strong>Q84. Parallel execution in Cucumber (TestNG runners, multiple runners, Surefire/Failsafe).</strong></p>
+<p><strong>Q85. Step definition best practices (single responsibility, POM, no hardcoded waits, logging, reuse).</strong></p>
+<hr />
+<h2 id="section-6-rest-api-automation-16-questions">Section 6: REST API Automation (16 Questions)<a class="headerlink" href="#section-6-rest-api-automation-16-questions" title="Permanent link">&para;</a></h2>
+<p><strong>Q86. REST API principles &amp; HTTP methods (idempotence, CRUD mapping).</strong></p>
+<p><strong>Q87. RestAssured basics (given/when/then; baseURI; GET/POST/PUT/DELETE).</strong></p>
+<p><strong>Q88. HTTP status codes (200/201/204/400/401/403/404/405/500/502/503).</strong></p>
+<p><strong>Q89. JSON/XML parsing (JsonPath, XmlPath), arrays, nested objects.</strong></p>
+<p><strong>Q90. Headers &amp; auth (Bearer, Basic, OAuth2), RequestSpec/ResponseSpec, API keys.</strong></p>
+<p><strong>Q91. JSON Schema validation (<code>json-schema-validator</code> module; file or inline schemas).</strong></p>
+<p><strong>Q92. Content types (JSON, XML, form-url-encoded, multipart).</strong></p>
+<p><strong>Q93. Parameterization/data-driven API tests (DataProvider, CSV/JSON external data).</strong></p>
+<p><strong>Q94. Request/response logging (filters, conditional logging, log to file/custom filters).</strong></p>
+<p><strong>Q95. Timeouts, retries, error handling (socket/connect timeouts, retry analyzer/manual retries, handling 4xx/5xx).</strong></p>
+<p><strong>Q96. SOAP vs REST; SOAP testing (SOAPMessage; or RestAssured with XML + XPath).</strong></p>
+<hr />
+<h2 id="section-7-common-framework-design-best-practices-10-questions">Section 7: Common Framework Design &amp; Best Practices (10 Questions)<a class="headerlink" href="#section-7-common-framework-design-best-practices-10-questions" title="Permanent link">&para;</a></h2>
+<p><strong>Q97. Test automation framework architecture (layered: execution → framework → business/page/steps → utilities → AUT).</strong><br />
+Driver manager, config reader, base test, page objects, utilities, reporting/logging.</p>
+<p><strong>Q98. Page Object Model importance (maintainability, reuse, readability).</strong><br />
+Encapsulate locators/actions; return next page objects; handle waits inside page methods.</p>
+<p><strong>Q99. CI/CD integration.</strong><br />
+Jenkins/GitHub Actions pipelines: build → unit → integration/API → UI smoke/regression → reports → deploy; headless, artifacts, notifications.</p>
+<p><strong>Q100. Best practices for scalable/maintainable frameworks.</strong><br />
+Modular structure, centralized config, data-driven, robust waits, logging, screenshots, reusable utilities, version control hygiene, code quality tools (Sonar, Jacoco), documentation.</p>
+<p><strong>Bonus Q101–Q105 (from design/best-practices):</strong><br />
+- <strong>Q101. Cross-browser testing</strong> via TestNG params and driver factory.<br />
+- <strong>Q102. Environment management</strong> using enums/profiles/props.<br />
+- <strong>Q103. Custom assertions/validations</strong> utilities.<br />
+- <strong>Q104. Reporting with screenshots/logs</strong> (Extent/Allure + logger).<br />
+- <strong>Q105. Test data management &amp; cleanup</strong> (DB helpers, factories, teardown).</p>
+<hr />
+<p><em>Use this guide as a concise Markdown reference for experienced automation testers preparing for interviews across Selenium, Java, TestNG, Cucumber BDD, API testing, and framework design.</em> </p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.expand", "navigation.sections", "navigation.top", "content.code.copy", "content.code.annotate", "search.highlight", "search.suggest"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

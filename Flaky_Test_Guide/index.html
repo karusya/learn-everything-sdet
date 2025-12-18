@@ -1,0 +1,3186 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Knowledge base for SDET, Playwright, Selenium, API, and QA strategy by karusya">
+      
+      
+      
+        <link rel="canonical" href="https://karusya.github.io/learn-everything-for-me/Flaky_Test_Guide/">
+      
+      
+        <link rel="prev" href="../test-techniques/">
+      
+      
+        <link rel="next" href="../ui-api-pom-comparison/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/avatar-32.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Flaky Test Guide - Learn Everything For Me</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#flaky-test-huong-dan-hoan-chinh" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Learn Everything For Me" class="md-header__button md-logo" aria-label="Learn Everything For Me" data-md-component="logo">
+      
+  <img src="../assets/avatar.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Learn Everything For Me
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Flaky Test Guide
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="amber"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="pink" data-md-color-accent="amber"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/karusya/learn-everything-for-me" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    karusya/learn-everything-for-me
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Learn Everything For Me" class="md-nav__button md-logo" aria-label="Learn Everything For Me" data-md-component="logo">
+      
+  <img src="../assets/avatar.png" alt="logo">
+
+    </a>
+    Learn Everything For Me
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/karusya/learn-everything-for-me" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    karusya/learn-everything-for-me
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Playwright
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Playwright
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Playwright_Guide_Reorganized/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Playwright Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../playwright-agents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Canary & Agentic Workflow
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../playwright-fixtures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fixtures & Config
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../playwright-assertions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Assertions Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../playwright-reporter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reporter API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../playwright-library/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Library vs Test Runner
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../migration-guides/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Migration Guides
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API Testing
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    API Testing
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api-testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API Testing Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testing Strategy
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Testing Strategy
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Test_Automation_Pyramid_Guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test Automation Pyramid
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../test-techniques/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test Techniques
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Flaky Test Guide
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Flaky Test Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#flaky-test-la-gi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ❓ Flaky Test Là Gì?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="❓ Flaky Test Là Gì?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ac-iem-chinh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Đặc Điểm Chính
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vi-du-thuc-te" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💡 Ví Dụ Thực Tế
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dau-hieu-nhan-biet-flaky-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚨 Dấu Hiệu Nhận Biết Flaky Test
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚨 Dấu Hiệu Nhận Biết Flaky Test">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thong-ke-bat-thuong" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 Thống Kê Bất Thường
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hanh-vi-khong-on-inh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔄 Hành Vi Không Ổn Định
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tac-ong-en-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📈 Tác Động Đến Pipeline
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nguyen-nhan-pho-bien-nhat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧠 Nguyên Nhân Phổ Biến Nhất
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧠 Nguyên Nhân Phổ Biến Nhất">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-timing-wait-khong-u" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⏱️ 1. Timing / Wait Không Đủ
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⏱️ 1. Timing / Wait Không Đủ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vi-du-xau" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ❌ Ví Dụ Xấu
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cach-ung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Cách Đúng
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-dependency-vao-du-lieu-thay-oi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 2. Dependency Vào Dữ Liệu Thay Đổi
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📊 2. Dependency Vào Dữ Liệu Thay Đổi">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vi-du-flaky" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ❌ Ví Dụ Flaky
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cach-fix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Cách Fix
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-race-condition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⚡ 3. Race Condition
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-khong-clean-state-truoc-moi-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧹 4. Không Clean State Trước Mỗi Test
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧹 4. Không Clean State Trước Mỗi Test">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test-flaky" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ❌ Test Flaky
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cach-fix_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Cách Fix
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-external-dependency" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🌐 5. External Dependency
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🌐 5. External Dependency">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#phu-thuoc-external" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ❌ Phụ Thuộc External
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mock-external-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Mock External Services
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cach-xu-ly-flaky-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛠️ Cách Xử Lý Flaky Test
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛠️ Cách Xử Lý Flaky Test">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-luon-dung-locator-on-inh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 1. Luôn Dùng Locator Ổn Định
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 1. Luôn Dùng Locator Ổn Định">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#locator-flaky" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ❌ Locator Flaky
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#locator-tot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Locator Tốt
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-oi-ung-ieu-kien-auto-wait" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⏳ 2. Đợi Đúng Điều Kiện (Auto-Wait)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-dung-retry-timeout-hop-ly" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔄 3. Dùng Retry &amp; Timeout Hợp Lý
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-mock-api-khi-khong-can-that" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎭 4. Mock API Khi Không Cần Thật
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-reset-state-moi-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧽 5. Reset State Mỗi Test
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debug-flaky-test-trong-ci" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧪 Debug Flaky Test Trong CI
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧪 Debug Flaky Test Trong CI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quy-trinh-debug" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔍 Quy Trình Debug
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔍 Quy Trình Debug">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-xac-nhan-flaky" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1️⃣ Xác Nhận Flaky
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-bat-trace-video" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2️⃣ Bật Trace &amp; Video
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-phan-tich-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3️⃣ Phân Tích Logs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debug-techniques" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🐌 Debug Techniques
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🐌 Debug Techniques">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#slow-motion-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slow Motion Mode
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Network Monitoring
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#environment-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Environment Comparison
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checklist-xu-ly-flaky-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📋 Checklist Xử Lý Flaky Test
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📋 Checklist Xử Lý Flaky Test">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#truoc-khi-viet-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Trước Khi Viết Test
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trong-qua-trinh-viet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Trong Quá Trình Viết
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#khi-test-fail" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Khi Test Fail
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#refactor-flaky-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Refactor Flaky Test
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices-tranh-flaky-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Best Practices Tránh Flaky Test
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 Best Practices Tránh Flaky Test">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🏗️ Test Design
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tool-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔧 Tool Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monitoring-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 Monitoring &amp; Metrics
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ket-luan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚀 Kết Luận
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚀 Kết Luận">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#chien-luoc-phong-ngua" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💡 Chiến Lược Phòng Ngừa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mindset-qa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎖️ Mindset QA
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ui-api-pom-comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UI POM vs API POM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shift-left-testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Shift-Left Testing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mutation-testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mutation Testing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QA Resources
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    QA Resources
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../qa-sdet-roadmap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QA/SDET Transition Roadmap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../qa-roadmap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QA & Automation Roadmap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sdet-framework-foundation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Core Principles Framework
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../playwright-sdet-framework-intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SDET Framework Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../k6_performance_testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QA Load Test with K6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Resources
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Data Resources
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../elasticsearch-roadmap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Elasticsearch Roadmap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../elasticsearch-query-deepdive/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Elasticsearch Query Deep Dive
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../http-caching/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HTTP Caching Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../web3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Web3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SDET Prep
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    SDET Prep
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SDET_Interview_Preparation_Guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SDET Interview Preparation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Experienced_Automation_Tester_QA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Experienced Automation Tester Q&A
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Automation_Interview_QA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Automation Interview Q&A
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java-oop-concepts.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Java OOP Concepts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#flaky-test-la-gi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ❓ Flaky Test Là Gì?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="❓ Flaky Test Là Gì?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ac-iem-chinh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Đặc Điểm Chính
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vi-du-thuc-te" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💡 Ví Dụ Thực Tế
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dau-hieu-nhan-biet-flaky-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚨 Dấu Hiệu Nhận Biết Flaky Test
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚨 Dấu Hiệu Nhận Biết Flaky Test">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thong-ke-bat-thuong" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 Thống Kê Bất Thường
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hanh-vi-khong-on-inh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔄 Hành Vi Không Ổn Định
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tac-ong-en-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📈 Tác Động Đến Pipeline
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nguyen-nhan-pho-bien-nhat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧠 Nguyên Nhân Phổ Biến Nhất
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧠 Nguyên Nhân Phổ Biến Nhất">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-timing-wait-khong-u" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⏱️ 1. Timing / Wait Không Đủ
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⏱️ 1. Timing / Wait Không Đủ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vi-du-xau" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ❌ Ví Dụ Xấu
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cach-ung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Cách Đúng
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-dependency-vao-du-lieu-thay-oi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 2. Dependency Vào Dữ Liệu Thay Đổi
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📊 2. Dependency Vào Dữ Liệu Thay Đổi">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vi-du-flaky" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ❌ Ví Dụ Flaky
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cach-fix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Cách Fix
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-race-condition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⚡ 3. Race Condition
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-khong-clean-state-truoc-moi-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧹 4. Không Clean State Trước Mỗi Test
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧹 4. Không Clean State Trước Mỗi Test">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test-flaky" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ❌ Test Flaky
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cach-fix_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Cách Fix
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-external-dependency" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🌐 5. External Dependency
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🌐 5. External Dependency">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#phu-thuoc-external" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ❌ Phụ Thuộc External
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mock-external-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Mock External Services
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cach-xu-ly-flaky-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛠️ Cách Xử Lý Flaky Test
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛠️ Cách Xử Lý Flaky Test">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-luon-dung-locator-on-inh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 1. Luôn Dùng Locator Ổn Định
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 1. Luôn Dùng Locator Ổn Định">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#locator-flaky" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ❌ Locator Flaky
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#locator-tot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Locator Tốt
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-oi-ung-ieu-kien-auto-wait" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⏳ 2. Đợi Đúng Điều Kiện (Auto-Wait)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-dung-retry-timeout-hop-ly" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔄 3. Dùng Retry &amp; Timeout Hợp Lý
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-mock-api-khi-khong-can-that" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎭 4. Mock API Khi Không Cần Thật
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-reset-state-moi-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧽 5. Reset State Mỗi Test
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#debug-flaky-test-trong-ci" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧪 Debug Flaky Test Trong CI
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧪 Debug Flaky Test Trong CI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quy-trinh-debug" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔍 Quy Trình Debug
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔍 Quy Trình Debug">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-xac-nhan-flaky" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1️⃣ Xác Nhận Flaky
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-bat-trace-video" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2️⃣ Bật Trace &amp; Video
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-phan-tich-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3️⃣ Phân Tích Logs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debug-techniques" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🐌 Debug Techniques
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🐌 Debug Techniques">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#slow-motion-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slow Motion Mode
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Network Monitoring
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#environment-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Environment Comparison
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#checklist-xu-ly-flaky-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📋 Checklist Xử Lý Flaky Test
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📋 Checklist Xử Lý Flaky Test">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#truoc-khi-viet-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Trước Khi Viết Test
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trong-qua-trinh-viet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Trong Quá Trình Viết
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#khi-test-fail" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Khi Test Fail
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#refactor-flaky-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Refactor Flaky Test
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices-tranh-flaky-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Best Practices Tránh Flaky Test
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 Best Practices Tránh Flaky Test">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#test-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🏗️ Test Design
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tool-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔧 Tool Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monitoring-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 Monitoring &amp; Metrics
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ket-luan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚀 Kết Luận
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚀 Kết Luận">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#chien-luoc-phong-ngua" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💡 Chiến Lược Phòng Ngừa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mindset-qa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎖️ Mindset QA
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="flaky-test-huong-dan-hoan-chinh">🧩 Flaky Test - Hướng Dẫn Hoàn Chỉnh<a class="headerlink" href="#flaky-test-huong-dan-hoan-chinh" title="Permanent link">&para;</a></h1>
+<h2 id="flaky-test-la-gi">❓ Flaky Test Là Gì?<a class="headerlink" href="#flaky-test-la-gi" title="Permanent link">&para;</a></h2>
+<p><strong>Flaky Test</strong> = Test khi chạy nhiều lần thì <strong>lúc pass - lúc fail</strong>, dù code không hề thay đổi.</p>
+<h3 id="ac-iem-chinh">🎯 Đặc Điểm Chính<a class="headerlink" href="#ac-iem-chinh" title="Permanent link">&para;</a></h3>
+<ul>
+<li>❌ <strong>Fail ngẫu nhiên</strong> - Không theo pattern cố định</li>
+<li>🐛 <strong>Khó debug</strong> - Không biết nguyên nhân chính xác</li>
+<li>😔 <strong>Giảm niềm tin</strong> - Team mất confidence vào test suite</li>
+<li>📊 <strong>Thống kê thất thường</strong> - CI/CD pipeline lúc đỏ lúc xanh</li>
+</ul>
+<h3 id="vi-du-thuc-te">💡 Ví Dụ Thực Tế<a class="headerlink" href="#vi-du-thuc-te" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Chạy 10 lần - Kết quả khác nhau</span>
+✅<span class="w"> </span>Test<span class="w"> </span><span class="m">1</span>:<span class="w"> </span>PASS<span class="w">    </span>❌<span class="w"> </span>Test<span class="w"> </span><span class="m">6</span>:<span class="w"> </span>FAIL
+✅<span class="w"> </span>Test<span class="w"> </span><span class="m">2</span>:<span class="w"> </span>PASS<span class="w">    </span>✅<span class="w"> </span>Test<span class="w"> </span><span class="m">7</span>:<span class="w"> </span>PASS
+✅<span class="w"> </span>Test<span class="w"> </span><span class="m">3</span>:<span class="w"> </span>PASS<span class="w">    </span>❌<span class="w"> </span>Test<span class="w"> </span><span class="m">8</span>:<span class="w"> </span>FAIL
+✅<span class="w"> </span>Test<span class="w"> </span><span class="m">4</span>:<span class="w"> </span>PASS<span class="w">    </span>✅<span class="w"> </span>Test<span class="w"> </span><span class="m">9</span>:<span class="w"> </span>PASS
+❌<span class="w"> </span>Test<span class="w"> </span><span class="m">5</span>:<span class="w"> </span>FAIL<span class="w">    </span>❌<span class="w"> </span>Test<span class="w"> </span><span class="m">10</span>:<span class="w"> </span>FAIL
+</code></pre></div>
+<hr />
+<h2 id="dau-hieu-nhan-biet-flaky-test">🚨 Dấu Hiệu Nhận Biết Flaky Test<a class="headerlink" href="#dau-hieu-nhan-biet-flaky-test" title="Permanent link">&para;</a></h2>
+<h3 id="thong-ke-bat-thuong">📊 Thống Kê Bất Thường<a class="headerlink" href="#thong-ke-bat-thuong" title="Permanent link">&para;</a></h3>
+<ul>
+<li>▶️ Chạy <strong>10 lần</strong>: Pass 7, Fail 3</li>
+<li>🔄 <strong>"Rerun test"</strong> lại pass</li>
+<li>🎲 Fail <strong>không theo pattern</strong> nào cả</li>
+</ul>
+<h3 id="hanh-vi-khong-on-inh">🔄 Hành Vi Không Ổn Định<a class="headerlink" href="#hanh-vi-khong-on-inh" title="Permanent link">&para;</a></h3>
+<ul>
+<li>🌐 <strong>Local pass</strong> nhưng <strong>CI fail</strong></li>
+<li>⏰ <strong>Thời gian khác nhau</strong> → kết quả khác nhau</li>
+<li>🔀 <strong>Thứ tự test</strong> thay đổi → flaky xuất hiện</li>
+</ul>
+<h3 id="tac-ong-en-pipeline">📈 Tác Động Đến Pipeline<a class="headerlink" href="#tac-ong-en-pipeline" title="Permanent link">&para;</a></h3>
+<ul>
+<li>🚦 CI/CD <strong>lúc đỏ lúc xanh</strong> không rõ lý do</li>
+<li>👥 Team <strong>mất thời gian</strong> debug vấn đề không tồn tại</li>
+<li>📉 <strong>Coverage reports</strong> không đáng tin cậy</li>
+</ul>
+<hr />
+<h2 id="nguyen-nhan-pho-bien-nhat">🧠 Nguyên Nhân Phổ Biến Nhất<a class="headerlink" href="#nguyen-nhan-pho-bien-nhat" title="Permanent link">&para;</a></h2>
+<h3 id="1-timing-wait-khong-u">⏱️ 1. Timing / Wait Không Đủ<a class="headerlink" href="#1-timing-wait-khong-u" title="Permanent link">&para;</a></h3>
+<p><strong>Vấn đề</strong>: Page chưa load, element chưa hiển thị, request chưa về.</p>
+<h4 id="vi-du-xau">❌ Ví Dụ Xấu<a class="headerlink" href="#vi-du-xau" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">click</span><span class="p">(</span><span class="s1">&#39;#login&#39;</span><span class="p">);</span>
+<span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">waitForTimeout</span><span class="p">(</span><span class="mf">1000</span><span class="p">);</span><span class="w"> </span><span class="c1">// ⚠️ Hard-coded delay</span>
+<span class="k">await</span><span class="w"> </span><span class="nx">expect</span><span class="p">(</span><span class="nx">page</span><span class="p">.</span><span class="nx">locator</span><span class="p">(</span><span class="s1">&#39;.success&#39;</span><span class="p">)).</span><span class="nx">toBeVisible</span><span class="p">();</span>
+</code></pre></div>
+<h4 id="cach-ung">✅ Cách Đúng<a class="headerlink" href="#cach-ung" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">getByRole</span><span class="p">(</span><span class="s1">&#39;button&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Login&#39;</span><span class="w"> </span><span class="p">}).</span><span class="nx">click</span><span class="p">();</span>
+<span class="k">await</span><span class="w"> </span><span class="nx">expect</span><span class="p">(</span><span class="nx">page</span><span class="p">.</span><span class="nx">getByText</span><span class="p">(</span><span class="s1">&#39;Welcome&#39;</span><span class="p">)).</span><span class="nx">toBeVisible</span><span class="p">();</span><span class="w"> </span><span class="c1">// 🎯 Auto-wait</span>
+</code></pre></div>
+<h3 id="2-dependency-vao-du-lieu-thay-oi">📊 2. Dependency Vào Dữ Liệu Thay Đổi<a class="headerlink" href="#2-dependency-vao-du-lieu-thay-oi" title="Permanent link">&para;</a></h3>
+<p><strong>Vấn đề</strong>: Test phụ thuộc vào dữ liệu động.</p>
+<h4 id="vi-du-flaky">❌ Ví Dụ Flaky<a class="headerlink" href="#vi-du-flaky" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="c1">// Test số lượng items - nhưng DB thay đổi liên tục</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">itemCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">locator</span><span class="p">(</span><span class="s1">&#39;.product-item&#39;</span><span class="p">).</span><span class="nx">count</span><span class="p">();</span>
+<span class="nx">expect</span><span class="p">(</span><span class="nx">itemCount</span><span class="p">).</span><span class="nx">toBeGreaterThan</span><span class="p">(</span><span class="mf">10</span><span class="p">);</span><span class="w"> </span><span class="c1">// ❌ Có thể fail nếu ít sản phẩm</span>
+
+<span class="c1">// Test giá trending - thay đổi theo giờ</span>
+<span class="k">await</span><span class="w"> </span><span class="nx">expect</span><span class="p">(</span><span class="nx">page</span><span class="p">.</span><span class="nx">getByText</span><span class="p">(</span><span class="s1">&#39;$29.99&#39;</span><span class="p">)).</span><span class="nx">toBeVisible</span><span class="p">();</span><span class="w"> </span><span class="c1">// ❌ Giá thay đổi</span>
+</code></pre></div>
+<h4 id="cach-fix">✅ Cách Fix<a class="headerlink" href="#cach-fix" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="c1">// Mock data hoặc tạo data test cố định</span>
+<span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">route</span><span class="p">(</span><span class="s1">&#39;/api/products&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">route</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">route</span><span class="p">.</span><span class="nx">fulfill</span><span class="p">({</span>
+<span class="w">    </span><span class="nx">status</span><span class="o">:</span><span class="w"> </span><span class="mf">200</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">body</span><span class="o">:</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">([</span>
+<span class="w">      </span><span class="p">{</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Test Product 1&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">price</span><span class="o">:</span><span class="w"> </span><span class="mf">29.99</span><span class="w"> </span><span class="p">},</span>
+<span class="w">      </span><span class="p">{</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Test Product 2&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">price</span><span class="o">:</span><span class="w"> </span><span class="mf">39.99</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="p">])</span>
+<span class="w">  </span><span class="p">});</span>
+<span class="p">});</span>
+</code></pre></div>
+<h3 id="3-race-condition">⚡ 3. Race Condition<a class="headerlink" href="#3-race-condition" title="Permanent link">&para;</a></h3>
+<p><strong>Vấn đề</strong>: Hai async actions chạy song song → hành vi khác nhau mỗi lần.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// ❌ Race condition</span>
+<span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">click</span><span class="p">(</span><span class="s1">&#39;#submit-form&#39;</span><span class="p">);</span>
+<span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">fill</span><span class="p">(</span><span class="s1">&#39;#name&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;John&#39;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Chạy song song với click</span>
+
+<span class="c1">// ✅ Sequential execution</span>
+<span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">fill</span><span class="p">(</span><span class="s1">&#39;#name&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;John&#39;</span><span class="p">);</span>
+<span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">click</span><span class="p">(</span><span class="s1">&#39;#submit-form&#39;</span><span class="p">);</span>
+</code></pre></div>
+<h3 id="4-khong-clean-state-truoc-moi-test">🧹 4. Không Clean State Trước Mỗi Test<a class="headerlink" href="#4-khong-clean-state-truoc-moi-test" title="Permanent link">&para;</a></h3>
+<p><strong>Vấn đề</strong>: Session, cache, database còn dữ liệu test cũ.</p>
+<h4 id="test-flaky">❌ Test Flaky<a class="headerlink" href="#test-flaky" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;create user&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="w"> </span><span class="nx">page</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// Không clean DB - user đã tồn tại từ test trước</span>
+<span class="w">  </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">fill</span><span class="p">(</span><span class="s1">&#39;#username&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;testuser&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">click</span><span class="p">(</span><span class="s1">&#39;#create&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="k">await</span><span class="w"> </span><span class="nx">expect</span><span class="p">(</span><span class="nx">page</span><span class="p">.</span><span class="nx">getByText</span><span class="p">(</span><span class="s1">&#39;User created&#39;</span><span class="p">)).</span><span class="nx">toBeVisible</span><span class="p">();</span><span class="w"> </span><span class="c1">// ❌ Fail nếu user đã tồn tại</span>
+<span class="p">});</span>
+</code></pre></div>
+<h4 id="cach-fix_1">✅ Cách Fix<a class="headerlink" href="#cach-fix_1" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="nx">test</span><span class="p">.</span><span class="nx">beforeEach</span><span class="p">(</span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="w"> </span><span class="nx">page</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// Clean state trước mỗi test</span>
+<span class="w">  </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">context</span><span class="p">().</span><span class="nx">clearCookies</span><span class="p">();</span>
+<span class="w">  </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">evaluate</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">localStorage</span><span class="p">.</span><span class="nx">clear</span><span class="p">());</span>
+
+<span class="w">  </span><span class="c1">// Hoặc reset database</span>
+<span class="w">  </span><span class="k">await</span><span class="w"> </span><span class="nx">resetTestDatabase</span><span class="p">();</span>
+<span class="p">});</span>
+</code></pre></div>
+<h3 id="5-external-dependency">🌐 5. External Dependency<a class="headerlink" href="#5-external-dependency" title="Permanent link">&para;</a></h3>
+<p><strong>Vấn đề</strong>: API ngoài, third-party services không ổn định.</p>
+<h4 id="phu-thuoc-external">❌ Phụ Thuộc External<a class="headerlink" href="#phu-thuoc-external" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="c1">// Test gọi API payment thực</span>
+<span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">click</span><span class="p">(</span><span class="s1">&#39;#pay-with-stripe&#39;</span><span class="p">);</span>
+<span class="k">await</span><span class="w"> </span><span class="nx">expect</span><span class="p">(</span><span class="nx">page</span><span class="p">.</span><span class="nx">getByText</span><span class="p">(</span><span class="s1">&#39;Payment successful&#39;</span><span class="p">)).</span><span class="nx">toBeVisible</span><span class="p">();</span>
+<span class="c1">// ❌ Stripe API chậm → timeout</span>
+<span class="c1">// ❌ Network issues → fail</span>
+</code></pre></div>
+<h4 id="mock-external-services">✅ Mock External Services<a class="headerlink" href="#mock-external-services" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">route</span><span class="p">(</span><span class="s1">&#39;**/api/stripe/**&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">route</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">route</span><span class="p">.</span><span class="nx">fulfill</span><span class="p">({</span>
+<span class="w">    </span><span class="nx">status</span><span class="o">:</span><span class="w"> </span><span class="mf">200</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">body</span><span class="o">:</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">({</span><span class="w"> </span><span class="nx">success</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="nx">transactionId</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;test_123&#39;</span><span class="w"> </span><span class="p">})</span>
+<span class="w">  </span><span class="p">});</span>
+<span class="p">});</span>
+</code></pre></div>
+<hr />
+<h2 id="cach-xu-ly-flaky-test">🛠️ Cách Xử Lý Flaky Test<a class="headerlink" href="#cach-xu-ly-flaky-test" title="Permanent link">&para;</a></h2>
+<h3 id="1-luon-dung-locator-on-inh">🎯 1. Luôn Dùng Locator Ổn Định<a class="headerlink" href="#1-luon-dung-locator-on-inh" title="Permanent link">&para;</a></h3>
+<h4 id="locator-flaky">❌ Locator Flaky<a class="headerlink" href="#locator-flaky" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="c1">// CSS class có thể thay đổi</span>
+<span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">click</span><span class="p">(</span><span class="s1">&#39;.btn.btn-primary.ml-2&#39;</span><span class="p">);</span>
+
+<span class="c1">// XPath fragile</span>
+<span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">click</span><span class="p">(</span><span class="s1">&#39;//*[@id=&quot;login-form&quot;]/div[2]/button&#39;</span><span class="p">);</span>
+</code></pre></div>
+<h4 id="locator-tot">✅ Locator Tốt<a class="headerlink" href="#locator-tot" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="c1">// Role-based (khuyên dùng nhất)</span>
+<span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">getByRole</span><span class="p">(</span><span class="s1">&#39;button&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Login&#39;</span><span class="w"> </span><span class="p">}).</span><span class="nx">click</span><span class="p">();</span>
+
+<span class="c1">// Data-testid (ổn định nhất)</span>
+<span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">getByTestId</span><span class="p">(</span><span class="s1">&#39;submit-button&#39;</span><span class="p">).</span><span class="nx">click</span><span class="p">();</span>
+
+<span class="c1">// Accessible name</span>
+<span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">getByLabel</span><span class="p">(</span><span class="s1">&#39;Email address&#39;</span><span class="p">).</span><span class="nx">fill</span><span class="p">(</span><span class="s1">&#39;test@example.com&#39;</span><span class="p">);</span>
+</code></pre></div>
+<h3 id="2-oi-ung-ieu-kien-auto-wait">⏳ 2. Đợi Đúng Điều Kiện (Auto-Wait)<a class="headerlink" href="#2-oi-ung-ieu-kien-auto-wait" title="Permanent link">&para;</a></h3>
+<p><strong>Playwright đã có sẵn - không cần waitForTimeout()</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c1">// ✅ Auto-wait thông minh</span>
+<span class="k">await</span><span class="w"> </span><span class="nx">expect</span><span class="p">(</span><span class="nx">page</span><span class="p">.</span><span class="nx">getByText</span><span class="p">(</span><span class="s1">&#39;Loading...&#39;</span><span class="p">)).</span><span class="nx">toBeVisible</span><span class="p">();</span>
+<span class="k">await</span><span class="w"> </span><span class="nx">expect</span><span class="p">(</span><span class="nx">page</span><span class="p">.</span><span class="nx">getByText</span><span class="p">(</span><span class="s1">&#39;Success&#39;</span><span class="p">)).</span><span class="nx">toBeVisible</span><span class="p">({</span><span class="w"> </span><span class="nx">timeout</span><span class="o">:</span><span class="w"> </span><span class="mf">10000</span><span class="w"> </span><span class="p">});</span>
+
+<span class="c1">// ❌ Không dùng hard-coded delay</span>
+<span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">waitForTimeout</span><span class="p">(</span><span class="mf">3000</span><span class="p">);</span><span class="w"> </span><span class="c1">// ⚠️ Anti-pattern</span>
+</code></pre></div>
+<h3 id="3-dung-retry-timeout-hop-ly">🔄 3. Dùng Retry &amp; Timeout Hợp Lý<a class="headerlink" href="#3-dung-retry-timeout-hop-ly" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;robust test&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="w"> </span><span class="nx">page</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// Timeout phù hợp với use case</span>
+<span class="w">  </span><span class="k">await</span><span class="w"> </span><span class="nx">expect</span><span class="p">(</span><span class="nx">page</span><span class="p">.</span><span class="nx">getByText</span><span class="p">(</span><span class="s1">&#39;Data loaded&#39;</span><span class="p">))</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">toBeVisible</span><span class="p">({</span><span class="w"> </span><span class="nx">timeout</span><span class="o">:</span><span class="w"> </span><span class="mf">15000</span><span class="w"> </span><span class="p">});</span>
+
+<span class="w">  </span><span class="c1">// Retry cho actions không ổn định</span>
+<span class="w">  </span><span class="k">await</span><span class="w"> </span><span class="nx">expect</span><span class="p">(</span><span class="k">async</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">reload</span><span class="p">();</span>
+<span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="nx">expect</span><span class="p">(</span><span class="nx">page</span><span class="p">.</span><span class="nx">getByText</span><span class="p">(</span><span class="s1">&#39;Content ready&#39;</span><span class="p">)).</span><span class="nx">toBeVisible</span><span class="p">();</span>
+<span class="w">  </span><span class="p">}).</span><span class="nx">toPass</span><span class="p">({</span><span class="w"> </span><span class="nx">timeout</span><span class="o">:</span><span class="w"> </span><span class="mf">10000</span><span class="w"> </span><span class="p">});</span>
+<span class="p">});</span>
+</code></pre></div>
+<h3 id="4-mock-api-khi-khong-can-that">🎭 4. Mock API Khi Không Cần Thật<a class="headerlink" href="#4-mock-api-khi-khong-can-that" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1">// Mock API responses</span>
+<span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">route</span><span class="p">(</span><span class="s1">&#39;/api/user/profile&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">route</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">route</span><span class="p">.</span><span class="nx">fulfill</span><span class="p">({</span>
+<span class="w">    </span><span class="nx">status</span><span class="o">:</span><span class="w"> </span><span class="mf">200</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">body</span><span class="o">:</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">({</span>
+<span class="w">      </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Test User&#39;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">email</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;test@example.com&#39;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">avatar</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;https://example.com/avatar.jpg&#39;</span>
+<span class="w">    </span><span class="p">})</span>
+<span class="w">  </span><span class="p">});</span>
+<span class="p">});</span>
+
+<span class="c1">// Mock network delays</span>
+<span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">route</span><span class="p">(</span><span class="s1">&#39;/api/slow-endpoint&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="nx">route</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">await</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Promise</span><span class="p">(</span><span class="nx">resolve</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">setTimeout</span><span class="p">(</span><span class="nx">resolve</span><span class="p">,</span><span class="w"> </span><span class="mf">100</span><span class="p">));</span><span class="w"> </span><span class="c1">// Simulate delay</span>
+<span class="w">  </span><span class="nx">route</span><span class="p">.</span><span class="nx">fulfill</span><span class="p">({</span><span class="w"> </span><span class="nx">status</span><span class="o">:</span><span class="w"> </span><span class="mf">200</span><span class="p">,</span><span class="w"> </span><span class="nx">body</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Slow response&#39;</span><span class="w"> </span><span class="p">});</span>
+<span class="p">});</span>
+</code></pre></div>
+<h3 id="5-reset-state-moi-test">🧽 5. Reset State Mỗi Test<a class="headerlink" href="#5-reset-state-moi-test" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1">// playwright.config.ts</span>
+<span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="nx">defineConfig</span><span class="p">({</span>
+<span class="w">  </span><span class="nx">use</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Fresh browser context mỗi test</span>
+<span class="w">    </span><span class="c1">// Không dùng storageState nếu không cần thiết</span>
+<span class="w">  </span><span class="p">},</span>
+
+<span class="w">  </span><span class="c1">// Clean database</span>
+<span class="w">  </span><span class="nx">globalSetup</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;./global-setup.ts&#39;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">globalTeardown</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;./global-teardown.ts&#39;</span>
+<span class="p">});</span>
+
+<span class="c1">// Test-level cleanup</span>
+<span class="nx">test</span><span class="p">.</span><span class="nx">afterEach</span><span class="p">(</span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="w"> </span><span class="nx">page</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// Clear local storage, cookies</span>
+<span class="w">  </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">evaluate</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">localStorage</span><span class="p">.</span><span class="nx">clear</span><span class="p">();</span>
+<span class="w">    </span><span class="nx">sessionStorage</span><span class="p">.</span><span class="nx">clear</span><span class="p">();</span>
+<span class="w">  </span><span class="p">});</span>
+<span class="w">  </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">context</span><span class="p">().</span><span class="nx">clearCookies</span><span class="p">();</span>
+<span class="p">});</span>
+</code></pre></div>
+<hr />
+<h2 id="debug-flaky-test-trong-ci">🧪 Debug Flaky Test Trong CI<a class="headerlink" href="#debug-flaky-test-trong-ci" title="Permanent link">&para;</a></h2>
+<h3 id="quy-trinh-debug">🔍 Quy Trình Debug<a class="headerlink" href="#quy-trinh-debug" title="Permanent link">&para;</a></h3>
+<h4 id="1-xac-nhan-flaky">1️⃣ Xác Nhận Flaky<a class="headerlink" href="#1-xac-nhan-flaky" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># Chạy test 10 lần để xác nhận flaky</span>
+<span class="k">for</span><span class="w"> </span>i<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="o">{</span><span class="m">1</span>..10<span class="o">}</span><span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">  </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Run </span><span class="nv">$i</span><span class="s2">:&quot;</span>
+<span class="w">  </span>npx<span class="w"> </span>playwright<span class="w"> </span><span class="nb">test</span><span class="w"> </span>--project<span class="o">=</span>chromium<span class="w"> </span>flaky-test.spec.ts
+<span class="k">done</span>
+</code></pre></div>
+<h4 id="2-bat-trace-video">2️⃣ Bật Trace &amp; Video<a class="headerlink" href="#2-bat-trace-video" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="c1">// playwright.config.ts</span>
+<span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="nx">defineConfig</span><span class="p">({</span>
+<span class="w">  </span><span class="nx">use</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Record trace khi fail</span>
+<span class="w">    </span><span class="nx">trace</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;on-first-retry&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="c1">// Record video</span>
+<span class="w">    </span><span class="nx">video</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;retain-on-failure&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="c1">// Screenshot khi fail</span>
+<span class="w">    </span><span class="nx">screenshot</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;only-on-failure&#39;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">});</span>
+</code></pre></div>
+<h4 id="3-phan-tich-logs">3️⃣ Phân Tích Logs<a class="headerlink" href="#3-phan-tich-logs" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># Xem console logs</span>
+npx<span class="w"> </span>playwright<span class="w"> </span>show-report
+
+<span class="c1"># Download trace files từ CI</span>
+<span class="c1"># Analyze với Playwright Trace Viewer</span>
+npx<span class="w"> </span>playwright<span class="w"> </span>show-trace<span class="w"> </span>trace.zip
+</code></pre></div>
+<h3 id="debug-techniques">🐌 Debug Techniques<a class="headerlink" href="#debug-techniques" title="Permanent link">&para;</a></h3>
+<h4 id="slow-motion-mode">Slow Motion Mode<a class="headerlink" href="#slow-motion-mode" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># Chạy chậm để observe</span>
+npx<span class="w"> </span>playwright<span class="w"> </span><span class="nb">test</span><span class="w"> </span>--headed<span class="w"> </span>--slowMo<span class="o">=</span><span class="m">500</span>
+
+<span class="c1"># Debug mode với inspector</span>
+npx<span class="w"> </span>playwright<span class="w"> </span><span class="nb">test</span><span class="w"> </span>--debug<span class="w"> </span>failing-test.spec.ts
+</code></pre></div>
+<h4 id="network-monitoring">Network Monitoring<a class="headerlink" href="#network-monitoring" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="c1">// Log network requests</span>
+<span class="nx">page</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;request&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">request</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Request:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">request</span><span class="p">.</span><span class="nx">url</span><span class="p">());</span>
+<span class="p">});</span>
+
+<span class="nx">page</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;response&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">response</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Response:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">response</span><span class="p">.</span><span class="nx">status</span><span class="p">(),</span><span class="w"> </span><span class="nx">response</span><span class="p">.</span><span class="nx">url</span><span class="p">());</span>
+<span class="p">});</span>
+</code></pre></div>
+<h4 id="environment-comparison">Environment Comparison<a class="headerlink" href="#environment-comparison" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="c1">// So sánh local vs CI</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;User Agent:&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">evaluate</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">navigator</span><span class="p">.</span><span class="nx">userAgent</span><span class="p">));</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Viewport:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">viewportSize</span><span class="p">());</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Timezone:&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">evaluate</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nb">Intl</span><span class="p">.</span><span class="nx">DateTimeFormat</span><span class="p">().</span><span class="nx">resolvedOptions</span><span class="p">().</span><span class="nx">timeZone</span><span class="p">));</span>
+</code></pre></div>
+<hr />
+<h2 id="checklist-xu-ly-flaky-test">📋 Checklist Xử Lý Flaky Test<a class="headerlink" href="#checklist-xu-ly-flaky-test" title="Permanent link">&para;</a></h2>
+<h3 id="truoc-khi-viet-test">✅ Trước Khi Viết Test<a class="headerlink" href="#truoc-khi-viet-test" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] Xác định <strong>test boundaries</strong> rõ ràng</li>
+<li>[ ] <strong>Mock external dependencies</strong></li>
+<li>[ ] Chọn <strong>locators ổn định</strong></li>
+<li>[ ] Setup <strong>proper cleanup</strong></li>
+</ul>
+<h3 id="trong-qua-trinh-viet">✅ Trong Quá Trình Viết<a class="headerlink" href="#trong-qua-trinh-viet" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] <strong>Không dùng</strong> <code>waitForTimeout()</code></li>
+<li>[ ] <strong>Luôn dùng</strong> auto-wait của Playwright</li>
+<li>[ ] <strong>Test data</strong> độc lập, không conflict</li>
+<li>[ ] <strong>Handle async</strong> đúng cách</li>
+</ul>
+<h3 id="khi-test-fail">✅ Khi Test Fail<a class="headerlink" href="#khi-test-fail" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] <strong>Chạy lại</strong> 5-10 lần để xác nhận flaky</li>
+<li>[ ] <strong>Bật trace</strong> và analyze</li>
+<li>[ ] <strong>Kiểm tra logs</strong> network/console</li>
+<li>[ ] <strong>So sánh</strong> local vs CI environment</li>
+</ul>
+<h3 id="refactor-flaky-test">✅ Refactor Flaky Test<a class="headerlink" href="#refactor-flaky-test" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] <strong>Tăng timeout</strong> hợp lý (không quá 30s)</li>
+<li>[ ] <strong>Retry logic</strong> cho actions không ổn định</li>
+<li>[ ] <strong>Isolate test data</strong> hoàn toàn</li>
+<li>[ ] <strong>Mock slow APIs</strong> hoặc unreliable services</li>
+</ul>
+<hr />
+<h2 id="best-practices-tranh-flaky-test">🎯 Best Practices Tránh Flaky Test<a class="headerlink" href="#best-practices-tranh-flaky-test" title="Permanent link">&para;</a></h2>
+<h3 id="test-design">🏗️ Test Design<a class="headerlink" href="#test-design" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Test một responsibility</strong> - Mỗi test chỉ kiểm tra một điều</li>
+<li><strong>Independent tests</strong> - Không phụ thuộc lẫn nhau</li>
+<li><strong>Predictable data</strong> - Dùng seed data hoặc factories</li>
+<li><strong>Minimal UI interactions</strong> - Ưu tiên API calls khi có thể</li>
+</ol>
+<h3 id="tool-configuration">🔧 Tool Configuration<a class="headerlink" href="#tool-configuration" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1">// playwright.config.ts - Anti-flaky setup</span>
+<span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="nx">defineConfig</span><span class="p">({</span>
+<span class="w">  </span><span class="nx">use</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Reasonable timeouts</span>
+<span class="w">    </span><span class="nx">actionTimeout</span><span class="o">:</span><span class="w"> </span><span class="mf">10000</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">navigationTimeout</span><span class="o">:</span><span class="w"> </span><span class="mf">30000</span><span class="p">,</span>
+
+<span class="w">    </span><span class="c1">// Retry failed tests</span>
+<span class="w">    </span><span class="nx">retries</span><span class="o">:</span><span class="w"> </span><span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">CI</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
+
+<span class="w">    </span><span class="c1">// Capture evidence</span>
+<span class="w">    </span><span class="nx">trace</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;retain-on-failure&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">screenshot</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;only-on-failure&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">video</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;retain-on-failure&#39;</span>
+<span class="w">  </span><span class="p">},</span>
+
+<span class="w">  </span><span class="c1">// Parallel execution (nhưng không quá nhiều)</span>
+<span class="w">  </span><span class="nx">workers</span><span class="o">:</span><span class="w"> </span><span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">CI</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="kc">undefined</span>
+<span class="p">});</span>
+</code></pre></div>
+<h3 id="monitoring-metrics">📊 Monitoring &amp; Metrics<a class="headerlink" href="#monitoring-metrics" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Track flaky rate</strong>: <code>&lt; 5% là acceptable</code></li>
+<li><strong>Alert</strong> khi test fail rate tăng</li>
+<li><strong>Regular cleanup</strong>: Remove hoặc fix flaky tests</li>
+<li><strong>Documentation</strong>: Ghi lý do và cách fix</li>
+</ul>
+<hr />
+<h2 id="ket-luan">🚀 Kết Luận<a class="headerlink" href="#ket-luan" title="Permanent link">&para;</a></h2>
+<p><strong>Flaky Test là kẻ thù số 1</strong> của automated testing. Chúng:</p>
+<ul>
+<li>📉 <strong>Giảm niềm tin</strong> vào test suite</li>
+<li>⏰ <strong>Tốn thời gian</strong> debug không cần thiết</li>
+<li>💰 <strong>Tăng chi phí</strong> maintenance</li>
+<li>😫 <strong>Làm team stress</strong> và mất động lực</li>
+</ul>
+<h3 id="chien-luoc-phong-ngua">💡 Chiến Lược Phòng Ngừa<a class="headerlink" href="#chien-luoc-phong-ngua" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Thiết kế tests</strong> với mindset "stable first"</li>
+<li><strong>Mock everything</strong> không cần thiết</li>
+<li><strong>Use reliable locators</strong> và auto-wait</li>
+<li><strong>Monitor regularly</strong> và fix ngay khi phát hiện</li>
+<li><strong>Accept reality</strong>: 100% stable tests là không thể - aim for <code>&lt; 5%</code> flaky rate</li>
+</ol>
+<h3 id="mindset-qa">🎖️ Mindset QA<a class="headerlink" href="#mindset-qa" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>"Flaky test không phải là lỗi của tool, mà là lỗi của cách chúng ta viết test"</p>
+</blockquote>
+<p><strong>Hãy viết tests như thể chúng sẽ chạy 1000 lần mà không fail một lần nào!</strong> 🚀</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.expand", "navigation.sections", "navigation.top", "content.code.copy", "content.code.annotate", "search.highlight", "search.suggest"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

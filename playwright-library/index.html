@@ -1,0 +1,1925 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Knowledge base for SDET, Playwright, Selenium, API, and QA strategy by karusya">
+      
+      
+      
+        <link rel="canonical" href="https://karusya.github.io/learn-everything-for-me/playwright-library/">
+      
+      
+        <link rel="prev" href="../playwright-reporter/">
+      
+      
+        <link rel="next" href="../migration-guides/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/avatar-32.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Library vs Test Runner - Learn Everything For Me</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#playwright-library-vs-test-runner-best-practices" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Learn Everything For Me" class="md-header__button md-logo" aria-label="Learn Everything For Me" data-md-component="logo">
+      
+  <img src="../assets/avatar.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Learn Everything For Me
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Library vs Test Runner
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="amber"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="pink" data-md-color-accent="amber"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/karusya/learn-everything-for-me" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    karusya/learn-everything-for-me
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Learn Everything For Me" class="md-nav__button md-logo" aria-label="Learn Everything For Me" data-md-component="logo">
+      
+  <img src="../assets/avatar.png" alt="logo">
+
+    </a>
+    Learn Everything For Me
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/karusya/learn-everything-for-me" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    karusya/learn-everything-for-me
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Playwright
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Playwright
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Playwright_Guide_Reorganized/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Playwright Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../playwright-agents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Canary & Agentic Workflow
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../playwright-fixtures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fixtures & Config
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../playwright-assertions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Assertions Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../playwright-reporter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reporter API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Library vs Test Runner
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Library vs Test Runner
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#library-vs-test-runner" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Library vs Test Runner
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#browser-system-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Browser &amp; System Setup
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playwright-tooling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Playwright Tooling
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#emulation-actionability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Emulation &amp; Actionability
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assertions-expect-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Assertions &amp; Expect API
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fixtures-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fixtures &amp; Configuration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#network-api-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Network &amp; API Testing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessibility-snapshot-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accessibility &amp; Snapshot Testing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#traces-videos-and-reports" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Traces, Videos, and Reports
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing-strategies-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Testing Strategies &amp; Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#productivity-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Productivity Tips
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Additional Notes
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../migration-guides/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Migration Guides
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API Testing
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    API Testing
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api-testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API Testing Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testing Strategy
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Testing Strategy
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Test_Automation_Pyramid_Guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test Automation Pyramid
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../test-techniques/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test Techniques
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Flaky_Test_Guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Flaky Test Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ui-api-pom-comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UI POM vs API POM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shift-left-testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Shift-Left Testing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mutation-testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mutation Testing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QA Resources
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    QA Resources
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../qa-sdet-roadmap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QA/SDET Transition Roadmap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../qa-roadmap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QA & Automation Roadmap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sdet-framework-foundation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Core Principles Framework
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../playwright-sdet-framework-intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SDET Framework Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../k6_performance_testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QA Load Test with K6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Resources
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Data Resources
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../elasticsearch-roadmap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Elasticsearch Roadmap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../elasticsearch-query-deepdive/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Elasticsearch Query Deep Dive
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../http-caching/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HTTP Caching Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../web3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Web3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SDET Prep
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    SDET Prep
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SDET_Interview_Preparation_Guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SDET Interview Preparation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Experienced_Automation_Tester_QA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Experienced Automation Tester Q&A
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Automation_Interview_QA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Automation Interview Q&A
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java-oop-concepts.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Java OOP Concepts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#library-vs-test-runner" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Library vs Test Runner
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#browser-system-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Browser &amp; System Setup
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#playwright-tooling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Playwright Tooling
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#emulation-actionability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Emulation &amp; Actionability
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assertions-expect-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Assertions &amp; Expect API
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fixtures-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fixtures &amp; Configuration
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#network-api-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Network &amp; API Testing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#accessibility-snapshot-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accessibility &amp; Snapshot Testing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#traces-videos-and-reports" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Traces, Videos, and Reports
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing-strategies-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Testing Strategies &amp; Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#productivity-tips" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Productivity Tips
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Additional Notes
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="playwright-library-vs-test-runner-best-practices">Playwright Library vs Test Runner &amp; Best Practices<a class="headerlink" href="#playwright-library-vs-test-runner-best-practices" title="Permanent link">&para;</a></h1>
+<h2 id="library-vs-test-runner">Library vs Test Runner<a class="headerlink" href="#library-vs-test-runner" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>When to use</strong>: <code>playwright</code> (Library) is a low-level API to launch browsers, handle contexts, pages, and manual assertions. <code>@playwright/test</code> is a full test runner with fixtures, builtin assertions, retries, reporters, and CLI tools.</li>
+<li><strong>Example difference</strong>:</li>
+<li>Library script needs to <code>chromium.launch()</code>, <code>context.newPage()</code>, <code>context.route</code>, <code>await page.title()</code> manually, and asserts via <code>node:assert</code>.</li>
+<li>Test uses <code>test</code> fixture, <code>expect(page).toHaveTitle()</code>, auto-waits, and <code>npx playwright test</code> runs with configuration.</li>
+<li><strong>Extra features</strong>: Playwright Test adds matrix projects, parallelism, web-first assertions, tracing, retries, reporting, and UI tooling.</li>
+<li><strong>Installation</strong>:</li>
+<li>Library: <code>npm install playwright</code> + <code>npx playwright install</code> (or install browser-specific packages).</li>
+<li>Test Runner: <code>npm init playwright@latest</code> (includes configuration, test structure, CLI, and recommended workflow).</li>
+</ul>
+<h2 id="browser-system-setup">Browser &amp; System Setup<a class="headerlink" href="#browser-system-setup" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Install browsers</strong>: <code>npx playwright install</code> for all, or specify <code>chromium</code>, <code>firefox</code>, <code>webkit</code>. Use <code>--with-deps</code> on CI. Use <code>PLAYWRIGHT_DOWNLOAD_HOST</code>, <code>HTTPS_PROXY</code>, or <code>NODE_EXTRA_CA_CERTS</code> when behind a proxy.</li>
+<li><strong>System dependencies</strong>: <code>npx playwright install-deps</code> (+ browser name).</li>
+<li><strong>Hermetic mode</strong>: <code>PLAYWRIGHT_BROWSERS_PATH=0 npx playwright install</code> or share browser cache via <code>PLAYWRIGHT_BROWSERS_PATH=$HOME/pw-browsers</code>.</li>
+<li><strong>Skip downloads</strong>: <code>PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1 npm install</code>.</li>
+<li><strong>Update Playwright</strong>: <code>npm install -D @playwright/test@latest</code> + <code>npx playwright install</code>.</li>
+</ul>
+<h2 id="playwright-tooling">Playwright Tooling<a class="headerlink" href="#playwright-tooling" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Codegen</strong>: <code>npx playwright codegen &lt;url&gt;</code> records interactions and annotations, captures locators (<code>Pick Locator</code>), and supports devices, color schemes, viewport, timezone, geolocation, storage state (<code>--save-storage</code>, <code>--load-storage</code>). Useful for rapid test scaffolding or locator discovery.</li>
+<li><strong>UI Mode</strong>: <code>npx playwright test --ui</code> launches interactive watch/debug experience with trace explorer.</li>
+<li><strong>Inspector</strong>: <code>npx playwright test --debug</code> or <code>page.pause()</code> let you step through tests, edit locators, inspect DOM and logs.</li>
+<li><strong>Browser DevTools</strong>: <code>PWDEBUG=console</code> exposes the Playwright helper in DevTools for debugging selectors.</li>
+<li><strong>VS Code Extension</strong>: run/debug tests, pick locators, view logs/traces, and manage projects/profiles.</li>
+</ul>
+<h2 id="emulation-actionability">Emulation &amp; Actionability<a class="headerlink" href="#emulation-actionability" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Leverage <code>devices</code> registry for viewport, UA, mobile, color scheme, geolocation, language, timezone, permissions, touch. Example:
+  <div class="highlight"><pre><span></span><code><span class="nx">use</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="nx">devices</span><span class="p">[</span><span class="s1">&#39;Desktop Chrome&#39;</span><span class="p">],</span><span class="w"> </span><span class="nx">colorScheme</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;dark&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">geolocation</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">latitude</span><span class="o">:</span><span class="w"> </span><span class="kt">41.9</span><span class="p">,</span><span class="w"> </span><span class="nx">longitude</span><span class="o">:</span><span class="w"> </span><span class="kt">12.5</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div></li>
+<li>Auto-wait ensures actions wait for visibility, stability, enabled/receiving events. <code>force: true</code> bypasses checks; use only when necessary.</li>
+<li>Use locators (<code>page.getByRole</code>, <code>getByLabel</code>, <code>getByText</code>, <code>getByTestId</code>) instead of brittle CSS/XPath. Chain <code>.filter()</code>, <code>.and()</code>, <code>.or()</code>, <code>.nth()</code>, <code>.first()</code>, <code>.last()</code> or layout selectors like <code>:right-of()</code>.</li>
+</ul>
+<h2 id="assertions-expect-api">Assertions &amp; Expect API<a class="headerlink" href="#assertions-expect-api" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Prefer web-first assertions: <code>expect(locator).toBeVisible()</code>, <code>toHaveText()</code>, <code>toHaveURL()</code>, <code>toHaveScreenshot()</code>, <code>poll()</code>, <code>toPass()</code>.</li>
+<li>Non-retrying matchers: <code>expect(value).toBe()</code>, <code>.toEqual()</code>, <code>.toMatch()</code>.</li>
+<li>Soft assertions: <code>expect.soft(...)</code> to continue tests while collecting failures. Inspect <code>test.info().errors</code>.</li>
+<li><code>expect.configure({ timeout, soft })</code> for specialized behavior; <code>expect.poll()</code> and <code>.toPass()</code> add custom retry logic.</li>
+<li>Extend expect with <code>expect.extend({ customMatcher() { ... } })</code>. Combine matchers from modules via <code>mergeExpects</code>.</li>
+</ul>
+<h2 id="fixtures-configuration">Fixtures &amp; Configuration<a class="headerlink" href="#fixtures-configuration" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Built-in fixtures: <code>page</code>, <code>context</code>, <code>browser</code>, <code>request</code>, <code>testInfo</code>. Create custom fixtures via <code>test.extend</code>.</li>
+<li>Worker-scoped fixtures reduce duplication (<code>{ scope: 'worker' }</code>), and <code>auto: true</code> runs automatically for every test.</li>
+<li>Use <code>test.use({ storageState: 'state.json' })</code> to share logged-in state or reset state with <code>test.use({ storageState: { cookies: [], origins: [] } })</code>.</li>
+<li>Global setup: prefer project dependencies (setup project + dependencies + teardown). Alternatively configure <code>globalSetup</code>/<code>globalTeardown</code> functions returning teardown data.</li>
+<li><code>test.describe.configure</code> controls mode (<code>serial</code>, <code>parallel</code>). Use <code>test.describe.serial()</code> for dependent tests (flaky).</li>
+<li>Filtering: <code>--grep</code>, <code>--grep-invert</code>, <code>--repeat-each</code>, <code>--shard</code>, <code>--only-changed</code>. Use <code>test.only</code>/<code>test.skip</code> or conditional <code>test.skip(condition)</code>.</li>
+</ul>
+<h2 id="network-api-testing">Network &amp; API Testing<a class="headerlink" href="#network-api-testing" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>API requests</strong>: Use <code>request</code> fixture with <code>baseURL</code>, <code>extraHTTPHeaders</code>, <code>proxy</code>. Setup/teardown with <code>beforeAll</code>/<code>afterAll</code> to create/delete resources.</li>
+<li><strong>Context vs global requests</strong>: <code>context.request</code> shares cookies with browser context, <code>playwright.request.newContext()</code> is isolated. Use <code>request.storageState()</code> for reusable cookies.</li>
+<li><strong>Mocking</strong>: <code>page.route()</code>, <code>context.route()</code> with glob/regexp, <code>route.fulfill/continue/abort</code>. Use HAR replay via <code>routeFromHAR()</code> or command-line <code>playwright open --save-har</code>.</li>
+<li><strong>WebSockets</strong>: <code>page.routeWebSocket(url, handler)</code> to intercept and modify frames.</li>
+<li><strong>Proxy/auth</strong>: configure <code>httpCredentials</code>, <code>proxy</code> fields globally or per-context.</li>
+<li><strong>Mock browser APIs</strong>: <code>page.addInitScript()</code> to override <code>navigator.getBattery</code>, expose functions via <code>page.exposeFunction</code>, or simulate events manually.</li>
+</ul>
+<h2 id="accessibility-snapshot-testing">Accessibility &amp; Snapshot Testing<a class="headerlink" href="#accessibility-snapshot-testing" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Use <code>expect(locator).toMatchAriaSnapshot()</code> to verify structured accessibility tree (<code>.aria.yml</code>). Update with <code>--update-snapshots</code>.</li>
+<li>Generate snapshots via Codegen or <code>locator.ariaSnapshot()</code>. Configure <code>expect.toMatchAriaSnapshot.pathTemplate</code>.</li>
+<li>Use <code>expect(locator).toHaveScreenshot()</code> for visual regression; configure <code>maxDiffPixels</code>, <code>stylePath</code>, <code>pathTemplate</code>.</li>
+<li>Store snapshots under <code>*.spec.ts-snapshots/</code>. Update with <code>npx playwright test -u</code>.</li>
+<li>Soft matching: <code>:text</code>, <code>:text-is</code>, <code>:text-matches</code>, partial matching via <code>[role=...]</code> and <code>/children: equal</code>.</li>
+</ul>
+<h2 id="traces-videos-and-reports">Traces, Videos, and Reports<a class="headerlink" href="#traces-videos-and-reports" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Tracing</strong>: configure <code>use.trace = 'on-first-retry'</code>, <code>'retain-on-failure'</code>, <code>'on'</code>, <code>'off'</code>. Use <code>npx playwright show-trace trace.zip</code> or <code>trace.playwright.dev</code> to inspect actions, DOM snapshots, timeline, console, network, attachments.</li>
+<li><strong>Videos</strong>: <code>use.video = 'on-first-retry' | 'retain-on-failure' | 'on'</code>. Access via <code>page.video().path()</code> after context close.</li>
+<li><strong>Reporters</strong>: combine <code>['html', { open: 'never' }]</code>, <code>blob</code>, <code>json</code>, <code>junit</code>, <code>dot</code>, <code>line</code>, <code>github</code>. Use <code>merge-reports</code> to stitch blob outputs, especially with sharding.</li>
+<li><strong>Artifacts</strong>: upload HTML reports/traces/videos via <code>actions/upload-artifact</code>.</li>
+</ul>
+<h2 id="testing-strategies-best-practices">Testing Strategies &amp; Best Practices<a class="headerlink" href="#testing-strategies-best-practices" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Test pyramid &amp; isolation</strong>: unit/integration/E2E layering; keep tests isolated with independent BrowserContexts (or context per test). Use fixtures to share helper classes (e.g. POMs). Do not clean up by hand; create new contexts or delete storage.</li>
+<li><strong>Locators</strong>: prefer <code>getByRole</code>, <code>getByText</code>, <code>getByLabel</code>; avoid brittle CSS/XPath. Use <code>getByTestId</code> for explicit test contracts. Use <code>locator.filter({ hasText })</code>, <code>.hasNot</code>, <code>.and</code>, <code>.or</code>.</li>
+<li><strong>Actions</strong>: prefer <code>.fill()</code> over <code>.type()</code>/<code>.press()</code> unless necessary. Use <code>locator.hover()</code>, <code>dragTo()</code>, <code>mouse.wheel()</code> when needed. Use <code>locator.dispatchEvent()</code> for advanced keyboard/touch scenarios, multi-touch (pinch/pan), uploads via <code>setInputFiles</code>.</li>
+<li><strong>Auto-wait</strong>: actions automatically wait for visibility/stability/enabled state; use <code>force: true</code> cautiously.</li>
+<li><strong>Authentication</strong>: store storageState under <code>playwright/.auth</code>; authenticate via setup project or worker fixtures; use API login (request context) when possible; set <code>test.use({ storageState: auth.json })</code>.</li>
+<li><strong>Parallel workers</strong>: use <code>testInfo.parallelIndex</code> to create unique accounts; manage per-worker storage states (<code>test.info().project.outputDir</code>).</li>
+<li><strong>Clock</strong>: use <code>page.clock.setFixedTime()</code>, <code>.install()</code>, <code>.fastForward()</code>, <code>.pauseAt()</code>, <code>.runFor()</code> to control timers/Date/timeouts.</li>
+<li><strong>Components (experimental)</strong>: use <code>@playwright/experimental-ct-*</code> to mount React/Vue/Svelte components (<code>mount</code>, <code>unmount</code>, <code>update</code>, <code>hooks</code>). Configure <code>ctViteConfig</code> if reusing existing Vite setup; use <code>hooksConfig</code> for routing, stores, Pinia.</li>
+<li><strong>Mock APIs</strong>: use <code>router</code> fixture or MSW handlers, route WebSocket, use HAR for reproducible responses.</li>
+<li><strong>Service Workers</strong>: disable with <code>serviceWorkers: 'block'</code> or interact via <code>browserContext.serviceWorkers()</code>; route Service Worker requests separately.</li>
+<li><strong>Autos</strong>: prefer <code>page.getByRole('button', { name: 'Submit' })</code>. Use <code>expect.soft</code> for aggregated assertions, and <code>testInfo.setTimeout</code> for dynamic timeouts.</li>
+</ul>
+<h2 id="productivity-tips">Productivity Tips<a class="headerlink" href="#productivity-tips" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Use <code>npx playwright test --workers=1</code></strong> or <code>--shard</code> for relative ordering/clusters.</li>
+<li><strong>Lint and type-check</strong>: <code>npx tsc --noEmit</code>, <code>eslint</code> with <code>@typescript-eslint/no-floating-promises</code>.</li>
+<li><strong>CI</strong>: run tests per-commit, parallelize via matrix/shards, upload blobs; configure <code>maxFailures</code>, <code>retries</code>, <code>workers</code>, <code>--forbid-only</code>.</li>
+<li><strong>Documentation</strong>: keep README updated, store <code>.aria.yml</code> and screenshot snapshots in repo, commit trace/video attachments if needed.</li>
+</ul>
+<h2 id="additional-notes">Additional Notes<a class="headerlink" href="#additional-notes" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Playwright Agents</strong>: use <code>npx playwright init-agents --loop=vscode</code> to set up planner/generator/healer.</li>
+<li><strong>Canary builds</strong>: install via <code>npm install -D @playwright/test@next</code> and view docs (press Shift x5 at playwright.dev) to test unreleased features.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.expand", "navigation.sections", "navigation.top", "content.code.copy", "content.code.annotate", "search.highlight", "search.suggest"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

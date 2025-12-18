@@ -1,0 +1,4093 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Knowledge base for SDET, Playwright, Selenium, API, and QA strategy by karusya">
+      
+      
+      
+        <link rel="canonical" href="https://karusya.github.io/learn-everything-for-me/sdet-framework-foundation/">
+      
+      
+        <link rel="prev" href="../qa-roadmap/">
+      
+      
+        <link rel="next" href="../playwright-sdet-framework-intro/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/avatar-32.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Core Principles Framework - Learn Everything For Me</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#building-solid-sdet-framework-foundations" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Learn Everything For Me" class="md-header__button md-logo" aria-label="Learn Everything For Me" data-md-component="logo">
+      
+  <img src="../assets/avatar.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Learn Everything For Me
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Core Principles Framework
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="amber"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="pink" data-md-color-accent="amber"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/karusya/learn-everything-for-me" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    karusya/learn-everything-for-me
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Learn Everything For Me" class="md-nav__button md-logo" aria-label="Learn Everything For Me" data-md-component="logo">
+      
+  <img src="../assets/avatar.png" alt="logo">
+
+    </a>
+    Learn Everything For Me
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/karusya/learn-everything-for-me" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    karusya/learn-everything-for-me
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Playwright
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Playwright
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Playwright_Guide_Reorganized/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Playwright Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../playwright-agents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Canary & Agentic Workflow
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../playwright-fixtures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fixtures & Config
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../playwright-assertions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Assertions Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../playwright-reporter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reporter API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../playwright-library/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Library vs Test Runner
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../migration-guides/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Migration Guides
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API Testing
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    API Testing
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api-testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API Testing Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testing Strategy
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Testing Strategy
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Test_Automation_Pyramid_Guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test Automation Pyramid
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../test-techniques/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test Techniques
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Flaky_Test_Guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Flaky Test Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ui-api-pom-comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UI POM vs API POM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shift-left-testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Shift-Left Testing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mutation-testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mutation Testing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QA Resources
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    QA Resources
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../qa-sdet-roadmap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QA/SDET Transition Roadmap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../qa-roadmap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QA & Automation Roadmap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Core Principles Framework
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Core Principles Framework
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-not-take-shortcuts-at-the-beginning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 Why NOT Take Shortcuts at the Beginning?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#english-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🌍 ENGLISH VERSION
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🌍 ENGLISH VERSION">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-introduction-luck-or-painful-lesson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 💡 Introduction: Luck or Painful Lesson?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#my-personal-experience" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        My Personal Experience:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#immediate-benefits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Immediate Benefits:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-point" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Key Point:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-juniors-dilemma-why-complicate-things" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 🤯 Junior's Dilemma: "Why Complicate Things?"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#harsh-reality" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Harsh Reality:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#waitsync-problem-why-wait-for-load-state-or-selector-when-i-just-need-click" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ❓ Wait/Sync Problem: "Why wait for load state or selector when I just need click()?"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logging-problem-why-log-for-time-waste-and-full-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ❓ Logging Problem: "Why log for time waste and full data?"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pom-problem-is-writing-logic-directly-in-test-steps-faster-and-easier" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ❓ POM Problem: "Is writing logic directly in test steps faster and easier?"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-painful-lesson-then-you-see-the-real-picture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 💥 Painful Lesson: "Then You See the Real Picture"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#this-is-the-most-important-part-consequences-of-taking-shortcuts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        This is the most important part - Consequences of "taking shortcuts"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typical-scenario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Typical Scenario:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consequences-when-scaling-actually-happens" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔥 Consequences when scaling (actually happens):
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔥 Consequences when scaling (actually happens):">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ui-operations-change" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚨 UI operations change:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logic-duplication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚨 Logic duplication:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parallel-execution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚨 Parallel execution:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#refactor-must-spend-5-10x-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚨 Refactor: Must spend 5-10x time
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#painful-conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Painful Conclusion:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-guidance-for-new-juniors-learn-standard-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 🧭 Guidance for New Juniors: Learn Standard Framework
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#you-wont-regret-the-initial-time-investment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        You won't regret the initial time investment!
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#41-standard-structure-separation-separation-of-concerns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1. Standard Structure = Separation (Separation of Concerns)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#standard-directory-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📁 Standard Directory Structure:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-why-standard-sdet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2. Why Standard SDET?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-core-principles-a-junior-must-master-when-building-a-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 🎯 Core Principles a Junior Must Master When Building a Framework
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#these-are-foundational-knowledge-focus-on-why-to-do-not-just-how-to-do" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        These are foundational knowledge - focus on "why to do", not just "how to do"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-principles-of-layering-and-separation-of-concerns-soc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 🏗️ Principles of Layering and Separation of Concerns (SoC)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-anti-flaky-mechanisms-ensuring-robustness" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 🛡️ Anti-Flaky Mechanisms (Ensuring Robustness)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-environment-and-configuration-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. ⚙️ Environment and Configuration Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-logging-and-reporting-traceability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 📰 Logging and Reporting (Traceability)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-flexibility-adapting-frameworks-based-on-project-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. 🎭 Flexibility - Adapting Frameworks Based on Project Requirements
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. 🎭 Flexibility - Adapting Frameworks Based on Project Requirements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-standard-frameworks-are-principles-not-rigid-templates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1. Standard Frameworks Are "Principles", Not "Rigid Templates"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-questions-to-help-you-adapt-your-framework-appropriately" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2. Questions to Help You "Adapt" Your Framework Appropriately
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-advice-start-with-principles-adapt-to-reality" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3. Advice: Start with Principles, Adapt to Reality
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.3. Advice: Start with Principles, Adapt to Reality">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-takeaway-for-this-section" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Key Takeaway for this section:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conclusion-early-investment-long-term-harvest" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Conclusion: Early Investment - Long-term Harvest
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#final-advice-for-juniors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        *Final Advice for Juniors:***
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚀 Next Steps:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phien-ban-tieng-viet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🇻🇳 PHIÊN BẢN TIẾNG VIỆT
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-loi-mo-au-may-man-hay-bai-hoc-au-thuong" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 💡 Lời mở đầu: May mắn hay Bài học đau thương?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. 💡 Lời mở đầu: May mắn hay Bài học đau thương?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kinh-nghiem-ca-nhan-cua-toi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kinh nghiệm cá nhân của tôi:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loi-ich-ngay-lap-tuc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lợi ích ngay lập tức:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iem-mau-chot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Điểm mấu chốt:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-noi-niem-cua-junior-tai-sao-phai-phuc-tap-hoa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 🤯 Nỗi niềm của Junior: "Tại sao phải phức tạp hóa?"
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 🤯 Nỗi niềm của Junior: &#34;Tại sao phải phức tạp hóa?&#34;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thuc-te-phu-phang" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Thực tế phũ phàng:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#van-e-waitsync-tai-sao-phai-wait-for-load-state-hay-wait-for-selector-khi-minh-chi-can-click" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ❓ Vấn đề Wait/Sync: "Tại sao phải wait for load state hay wait for selector khi mình chỉ cần click()?"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#van-e-logging-log-lam-gi-cho-ton-thoi-gian-va-ay-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ❓ Vấn đề Logging: "Log làm gì cho tốn thời gian và đầy data?"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#van-e-page-object-model-pom-viet-logic-truc-tiep-vao-step-test-co-phai-nhanh-va-de-hon-khong" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ❓ Vấn đề Page Object Model (POM): "Viết logic trực tiếp vào step test có phải nhanh và dễ hơn không?"
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-bai-hoc-au-thuong-roi-moi-thay-cai-canh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 💥 Bài học đau thương: "Rồi mới thấy cái cảnh"
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 💥 Bài học đau thương: &#34;Rồi mới thấy cái cảnh&#34;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ay-la-phan-quan-trong-nhat-hau-qua-cua-viec-i-tat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Đây là phần quan trọng nhất - Hậu quả của việc "đi tắt"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tinh-huong-ien-hinh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tình huống điển hình:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#he-qua-khi-mo-rong-thuc-te-xay-ra" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔥 Hệ quả khi mở rộng (thực tế xảy ra):
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔥 Hệ quả khi mở rộng (thực tế xảy ra):">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thao-tac-ui-thay-oi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚨 Thao tác UI thay đổi:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logic-bi-lap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚨 Logic bị lặp:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chay-song-song-parallel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚨 Chạy song song (Parallel):
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#refactor-phai-bo-thoi-gian-gap-5-10-lan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚨 Refactor: Phải bỏ thời gian gấp 5-10 lần
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ket-luan-au-thuong" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Kết luận đau thương:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-inh-huong-cho-tan-junior-hay-hoc-framework-chuan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 🧭 Định hướng cho Tân Junior: Hãy học Framework Chuẩn
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. 🧭 Định hướng cho Tân Junior: Hãy học Framework Chuẩn">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ban-se-khong-hoi-tiec-khi-au-tu-thoi-gian-ban-au" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bạn sẽ không hối tiếc khi đầu tư thời gian ban đầu!
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#41-cau-truc-chuan-tach-biet-separation-of-concerns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1. Cấu trúc Chuẩn = Tách biệt (Separation of Concerns)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cau-truc-thu-muc-chuan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📁 Cấu trúc thư mục chuẩn:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-tai-sao-lai-la-chuan-sdet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2. Tại sao lại là Chuẩn SDET?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-core-principles-a-junior-must-master-when-building-a-framework_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 🎯 Core Principles a Junior Must Master When Building a Framework
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. 🎯 Core Principles a Junior Must Master When Building a Framework">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ay-la-nhung-kien-thuc-nen-tang-tap-trung-vao-tai-sao-phai-lam-khong-chi-lam-the-nao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Đây là những kiến thức nền tảng - tập trung vào "tại sao phải làm", không chỉ "làm thế nào"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-nguyen-tac-tach-biet-va-lop-hoa-layering-separation-of-concerns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 🏗️ Nguyên tắc Tách biệt và Lớp hóa (Layering &amp; Separation of Concerns)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-kha-nang-chong-loi-ngau-nhien-anti-flaky-mechanisms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 🛡️ Khả năng Chống Lỗi Ngẫu nhiên (Anti-Flaky Mechanisms)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-thiet-lap-moi-truong-va-cau-hinh-configuration-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. ⚙️ Thiết lập Môi trường và Cấu hình (Configuration &amp; Environment)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-ghi-nhan-va-bao-cao-logging-reporting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 📰 Ghi nhận và Báo cáo (Logging &amp; Reporting)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-tinh-linh-hoat-ieu-chinh-framework-theo-yeu-cau-du-an" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. 🎭 Tính Linh Hoạt - Điều Chỉnh Framework Theo Yêu Cầu Dự Án
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. 🎭 Tính Linh Hoạt - Điều Chỉnh Framework Theo Yêu Cầu Dự Án">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-framework-chuan-la-nguyen-tac-khong-phai-khuon-mau-cung-nhac" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1. Framework Chuẩn Là "Nguyên Tắc", Không Phải "Khuôn Mẫu" Cứng Nhắc
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-cac-cau-hoi-giup-ban-ieu-chinh-framework-phu-hop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2. Các Câu Hỏi Giúp Bạn "Điều Chỉnh" Framework Phù Hợp
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-loi-khuyen-bat-au-tu-nguyen-tac-ieu-chinh-theo-thuc-te" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3. Lời Khuyên: Bắt Đầu Từ Nguyên Tắc, Điều Chỉnh Theo Thực Tế
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.3. Lời Khuyên: Bắt Đầu Từ Nguyên Tắc, Điều Chỉnh Theo Thực Tế">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-takeaway-cho-phan-nay" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Key Takeaway cho phần này:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../playwright-sdet-framework-intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SDET Framework Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../k6_performance_testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QA Load Test with K6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Resources
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Data Resources
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../elasticsearch-roadmap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Elasticsearch Roadmap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../elasticsearch-query-deepdive/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Elasticsearch Query Deep Dive
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../http-caching/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HTTP Caching Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../web3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Web3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SDET Prep
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    SDET Prep
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SDET_Interview_Preparation_Guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SDET Interview Preparation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Experienced_Automation_Tester_QA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Experienced Automation Tester Q&A
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Automation_Interview_QA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Automation Interview Q&A
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java-oop-concepts.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Java OOP Concepts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-not-take-shortcuts-at-the-beginning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 Why NOT Take Shortcuts at the Beginning?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#english-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🌍 ENGLISH VERSION
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🌍 ENGLISH VERSION">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-introduction-luck-or-painful-lesson" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 💡 Introduction: Luck or Painful Lesson?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#my-personal-experience" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        My Personal Experience:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#immediate-benefits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Immediate Benefits:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-point" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Key Point:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-juniors-dilemma-why-complicate-things" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 🤯 Junior's Dilemma: "Why Complicate Things?"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#harsh-reality" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Harsh Reality:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#waitsync-problem-why-wait-for-load-state-or-selector-when-i-just-need-click" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ❓ Wait/Sync Problem: "Why wait for load state or selector when I just need click()?"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logging-problem-why-log-for-time-waste-and-full-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ❓ Logging Problem: "Why log for time waste and full data?"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pom-problem-is-writing-logic-directly-in-test-steps-faster-and-easier" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ❓ POM Problem: "Is writing logic directly in test steps faster and easier?"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-painful-lesson-then-you-see-the-real-picture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 💥 Painful Lesson: "Then You See the Real Picture"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#this-is-the-most-important-part-consequences-of-taking-shortcuts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        This is the most important part - Consequences of "taking shortcuts"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typical-scenario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Typical Scenario:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consequences-when-scaling-actually-happens" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔥 Consequences when scaling (actually happens):
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔥 Consequences when scaling (actually happens):">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ui-operations-change" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚨 UI operations change:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logic-duplication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚨 Logic duplication:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parallel-execution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚨 Parallel execution:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#refactor-must-spend-5-10x-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚨 Refactor: Must spend 5-10x time
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#painful-conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Painful Conclusion:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-guidance-for-new-juniors-learn-standard-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 🧭 Guidance for New Juniors: Learn Standard Framework
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#you-wont-regret-the-initial-time-investment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        You won't regret the initial time investment!
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#41-standard-structure-separation-separation-of-concerns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1. Standard Structure = Separation (Separation of Concerns)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#standard-directory-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📁 Standard Directory Structure:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-why-standard-sdet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2. Why Standard SDET?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-core-principles-a-junior-must-master-when-building-a-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 🎯 Core Principles a Junior Must Master When Building a Framework
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#these-are-foundational-knowledge-focus-on-why-to-do-not-just-how-to-do" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        These are foundational knowledge - focus on "why to do", not just "how to do"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-principles-of-layering-and-separation-of-concerns-soc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 🏗️ Principles of Layering and Separation of Concerns (SoC)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-anti-flaky-mechanisms-ensuring-robustness" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 🛡️ Anti-Flaky Mechanisms (Ensuring Robustness)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-environment-and-configuration-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. ⚙️ Environment and Configuration Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-logging-and-reporting-traceability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 📰 Logging and Reporting (Traceability)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-flexibility-adapting-frameworks-based-on-project-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. 🎭 Flexibility - Adapting Frameworks Based on Project Requirements
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. 🎭 Flexibility - Adapting Frameworks Based on Project Requirements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-standard-frameworks-are-principles-not-rigid-templates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1. Standard Frameworks Are "Principles", Not "Rigid Templates"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-questions-to-help-you-adapt-your-framework-appropriately" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2. Questions to Help You "Adapt" Your Framework Appropriately
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-advice-start-with-principles-adapt-to-reality" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3. Advice: Start with Principles, Adapt to Reality
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.3. Advice: Start with Principles, Adapt to Reality">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-takeaway-for-this-section" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Key Takeaway for this section:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conclusion-early-investment-long-term-harvest" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Conclusion: Early Investment - Long-term Harvest
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#final-advice-for-juniors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        *Final Advice for Juniors:***
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚀 Next Steps:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phien-ban-tieng-viet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🇻🇳 PHIÊN BẢN TIẾNG VIỆT
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-loi-mo-au-may-man-hay-bai-hoc-au-thuong" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 💡 Lời mở đầu: May mắn hay Bài học đau thương?
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. 💡 Lời mở đầu: May mắn hay Bài học đau thương?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kinh-nghiem-ca-nhan-cua-toi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kinh nghiệm cá nhân của tôi:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loi-ich-ngay-lap-tuc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lợi ích ngay lập tức:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iem-mau-chot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Điểm mấu chốt:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-noi-niem-cua-junior-tai-sao-phai-phuc-tap-hoa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 🤯 Nỗi niềm của Junior: "Tại sao phải phức tạp hóa?"
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 🤯 Nỗi niềm của Junior: &#34;Tại sao phải phức tạp hóa?&#34;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thuc-te-phu-phang" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Thực tế phũ phàng:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#van-e-waitsync-tai-sao-phai-wait-for-load-state-hay-wait-for-selector-khi-minh-chi-can-click" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ❓ Vấn đề Wait/Sync: "Tại sao phải wait for load state hay wait for selector khi mình chỉ cần click()?"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#van-e-logging-log-lam-gi-cho-ton-thoi-gian-va-ay-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ❓ Vấn đề Logging: "Log làm gì cho tốn thời gian và đầy data?"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#van-e-page-object-model-pom-viet-logic-truc-tiep-vao-step-test-co-phai-nhanh-va-de-hon-khong" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ❓ Vấn đề Page Object Model (POM): "Viết logic trực tiếp vào step test có phải nhanh và dễ hơn không?"
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-bai-hoc-au-thuong-roi-moi-thay-cai-canh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 💥 Bài học đau thương: "Rồi mới thấy cái cảnh"
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 💥 Bài học đau thương: &#34;Rồi mới thấy cái cảnh&#34;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ay-la-phan-quan-trong-nhat-hau-qua-cua-viec-i-tat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Đây là phần quan trọng nhất - Hậu quả của việc "đi tắt"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tinh-huong-ien-hinh" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tình huống điển hình:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#he-qua-khi-mo-rong-thuc-te-xay-ra" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔥 Hệ quả khi mở rộng (thực tế xảy ra):
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔥 Hệ quả khi mở rộng (thực tế xảy ra):">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thao-tac-ui-thay-oi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚨 Thao tác UI thay đổi:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logic-bi-lap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚨 Logic bị lặp:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#chay-song-song-parallel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚨 Chạy song song (Parallel):
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#refactor-phai-bo-thoi-gian-gap-5-10-lan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚨 Refactor: Phải bỏ thời gian gấp 5-10 lần
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ket-luan-au-thuong" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Kết luận đau thương:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-inh-huong-cho-tan-junior-hay-hoc-framework-chuan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 🧭 Định hướng cho Tân Junior: Hãy học Framework Chuẩn
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. 🧭 Định hướng cho Tân Junior: Hãy học Framework Chuẩn">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ban-se-khong-hoi-tiec-khi-au-tu-thoi-gian-ban-au" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Bạn sẽ không hối tiếc khi đầu tư thời gian ban đầu!
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#41-cau-truc-chuan-tach-biet-separation-of-concerns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1. Cấu trúc Chuẩn = Tách biệt (Separation of Concerns)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cau-truc-thu-muc-chuan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📁 Cấu trúc thư mục chuẩn:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-tai-sao-lai-la-chuan-sdet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2. Tại sao lại là Chuẩn SDET?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-core-principles-a-junior-must-master-when-building-a-framework_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 🎯 Core Principles a Junior Must Master When Building a Framework
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. 🎯 Core Principles a Junior Must Master When Building a Framework">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ay-la-nhung-kien-thuc-nen-tang-tap-trung-vao-tai-sao-phai-lam-khong-chi-lam-the-nao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Đây là những kiến thức nền tảng - tập trung vào "tại sao phải làm", không chỉ "làm thế nào"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-nguyen-tac-tach-biet-va-lop-hoa-layering-separation-of-concerns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 🏗️ Nguyên tắc Tách biệt và Lớp hóa (Layering &amp; Separation of Concerns)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-kha-nang-chong-loi-ngau-nhien-anti-flaky-mechanisms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 🛡️ Khả năng Chống Lỗi Ngẫu nhiên (Anti-Flaky Mechanisms)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-thiet-lap-moi-truong-va-cau-hinh-configuration-environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. ⚙️ Thiết lập Môi trường và Cấu hình (Configuration &amp; Environment)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-ghi-nhan-va-bao-cao-logging-reporting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 📰 Ghi nhận và Báo cáo (Logging &amp; Reporting)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-tinh-linh-hoat-ieu-chinh-framework-theo-yeu-cau-du-an" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. 🎭 Tính Linh Hoạt - Điều Chỉnh Framework Theo Yêu Cầu Dự Án
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. 🎭 Tính Linh Hoạt - Điều Chỉnh Framework Theo Yêu Cầu Dự Án">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-framework-chuan-la-nguyen-tac-khong-phai-khuon-mau-cung-nhac" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1. Framework Chuẩn Là "Nguyên Tắc", Không Phải "Khuôn Mẫu" Cứng Nhắc
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-cac-cau-hoi-giup-ban-ieu-chinh-framework-phu-hop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2. Các Câu Hỏi Giúp Bạn "Điều Chỉnh" Framework Phù Hợp
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63-loi-khuyen-bat-au-tu-nguyen-tac-ieu-chinh-theo-thuc-te" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3. Lời Khuyên: Bắt Đầu Từ Nguyên Tắc, Điều Chỉnh Theo Thực Tế
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.3. Lời Khuyên: Bắt Đầu Từ Nguyên Tắc, Điều Chỉnh Theo Thực Tế">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-takeaway-cho-phan-nay" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Key Takeaway cho phần này:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="building-solid-sdet-framework-foundations">🏗️ Building Solid SDET Framework Foundations<a class="headerlink" href="#building-solid-sdet-framework-foundations" title="Permanent link">&para;</a></h1>
+<h2 id="why-not-take-shortcuts-at-the-beginning">📝 Why NOT Take Shortcuts at the Beginning?<a class="headerlink" href="#why-not-take-shortcuts-at-the-beginning" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Real-world lessons from experience - A standard framework is "solid foundation for the fortress"</p>
+</blockquote>
+<hr />
+<h2 id="english-version">🌍 ENGLISH VERSION<a class="headerlink" href="#english-version" title="Permanent link">&para;</a></h2>
+<h3 id="1-introduction-luck-or-painful-lesson">1. 💡 Introduction: Luck or Painful Lesson?<a class="headerlink" href="#1-introduction-luck-or-painful-lesson" title="Permanent link">&para;</a></h3>
+<h3 id="my-personal-experience">My Personal Experience:<a class="headerlink" href="#my-personal-experience" title="Permanent link">&para;</a></h3>
+<p>I started my career with <strong>good fortune</strong> by working with pre-built Frameworks that were designed according to proper SDET (Software Development Engineer in Test) standards:</p>
+<ul>
+<li><strong>Playwright</strong> as the core testing framework</li>
+<li><strong>POM (Page Object Model)</strong> + <strong>Client Model</strong> for API</li>
+<li><strong>Allure Reporting</strong> built-in</li>
+<li><strong>CI/CD Pipeline</strong> with GitHub Actions</li>
+</ul>
+<h3 id="immediate-benefits">Immediate Benefits:<a class="headerlink" href="#immediate-benefits" title="Permanent link">&para;</a></h3>
+<p>✅ <strong>Enhanced understanding of standard architecture</strong> - Seeing the "skeleton" of a professional Framework</p>
+<p>✅ <strong>Easy maintenance</strong> - When UI changes, fix only 1 place instead of dozens</p>
+<p>✅ <strong>Easy debugging</strong> - Detailed logs, screenshot on fail, full trace</p>
+<p>✅ <strong>Easy expansion/advanced features deployment</strong> - Visual Testing, Data-driven testing, Automatic notifications integration in just days</p>
+<h3 id="key-point">🎯 Key Point:<a class="headerlink" href="#key-point" title="Permanent link">&para;</a></h3>
+<p><strong>Building a proper Framework from the beginning is "solid foundation for the fortress" later on.</strong></p>
+<p>It's not "overcomplicating", but <strong>early investment for long-term harvest</strong>.</p>
+<hr />
+<h3 id="2-juniors-dilemma-why-complicate-things">2. 🤯 Junior's Dilemma: "Why Complicate Things?"<a class="headerlink" href="#2-juniors-dilemma-why-complicate-things" title="Permanent link">&para;</a></h3>
+<h3 id="harsh-reality">Harsh Reality:<a class="headerlink" href="#harsh-reality" title="Permanent link">&para;</a></h3>
+<p>Most Juniors when starting have the same thought: <strong>"Write simple code first, optimize later"</strong></p>
+<p>I was like that too. Below are the most common doubts:</p>
+<h3 id="waitsync-problem-why-wait-for-load-state-or-selector-when-i-just-need-click">❓ Wait/Sync Problem: "Why wait for load state or selector when I just need click()?"<a class="headerlink" href="#waitsync-problem-why-wait-for-load-state-or-selector-when-i-just-need-click" title="Permanent link">&para;</a></h3>
+<p><strong>🎯 Answer (Concise):</strong> Fight Flaky Tests</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// ❌ WRONG: Click immediately</span>
+<span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">click</span><span class="p">(</span><span class="s1">&#39;#submit-btn&#39;</span><span class="p">);</span>
+
+<span class="c1">// ✅ RIGHT: Ensure element is ready</span>
+<span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">waitForSelector</span><span class="p">(</span><span class="s1">&#39;#submit-btn&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">state</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;visible&#39;</span><span class="w"> </span><span class="p">});</span>
+<span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">click</span><span class="p">(</span><span class="s1">&#39;#submit-btn&#39;</span><span class="p">);</span>
+</code></pre></div>
+<p><strong>Why?</strong> Your Framework will be stable when running parallel (parallel execution) on CI/CD.</p>
+<h3 id="logging-problem-why-log-for-time-waste-and-full-data">❓ Logging Problem: "Why log for time waste and full data?"<a class="headerlink" href="#logging-problem-why-log-for-time-waste-and-full-data" title="Permanent link">&para;</a></h3>
+<p><strong>🎯 Answer (Concise):</strong> Debug/Traceability</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// ❌ WRONG: No logging at all</span>
+<span class="nx">it</span><span class="p">(</span><span class="s1">&#39;Login test&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">fill</span><span class="p">(</span><span class="s1">&#39;#username&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;user&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">click</span><span class="p">(</span><span class="s1">&#39;#login-btn&#39;</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="c1">// ✅ RIGHT: Full logging</span>
+<span class="nx">it</span><span class="p">(</span><span class="s1">&#39;Login test&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Starting login test...&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">fill</span><span class="p">(</span><span class="s1">&#39;#username&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;user&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Username filled&#39;</span><span class="p">);</span>
+
+<span class="w">  </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">click</span><span class="p">(</span><span class="s1">&#39;#login-btn&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Login button clicked&#39;</span><span class="p">);</span>
+
+<span class="w">  </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">waitForURL</span><span class="p">(</span><span class="s1">&#39;**/dashboard&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Login successful&#39;</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div>
+<p><strong>Why?</strong> Without logs, it's almost <strong>impossible to find error causes</strong> when tests run on CI/CD server.</p>
+<h3 id="pom-problem-is-writing-logic-directly-in-test-steps-faster-and-easier">❓ POM Problem: "Is writing logic directly in test steps faster and easier?"<a class="headerlink" href="#pom-problem-is-writing-logic-directly-in-test-steps-faster-and-easier" title="Permanent link">&para;</a></h3>
+<p><strong>🎯 Answer (Concise):</strong> Maintainability &amp; Reusability</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// ❌ WRONG: Direct logic in test</span>
+<span class="nx">it</span><span class="p">(</span><span class="s1">&#39;Login and check dashboard&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="kr">goto</span><span class="p">(</span><span class="s1">&#39;/login&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">fill</span><span class="p">(</span><span class="s1">&#39;[data-testid=&quot;username&quot;]&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;user&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">fill</span><span class="p">(</span><span class="s1">&#39;[data-testid=&quot;password&quot;]&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;pass&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">click</span><span class="p">(</span><span class="s1">&#39;[data-testid=&quot;login-btn&quot;]&#39;</span><span class="p">);</span>
+
+<span class="w">  </span><span class="k">await</span><span class="w"> </span><span class="nx">expect</span><span class="p">(</span><span class="nx">page</span><span class="p">.</span><span class="nx">locator</span><span class="p">(</span><span class="s1">&#39;text=Welcome&#39;</span><span class="p">)).</span><span class="nx">toBeVisible</span><span class="p">();</span>
+<span class="p">});</span>
+
+<span class="c1">// ✅ RIGHT: Using POM</span>
+<span class="nx">it</span><span class="p">(</span><span class="s1">&#39;Login and check dashboard&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">loginPage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">LoginPage</span><span class="p">(</span><span class="nx">page</span><span class="p">);</span>
+<span class="w">  </span><span class="k">await</span><span class="w"> </span><span class="nx">loginPage</span><span class="p">.</span><span class="nx">login</span><span class="p">(</span><span class="s1">&#39;user&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;pass&#39;</span><span class="p">);</span>
+
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">dashboardPage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">DashboardPage</span><span class="p">(</span><span class="nx">page</span><span class="p">);</span>
+<span class="w">  </span><span class="k">await</span><span class="w"> </span><span class="nx">expect</span><span class="p">(</span><span class="nx">dashboardPage</span><span class="p">.</span><span class="nx">welcomeMessage</span><span class="p">).</span><span class="nx">toBeVisible</span><span class="p">();</span>
+<span class="p">});</span>
+</code></pre></div>
+<p><strong>Why?</strong> If UI changes (selector changes), you fix only <strong>1 POM file</strong> instead of dozens of test files.</p>
+<hr />
+<h3 id="3-painful-lesson-then-you-see-the-real-picture">3. 💥 Painful Lesson: "Then You See the Real Picture"<a class="headerlink" href="#3-painful-lesson-then-you-see-the-real-picture" title="Permanent link">&para;</a></h3>
+<h3 id="this-is-the-most-important-part-consequences-of-taking-shortcuts">This is the most important part - Consequences of "taking shortcuts"<a class="headerlink" href="#this-is-the-most-important-part-consequences-of-taking-shortcuts" title="Permanent link">&para;</a></h3>
+<h3 id="typical-scenario">Typical Scenario:<a class="headerlink" href="#typical-scenario" title="Permanent link">&para;</a></h3>
+<p><strong>Step 1:</strong> Junior excitedly builds "simple" Framework
+- Write all logic in test files
+- No POM, no wait, no log
+- "If it runs, it's OK, optimize later"</p>
+<p><strong>Step 2:</strong> Framework works well... in local environment
+- Tests run fast, all pass
+- Boss praises: "Great job, deploy to production!"</p>
+<p><strong>Step 3:</strong> Deploy to CI/CD - "Hell" begins</p>
+<h3 id="consequences-when-scaling-actually-happens">🔥 Consequences when scaling (actually happens):<a class="headerlink" href="#consequences-when-scaling-actually-happens" title="Permanent link">&para;</a></h3>
+<h4 id="ui-operations-change">🚨 UI operations change:<a class="headerlink" href="#ui-operations-change" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="c1">// Locator duplicated in 20 test files</span>
+<span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">click</span><span class="p">(</span><span class="s1">&#39;#old-submit-btn&#39;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Must fix 20 places</span>
+<span class="c1">// Instead of fixing only 1 POM file</span>
+</code></pre></div>
+<h4 id="logic-duplication">🚨 Logic duplication:<a class="headerlink" href="#logic-duplication" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="c1">// Same Login operation written repeatedly</span>
+<span class="c1">// In 15 different test files</span>
+<span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">fill</span><span class="p">(</span><span class="s1">&#39;#username&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;user&#39;</span><span class="p">);</span>
+<span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">fill</span><span class="p">(</span><span class="s1">&#39;#password&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;pass&#39;</span><span class="p">);</span>
+<span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">click</span><span class="p">(</span><span class="s1">&#39;#login-btn&#39;</span><span class="p">);</span>
+</code></pre></div>
+<h4 id="parallel-execution">🚨 Parallel execution:<a class="headerlink" href="#parallel-execution" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="c1">// Flaky tests everywhere</span>
+<span class="c1">// Random errors appear</span>
+<span class="c1">// &quot;Why pass locally but fail CI?&quot;</span>
+</code></pre></div>
+<h4 id="refactor-must-spend-5-10x-time">🚨 Refactor: Must spend 5-10x time<a class="headerlink" href="#refactor-must-spend-5-10x-time" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="c1">// Feeling &quot;whole world of pain&quot;</span>
+<span class="c1">// Must refactor from scratch</span>
+<span class="c1">// Deadline burning</span>
+<span class="c1">// Boss asks: &quot;Why so slow?&quot;</span>
+</code></pre></div>
+<h3 id="painful-conclusion">🎯 Painful Conclusion:<a class="headerlink" href="#painful-conclusion" title="Permanent link">&para;</a></h3>
+<p><strong>"Initial shortcut = Save 1-2 weeks"</strong>
+<strong>"Later fixing = Cost 2-3 months + stress + lost credibility"</strong></p>
+<hr />
+<h3 id="4-guidance-for-new-juniors-learn-standard-framework">4. 🧭 Guidance for New Juniors: Learn Standard Framework<a class="headerlink" href="#4-guidance-for-new-juniors-learn-standard-framework" title="Permanent link">&para;</a></h3>
+<h3 id="you-wont-regret-the-initial-time-investment">You won't regret the initial time investment!<a class="headerlink" href="#you-wont-regret-the-initial-time-investment" title="Permanent link">&para;</a></h3>
+<h3 id="41-standard-structure-separation-separation-of-concerns">4.1. Standard Structure = Separation (Separation of Concerns)<a class="headerlink" href="#41-standard-structure-separation-separation-of-concerns" title="Permanent link">&para;</a></h3>
+<p>A good Framework = Framework with <strong>clear layer separation</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Core Function</th>
+<th>Main Goal</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Test Layer</strong><br><code>src/tests/</code></td>
+<td>Contains scenarios (Test Steps) and Assertions</td>
+<td><strong>Orchestration, Clarity</strong></td>
+<td><code>expect()</code>, business flow</td>
+</tr>
+<tr>
+<td><strong>UI Abstraction</strong><br><code>src/ui/</code></td>
+<td>Page Objects, Locators, UI Actions</td>
+<td><strong>Maintainability</strong></td>
+<td>POM classes, selectors</td>
+</tr>
+<tr>
+<td><strong>API Abstraction</strong><br><code>src/api/</code></td>
+<td>API Clients, Endpoints, Data Models</td>
+<td><strong>Reusability</strong></td>
+<td>HTTP methods, DTOs</td>
+</tr>
+<tr>
+<td><strong>Utility Layer</strong><br><code>src/utils/</code></td>
+<td>Logging, Config, Retry Mechanism</td>
+<td><strong>Robustness, Debugging</strong></td>
+<td>Logger, env config</td>
+</tr>
+</tbody>
+</table>
+<h3 id="standard-directory-structure">📁 Standard Directory Structure:<a class="headerlink" href="#standard-directory-structure" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>src/
+├── tests/                    # 🧪 Test Layer
+│   ├── ui/                   # UI Tests
+│   ├── api/                  # API Tests
+│   └── e2e/                  # End-to-End Tests
+│
+├── ui/                       # 🎨 UI Abstraction
+│   ├── pages/                # Page Objects
+│   └── components/           # Reusable Components
+│
+├── api/                      # 🔌 API Abstraction
+│   ├── clients/              # API Clients
+│   ├── models/               # Data Models
+│   └── helpers/              # API Utilities
+│
+├── utils/                    # 🛠️ Utility Layer
+│   ├── config/               # Configuration
+│   ├── logger/               # Logging
+│   └── helpers/              # Common Helpers
+│
+└── types/                    # 📝 Type Definitions
+    └── index.ts
+</code></pre></div>
+<h3 id="42-why-standard-sdet">4.2. Why Standard SDET?<a class="headerlink" href="#42-why-standard-sdet" title="Permanent link">&para;</a></h3>
+<p>✅ <strong>Solid foundation</strong> makes adopting new tools easier:
+- Visual Testing integration (Applitools)
+- CI/CD Pipeline (GitHub Actions, Jenkins)
+- Data-driven testing (CSV, JSON)
+- Cross-browser testing (BrowserStack)
+- Performance testing (Lighthouse)</p>
+<p>✅ <strong>Helps you achieve SDET standards</strong>:
+- Not just QA Automation running scripts
+- But engineers capable of building testing systems</p>
+<p>✅ <strong>Easy to scale and maintain</strong>:
+- Team 5 people → Team 50 people still works
+- Small project → Enterprise project still runs</p>
+<hr />
+<h3 id="5-core-principles-a-junior-must-master-when-building-a-framework">5. 🎯 Core Principles a Junior Must Master When Building a Framework<a class="headerlink" href="#5-core-principles-a-junior-must-master-when-building-a-framework" title="Permanent link">&para;</a></h3>
+<h3 id="these-are-foundational-knowledge-focus-on-why-to-do-not-just-how-to-do">These are foundational knowledge - focus on "why to do", not just "how to do"<a class="headerlink" href="#these-are-foundational-knowledge-focus-on-why-to-do-not-just-how-to-do" title="Permanent link">&para;</a></h3>
+<h3 id="1-principles-of-layering-and-separation-of-concerns-soc">1. 🏗️ Principles of Layering and Separation of Concerns (SoC)<a class="headerlink" href="#1-principles-of-layering-and-separation-of-concerns-soc" title="Permanent link">&para;</a></h3>
+<p>A good Framework must be divided into clear responsibility layers. Junior must understand this principle primarily because it directly addresses maintenance issues.</p>
+<table>
+<thead>
+<tr>
+<th>Principle to Understand</th>
+<th>Key Details to Master</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Page Object Model (POM)</strong></td>
+<td>Separate: Element finding logic (Locator) and Actions from Test Assertions.<br><strong>Goal:</strong> When UI changes, modify only the single Page Object file</td>
+</tr>
+<tr>
+<td><strong>API Client/Service Model</strong></td>
+<td>Similar to POM for APIs. Separate: Endpoints and API calling methods from Test Logic.<br><strong>Goal:</strong> Use API for Data Setup or Data Verification without UI interaction</td>
+</tr>
+<tr>
+<td><strong>Test Layer</strong></td>
+<td>Contains only: Business logic (Test Flow) and Result Assertions.<br><strong>Goal:</strong> This is the only layer allowed to use <code>expect()</code> or <code>assert()</code></td>
+</tr>
+<tr>
+<td><strong>Importance of utils</strong></td>
+<td>Place all shared, common functions (Config, Logger, Helper Data) into utils to prevent code duplication</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2-anti-flaky-mechanisms-ensuring-robustness">2. 🛡️ Anti-Flaky Mechanisms (Ensuring Robustness)<a class="headerlink" href="#2-anti-flaky-mechanisms-ensuring-robustness" title="Permanent link">&para;</a></h3>
+<p>Flaky tests (tests that pass sometimes and fail sometimes) are the biggest enemy of automation. A Junior needs to know how to prevent them from the start.</p>
+<table>
+<thead>
+<tr>
+<th>Mechanism to Master</th>
+<th>Why Essential</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Explicit Waits</strong></td>
+<td>Strictly avoid <code>waitForTimeout()</code>. Only use conditional waits from Playwright (e.g., <code>waitForLoadState('networkidle')</code>, <code>page.waitForSelector()</code>) to ensure elements are ready</td>
+</tr>
+<tr>
+<td><strong>Optimal Locators</strong></td>
+<td>Prioritize Locators that are less likely to be changed by developers (e.g., <code>getByRole()</code>, <code>data-testid</code>, <code>data-qa</code>). Avoid brittle locators like long XPath or complex CSS</td>
+</tr>
+<tr>
+<td><strong>Basic Retry</strong></td>
+<td>Understand how to apply Retry mechanism (e.g., <code>this.retries(N)</code> in Mocha) to crucial tests to mitigate temporary environmental failure impacts</td>
+</tr>
+<tr>
+<td><strong>No Shared Page/Context</strong></td>
+<td>When running in parallel, every test (or worker) must have its own independent browser session (Page/Context) to avoid interference</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-environment-and-configuration-management">3. ⚙️ Environment and Configuration Management<a class="headerlink" href="#3-environment-and-configuration-management" title="Permanent link">&para;</a></h3>
+<p>A professional framework must run seamlessly across different environments.</p>
+<table>
+<thead>
+<tr>
+<th>Aspect to Understand</th>
+<th>Simple Implementation Method</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>External Configuration</strong></td>
+<td>Avoid hard-coding URLs/keys in code. Use <code>.env</code> files (dotenv) to manage environment variables (<code>BASE_URL</code>, <code>API_URL</code>)</td>
+</tr>
+<tr>
+<td><strong>Environment Switching</strong></td>
+<td>Easily switch between Dev/Staging/Production by simply setting environment variable (e.g., <code>TEST_ENV=staging</code>)</td>
+</tr>
+<tr>
+<td><strong>Logging Configuration</strong></td>
+<td>Ability to easily enable/disable or adjust log level (debug, info, warn) via configuration file</td>
+</tr>
+</tbody>
+</table>
+<h3 id="4-logging-and-reporting-traceability">4. 📰 Logging and Reporting (Traceability)<a class="headerlink" href="#4-logging-and-reporting-traceability" title="Permanent link">&para;</a></h3>
+<p>A failed test without detailed information is useless.</p>
+<table>
+<thead>
+<tr>
+<th>Tool/Concept to Understand</th>
+<th>Importance for Debugging</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Structured Logging (Pino/Winston)</strong></td>
+<td>Log critical steps of UI Actions (click, fill) and API Request/Response.<br><strong>Most Important:</strong> Log detailed exceptions/errors to enable debugging on CI servers</td>
+</tr>
+<tr>
+<td><strong>Allure/HTML Report</strong></td>
+<td>Understand that Report is more than just PASS/FAIL. It must display Allure Steps, Screenshot on Fail, and Logs/Payloads so non-coders can easily understand the failure root cause</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="6-flexibility-adapting-frameworks-based-on-project-requirements">6. 🎭 Flexibility - Adapting Frameworks Based on Project Requirements<a class="headerlink" href="#6-flexibility-adapting-frameworks-based-on-project-requirements" title="Permanent link">&para;</a></h2>
+<h3 id="61-standard-frameworks-are-principles-not-rigid-templates">6.1. Standard Frameworks Are "Principles", Not "Rigid Templates"<a class="headerlink" href="#61-standard-frameworks-are-principles-not-rigid-templates" title="Permanent link">&para;</a></h3>
+<p>A common misconception among juniors is that all projects must have every layer (ui/, api/, utils/...). In reality, a skilled SDET knows when to simplify and when to expand.</p>
+<p><strong><em>Examples of Flexibility:</em></strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>Project Type / Requirements</strong></th>
+<th><strong>How the Framework Can Be Adapted</strong></th>
+<th><strong>Why</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>MVP (Minimum Viable Product)</strong><br>Small, fast-changing, team of 1-2 people</td>
+<td>• Can combine pages/ and tests/ simply.<br>• Skip complex reporting (Allure), use basic HTML report.<br>• Prioritize simple POM over complex Component Model.</td>
+<td><strong><em>Speed is more important than perfection. Need to validate ideas quickly.</em></strong></td>
+</tr>
+<tr>
+<td><strong>API-First Applications</strong><br>(Backend services, Microservices)</td>
+<td>• Focus on api/ layer, build Client Model thoroughly.<br>• ui/ layer can be minimal or nonexistent.<br>• Invest heavily in data-driven testing and contract testing.</td>
+<td><strong><em>Testing effort should focus on areas with highest risk and business logic.</em></strong></td>
+</tr>
+<tr>
+<td><strong>Legacy Applications</strong><br>Unstable UI, no data-testid available</td>
+<td>• May need wrapper functions to handle complex waits and retries.<br>• May accept using XPath if no better options exist.<br>• Prioritize capture screenshot and video recording for debugging.</td>
+<td><strong><em>Stability (anti-flaky) is top priority; some "clean code" principles can be sacrificed.</em></strong></td>
+</tr>
+<tr>
+<td><strong>Large Enterprise Projects</strong><br>Team &gt;10 people, multiple modules</td>
+<td>• Need clear, complete layer structure.<br>• Need Component Model (BasePage, BaseComponent) for maximum reuse.<br>• Must have configuration management and detailed reporting (Allure).</td>
+<td><strong><em>Scalability, maintainability, and team collaboration are most important.</em></strong></td>
+</tr>
+<tr>
+<td><strong>Proof of Concept (POC) for New Tools</strong><br>(e.g., Visual Testing evaluation)</td>
+<td>• Can write standalone tests outside main framework.<br>• Focus on utils/ layer to integrate new tools.<br>• Minimal structure, easy to discard if POC fails.</td>
+<td><strong><em>Goal is tool evaluation, not building long-term systems.</em></strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="62-questions-to-help-you-adapt-your-framework-appropriately">6.2. Questions to Help You "Adapt" Your Framework Appropriately<a class="headerlink" href="#62-questions-to-help-you-adapt-your-framework-appropriately" title="Permanent link">&para;</a></h3>
+<p><strong><em>Before starting, ask yourself:</em></strong></p>
+<blockquote>
+<ol>
+<li><strong><em>Project scale &amp; lifespan? (2 months or 2 years?)</em></strong></li>
+<li><strong><em>What's the testing focus? (UI, API, Performance, Security?)</em></strong></li>
+<li><strong><em>Team size and experience? (Solo or team of 10? Junior or Senior?)</em></strong></li>
+<li><strong><em>Product development speed? (Does UI change frequently?)</em></strong></li>
+<li><strong><em>Reporting and integration requirements? (Need Allure for PM reports? Need Slack notifications?)</em></strong></li>
+</ol>
+</blockquote>
+<p><strong>Real Example:</strong></p>
+<blockquote>
+<p>"My Project A was a small internal tool with only 5 screens, maintained by a single tester (myself). I chose a simplified version: still separating pages/ and tests/, but skipping the api/ layer (unneeded) and using simple console.log instead of complex Winston. The framework remained 'standard' in separation principles but was streamlined for context."</p>
+</blockquote>
+<h3 id="63-advice-start-with-principles-adapt-to-reality">6.3. Advice: Start with Principles, Adapt to Reality<a class="headerlink" href="#63-advice-start-with-principles-adapt-to-reality" title="Permanent link">&para;</a></h3>
+<blockquote>
+<blockquote>
+<ol>
+<li>Always start with core principles: Separation of Concerns (SoC), Anti-Flakky, Configuration Management. These are <strong>"non-negotiable hardware".</strong></li>
+<li>Be flexible with implementation: Number of layers, POM complexity, logging/reporting tools can be <strong>"adjustable software".</strong></li>
+<li>Design for change: Your code should be modular so when the project grows, you can easily <strong>"upgrade"</strong> the framework (e.g., add Allure, separate Component Model) without rewriting.</li>
+</ol>
+</blockquote>
+</blockquote>
+<h4 id="key-takeaway-for-this-section">🎯 Key Takeaway for this section:<a class="headerlink" href="#key-takeaway-for-this-section" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p><strong><em>"A good framework isn't one that has everything, but one that BEST FITS the current needs of your project, and is DESIGNED TO ADAPT EASILY when those needs change."</em></strong></p>
+</blockquote>
+<h4 id="conclusion-early-investment-long-term-harvest">🎯 Conclusion: Early Investment - Long-term Harvest<a class="headerlink" href="#conclusion-early-investment-long-term-harvest" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Standard Framework = "Solid Foundation"
+Initially: Seems "complicated" and "time-consuming"
+Later: Saves hundreds of hours in maintenance and debugging
+Result: Become a real SDET, not just "QA running scripts"</p>
+</blockquote>
+<h4 id="final-advice-for-juniors"><strong><em>*</em>Final Advice for Juniors:</strong>***<a class="headerlink" href="#final-advice-for-juniors" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p><strong>"Don't hesitate to invest 2-3 weeks initially to learn and apply standard principles. Be adaptable: Use these principles as a compass, not a rigid map. Adjust implementation to fit your project's scale, complexity, and goals. The best framework isn't the most complex one, but the one that fits best and remains sustainable in your specific context!"</strong></p>
+</blockquote>
+<h4 id="next-steps">🚀 Next Steps:<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h4>
+<p><div class="highlight"><pre><span></span><code>1. Learn Theory: Master the principles above
+2. Practice: Start with small project, apply each layer
+3. Expand: Add advanced features gradually
+</code></pre></div>
+<em>Standard Framework is not the destination - but the journey. Start today!</em> 🎯</p>
+<hr />
+<h2 id="phien-ban-tieng-viet">🇻🇳 PHIÊN BẢN TIẾNG VIỆT<a class="headerlink" href="#phien-ban-tieng-viet" title="Permanent link">&para;</a></h2>
+<h2 id="1-loi-mo-au-may-man-hay-bai-hoc-au-thuong">1. 💡 Lời mở đầu: May mắn hay Bài học đau thương?<a class="headerlink" href="#1-loi-mo-au-may-man-hay-bai-hoc-au-thuong" title="Permanent link">&para;</a></h2>
+<h3 id="kinh-nghiem-ca-nhan-cua-toi">Kinh nghiệm cá nhân của tôi:<a class="headerlink" href="#kinh-nghiem-ca-nhan-cua-toi" title="Permanent link">&para;</a></h3>
+<p>Tôi bắt đầu sự nghiệp với <strong>may mắn</strong> khi làm việc với các Framework có sẵn, được thiết kế chuẩn chỉnh theo quy tắc SDET (Software Development Engineer in Test):</p>
+<ul>
+<li><strong>Playwright</strong> làm core testing framework</li>
+<li><strong>POM (Page Object Model)</strong> + <strong>Client Model</strong> cho API</li>
+<li><strong>Allure Reporting</strong> tích hợp sẵn</li>
+<li><strong>CI/CD Pipeline</strong> với GitHub Actions</li>
+</ul>
+<h3 id="loi-ich-ngay-lap-tuc">Lợi ích ngay lập tức:<a class="headerlink" href="#loi-ich-ngay-lap-tuc" title="Permanent link">&para;</a></h3>
+<p>✅ <strong>Nâng cao hiểu biết về kiến trúc chuẩn</strong> - Thấy được "skeleton" của một Framework chuyên nghiệp</p>
+<p>✅ <strong>Dễ dàng bảo trì (Maintenance)</strong> - Khi UI thay đổi, chỉ sửa 1 chỗ thay vì cả tá</p>
+<p>✅ <strong>Dễ dàng gỡ lỗi (Debug)</strong> - Log chi tiết, screenshot on fail, trace đầy đủ</p>
+<p>✅ <strong>Mở rộng/Triển khai tính năng nâng cao</strong> - Tích hợp Visual Testing, Data-driven testing, Notification tự động chỉ trong vài ngày</p>
+<h3 id="iem-mau-chot">🎯 Điểm mấu chốt:<a class="headerlink" href="#iem-mau-chot" title="Permanent link">&para;</a></h3>
+<p><strong>Việc xây dựng một Framework chuẩn chỉnh ngay từ ban đầu là một "chân móng vững chắc cho thành quách" sau này.</strong></p>
+<p>Không phải "phức tạp hóa", mà là <strong>đầu tư sớm để gặt hái lâu dài</strong>.</p>
+<hr />
+<h2 id="2-noi-niem-cua-junior-tai-sao-phai-phuc-tap-hoa">2. 🤯 Nỗi niềm của Junior: "Tại sao phải phức tạp hóa?"<a class="headerlink" href="#2-noi-niem-cua-junior-tai-sao-phai-phuc-tap-hoa" title="Permanent link">&para;</a></h2>
+<h3 id="thuc-te-phu-phang">Thực tế phũ phàng:<a class="headerlink" href="#thuc-te-phu-phang" title="Permanent link">&para;</a></h3>
+<p>Hầu hết Junior khi bắt đầu đều có chung một suy nghĩ: <strong>"Viết code đơn giản trước, tối ưu sau"</strong></p>
+<p>Tôi cũng từng như vậy. Dưới đây là những nghi vấn phổ biến nhất:</p>
+<h3 id="van-e-waitsync-tai-sao-phai-wait-for-load-state-hay-wait-for-selector-khi-minh-chi-can-click">❓ Vấn đề Wait/Sync: "Tại sao phải wait for load state hay wait for selector khi mình chỉ cần click()?"<a class="headerlink" href="#van-e-waitsync-tai-sao-phai-wait-for-load-state-hay-wait-for-selector-khi-minh-chi-can-click" title="Permanent link">&para;</a></h3>
+<p><strong>🎯 Đáp án (Ngắn gọn):</strong> Chống Flaky Test</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// ❌ SAI: Click ngay lập tức</span>
+<span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">click</span><span class="p">(</span><span class="s1">&#39;#submit-btn&#39;</span><span class="p">);</span>
+
+<span class="c1">// ✅ ĐÚNG: Đảm bảo element sẵn sàng</span>
+<span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">waitForSelector</span><span class="p">(</span><span class="s1">&#39;#submit-btn&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">state</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;visible&#39;</span><span class="w"> </span><span class="p">});</span>
+<span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">click</span><span class="p">(</span><span class="s1">&#39;#submit-btn&#39;</span><span class="p">);</span>
+</code></pre></div>
+<p><strong>Tại sao?</strong> Framework của bạn sẽ ổn định khi chạy song song (parallel execution) trên CI/CD.</p>
+<h3 id="van-e-logging-log-lam-gi-cho-ton-thoi-gian-va-ay-data">❓ Vấn đề Logging: "Log làm gì cho tốn thời gian và đầy data?"<a class="headerlink" href="#van-e-logging-log-lam-gi-cho-ton-thoi-gian-va-ay-data" title="Permanent link">&para;</a></h3>
+<p><strong>🎯 Đáp án (Ngắn gọn):</strong> Debug/Traceability</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// ❌ SAI: Không log gì cả</span>
+<span class="nx">it</span><span class="p">(</span><span class="s1">&#39;Login test&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">fill</span><span class="p">(</span><span class="s1">&#39;#username&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;user&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">click</span><span class="p">(</span><span class="s1">&#39;#login-btn&#39;</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="c1">// ✅ ĐÚNG: Log đầy đủ</span>
+<span class="nx">it</span><span class="p">(</span><span class="s1">&#39;Login test&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Starting login test...&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">fill</span><span class="p">(</span><span class="s1">&#39;#username&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;user&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Username filled&#39;</span><span class="p">);</span>
+
+<span class="w">  </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">click</span><span class="p">(</span><span class="s1">&#39;#login-btn&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Login button clicked&#39;</span><span class="p">);</span>
+
+<span class="w">  </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">waitForURL</span><span class="p">(</span><span class="s1">&#39;**/dashboard&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Login successful&#39;</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div>
+<p><strong>Tại sao?</strong> Không có Log, gần như <strong>không thể tìm ra nguyên nhân lỗi</strong> khi test chạy trên CI/CD server.</p>
+<h3 id="van-e-page-object-model-pom-viet-logic-truc-tiep-vao-step-test-co-phai-nhanh-va-de-hon-khong">❓ Vấn đề Page Object Model (POM): "Viết logic trực tiếp vào step test có phải nhanh và dễ hơn không?"<a class="headerlink" href="#van-e-page-object-model-pom-viet-logic-truc-tiep-vao-step-test-co-phai-nhanh-va-de-hon-khong" title="Permanent link">&para;</a></h3>
+<p><strong>🎯 Đáp án (Ngắn gọn):</strong> Maintainability &amp; Reusability</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// ❌ SAI: Logic trực tiếp trong test</span>
+<span class="nx">it</span><span class="p">(</span><span class="s1">&#39;Login and check dashboard&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="kr">goto</span><span class="p">(</span><span class="s1">&#39;/login&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">fill</span><span class="p">(</span><span class="s1">&#39;[data-testid=&quot;username&quot;]&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;user&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">fill</span><span class="p">(</span><span class="s1">&#39;[data-testid=&quot;password&quot;]&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;pass&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">click</span><span class="p">(</span><span class="s1">&#39;[data-testid=&quot;login-btn&quot;]&#39;</span><span class="p">);</span>
+
+<span class="w">  </span><span class="k">await</span><span class="w"> </span><span class="nx">expect</span><span class="p">(</span><span class="nx">page</span><span class="p">.</span><span class="nx">locator</span><span class="p">(</span><span class="s1">&#39;text=Welcome&#39;</span><span class="p">)).</span><span class="nx">toBeVisible</span><span class="p">();</span>
+<span class="p">});</span>
+
+<span class="c1">// ✅ ĐÚNG: Sử dụng POM</span>
+<span class="nx">it</span><span class="p">(</span><span class="s1">&#39;Login and check dashboard&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">loginPage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">LoginPage</span><span class="p">(</span><span class="nx">page</span><span class="p">);</span>
+<span class="w">  </span><span class="k">await</span><span class="w"> </span><span class="nx">loginPage</span><span class="p">.</span><span class="nx">login</span><span class="p">(</span><span class="s1">&#39;user&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;pass&#39;</span><span class="p">);</span>
+
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">dashboardPage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">DashboardPage</span><span class="p">(</span><span class="nx">page</span><span class="p">);</span>
+<span class="w">  </span><span class="k">await</span><span class="w"> </span><span class="nx">expect</span><span class="p">(</span><span class="nx">dashboardPage</span><span class="p">.</span><span class="nx">welcomeMessage</span><span class="p">).</span><span class="nx">toBeVisible</span><span class="p">();</span>
+<span class="p">});</span>
+</code></pre></div>
+<p><strong>Tại sao?</strong> Nếu UI thay đổi (selector đổi), bạn chỉ sửa <strong>1 file POM</strong> thay vì hàng chục file test.</p>
+<hr />
+<h2 id="3-bai-hoc-au-thuong-roi-moi-thay-cai-canh">3. 💥 Bài học đau thương: "Rồi mới thấy cái cảnh"<a class="headerlink" href="#3-bai-hoc-au-thuong-roi-moi-thay-cai-canh" title="Permanent link">&para;</a></h2>
+<h3 id="ay-la-phan-quan-trong-nhat-hau-qua-cua-viec-i-tat">Đây là phần quan trọng nhất - Hậu quả của việc "đi tắt"<a class="headerlink" href="#ay-la-phan-quan-trong-nhat-hau-qua-cua-viec-i-tat" title="Permanent link">&para;</a></h3>
+<h3 id="tinh-huong-ien-hinh">Tình huống điển hình:<a class="headerlink" href="#tinh-huong-ien-hinh" title="Permanent link">&para;</a></h3>
+<p><strong>Bước 1:</strong> Junior hào hứng xây dựng Framework "đơn giản"
+- Viết tất cả logic vào file test
+- Không có POM, không có wait, không có log
+- "Chạy được là OK, tối ưu sau"</p>
+<p><strong>Bước 2:</strong> Framework hoạt động tốt... trong local environment
+- Test chạy nhanh, pass hết
+- Sếp khen: "Giỏi quá, deploy lên production đi!"</p>
+<p><strong>Bước 3:</strong> Deploy lên CI/CD - "Cái địa ngục" bắt đầu</p>
+<h3 id="he-qua-khi-mo-rong-thuc-te-xay-ra">🔥 Hệ quả khi mở rộng (thực tế xảy ra):<a class="headerlink" href="#he-qua-khi-mo-rong-thuc-te-xay-ra" title="Permanent link">&para;</a></h3>
+<h4 id="thao-tac-ui-thay-oi">🚨 Thao tác UI thay đổi:<a class="headerlink" href="#thao-tac-ui-thay-oi" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="c1">// Locator bị trùng lặp ở 20 file test</span>
+<span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">click</span><span class="p">(</span><span class="s1">&#39;#old-submit-btn&#39;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Phải sửa 20 chỗ</span>
+<span class="c1">// Thay vì chỉ sửa 1 file POM</span>
+</code></pre></div>
+<h4 id="logic-bi-lap">🚨 Logic bị lặp:<a class="headerlink" href="#logic-bi-lap" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="c1">// Cùng một thao tác Login viết đi viết lại</span>
+<span class="c1">// Ở 15 file test khác nhau</span>
+<span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">fill</span><span class="p">(</span><span class="s1">&#39;#username&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;user&#39;</span><span class="p">);</span>
+<span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">fill</span><span class="p">(</span><span class="s1">&#39;#password&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;pass&#39;</span><span class="p">);</span>
+<span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">click</span><span class="p">(</span><span class="s1">&#39;#login-btn&#39;</span><span class="p">);</span>
+</code></pre></div>
+<h4 id="chay-song-song-parallel">🚨 Chạy song song (Parallel):<a class="headerlink" href="#chay-song-song-parallel" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="c1">// Test flaky tràn lan</span>
+<span class="c1">// Lỗi ngẫu nhiên xuất hiện</span>
+<span class="c1">// &quot;Tại sao test pass local mà fail CI?&quot;</span>
+</code></pre></div>
+<h4 id="refactor-phai-bo-thoi-gian-gap-5-10-lan">🚨 Refactor: Phải bỏ thời gian gấp 5-10 lần<a class="headerlink" href="#refactor-phai-bo-thoi-gian-gap-5-10-lan" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="c1">// Cảm giác &quot;cả một trời đau thương&quot;</span>
+<span class="c1">// Phải refactor từ đầu</span>
+<span class="c1">// Deadline cháy đầu</span>
+<span class="c1">// Sếp hỏi: &quot;Tại sao chậm thế?&quot;</span>
+</code></pre></div>
+<h3 id="ket-luan-au-thuong">🎯 Kết luận đau thương:<a class="headerlink" href="#ket-luan-au-thuong" title="Permanent link">&para;</a></h3>
+<p><strong>"Đi tắt" ban đầu = Tiết kiệm 1-2 tuần</strong>
+<strong>"Sửa chữa" sau này = Tốn 2-3 tháng + stress + mất uy tín</strong></p>
+<hr />
+<h2 id="4-inh-huong-cho-tan-junior-hay-hoc-framework-chuan">4. 🧭 Định hướng cho Tân Junior: Hãy học Framework Chuẩn<a class="headerlink" href="#4-inh-huong-cho-tan-junior-hay-hoc-framework-chuan" title="Permanent link">&para;</a></h2>
+<h3 id="ban-se-khong-hoi-tiec-khi-au-tu-thoi-gian-ban-au">Bạn sẽ không hối tiếc khi đầu tư thời gian ban đầu!<a class="headerlink" href="#ban-se-khong-hoi-tiec-khi-au-tu-thoi-gian-ban-au" title="Permanent link">&para;</a></h3>
+<h3 id="41-cau-truc-chuan-tach-biet-separation-of-concerns">4.1. Cấu trúc Chuẩn = Tách biệt (Separation of Concerns)<a class="headerlink" href="#41-cau-truc-chuan-tach-biet-separation-of-concerns" title="Permanent link">&para;</a></h3>
+<p>Một Framework tốt = Framework <strong>phân chia rõ ràng các lớp trách nhiệm (Layer)</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Chức năng cốt lõi</th>
+<th>Mục tiêu chính</th>
+<th>Ví dụ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Test Layer</strong><br><code>src/tests/</code></td>
+<td>Chứa kịch bản (Test Steps) và Assertions</td>
+<td><strong>Orchestration, Clarity</strong></td>
+<td><code>expect()</code>, business flow</td>
+</tr>
+<tr>
+<td><strong>UI Abstraction</strong><br><code>src/ui/</code></td>
+<td>Page Objects, Locators, UI Actions</td>
+<td><strong>Maintainability</strong></td>
+<td>POM classes, selectors</td>
+</tr>
+<tr>
+<td><strong>API Abstraction</strong><br><code>src/api/</code></td>
+<td>API Clients, Endpoints, Data Models</td>
+<td><strong>Reusability</strong></td>
+<td>HTTP methods, DTOs</td>
+</tr>
+<tr>
+<td><strong>Utility Layer</strong><br><code>src/utils/</code></td>
+<td>Logging, Config, Retry Mechanism</td>
+<td><strong>Robustness, Debugging</strong></td>
+<td>Logger, env config</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cau-truc-thu-muc-chuan">📁 Cấu trúc thư mục chuẩn:<a class="headerlink" href="#cau-truc-thu-muc-chuan" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>src/
+├── tests/                    # 🧪 Test Layer
+│   ├── ui/                   # UI Tests
+│   ├── api/                  # API Tests
+│   └── e2e/                  # End-to-End Tests
+│
+├── ui/                       # 🎨 UI Abstraction
+│   ├── pages/                # Page Objects
+│   └── components/           # Reusable Components
+│
+├── api/                      # 🔌 API Abstraction
+│   ├── clients/              # API Clients
+│   ├── models/               # Data Models
+│   └── helpers/              # API Utilities
+│
+├── utils/                    # 🛠️ Utility Layer
+│   ├── config/               # Configuration
+│   ├── logger/               # Logging
+│   └── helpers/              # Common Helpers
+│
+└── types/                    # 📝 Type Definitions
+    └── index.ts
+</code></pre></div>
+<h3 id="42-tai-sao-lai-la-chuan-sdet">4.2. Tại sao lại là Chuẩn SDET?<a class="headerlink" href="#42-tai-sao-lai-la-chuan-sdet" title="Permanent link">&para;</a></h3>
+<p>✅ <strong>Nền tảng vững chắc</strong> giúp vận dụng tool/cái gì đó mới dễ dàng hơn:
+- Tích hợp Visual Testing (Applitools)
+- CI/CD Pipeline (GitHub Actions, Jenkins)
+- Data-driven testing (CSV, JSON)
+- Cross-browser testing (BrowserStack)
+- Performance testing (Lighthouse)</p>
+<p>✅ <strong>Giúp bạn đạt được tiêu chuẩn của một SDET</strong>:
+- Không chỉ là QA Automation chạy script
+- Mà là kỹ sư có khả năng xây dựng hệ thống testing</p>
+<p>✅ <strong>Dễ dàng scale và maintain</strong>:
+- Team 5 người → Team 50 người vẫn ổn
+- Project nhỏ → Project enterprise vẫn chạy</p>
+<hr />
+<h2 id="5-core-principles-a-junior-must-master-when-building-a-framework_1">5. 🎯 Core Principles a Junior Must Master When Building a Framework<a class="headerlink" href="#5-core-principles-a-junior-must-master-when-building-a-framework_1" title="Permanent link">&para;</a></h2>
+<h3 id="ay-la-nhung-kien-thuc-nen-tang-tap-trung-vao-tai-sao-phai-lam-khong-chi-lam-the-nao">Đây là những kiến thức nền tảng - tập trung vào "tại sao phải làm", không chỉ "làm thế nào"<a class="headerlink" href="#ay-la-nhung-kien-thuc-nen-tang-tap-trung-vao-tai-sao-phai-lam-khong-chi-lam-the-nao" title="Permanent link">&para;</a></h3>
+<h3 id="1-nguyen-tac-tach-biet-va-lop-hoa-layering-separation-of-concerns">1. 🏗️ Nguyên tắc Tách biệt và Lớp hóa (Layering &amp; Separation of Concerns)<a class="headerlink" href="#1-nguyen-tac-tach-biet-va-lop-hoa-layering-separation-of-concerns" title="Permanent link">&para;</a></h3>
+<p>Một Framework tốt phải được chia thành các lớp trách nhiệm rõ ràng. Junior cần hiểu rằng việc này giúp giải quyết vấn đề bảo trì.</p>
+<table>
+<thead>
+<tr>
+<th>Nguyên tắc cần hiểu</th>
+<th>Chi tiết cần nắm</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Page Object Model (POM)</strong></td>
+<td>Tách: Logic tìm kiếm phần tử (Locator) và Thao tác (Action) ra khỏi bài Test (Assertion).<br><strong>Mục tiêu:</strong> Khi UI thay đổi, chỉ cần sửa 1 file Page Object</td>
+</tr>
+<tr>
+<td><strong>API Client/Service Model</strong></td>
+<td>Tương tự POM cho API. Tách: Endpoint và Method gọi API ra khỏi bài Test.<br><strong>Mục tiêu:</strong> Sử dụng API để Setup dữ liệu hoặc Verify dữ liệu mà không cần qua UI</td>
+</tr>
+<tr>
+<td><strong>Tầng Test (Test Layer)</strong></td>
+<td>Chỉ chứa: Logic nghiệp vụ (Business Flow) và Xác nhận kết quả (Assertion).<br><strong>Mục tiêu:</strong> Layer này là nơi duy nhất được phép sử dụng <code>expect()</code> hoặc <code>assert()</code></td>
+</tr>
+<tr>
+<td><strong>Tầm quan trọng của utils</strong></td>
+<td>Đặt các hàm dùng chung (Config, Logger, Helper Data) vào utils để tránh lặp code</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2-kha-nang-chong-loi-ngau-nhien-anti-flaky-mechanisms">2. 🛡️ Khả năng Chống Lỗi Ngẫu nhiên (Anti-Flaky Mechanisms)<a class="headerlink" href="#2-kha-nang-chong-loi-ngau-nhien-anti-flaky-mechanisms" title="Permanent link">&para;</a></h3>
+<p>Flaky Test (Test chạy lúc đúng lúc sai) là "kẻ thù" lớn nhất của Automation. Junior cần hiểu cách chống đỡ nó từ đầu.</p>
+<table>
+<thead>
+<tr>
+<th>Cơ chế cần hiểu</th>
+<th>Tại sao phải dùng</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Explicit Wait (Chờ rõ ràng)</strong></td>
+<td>Tuyệt đối tránh <code>waitForTimeout()</code>. Chỉ sử dụng các lệnh wait có điều kiện của Playwright (ví dụ: <code>waitForLoadState('networkidle')</code>, <code>page.waitForSelector()</code>) để đảm bảo phần tử đã sẵn sàng</td>
+</tr>
+<tr>
+<td><strong>Locator Tối ưu</strong></td>
+<td>Ưu tiên dùng các Locator ít bị thay đổi bởi Dev (ví dụ: <code>getByRole()</code>, <code>data-testid</code>, <code>data-qa</code>). Tránh các locator dễ vỡ như XPath/CSS quá dài</td>
+</tr>
+<tr>
+<td><strong>Retry Cơ bản</strong></td>
+<td>Hiểu cách sử dụng Retry (ví dụ: <code>this.retries(N)</code> trong Mocha) cho các bài Test quan trọng để giảm thiểu ảnh hưởng của các lỗi môi trường tạm thời</td>
+</tr>
+<tr>
+<td><strong>Không share Page/Context</strong></td>
+<td>Khi chạy song song (Parallel), mỗi Test cần có một phiên làm việc (Page/Browser Context) độc lập để không bị ảnh hưởng bởi nhau</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-thiet-lap-moi-truong-va-cau-hinh-configuration-environment">3. ⚙️ Thiết lập Môi trường và Cấu hình (Configuration &amp; Environment)<a class="headerlink" href="#3-thiet-lap-moi-truong-va-cau-hinh-configuration-environment" title="Permanent link">&para;</a></h3>
+<p>Một Framework chuyên nghiệp cần chạy được trên nhiều môi trường khác nhau.</p>
+<table>
+<thead>
+<tr>
+<th>Khía cạnh cần hiểu</th>
+<th>Cách triển khai đơn giản</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>External Configuration</strong></td>
+<td>Không để Hard-coded URL/Key trong code. Sử dụng file <code>.env</code> (dotenv) để quản lý các biến môi trường (<code>BASE_URL</code>, <code>API_URL</code>)</td>
+</tr>
+<tr>
+<td><strong>Environment Switching</strong></td>
+<td>Dễ dàng chuyển đổi giữa Dev/Staging/Production bằng cách chỉ định biến môi trường (ví dụ: <code>TEST_ENV=staging</code>)</td>
+</tr>
+<tr>
+<td><strong>Cấu hình Logging</strong></td>
+<td>Khả năng bật/tắt hoặc điều chỉnh mức độ log (debug, info, warn) qua file cấu hình</td>
+</tr>
+</tbody>
+</table>
+<h3 id="4-ghi-nhan-va-bao-cao-logging-reporting">4. 📰 Ghi nhận và Báo cáo (Logging &amp; Reporting)<a class="headerlink" href="#4-ghi-nhan-va-bao-cao-logging-reporting" title="Permanent link">&para;</a></h3>
+<p>Test thất bại mà không có thông tin chi tiết là vô dụng.</p>
+<table>
+<thead>
+<tr>
+<th>Công cụ cần hiểu</th>
+<th>Tầm quan trọng</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Structured Logging (Pino/Winston)</strong></td>
+<td>Ghi lại các bước quan trọng của UI Action (click, fill) và API Request/Response.<br><strong>Quan trọng nhất:</strong> Ghi lại các ngoại lệ/lỗi một cách chi tiết để debug trên CI</td>
+</tr>
+<tr>
+<td><strong>Allure/HTML Report</strong></td>
+<td>Hiểu rằng Report không chỉ là PASS/FAIL, mà là nơi hiển thị Allure Step, Screenshot on Fail, và Log/Payload để người không biết code cũng hiểu chuyện gì đã xảy ra</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>"Trước khi kết thúc, có một góc nhìn tinh tế mà các bạn Junior nên cân nhắc. Xây dựng một framework 'chuẩn' không có nghĩa là áp dụng cứng nhắc một khuôn mẫu. Một kỹ năng quan trọng của SDET là biết điều chỉnh và thích ứng framework dựa trên yêu cầu thực tế của từng dự án. Phần dưới đây sẽ giúp bạn hiểu khi nào cần đơn giản hóa và khi nào cần mở rộng"</strong></p>
+<h2 id="6-tinh-linh-hoat-ieu-chinh-framework-theo-yeu-cau-du-an">6. 🎭 Tính Linh Hoạt - Điều Chỉnh Framework Theo Yêu Cầu Dự Án<a class="headerlink" href="#6-tinh-linh-hoat-ieu-chinh-framework-theo-yeu-cau-du-an" title="Permanent link">&para;</a></h2>
+<h3 id="61-framework-chuan-la-nguyen-tac-khong-phai-khuon-mau-cung-nhac">6.1. Framework Chuẩn Là "Nguyên Tắc", Không Phải "Khuôn Mẫu" Cứng Nhắc<a class="headerlink" href="#61-framework-chuan-la-nguyen-tac-khong-phai-khuon-mau-cung-nhac" title="Permanent link">&para;</a></h3>
+<p>Một hiểu lầm phổ biến của Junior là nghĩ rằng tất cả dự án đều phải có đầy đủ mọi layer (ui/, api/, utils/...). Thực tế, một SDET giỏi biết khi nào cần đơn giản hóa và khi nào cần mở rộng.</p>
+<p><strong>*Ví dụ về sự linh hoạt:</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>Loại Dự Án / Yêu Cầu</strong></th>
+<th><strong>Framework Có Thể Được Điều Chỉnh Thế Nào?</strong></th>
+<th><strong>Lý Do</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>MVP (Sản phẩm thử nghiệm)</strong><br>Nhỏ, thay đổi nhanh, team 1-2 người</td>
+<td>- Có thể gộp pages và tests/ đơn giản.<br>- Tạm bỏ qua complex reporting (Allure), dùng HTML report cơ bản.<br>- Ưu tiên POM đơn giản hơn là Component Model phức tạp.</td>
+<td><strong><em>Tốc độ quan trọng hơn sự hoàn hảo. Cần validate ý tưởng nhanh</em></strong></td>
+</tr>
+<tr>
+<td><strong>Ứng dụng chủ yếu là AP</strong><br>(Backend service, Microservices)</td>
+<td>- Tập trung vào api/ layer, xây dựng Client Model kỹ.<br>- ui/ layer có thể rất nhỏ hoặc không có.<br>- Đầu tư mạnh vào data-driven testing và contract testing.</td>
+<td><strong><em>Testing effort nên tập trung vào nơi có rủi ro và logic nghiệp vụ chính.</em></strong></td>
+</tr>
+<tr>
+<td><strong>Ứng dụng Legacy (Cũ)</strong><br>UI không ổn định, không có <strong>data-testid</strong></td>
+<td>-   Có thể cần Wrapper functions để handle wait và retry phức tạp hơn.<br>- Có thể chấp nhận dùng XPath nếu không còn lựa chọn nào khác.<br>- Ưu tiên capture screenshot và video recording để debug.</td>
+<td><strong><em>Tính ổn định (anti-flaky) là ưu tiên số 1, có thể hy sinh một phần tính "clean code".</em></strong></td>
+</tr>
+<tr>
+<td><strong>Dự án Enterprise Lớn</strong><br> Team &gt;10 người, nhiều module</td>
+<td>- Cần cấu trúc rõ ràng, đầy đủ các layer.<br>- Cần Component Model (BasePage, BaseComponent) để tái sử dụng tối đa.<br>- Bắt buộc có Configuration management và Detailed Reporting (Allure).</td>
+<td><strong><em>Khả năng mở rộng, bảo trì và hợp tác trong team là quan trọng nhất.</em></strong></td>
+</tr>
+<tr>
+<td><strong>Proof of Concept (POC) cho Tool mới</strong><br>(VD: thử nghiệm Visual Testing)</td>
+<td>- Có thể viết test độc lập, ngoài framework chính.<br>- Tập trung layer utils/ để tích hợp tool mới.<br>- Cấu trúc tối giản, dễ dàng bỏ đi nếu POC thất bại.</td>
+<td><strong><em>Mục tiêu là đánh giá tool, không phải xây dựng hệ thống lâu dài.</em></strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="62-cac-cau-hoi-giup-ban-ieu-chinh-framework-phu-hop">6.2. Các Câu Hỏi Giúp Bạn "Điều Chỉnh" Framework Phù Hợp<a class="headerlink" href="#62-cac-cau-hoi-giup-ban-ieu-chinh-framework-phu-hop" title="Permanent link">&para;</a></h3>
+<p><strong><em>Trước khi bắt đầu, hãy tự hỏi:</em></strong>
+<div class="highlight"><pre><span></span><code><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Quy mô &amp; Thời gian sống của dự án? (2 tháng hay 2 năm?)</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Đâu là trọng tâm testing? (UI, API, Performance, Security?)</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Team size và kinh nghiệm? (Một mình hay team 10 người? Junior hay Senior?)</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Tốc độ phát triển sản phẩm? (UI có hay thay đổi không?)</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Yêu cầu về báo cáo và tích hợp? (Cần Allure để report cho PM? Cần tích hợp Slack notification?)</span>
+</code></pre></div>
+<strong><em>Ví dụ thực tế:</em></strong></p>
+<p><strong><em>*</em>"Dự án A của tôi là một internal tool nhỏ, chỉ có 5 màn hình, chạy bởi 1 tester duy nhất (chính tôi). Tôi đã chọn một phiên bản đơn giản: vẫn có pages/ và tests/ tách biệt, nhưng bỏ qua api/ layer (vì không cần) và dùng console.log đơn giản thay vì Winston phức tạp. Framework vẫn 'chuẩn' ở nguyên tắc tách biệt, nhưng được tinh gọn cho phù hợp bối cảnh."</strong>***
+|---|</p>
+<h3 id="63-loi-khuyen-bat-au-tu-nguyen-tac-ieu-chinh-theo-thuc-te">6.3. Lời Khuyên: Bắt Đầu Từ Nguyên Tắc, Điều Chỉnh Theo Thực Tế<a class="headerlink" href="#63-loi-khuyen-bat-au-tu-nguyen-tac-ieu-chinh-theo-thuc-te" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong><em>Luôn bắt đầu với các nguyên tắc cốt lõi: Tách biệt (SoC), Chống Flaky, Quản lý cấu hình. Đây là "phần cứng" không nên thỏa hiệp.</em></strong></li>
+<li><strong><em>Linh hoạt với việc triển khai (implementation): Số lượng layer, độ phức tạp của POM, công cụ logging/reporting có thể là "phần mềm" để điều chỉnh.</em></strong></li>
+<li><strong><em>Thiết kế để dễ thay đổi: Code của bạn nên được module hóa để khi dự án phát triển, bạn có thể dễ dàng "nâng cấp" framework (ví dụ: thêm Allure, tách Component Model) mà không phải viết lại.</em></strong></li>
+</ol>
+<h4 id="key-takeaway-cho-phan-nay">🎯 Key Takeaway cho phần này:<a class="headerlink" href="#key-takeaway-cho-phan-nay" title="Permanent link">&para;</a></h4>
+<p><strong><em>"Một Framework tốt không phải là Framework có mọi thứ, mà là Framework PHÙ HỢP NHẤT với nhu cầu hiện tại của dự án, và được THIẾT KẾ ĐỂ DỄ DÀNG THÍCH ỨNG khi nhu cầu đó thay đổi."</em></strong></p>
+<table>
+<thead>
+<tr>
+<th><strong><em>*</em>"Final Advice for Juniors:</strong>***</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. <strong><em>*</em>Đừng ngại đầu tư 2-3 tuần ban đầu để học và áp dụng các nguyên tắc chuẩn.</strong><strong><em><br>2. </em></strong><strong>Hãy linh hoạt: Sử dụng các nguyên tắc đó như một la bàn, không phải một bản đồ cứng nhắc. Điều chỉnh việc triển khai cho phù hợp với quy mô, độ phức tạp và mục tiêu của dự án bạn đang làm.</strong><strong><em><br>3. </em></strong><strong>Framework tốt nhất không phải là framework phức tạp nhất, mà là framework phù hợp nhất và bền vững nhất cho hoàn cảnh của bạn."</strong>***</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><em>Framework chuẩn không phải là đích đến - mà là hành trình. Hãy bắt đầu ngay hôm nay!</em> 🎯</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.expand", "navigation.sections", "navigation.top", "content.code.copy", "content.code.annotate", "search.highlight", "search.suggest"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
