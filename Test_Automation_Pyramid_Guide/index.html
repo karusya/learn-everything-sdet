@@ -2415,72 +2415,72 @@
   
 
 
-<h1 id="test-automation-pyramid-huong-dan-de-hieu">🏗️ Test Automation Pyramid - Hướng Dẫn Dễ Hiểu<a class="headerlink" href="#test-automation-pyramid-huong-dan-de-hieu" title="Permanent link">&para;</a></h1>
-<h2 id="gioi-thieu">📖 Giới Thiệu<a class="headerlink" href="#gioi-thieu" title="Permanent link">&para;</a></h2>
-<p><strong>Test Automation Pyramid</strong> (Tháp Tự Động Hóa Kiểm Thử) là một mô hình chiến lược giúp tổ chức các loại kiểm thử tự động một cách hiệu quả. Mô hình này được minh họa như một kim tự tháp với <strong>3 tầng chính</strong>, sắp xếp từ <strong>dưới lên trên</strong> theo thứ tự ưu tiên.</p>
-<div class="highlight"><pre><span></span><code>     🥉 E2E Tests (Ít nhất)
-        ↗️ Tích hợp Tests
-   🥇 Unit Tests (Nhiều nhất)
+<h1 id="test-automation-pyramid-comprehensive-guide">🏗️ Test Automation Pyramid - Comprehensive Guide<a class="headerlink" href="#test-automation-pyramid-comprehensive-guide" title="Permanent link">&para;</a></h1>
+<h2 id="introduction">📖 Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
+<p>The <strong>Test Automation Pyramid</strong> is a strategic model that helps organize different types of automated testing efficiently. This model is illustrated as a pyramid with <strong>3 main layers</strong>, arranged from <strong>bottom to top</strong> in order of priority.</p>
+<div class="highlight"><pre><span></span><code>     🥉 E2E Tests (Fewest)
+        ↗️ Integration Tests
+   🥇 Unit Tests (Most)
 </code></pre></div>
-<h2 id="bang-so-sanh-tong-quan">📊 Bảng So Sánh Tổng Quan<a class="headerlink" href="#bang-so-sanh-tong-quan" title="Permanent link">&para;</a></h2>
+<h2 id="overview-comparison-table">📊 Overview Comparison Table<a class="headerlink" href="#overview-comparison-table" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
-<th>Tầng</th>
-<th>Loại Kiểm Thử</th>
-<th>Tốc Độ</th>
-<th>Chi phí</th>
-<th>Số Lượng</th>
+<th>Layer</th>
+<th>Test Type</th>
+<th>Speed</th>
+<th>Cost</th>
+<th>Quantity</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Đỉnh</strong></td>
+<td><strong>Top</strong></td>
 <td>End-to-End (E2E)</td>
-<td>🐌 Chậm</td>
-<td>💰 Cao</td>
-<td>📉 Ít nhất</td>
+<td>🐌 Slow</td>
+<td>💰 High</td>
+<td>📉 Fewest</td>
 </tr>
 <tr>
-<td><strong>Giữa</strong></td>
+<td><strong>Middle</strong></td>
 <td>Integration</td>
-<td>⚡ Trung bình</td>
-<td>💰💰 Trung bình</td>
-<td>📊 Ít hơn</td>
+<td>⚡ Medium</td>
+<td>💰💰 Medium</td>
+<td>📊 Fewer</td>
 </tr>
 <tr>
-<td><strong>Đáy</strong></td>
+<td><strong>Bottom</strong></td>
 <td>Unit Tests</td>
-<td>🚀 Rất nhanh</td>
-<td>💚 Thấp</td>
-<td>📈 Nhiều nhất</td>
+<td>🚀 Very Fast</td>
+<td>💚 Low</td>
+<td>📈 Most</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2 id="tang-1-unit-tests-kiem-thu-on-vi">🥇 Tầng 1: Unit Tests (Kiểm Thử Đơn Vị)<a class="headerlink" href="#tang-1-unit-tests-kiem-thu-on-vi" title="Permanent link">&para;</a></h2>
-<h3 id="inh-nghia">🎯 Định Nghĩa<a class="headerlink" href="#inh-nghia" title="Permanent link">&para;</a></h3>
-<p>Kiểm thử các <strong>đơn vị mã nhỏ nhất</strong> của ứng dụng:
-- Một hàm (function)
-- Một phương thức (method)
-- Một lớp (class)</p>
-<h3 id="muc-tieu">✅ Mục Tiêu<a class="headerlink" href="#muc-tieu" title="Permanent link">&para;</a></h3>
-<p>Đảm bảo <strong>từng thành phần riêng lẻ</strong> hoạt động chính xác theo thiết kế.</p>
-<h3 id="ac-iem">📈 Đặc Điểm<a class="headerlink" href="#ac-iem" title="Permanent link">&para;</a></h3>
+<h2 id="layer-1-unit-tests">🥇 Layer 1: Unit Tests<a class="headerlink" href="#layer-1-unit-tests" title="Permanent link">&para;</a></h2>
+<h3 id="definition">🎯 Definition<a class="headerlink" href="#definition" title="Permanent link">&para;</a></h3>
+<p>Testing the <strong>smallest code units</strong> of an application:
+- A function
+- A method
+- A class</p>
+<h3 id="objective">✅ Objective<a class="headerlink" href="#objective" title="Permanent link">&para;</a></h3>
+<p>Ensure <strong>each individual component</strong> works correctly according to design.</p>
+<h3 id="characteristics">📈 Characteristics<a class="headerlink" href="#characteristics" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>Số lượng</strong>: 🏆 <strong>Lớn nhất</strong> - Là nền tảng của chiến lược kiểm thử</li>
-<li><strong>Tốc độ</strong>: 🚀 <strong>Rất nhanh</strong> - Chạy chỉ mất mili giây</li>
-<li><strong>Chi phí</strong>: 💚 <strong>Thấp nhất</strong> - Dễ viết, dễ bảo trì</li>
+<li><strong>Quantity</strong>: 🏆 <strong>Largest</strong> - Foundation of testing strategy</li>
+<li><strong>Speed</strong>: 🚀 <strong>Very fast</strong> - Runs in milliseconds</li>
+<li><strong>Cost</strong>: 💚 <strong>Lowest</strong> - Easy to write and maintain</li>
 </ul>
-<h3 id="loi-ich">🎁 Lợi Ích<a class="headerlink" href="#loi-ich" title="Permanent link">&para;</a></h3>
+<h3 id="benefits">🎁 Benefits<a class="headerlink" href="#benefits" title="Permanent link">&para;</a></h3>
 <ul>
-<li>✅ Bắt lỗi <strong>chính xác</strong> ngay khi được tạo ra</li>
-<li>✅ Giúp lập trình viên <strong>sửa lỗi nhanh chóng</strong></li>
-<li>✅ <strong>Tự tin tái cấu trúc</strong> mã (refactoring)</li>
-<li>✅ <strong>Chạy thường xuyên</strong> trong CI/CD pipeline</li>
+<li>✅ Catch bugs <strong>precisely</strong> when they are created</li>
+<li>✅ Help developers <strong>fix bugs quickly</strong></li>
+<li>✅ <strong>Confident refactoring</strong> of code</li>
+<li>✅ <strong>Run frequently</strong> in CI/CD pipeline</li>
 </ul>
-<h3 id="vi-du">💡 Ví Dụ<a class="headerlink" href="#vi-du" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="c1">// Unit Test cho một hàm tính tổng</span>
+<h3 id="example">💡 Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1">// Unit Test for a sum function</span>
 <span class="kd">function</span><span class="w"> </span><span class="nx">sum</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">b</span><span class="p">;</span>
 <span class="p">}</span>
@@ -2493,30 +2493,30 @@
 <span class="p">});</span>
 </code></pre></div>
 <hr />
-<h2 id="tang-2-integration-tests-kiem-thu-tich-hop">🥈 Tầng 2: Integration Tests (Kiểm Thử Tích Hợp)<a class="headerlink" href="#tang-2-integration-tests-kiem-thu-tich-hop" title="Permanent link">&para;</a></h2>
-<h3 id="inh-nghia_1">🎯 Định Nghĩa<a class="headerlink" href="#inh-nghia_1" title="Permanent link">&para;</a></h3>
-<p>Kiểm thử <strong>sự tương tác giữa các thành phần</strong> của ứng dụng:
-- Giao tiếp giữa mã nguồn và cơ sở dữ liệu
-- Liên kết giữa các microservice
-- Kết nối giữa front-end và back-end
-- API calls giữa các hệ thống</p>
-<h3 id="muc-tieu_1">✅ Mục Tiêu<a class="headerlink" href="#muc-tieu_1" title="Permanent link">&para;</a></h3>
-<p>Đảm bảo <strong>các thành phần khi làm việc cùng nhau</strong> vẫn hoạt động đúng.</p>
-<h3 id="ac-iem_1">📊 Đặc Điểm<a class="headerlink" href="#ac-iem_1" title="Permanent link">&para;</a></h3>
+<h2 id="layer-2-integration-tests">🥈 Layer 2: Integration Tests<a class="headerlink" href="#layer-2-integration-tests" title="Permanent link">&para;</a></h2>
+<h3 id="definition_1">🎯 Definition<a class="headerlink" href="#definition_1" title="Permanent link">&para;</a></h3>
+<p>Testing <strong>interactions between components</strong> of an application:
+- Communication between source code and database
+- Connections between microservices
+- Integration between front-end and back-end
+- API calls between systems</p>
+<h3 id="objective_1">✅ Objective<a class="headerlink" href="#objective_1" title="Permanent link">&para;</a></h3>
+<p>Ensure <strong>components working together</strong> still function correctly.</p>
+<h3 id="characteristics_1">📊 Characteristics<a class="headerlink" href="#characteristics_1" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>Số lượng</strong>: 📊 <strong>Ít hơn Unit Test</strong> - Tập trung vào các điểm tích hợp quan trọng</li>
-<li><strong>Tốc độ</strong>: ⚡ <strong>Trung bình</strong> - Chậm hơn Unit Test do liên quan đến I/O</li>
-<li><strong>Chi phí</strong>: 💰💰 <strong>Trung bình</strong> - Cần setup môi trường test phức tạp hơn</li>
+<li><strong>Quantity</strong>: 📊 <strong>Fewer than Unit Tests</strong> - Focus on important integration points</li>
+<li><strong>Speed</strong>: ⚡ <strong>Medium</strong> - Slower than Unit Tests due to I/O operations</li>
+<li><strong>Cost</strong>: 💰💰 <strong>Medium</strong> - Requires more complex test environment setup</li>
 </ul>
-<h3 id="loi-ich_1">🎁 Lợi Ích<a class="headerlink" href="#loi-ich_1" title="Permanent link">&para;</a></h3>
+<h3 id="benefits_1">🎁 Benefits<a class="headerlink" href="#benefits_1" title="Permanent link">&para;</a></h3>
 <ul>
-<li>✅ Kiểm tra <strong>vấn đề về giao diện</strong> giữa các thành phần</li>
-<li>✅ Phát hiện lỗi <strong>định dạng dữ liệu</strong></li>
-<li>✅ Xác minh <strong>kết nối mạng</strong> và <strong>API calls</strong></li>
-<li>✅ Đảm bảo <strong>data flow</strong> giữa các hệ thống</li>
+<li>✅ Check <strong>interface issues</strong> between components</li>
+<li>✅ Detect <strong>data format</strong> errors</li>
+<li>✅ Verify <strong>network connections</strong> and <strong>API calls</strong></li>
+<li>✅ Ensure <strong>data flow</strong> between systems</li>
 </ul>
-<h3 id="vi-du_1">💡 Ví Dụ<a class="headerlink" href="#vi-du_1" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="c1">// Integration Test cho API call</span>
+<h3 id="example_1">💡 Example<a class="headerlink" href="#example_1" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1">// Integration Test for API call</span>
 <span class="nx">test</span><span class="p">(</span><span class="s1">&#39;user API integration&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="c1">// Setup test database</span>
 <span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">testUser</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;John&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">email</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;john@test.com&#39;</span><span class="w"> </span><span class="p">};</span>
@@ -2534,53 +2534,53 @@
 <span class="p">});</span>
 </code></pre></div>
 <hr />
-<h2 id="tang-3-e2e-tests-end-to-end-tests">🥉 Tầng 3: E2E Tests (End-to-End Tests)<a class="headerlink" href="#tang-3-e2e-tests-end-to-end-tests" title="Permanent link">&para;</a></h2>
-<h3 id="inh-nghia_2">🎯 Định Nghĩa<a class="headerlink" href="#inh-nghia_2" title="Permanent link">&para;</a></h3>
-<p>Kiểm thử <strong>toàn bộ luồng công việc</strong> của người dùng:
-- Từ giao diện người dùng (UI) đến cuối cùng
-- Ví dụ: Đăng nhập → Thêm sản phẩm → Thanh toán → Xác nhận đơn hàng</p>
-<h3 id="muc-tieu_2">✅ Mục Tiêu<a class="headerlink" href="#muc-tieu_2" title="Permanent link">&para;</a></h3>
-<p>Xác nhận <strong>toàn bộ hệ thống hoạt động</strong> như một ứng dụng hoàn chỉnh trong môi trường mô phỏng thực tế.</p>
-<h3 id="ac-iem_2">🐌 Đặc Điểm<a class="headerlink" href="#ac-iem_2" title="Permanent link">&para;</a></h3>
+<h2 id="layer-3-e2e-tests">🥉 Layer 3: E2E Tests (End-to-End Tests)<a class="headerlink" href="#layer-3-e2e-tests" title="Permanent link">&para;</a></h2>
+<h3 id="definition_2">🎯 Definition<a class="headerlink" href="#definition_2" title="Permanent link">&para;</a></h3>
+<p>Testing <strong>complete user workflows</strong>:
+- From user interface (UI) to the end
+- Example: Login → Add product → Checkout → Order confirmation</p>
+<h3 id="objective_2">✅ Objective<a class="headerlink" href="#objective_2" title="Permanent link">&para;</a></h3>
+<p>Verify <strong>the entire system works</strong> as a complete application in a real-world simulation environment.</p>
+<h3 id="characteristics_2">🐌 Characteristics<a class="headerlink" href="#characteristics_2" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>Số lượng</strong>: 📉 <strong>Ít nhất</strong> - Chỉ tập trung vào kịch bản quan trọng</li>
-<li><strong>Tốc độ</strong>: 🐌 <strong>Chậm nhất</strong> - Thao tác qua UI rất tốn thời gian</li>
-<li><strong>Chi phí</strong>: 💰💰💰 <strong>Cao nhất</strong> - Khó viết, dễ bị lỗi (flaky), khó bảo trì</li>
+<li><strong>Quantity</strong>: 📉 <strong>Fewest</strong> - Focus only on important scenarios</li>
+<li><strong>Speed</strong>: 🐌 <strong>Slowest</strong> - UI operations are very time-consuming</li>
+<li><strong>Cost</strong>: 💰💰💰 <strong>Highest</strong> - Hard to write, prone to flakiness, difficult to maintain</li>
 </ul>
-<h3 id="loi-ich_2">🎁 Lợi Ích<a class="headerlink" href="#loi-ich_2" title="Permanent link">&para;</a></h3>
+<h3 id="benefits_2">🎁 Benefits<a class="headerlink" href="#benefits_2" title="Permanent link">&para;</a></h3>
 <ul>
-<li>✅ Mang lại <strong>sự tự tin cao nhất</strong> về trải nghiệm người dùng</li>
-<li>✅ Kiểm tra <strong>luồng công việc hoàn chỉnh</strong></li>
-<li>✅ Phát hiện vấn đề <strong>cross-cutting</strong> (như authentication, navigation)</li>
+<li>✅ Provides <strong>highest confidence</strong> in user experience</li>
+<li>✅ Tests <strong>complete workflows</strong></li>
+<li>✅ Detects <strong>cross-cutting</strong> issues (like authentication, navigation)</li>
 </ul>
-<h3 id="vi-du-playwright">💡 Ví Dụ (Playwright)<a class="headerlink" href="#vi-du-playwright" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="c1">// E2E Test cho quy trình mua hàng</span>
+<h3 id="example-playwright">💡 Example (Playwright)<a class="headerlink" href="#example-playwright" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1">// E2E Test for purchase workflow</span>
 <span class="nx">test</span><span class="p">(</span><span class="s1">&#39;complete purchase flow&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="w"> </span><span class="nx">page</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="c1">// Đăng nhập</span>
+<span class="w">  </span><span class="c1">// Login</span>
 <span class="w">  </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="kr">goto</span><span class="p">(</span><span class="s1">&#39;/login&#39;</span><span class="p">);</span>
 <span class="w">  </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">fill</span><span class="p">(</span><span class="s1">&#39;[data-testid=&quot;email&quot;]&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;user@test.com&#39;</span><span class="p">);</span>
 <span class="w">  </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">fill</span><span class="p">(</span><span class="s1">&#39;[data-testid=&quot;password&quot;]&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;password123&#39;</span><span class="p">);</span>
 <span class="w">  </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">click</span><span class="p">(</span><span class="s1">&#39;[data-testid=&quot;login-button&quot;]&#39;</span><span class="p">);</span>
 
-<span class="w">  </span><span class="c1">// Thêm sản phẩm vào giỏ</span>
+<span class="w">  </span><span class="c1">// Add product to cart</span>
 <span class="w">  </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="kr">goto</span><span class="p">(</span><span class="s1">&#39;/products&#39;</span><span class="p">);</span>
 <span class="w">  </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">click</span><span class="p">(</span><span class="s1">&#39;[data-testid=&quot;product-1-add&quot;]&#39;</span><span class="p">);</span>
 <span class="w">  </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">click</span><span class="p">(</span><span class="s1">&#39;[data-testid=&quot;view-cart&quot;]&#39;</span><span class="p">);</span>
 
-<span class="w">  </span><span class="c1">// Thanh toán</span>
+<span class="w">  </span><span class="c1">// Checkout</span>
 <span class="w">  </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">click</span><span class="p">(</span><span class="s1">&#39;[data-testid=&quot;checkout&quot;]&#39;</span><span class="p">);</span>
 <span class="w">  </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">fill</span><span class="p">(</span><span class="s1">&#39;[data-testid=&quot;card-number&quot;]&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;4111111111111111&#39;</span><span class="p">);</span>
 <span class="w">  </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">click</span><span class="p">(</span><span class="s1">&#39;[data-testid=&quot;complete-purchase&quot;]&#39;</span><span class="p">);</span>
 
-<span class="w">  </span><span class="c1">// Xác nhận</span>
+<span class="w">  </span><span class="c1">// Confirmation</span>
 <span class="w">  </span><span class="k">await</span><span class="w"> </span><span class="nx">expect</span><span class="p">(</span><span class="nx">page</span><span class="p">.</span><span class="nx">locator</span><span class="p">(</span><span class="s1">&#39;[data-testid=&quot;success-message&quot;]&#39;</span><span class="p">))</span>
 <span class="w">    </span><span class="p">.</span><span class="nx">toContainText</span><span class="p">(</span><span class="s1">&#39;Order completed successfully&#39;</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div>
 <hr />
-<h2 id="y-nghia-chien-luoc">🎯 Ý Nghĩa Chiến Lược<a class="headerlink" href="#y-nghia-chien-luoc" title="Permanent link">&para;</a></h2>
-<h3 id="thong-iep-cot-loi">💡 Thông Điệp Cốt Lõi<a class="headerlink" href="#thong-iep-cot-loi" title="Permanent link">&para;</a></h3>
-<p><strong>Test Automation Pyramid</strong> nhấn mạnh:</p>
+<h2 id="strategic-significance">🎯 Strategic Significance<a class="headerlink" href="#strategic-significance" title="Permanent link">&para;</a></h2>
+<h3 id="core-message">💡 Core Message<a class="headerlink" href="#core-message" title="Permanent link">&para;</a></h3>
+<p>The <strong>Test Automation Pyramid</strong> emphasizes:</p>
 <h4 id="1-hieu-suat-efficiency">1️⃣ <strong>Hiệu Suất (Efficiency)</strong><a class="headerlink" href="#1-hieu-suat-efficiency" title="Permanent link">&para;</a></h4>
 <ul>
 <li>Tập trung <strong>80% effort</strong> vào Unit Tests (nhanh và rẻ)</li>
