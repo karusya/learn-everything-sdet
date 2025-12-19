@@ -2002,7 +2002,7 @@
 <span class="w">  </span><span class="nx">sleep</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">2</span><span class="p">);</span><span class="w"> </span><span class="c1">// Random sleep 0-2s</span>
 <span class="p">}</span>
 </code></pre></div>
-<h3 id="ngay-5-7-thuc-hanh-voi-api-thuc-te">Ngày 5-7: Thực hành với API thực tế<a class="headerlink" href="#ngay-5-7-thuc-hanh-voi-api-thuc-te" title="Permanent link">&para;</a></h3>
+<h3 id="day-5-7-real-api-practice">Day 5-7: Real API Practice<a class="headerlink" href="#day-5-7-real-api-practice" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="c1">// script-api-test.js</span>
 <span class="k">import</span><span class="w"> </span><span class="nx">http</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;k6/http&#39;</span><span class="p">;</span>
 <span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">check</span><span class="p">,</span><span class="w"> </span><span class="nx">group</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;k6&#39;</span><span class="p">;</span>
@@ -2011,7 +2011,7 @@
 
 <span class="k">export</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">options</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="nx">scenarios</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">// Scenario 1: Kiểm tra load bình thường</span>
+<span class="w">    </span><span class="c1">// Scenario 1: Normal load testing</span>
 <span class="w">    </span><span class="nx">normal_load</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">      </span><span class="nx">executor</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;constant-vus&#39;</span><span class="p">,</span>
 <span class="w">      </span><span class="nx">vus</span><span class="o">:</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span>
@@ -2081,8 +2081,8 @@
 <span class="w">  </span><span class="p">});</span>
 <span class="p">}</span>
 </code></pre></div>
-<h2 id="tuan-2-nang-cao-thuc-hanh">Tuần 2: Nâng cao &amp; Thực hành<a class="headerlink" href="#tuan-2-nang-cao-thuc-hanh" title="Permanent link">&para;</a></h2>
-<h3 id="ngay-8-9-data-driven-testing-voi-csvjson">Ngày 8-9: Data-driven testing với CSV/JSON<a class="headerlink" href="#ngay-8-9-data-driven-testing-voi-csvjson" title="Permanent link">&para;</a></h3>
+<h2 id="week-2-advanced-practice">Week 2: Advanced &amp; Practice<a class="headerlink" href="#week-2-advanced-practice" title="Permanent link">&para;</a></h2>
+<h3 id="day-8-9-data-driven-testing-csv-json">Day 8-9: Data-driven Testing with CSV/JSON<a class="headerlink" href="#day-8-9-data-driven-testing-csv-json" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="c1">// script-data-driven.js</span>
 <span class="k">import</span><span class="w"> </span><span class="nx">http</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;k6/http&#39;</span><span class="p">;</span>
 <span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">check</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;k6&#39;</span><span class="p">;</span>
