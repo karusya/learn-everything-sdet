@@ -2564,87 +2564,87 @@
 <h2 id="strategic-significance">🎯 Strategic Significance<a class="headerlink" href="#strategic-significance" title="Permanent link">&para;</a></h2>
 <h3 id="core-message">💡 Core Message<a class="headerlink" href="#core-message" title="Permanent link">&para;</a></h3>
 <p>The <strong>Test Automation Pyramid</strong> emphasizes:</p>
-<h4 id="1-hieu-suat-efficiency">1️⃣ <strong>Hiệu Suất (Efficiency)</strong><a class="headerlink" href="#1-hieu-suat-efficiency" title="Permanent link">&para;</a></h4>
+<h4 id="1-efficiency">1️⃣ <strong>Efficiency</strong><a class="headerlink" href="#1-efficiency" title="Permanent link">&para;</a></h4>
 <ul>
-<li>Tập trung <strong>80% effort</strong> vào Unit Tests (nhanh và rẻ)</li>
-<li>Sử dụng <strong>20% còn lại</strong> cho Integration + E2E Tests</li>
+<li>Focus <strong>80% effort</strong> on Unit Tests (fast and cheap)</li>
+<li>Use <strong>remaining 20%</strong> for Integration + E2E Tests</li>
 </ul>
-<h4 id="2-o-tin-cay-reliability">2️⃣ <strong>Độ Tin Cậy (Reliability)</strong><a class="headerlink" href="#2-o-tin-cay-reliability" title="Permanent link">&para;</a></h4>
+<h4 id="2-reliability">2️⃣ <strong>Reliability</strong><a class="headerlink" href="#2-reliability" title="Permanent link">&para;</a></h4>
 <ul>
-<li><strong>Giảm thiểu E2E Tests</strong> vì chúng thường "flaky" (không ổn định)</li>
-<li>E2E Tests dễ bị ảnh hưởng bởi:</li>
-<li>Thay đổi UI/UX</li>
+<li><strong>Minimize E2E Tests</strong> because they are often "flaky" (unstable)</li>
+<li>E2E Tests are easily affected by:</li>
+<li>UI/UX changes</li>
 <li>Network issues</li>
 <li>Browser compatibility</li>
 <li>Third-party services</li>
 </ul>
-<h4 id="3-toi-uu-hoa-chi-phi">3️⃣ <strong>Tối Ưu Hóa Chi phí</strong><a class="headerlink" href="#3-toi-uu-hoa-chi-phi" title="Permanent link">&para;</a></h4>
+<h4 id="3-cost-optimization">3️⃣ <strong>Cost Optimization</strong><a class="headerlink" href="#3-cost-optimization" title="Permanent link">&para;</a></h4>
 <ul>
-<li>Phát hiện lỗi ở <strong>tầng dưới</strong> → Tiết kiệm <strong>gấp nhiều lần</strong> chi phí</li>
-<li>Sửa lỗi trong development → Rẻ hơn production bugs</li>
+<li>Detect bugs at <strong>lower layers</strong> → Save <strong>many times</strong> the cost</li>
+<li>Fix bugs in development → Cheaper than production bugs</li>
 </ul>
-<h3 id="cong-thuc-thanh-cong">📊 Công Thức Thành Công<a class="headerlink" href="#cong-thuc-thanh-cong" title="Permanent link">&para;</a></h3>
+<h3 id="success-formula">📊 Success Formula<a class="headerlink" href="#success-formula" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code>Unit Tests (70-80%) + Integration Tests (15-20%) + E2E Tests (5-10%) = 🚀 Efficient Test Suite
 </code></pre></div>
 <hr />
-<h2 id="thuc-hien-trong-du-an">🛠️ Thực Hiện Trong Dự Án<a class="headerlink" href="#thuc-hien-trong-du-an" title="Permanent link">&para;</a></h2>
+<h2 id="project-implementation">🛠️ Project Implementation<a class="headerlink" href="#project-implementation" title="Permanent link">&para;</a></h2>
 <h3 id="checklist-setup">📋 Checklist Setup<a class="headerlink" href="#checklist-setup" title="Permanent link">&para;</a></h3>
 <h4 id="unit-tests">✅ Unit Tests<a class="headerlink" href="#unit-tests" title="Permanent link">&para;</a></h4>
 <ul>
-<li>[ ] Chọn testing framework (Jest, JUnit, pytest, etc.)</li>
-<li>[ ] Setup test runners và reporters</li>
-<li>[ ] Viết tests cho business logic</li>
-<li>[ ] Integrate với CI/CD (run on every commit)</li>
+<li>[ ] Choose testing framework (Jest, JUnit, pytest, etc.)</li>
+<li>[ ] Setup test runners and reporters</li>
+<li>[ ] Write tests for business logic</li>
+<li>[ ] Integrate with CI/CD (run on every commit)</li>
 </ul>
 <h4 id="integration-tests">✅ Integration Tests<a class="headerlink" href="#integration-tests" title="Permanent link">&para;</a></h4>
 <ul>
-<li>[ ] Setup test database (in-memory hoặc containerized)</li>
-<li>[ ] Mock external services khi cần</li>
+<li>[ ] Setup test database (in-memory or containerized)</li>
+<li>[ ] Mock external services when needed</li>
 <li>[ ] Test API endpoints</li>
 <li>[ ] Test database operations</li>
 </ul>
 <h4 id="e2e-tests">✅ E2E Tests<a class="headerlink" href="#e2e-tests" title="Permanent link">&para;</a></h4>
 <ul>
-<li>[ ] Chọn tool phù hợp (Playwright, Cypress, Selenium)</li>
-<li>[ ] Setup test environment (staging giống production nhất có thể)</li>
-<li>[ ] Chỉ test <strong>critical user journeys</strong></li>
-<li>[ ] Run <strong>daily/weekly</strong> thay vì on every commit</li>
+<li>[ ] Choose appropriate tool (Playwright, Cypress, Selenium)</li>
+<li>[ ] Setup test environment (staging as close to production as possible)</li>
+<li>[ ] Only test <strong>critical user journeys</strong></li>
+<li>[ ] Run <strong>daily/weekly</strong> instead of on every commit</li>
 </ul>
 <h3 id="best-practices">🎯 Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h3>
 <h4 id="unit-tests_1">🔹 Unit Tests<a class="headerlink" href="#unit-tests_1" title="Permanent link">&para;</a></h4>
 <ul>
-<li>Test <strong>isolated logic</strong> (không phụ thuộc external)</li>
-<li>Sử dụng <strong>mocks/stubs</strong> cho dependencies</li>
-<li>Viết <strong>descriptive test names</strong></li>
+<li>Test <strong>isolated logic</strong> (no external dependencies)</li>
+<li>Use <strong>mocks/stubs</strong> for dependencies</li>
+<li>Write <strong>descriptive test names</strong></li>
 <li>Aim for <strong>high coverage</strong> (&gt;80%)</li>
 </ul>
 <h4 id="integration-tests_1">🔹 Integration Tests<a class="headerlink" href="#integration-tests_1" title="Permanent link">&para;</a></h4>
 <ul>
-<li>Test <strong>real dependencies</strong> khi có thể</li>
-<li>Sử dụng <strong>test containers</strong> (Docker)</li>
-<li><strong>Parallel execution</strong> để tăng tốc độ</li>
-<li><strong>Clean up</strong> data sau mỗi test</li>
+<li>Test <strong>real dependencies</strong> when possible</li>
+<li>Use <strong>test containers</strong> (Docker)</li>
+<li><strong>Parallel execution</strong> to increase speed</li>
+<li><strong>Clean up</strong> data after each test</li>
 </ul>
 <h4 id="e2e-tests_1">🔹 E2E Tests<a class="headerlink" href="#e2e-tests_1" title="Permanent link">&para;</a></h4>
 <ul>
-<li><strong>Minimize số lượng</strong> (chỉ critical flows)</li>
+<li><strong>Minimize quantity</strong> (only critical flows)</li>
 <li><strong>Stable selectors</strong> (data-testid, not CSS classes)</li>
-<li><strong>Retry mechanisms</strong> cho flaky tests</li>
-<li><strong>Visual regression testing</strong> nếu cần</li>
+<li><strong>Retry mechanisms</strong> for flaky tests</li>
+<li><strong>Visual regression testing</strong> if needed</li>
 </ul>
 <hr />
-<h2 id="ket-luan">🚀 Kết Luận<a class="headerlink" href="#ket-luan" title="Permanent link">&para;</a></h2>
-<p><strong>Test Automation Pyramid</strong> không phải là quy tắc cứng nhắc mà là <strong>kim chỉ nam</strong> để:</p>
+<h2 id="conclusion">🚀 Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h2>
+<p>The <strong>Test Automation Pyramid</strong> is not a rigid rule but a <strong>guiding principle</strong> to:</p>
 <ol>
-<li><strong>Tối ưu hóa tài nguyên</strong>: Tập trung vào tests mang lại giá trị cao nhất</li>
-<li><strong>Cân bằng tốc độ vs độ tin cậy</strong>: Nhanh để feedback sớm, đáng tin cậy để confidence cao</li>
-<li><strong>Scalable testing strategy</strong>: Có thể áp dụng cho projects từ nhỏ đến lớn</li>
+<li><strong>Optimize resources</strong>: Focus on tests that bring the highest value</li>
+<li><strong>Balance speed vs reliability</strong>: Fast for early feedback, reliable for high confidence</li>
+<li><strong>Scalable testing strategy</strong>: Can be applied to projects from small to large</li>
 </ol>
-<h3 id="loi-khuyen-cuoi-cung">💡 Lời Khuyên Cuối Cùng<a class="headerlink" href="#loi-khuyen-cuoi-cung" title="Permanent link">&para;</a></h3>
+<h3 id="final-advice">💡 Final Advice<a class="headerlink" href="#final-advice" title="Permanent link">&para;</a></h3>
 <blockquote>
-<p>Hãy xây dựng <strong>nền móng vững chắc</strong> với Unit Tests, <strong>hỗ trợ</strong> bằng Integration Tests, và chỉ dùng E2E Tests như <strong>lá chắn cuối cùng</strong> cho những luồng quan trọng nhất của người dùng.</p>
+<p>Build a <strong>solid foundation</strong> with Unit Tests, <strong>support</strong> with Integration Tests, and only use E2E Tests as the <strong>final shield</strong> for the most critical user flows.</p>
 </blockquote>
-<p><strong>Nhớ</strong>: Một test suite tốt không phải là có nhiều tests, mà là <strong>tests đúng chỗ, đúng lúc</strong>! 🎯</p>
+<p><strong>Remember</strong>: A good test suite is not about having many tests, but having <strong>the right tests at the right time</strong>! 🎯</p>
 
 
 
