@@ -86,8 +86,17 @@ nav:
       - HTTP Caching Guide: http-caching.md
       - Web3: web3.md
 
+  - Machine Learning:
+      - Supervised Learning: ML-supervised-learning.md
+      - Linear Regression: ML-linear-regression.md
+      - Loss Functions: ML-loss.md
+
+  - Programming:
+      - JavaScript/TypeScript OOP: js-ts-oop-concepts.md
+      - K6 Performance Testing: k6.md
+      - SQL Roadmap: sql-roadmap.md
+
   - SDET Prep:
       - SDET Interview Preparation: SDET_Interview_Preparation_Guide.md
       - Experienced Automation Tester Q&A: Experienced_Automation_Tester_QA.md
       - Automation Interview Q&A: Automation_Interview_QA.md
-      - Java OOP Concepts: java-oop-concepts.md
