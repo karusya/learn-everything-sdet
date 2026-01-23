@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://karusya.github.io/learn-everything-for-me/migration-guides/">
+        <link rel="canonical" href="https://karusya.github.io/learn-everything-for-me/ML-supervised-learning/">
       
       
-        <link rel="prev" href="../playwright-library/">
+        <link rel="prev" href="../web3/">
       
       
-        <link rel="next" href="../api-testing/">
+        <link rel="next" href="../ML-linear-regression/">
       
       
         
@@ -27,7 +27,7 @@
     
     
       
-        <title>Migration Guides - Learn Everything For Me</title>
+        <title>Supervised Learning — Core Concepts - Learn Everything For Me</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#migration-guides-infrastructure-notes" class="md-skip">
+        <a href="#supervised-learning" class="md-skip">
           Skip to content
         </a>
       
@@ -115,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Migration Guides
+              Supervised Learning — Core Concepts
             
           </span>
         </div>
@@ -282,8 +282,6 @@
       
   
   
-    
-  
   
   
     
@@ -296,11 +294,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
@@ -321,7 +321,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -504,37 +504,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Migration Guides
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../migration-guides/" class="md-nav__link">
         
   
   
@@ -550,248 +523,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#migrating-from-protractor" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Migrating from Protractor
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Migrating from Protractor">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#principles" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Principles
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cheat-sheet" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Cheat sheet
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#example-migration" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Example migration
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#migrating-from-puppeteer" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Migrating from Puppeteer
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Migrating from Puppeteer">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#principles_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Principles
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cheat-sheet_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Cheat sheet
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#example-migration_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Example migration
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#migrating-from-testing-library-component-testing" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Migrating from Testing Library (Component Testing)
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Migrating from Testing Library (Component Testing)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#principles_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Principles
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cheat-sheet_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Cheat sheet
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tips" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Tips
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#docker-ci-notes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Docker &amp; CI Notes
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Docker &amp; CI Notes">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#docker" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Docker
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ci-best-practices" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        CI Best Practices
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ci-providers" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        CI Providers
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#selenium-grid-experimental" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Selenium Grid (Experimental)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#supported-languages-tools" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Supported Languages &amp; Tools
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1500,8 +1231,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -1512,13 +1245,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
         
           
           <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
@@ -1539,7 +1270,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1554,10 +1285,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../ML-supervised-learning/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Supervised Learning
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1573,6 +1331,160 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples-of-datasets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Examples of datasets
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dataset-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dataset structure
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dataset structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Features
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#label" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Label
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Label">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-weather-prediction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example (weather prediction)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dataset-characteristics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dataset characteristics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dataset characteristics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Examples
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Model
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1958,44 +1870,33 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#migrating-from-protractor" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Migrating from Protractor
+        Overview
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Migrating from Protractor">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#principles" class="md-nav__link">
+  <a href="#examples-of-datasets" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Principles
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cheat-sheet" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Cheat sheet
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#example-migration" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Example migration
+        Examples of datasets
       
     </span>
   </a>
@@ -2008,22 +1909,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#migrating-from-puppeteer" class="md-nav__link">
+  <a href="#dataset-structure" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Migrating from Puppeteer
+        Dataset structure
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Migrating from Puppeteer">
+    <nav class="md-nav" aria-label="Dataset structure">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#principles_1" class="md-nav__link">
+  <a href="#features" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Principles
+        Features
       
     </span>
   </a>
@@ -2031,21 +1932,55 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#cheat-sheet_1" class="md-nav__link">
+  <a href="#label" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Cheat sheet
+        Label
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Label">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-weather-prediction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example (weather prediction)
       
     </span>
   </a>
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#example-migration_1" class="md-nav__link">
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dataset-characteristics" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Example migration
+        Dataset characteristics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dataset characteristics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Examples
       
     </span>
   </a>
@@ -2058,121 +1993,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#migrating-from-testing-library-component-testing" class="md-nav__link">
+  <a href="#model" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Migrating from Testing Library (Component Testing)
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Migrating from Testing Library (Component Testing)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#principles_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Principles
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cheat-sheet_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Cheat sheet
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tips" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Tips
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#docker-ci-notes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Docker &amp; CI Notes
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Docker &amp; CI Notes">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#docker" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Docker
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ci-best-practices" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        CI Best Practices
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ci-providers" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        CI Providers
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#selenium-grid-experimental" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Selenium Grid (Experimental)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#supported-languages-tools" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Supported Languages &amp; Tools
+        Model
       
     </span>
   </a>
@@ -2199,235 +2023,84 @@
   
 
 
-<h1 id="migration-guides-infrastructure-notes">Migration Guides &amp; Infrastructure Notes<a class="headerlink" href="#migration-guides-infrastructure-notes" title="Permanent link">&para;</a></h1>
-<h2 id="migrating-from-protractor">Migrating from Protractor<a class="headerlink" href="#migrating-from-protractor" title="Permanent link">&para;</a></h2>
-<h3 id="principles">Principles<a class="headerlink" href="#principles" title="Permanent link">&para;</a></h3>
+<!-- markdownlint-disable MD025 MD003 MD022 MD026 MD024 -->
+
+<h1 id="supervised-learning">Supervised Learning<a class="headerlink" href="#supervised-learning" title="Permanent link">&para;</a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p><strong>Supervised machine learning</strong> is based on learning a relationship between inputs and outputs using labeled data.</p>
+<p>The core concepts of supervised learning are:
+- Data
+- Model
+- Training
+- Evaluating
+- Inference</p>
+<hr />
+<h2 id="data">Data<a class="headerlink" href="#data" title="Permanent link">&para;</a></h2>
+<p>Data is the <strong>driving force</strong> of machine learning.</p>
+<p>It can appear as:
+- Numbers and words stored in tables
+- Pixel values in images
+- Waveforms in audio files</p>
+<p>Related data is stored in <strong>datasets</strong>.</p>
+<h3 id="examples-of-datasets">Examples of datasets<a class="headerlink" href="#examples-of-datasets" title="Permanent link">&para;</a></h3>
 <ul>
-<li>No <code>webdriver-manager</code>/Selenium server: Playwright Test talks directly to browsers.</li>
-<li><code>ElementFinder</code> &amp; <code>waitForAngular</code> concepts are replaced by <code>page.locator()</code> + auto-waiting.</li>
-<li>Always <code>await</code> Playwright calls.</li>
+<li>Images of cats</li>
+<li>Housing prices</li>
+<li>Weather information</li>
 </ul>
-<h3 id="cheat-sheet">Cheat sheet<a class="headerlink" href="#cheat-sheet" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>Protractor</th>
-<th>Playwright Test</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>element(by.css('...'))</code></td>
-<td><code>page.locator('...')</code></td>
-</tr>
-<tr>
-<td><code>element(by.buttonText('…'))</code></td>
-<td><code>page.locator('button, input[type="button"], input[type="submit"] &gt;&gt; text="…"' )</code></td>
-</tr>
-<tr>
-<td><code>element(by.repeater('todo in todoList.todos'))</code></td>
-<td><code>page.locator('[ng-repeat="todo in todoList.todos"]')</code></td>
-</tr>
-<tr>
-<td><code>element.all</code></td>
-<td><code>page.locator(...)</code> (supports counts, nth, etc.)</td>
-</tr>
-<tr>
-<td><code>browser.get(url)</code></td>
-<td><code>await page.goto(url)</code></td>
-</tr>
-<tr>
-<td><code>browser.getCurrentUrl()</code></td>
-<td><code>page.url()</code></td>
-</tr>
-</tbody>
-</table>
-<h3 id="example-migration">Example migration<a class="headerlink" href="#example-migration" title="Permanent link">&para;</a></h3>
-<p>Protractor test becomes Playwright Test with:
-1. <code>test</code>/<code>expect</code> imports from <code>@playwright/test</code>.
-2. Async <code>test</code> functions with injected <code>page</code> fixture.
-3. <code>page.locator()</code> for DOM access and <code>expect(locator)</code> for assertions.
-4. No manual Angular waits because Playwright auto-waits, with optional <code>waitForAngular</code> polyfill when needed (use <code>protractor</code>’s client-side script or Angular Testabilities).</p>
-<h2 id="migrating-from-puppeteer">Migrating from Puppeteer<a class="headerlink" href="#migrating-from-puppeteer" title="Permanent link">&para;</a></h2>
-<h3 id="principles_1">Principles<a class="headerlink" href="#principles_1" title="Permanent link">&para;</a></h3>
+<hr />
+<h2 id="dataset-structure">Dataset structure<a class="headerlink" href="#dataset-structure" title="Permanent link">&para;</a></h2>
+<p>A dataset is made up of <strong>individual examples</strong>.</p>
+<p>An example is similar to:
+- A single row in a spreadsheet</p>
+<p>Each example contains:
+- <strong>Features</strong>
+- <strong>Label</strong></p>
+<h3 id="features">Features<a class="headerlink" href="#features" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Playwright is multi-browser; swap <code>puppeteer.launch()</code> for specific <code>playwright.chromium/firefox/webkit.launch()</code>.</li>
-<li>Prefer Playwright <code>Locator</code> + web-first assertions over <code>page.$</code>, <code>page.$eval</code>, and <code>ElementHandle</code>.</li>
-<li>Auto-wait removes most manual <code>waitFor*</code> calls, though <code>waitForLoadState()</code> or assertions with <code>await</code> are available.</li>
+<li>Input values used by the model to make predictions</li>
 </ul>
-<h3 id="cheat-sheet_1">Cheat sheet<a class="headerlink" href="#cheat-sheet_1" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>Puppeteer</th>
-<th>Playwright Library</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>puppeteer.launch()</code></td>
-<td><code>playwright.chromium.launch()</code></td>
-</tr>
-<tr>
-<td><code>page.waitForSelector()</code></td>
-<td><code>locator.waitFor()</code> (or auto via <code>await locator.click()</code>)</td>
-</tr>
-<tr>
-<td><code>page.$eval()</code></td>
-<td><code>expect(locator).toHaveText()</code></td>
-</tr>
-<tr>
-<td><code>page.click(selector)</code></td>
-<td><code>page.locator(selector).click()</code></td>
-</tr>
-<tr>
-<td><code>page.type(...)</code></td>
-<td><code>.fill(...)</code></td>
-</tr>
-<tr>
-<td><code>page.waitForNavigation()</code></td>
-<td>usually unnecessary; use <code>await page.goto()</code> or <code>expect(page).toHaveURL()</code></td>
-</tr>
-<tr>
-<td><code>page.setViewport(...)</code></td>
-<td><code>page.setViewportSize(...)</code></td>
-</tr>
-<tr>
-<td><code>page.reload()</code></td>
-<td><code>await page.reload()</code> (auto-waiting)</td>
-</tr>
-</tbody>
-</table>
-<h3 id="example-migration_1">Example migration<a class="headerlink" href="#example-migration_1" title="Permanent link">&para;</a></h3>
+<h3 id="label">Label<a class="headerlink" href="#label" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Replace Puppeteer/Jest script with Playwright Test: import <code>{ test, expect }</code>, use <code>test()</code> blocks receiving <code>{ page }</code>, and assert with <code>expect</code>.</li>
-<li>Drop manual <code>waitForSelector</code> in favor of <code>await expect(locator).toBeVisible()</code> or <code>toHaveCount</code>.</li>
-<li><code>setViewportSize</code>, <code>newContext</code>, <code>newPage</code>, and <code>auto-waited</code> locators replace the older flows.</li>
+<li>The “answer”</li>
+<li>The value the model is trying to predict</li>
 </ul>
-<h2 id="migrating-from-testing-library-component-testing">Migrating from Testing Library (Component Testing)<a class="headerlink" href="#migrating-from-testing-library-component-testing" title="Permanent link">&para;</a></h2>
-<h3 id="principles_2">Principles<a class="headerlink" href="#principles_2" title="Permanent link">&para;</a></h3>
+<h4 id="example-weather-prediction">Example (weather prediction)<a class="headerlink" href="#example-weather-prediction" title="Permanent link">&para;</a></h4>
 <ul>
-<li>Replace <code>render</code> + queries with <code>mount</code> and Playwright locators from <code>@playwright/experimental-ct-*</code>.</li>
-<li>Use Playwright actions/locators (<code>getByText</code>, <code>getByRole</code>, <code>fill</code>, <code>click</code>) instead of <code>screen</code> helpers.</li>
-<li>Assertions rely on <code>expect(locator)</code> (web-first) rather than DOM texts/<code>queryBy</code>.</li>
+<li>Features: latitude, longitude, temperature, humidity, cloud coverage, wind direction, atmospheric pressure</li>
+<li>Label: rainfall amount</li>
 </ul>
-<h3 id="cheat-sheet_2">Cheat sheet<a class="headerlink" href="#cheat-sheet_2" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>Testing Library</th>
-<th>Playwright Component Testing</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>render(&lt;Component /&gt;)</code></td>
-<td><code>await mount(&lt;Component /&gt;)</code></td>
-</tr>
-<tr>
-<td><code>screen.getByText(...)</code></td>
-<td><code>component.getByText(...)</code></td>
-</tr>
-<tr>
-<td><code>user.click(...)</code></td>
-<td><code>locator.click()</code></td>
-</tr>
-<tr>
-<td><code>screen.findByText</code></td>
-<td><code>component.getByText(...)</code> (auto-waiting)</td>
-</tr>
-<tr>
-<td><code>screen.getByLabelText</code></td>
-<td><code>component.getByLabel('...')</code></td>
-</tr>
-<tr>
-<td><code>expect(...).toBeInTheDocument()</code></td>
-<td><code>await expect(locator).toBeVisible()</code></td>
-</tr>
-<tr>
-<td><code>within(...)</code></td>
-<td><code>locator.locator(...)</code></td>
-</tr>
-</tbody>
-</table>
-<h3 id="tips">Tips<a class="headerlink" href="#tips" title="Permanent link">&para;</a></h3>
+<p>Examples that contain <strong>both features and a label</strong> are called <strong>labeled examples</strong>.</p>
+<hr />
+<h2 id="dataset-characteristics">Dataset characteristics<a class="headerlink" href="#dataset-characteristics" title="Permanent link">&para;</a></h2>
+<p>Datasets are characterized by:
+- <strong>Size</strong> — number of examples
+- <strong>Diversity</strong> — range of conditions covered by the examples</p>
+<p>Good datasets are:
+- Large <strong>and</strong>
+- Highly diverse</p>
+<p>However:
+- A large dataset does not guarantee diversity
+- A diverse dataset does not guarantee enough examples</p>
+<h3 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Use <code>update()</code> to rerender with new props, <code>unmount()</code> to clean up, <code>hooksConfig</code> for dependencies (routing, stores).</li>
-<li>Component tests reuse fixtures and run in isolation via <code>mount</code>.</li>
+<li>100 years of data only for July → poor predictions for January</li>
+<li>Few years of data covering all months → poor predictions due to limited historical variability</li>
 </ul>
-<h2 id="docker-ci-notes">Docker &amp; CI Notes<a class="headerlink" href="#docker-ci-notes" title="Permanent link">&para;</a></h2>
-<h3 id="docker">Docker<a class="headerlink" href="#docker" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Prefer <code>mcr.microsoft.com/playwright:&lt;version&gt;-noble</code> containers; include <code>seccomp_profile.json</code> when running as non-root.</li>
-<li>Use recommended flags: <code>--init</code>, <code>--ipc=host</code>, <code>--cap-add=SYS_ADMIN</code> (during debugging), run headed tests with <code>xvfb-run</code>.</li>
-<li>Playwright Server: <code>npx playwright run-server --port ...</code> in container, connect from host via <code>PW_TEST_CONNECT_WS_ENDPOINT</code>.</li>
-<li>For scraping/untrusted code use separate user (<code>--user pwuser</code>) plus seccomp profile for Chromium sandbox support.</li>
-</ul>
-<h3 id="ci-best-practices">CI Best Practices<a class="headerlink" href="#ci-best-practices" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Install dependencies: <code>npm ci</code> + <code>npx playwright install --with-deps</code>.</li>
-<li>Prefer <code>workers: process.env.CI ? 1 : undefined</code>, but parallelize on powerful runners; use <code>--shard=x/y</code> or CI matrix for splitting.</li>
-<li>Use <code>--only-changed</code> for fail-fast previews, run full suite afterward.</li>
-<li>Upload <code>playwright-report</code>, traces, videos via <code>actions/upload-artifact</code>.</li>
-<li>Configure reporters like <code>[['junit', { outputFile: 'test-results/results.xml' }], ['html', { open: 'never' }]]</code>.</li>
-<li>Increase <code>globalTimeout</code>, <code>maxFailures</code>, or <code>retry</code> as needed for stability.</li>
-<li>Set <code>DEBUG=pw:browser*</code> for detailed logs when diagnosing grid/launch issues.</li>
-</ul>
-<h3 id="ci-providers">CI Providers<a class="headerlink" href="#ci-providers" title="Permanent link">&para;</a></h3>
-<ul>
-<li><strong>GitHub Actions</strong>: workflows described; use container image, deployment triggers, matrix/sharding, and publish artifacts.</li>
-<li><strong>Azure Pipelines</strong>: install Node.js (UseNode task), run <code>npx playwright test</code>, upload reports, optionally publish JUnit/artifacts.</li>
-<li><strong>CircleCI/GitLab/Bitbucket/Drone/Google Cloud Build</strong>: use <code>mcr.microsoft.com/playwright</code> image and run <code>npx playwright test</code>; use <code>parallel</code>/<code>matrix</code> for sharding.</li>
-<li><strong>Docker/CI</strong>: prefer caching? not necessary; let Playwright download browsers unless pinning is critical.</li>
-<li><strong>Fail-fast</strong>: run <code>npx playwright test --only-changed=$BASE_REF</code> on PRs before full suite.</li>
-</ul>
-<h2 id="selenium-grid-experimental">Selenium Grid (Experimental)<a class="headerlink" href="#selenium-grid-experimental" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Playwright can connect to Selenium Grid 4 via <code>SELENIUM_REMOTE_URL</code> (Chromium/Edge only) and optional <code>SELENIUM_REMOTE_CAPABILITIES</code>/<code>SELENIUM_REMOTE_HEADERS</code>.</li>
-<li>Provide grid-specific env vars (<code>SE_NODE_GRID_URL</code>, <code>SE_EVENT_BUS_*</code>) when starting nodes.</li>
-<li>Use <code>DEBUG=pw:browser*</code> for low-level logs and include them when filing issues.</li>
-<li>Docker example: run standalone/node containers, then <code>SELENIUM_REMOTE_URL=http://hub:4444 npx playwright test</code>.</li>
-<li>Selenium 3 support is best-effort; direct grid access required because CDP is not exposed.</li>
-</ul>
-<h2 id="supported-languages-tools">Supported Languages &amp; Tools<a class="headerlink" href="#supported-languages-tools" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Language</th>
-<th>Recommended Runner</th>
-<th>Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>JavaScript/TypeScript</td>
-<td><code>@playwright/test</code></td>
-<td>Built-in test runner with tracing, reporters, inspector, CLI.</td>
-</tr>
-<tr>
-<td>Python</td>
-<td><code>playwright pytest plugin</code></td>
-<td>Use <code>pytest</code> fixture helpers for browsers + parallelism.</td>
-</tr>
-<tr>
-<td>Java</td>
-<td>Any test framework (JUnit/TestNG)</td>
-<td>Use Playwright Java bindings with webdriver style.</td>
-</tr>
-<tr>
-<td>.NET</td>
-<td>MSTest/NUnit/xUnit</td>
-<td>Playwright for .NET offers base classes per runner.</td>
-</tr>
-</tbody>
-</table>
-<p>Include matching Playwright version across languages/containers for compatibility. If using Docker, ensure <code>npx playwright test</code> version matches browser binaries inside image.</p>
+<p>Both size and diversity are required for reliable learning.</p>
+<hr />
+<h2 id="model">Model<a class="headerlink" href="#model" title="Permanent link">&para;</a></h2>
+<p>In supervised learning, a <strong>model</strong> is a complex collection of numbers that defines a mathematical relationship between:
+- Input features</p>
 
 
 
 
 
 
+
+  
+  
 
 
 
