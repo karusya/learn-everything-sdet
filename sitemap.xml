@@ -2,122 +2,134 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://karusya.github.io/learn-everything-for-me/</loc>
-         <lastmod>2025-12-18</lastmod>
+         <lastmod>2026-01-23</lastmod>
     </url>
     <url>
          <loc>https://karusya.github.io/learn-everything-for-me/Automation_Interview_QA/</loc>
-         <lastmod>2025-12-18</lastmod>
+         <lastmod>2026-01-23</lastmod>
     </url>
     <url>
          <loc>https://karusya.github.io/learn-everything-for-me/Experienced_Automation_Tester_QA/</loc>
-         <lastmod>2025-12-18</lastmod>
+         <lastmod>2026-01-23</lastmod>
     </url>
     <url>
          <loc>https://karusya.github.io/learn-everything-for-me/Flaky_Test_Guide/</loc>
-         <lastmod>2025-12-18</lastmod>
+         <lastmod>2026-01-23</lastmod>
+    </url>
+    <url>
+         <loc>https://karusya.github.io/learn-everything-for-me/ML-linear-regression/</loc>
+         <lastmod>2026-01-23</lastmod>
+    </url>
+    <url>
+         <loc>https://karusya.github.io/learn-everything-for-me/ML-loss/</loc>
+         <lastmod>2026-01-23</lastmod>
+    </url>
+    <url>
+         <loc>https://karusya.github.io/learn-everything-for-me/ML-supervised-learning/</loc>
+         <lastmod>2026-01-23</lastmod>
     </url>
     <url>
          <loc>https://karusya.github.io/learn-everything-for-me/Playwright_Guide_Reorganized/</loc>
-         <lastmod>2025-12-18</lastmod>
+         <lastmod>2026-01-23</lastmod>
     </url>
     <url>
          <loc>https://karusya.github.io/learn-everything-for-me/SDET_Interview_Preparation_Guide/</loc>
-         <lastmod>2025-12-18</lastmod>
+         <lastmod>2026-01-23</lastmod>
     </url>
     <url>
          <loc>https://karusya.github.io/learn-everything-for-me/Test_Automation_Pyramid_Guide/</loc>
-         <lastmod>2025-12-18</lastmod>
+         <lastmod>2026-01-23</lastmod>
     </url>
     <url>
          <loc>https://karusya.github.io/learn-everything-for-me/api-testing/</loc>
-         <lastmod>2025-12-18</lastmod>
+         <lastmod>2026-01-23</lastmod>
     </url>
     <url>
          <loc>https://karusya.github.io/learn-everything-for-me/elasticsearch-query-deepdive/</loc>
-         <lastmod>2025-12-18</lastmod>
+         <lastmod>2026-01-23</lastmod>
     </url>
     <url>
          <loc>https://karusya.github.io/learn-everything-for-me/elasticsearch-roadmap/</loc>
-         <lastmod>2025-12-18</lastmod>
+         <lastmod>2026-01-23</lastmod>
     </url>
     <url>
          <loc>https://karusya.github.io/learn-everything-for-me/http-caching/</loc>
-         <lastmod>2025-12-18</lastmod>
+         <lastmod>2026-01-23</lastmod>
     </url>
     <url>
          <loc>https://karusya.github.io/learn-everything-for-me/js-ts-oop-concepts/</loc>
-         <lastmod>2025-12-18</lastmod>
+         <lastmod>2026-01-23</lastmod>
     </url>
     <url>
          <loc>https://karusya.github.io/learn-everything-for-me/k6/</loc>
-         <lastmod>2025-12-18</lastmod>
+         <lastmod>2026-01-23</lastmod>
     </url>
     <url>
          <loc>https://karusya.github.io/learn-everything-for-me/k6_performance_testing/</loc>
-         <lastmod>2025-12-18</lastmod>
+         <lastmod>2026-01-23</lastmod>
     </url>
     <url>
          <loc>https://karusya.github.io/learn-everything-for-me/migration-guides/</loc>
-         <lastmod>2025-12-18</lastmod>
+         <lastmod>2026-01-23</lastmod>
     </url>
     <url>
          <loc>https://karusya.github.io/learn-everything-for-me/mutation-testing/</loc>
-         <lastmod>2025-12-18</lastmod>
+         <lastmod>2026-01-23</lastmod>
     </url>
     <url>
          <loc>https://karusya.github.io/learn-everything-for-me/playwright-agents/</loc>
-         <lastmod>2025-12-18</lastmod>
+         <lastmod>2026-01-23</lastmod>
     </url>
     <url>
          <loc>https://karusya.github.io/learn-everything-for-me/playwright-assertions/</loc>
-         <lastmod>2025-12-18</lastmod>
+         <lastmod>2026-01-23</lastmod>
     </url>
     <url>
          <loc>https://karusya.github.io/learn-everything-for-me/playwright-fixtures/</loc>
-         <lastmod>2025-12-18</lastmod>
+         <lastmod>2026-01-23</lastmod>
     </url>
     <url>
          <loc>https://karusya.github.io/learn-everything-for-me/playwright-library/</loc>
-         <lastmod>2025-12-18</lastmod>
+         <lastmod>2026-01-23</lastmod>
     </url>
     <url>
          <loc>https://karusya.github.io/learn-everything-for-me/playwright-reporter/</loc>
-         <lastmod>2025-12-18</lastmod>
+         <lastmod>2026-01-23</lastmod>
     </url>
     <url>
          <loc>https://karusya.github.io/learn-everything-for-me/playwright-sdet-framework-intro/</loc>
-         <lastmod>2025-12-18</lastmod>
+         <lastmod>2026-01-23</lastmod>
     </url>
     <url>
          <loc>https://karusya.github.io/learn-everything-for-me/qa-roadmap/</loc>
-         <lastmod>2025-12-18</lastmod>
+         <lastmod>2026-01-23</lastmod>
     </url>
     <url>
          <loc>https://karusya.github.io/learn-everything-for-me/qa-sdet-roadmap/</loc>
-         <lastmod>2025-12-18</lastmod>
+         <lastmod>2026-01-23</lastmod>
     </url>
     <url>
          <loc>https://karusya.github.io/learn-everything-for-me/sdet-framework-foundation/</loc>
-         <lastmod>2025-12-18</lastmod>
+         <lastmod>2026-01-23</lastmod>
     </url>
     <url>
          <loc>https://karusya.github.io/learn-everything-for-me/shift-left-testing/</loc>
-         <lastmod>2025-12-18</lastmod>
+         <lastmod>2026-01-23</lastmod>
     </url>
     <url>
          <loc>https://karusya.github.io/learn-everything-for-me/sql-roadmap/</loc>
-         <lastmod>2025-12-18</lastmod>
+         <lastmod>2026-01-23</lastmod>
     </url>
     <url>
          <loc>https://karusya.github.io/learn-everything-for-me/test-techniques/</loc>
-         <lastmod>2025-12-18</lastmod>
+         <lastmod>2026-01-23</lastmod>
     </url>
     <url>
          <loc>https://karusya.github.io/learn-everything-for-me/ui-api-pom-comparison/</loc>
-         <lastmod>2025-12-18</lastmod>
+         <lastmod>2026-01-23</lastmod>
     </url>
     <url>
          <loc>https://karusya.github.io/learn-everything-for-me/web3/</loc>
-         <lastmod>2025-12-18</lastmod>
+         <lastmod>2026-01-23</lastmod>
     </url>
 </urlset>

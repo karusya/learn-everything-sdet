@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://karusya.github.io/learn-everything-for-me/migration-guides/">
+        <link rel="canonical" href="https://karusya.github.io/learn-everything-for-me/ML-loss/">
       
       
-        <link rel="prev" href="../playwright-library/">
+        <link rel="prev" href="../ML-linear-regression/">
       
       
-        <link rel="next" href="../api-testing/">
+        <link rel="next" href="../js-ts-oop-concepts/">
       
       
         
@@ -27,7 +27,7 @@
     
     
       
-        <title>Migration Guides - Learn Everything For Me</title>
+        <title>Loss Functions — Core Notes - Learn Everything For Me</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#migration-guides-infrastructure-notes" class="md-skip">
+        <a href="#loss-functions" class="md-skip">
           Skip to content
         </a>
       
@@ -115,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Migration Guides
+              Loss Functions — Core Notes
             
           </span>
         </div>
@@ -282,8 +282,6 @@
       
   
   
-    
-  
   
   
     
@@ -296,11 +294,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
@@ -321,7 +321,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -504,37 +504,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Migration Guides
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../migration-guides/" class="md-nav__link">
         
   
   
@@ -550,248 +523,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#migrating-from-protractor" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Migrating from Protractor
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Migrating from Protractor">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#principles" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Principles
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cheat-sheet" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Cheat sheet
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#example-migration" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Example migration
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#migrating-from-puppeteer" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Migrating from Puppeteer
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Migrating from Puppeteer">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#principles_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Principles
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cheat-sheet_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Cheat sheet
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#example-migration_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Example migration
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#migrating-from-testing-library-component-testing" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Migrating from Testing Library (Component Testing)
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Migrating from Testing Library (Component Testing)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#principles_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Principles
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cheat-sheet_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Cheat sheet
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tips" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Tips
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#docker-ci-notes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Docker &amp; CI Notes
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Docker &amp; CI Notes">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#docker" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Docker
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ci-best-practices" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        CI Best Practices
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ci-providers" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        CI Providers
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#selenium-grid-experimental" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Selenium Grid (Experimental)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#supported-languages-tools" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Supported Languages &amp; Tools
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1500,8 +1231,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -1512,13 +1245,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
         
           
           <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
@@ -1539,7 +1270,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1610,10 +1341,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../ML-loss/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Loss Functions
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1629,6 +1387,181 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-loss" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is loss?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-loss-is-important" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why loss is important
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#distance-between-prediction-and-actual-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Distance between prediction and actual value
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-ways-to-calculate-distance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common ways to calculate distance
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common ways to calculate distance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#absolute-difference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Absolute difference
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#squared-difference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Squared difference
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types-of-loss-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Types of loss functions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Types of loss functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#l1-loss" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        L1 Loss
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mae-mean-absolute-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MAE (Mean Absolute Error)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#l2-loss" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        L2 Loss
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mse-mean-squared-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MSE (Mean Squared Error)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rmse-root-mean-squared-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RMSE (Root Mean Squared Error)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1958,22 +1891,55 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#migrating-from-protractor" class="md-nav__link">
+  <a href="#what-is-loss" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Migrating from Protractor
+        What is loss?
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Migrating from Protractor">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-loss-is-important" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why loss is important
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#distance-between-prediction-and-actual-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Distance between prediction and actual value
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-ways-to-calculate-distance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common ways to calculate distance
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common ways to calculate distance">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#principles" class="md-nav__link">
+  <a href="#absolute-difference" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Principles
+        Absolute difference
       
     </span>
   </a>
@@ -1981,21 +1947,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#cheat-sheet" class="md-nav__link">
+  <a href="#squared-difference" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Cheat sheet
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#example-migration" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Example migration
+        Squared difference
       
     </span>
   </a>
@@ -2008,22 +1963,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#migrating-from-puppeteer" class="md-nav__link">
+  <a href="#types-of-loss-functions" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Migrating from Puppeteer
+        Types of loss functions
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Migrating from Puppeteer">
+    <nav class="md-nav" aria-label="Types of loss functions">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#principles_1" class="md-nav__link">
+  <a href="#l1-loss" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Principles
+        L1 Loss
       
     </span>
   </a>
@@ -2031,10 +1986,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#cheat-sheet_1" class="md-nav__link">
+  <a href="#mae-mean-absolute-error" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Cheat sheet
+        MAE (Mean Absolute Error)
       
     </span>
   </a>
@@ -2042,10 +1997,32 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#example-migration_1" class="md-nav__link">
+  <a href="#l2-loss" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Example migration
+        L2 Loss
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mse-mean-squared-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MSE (Mean Squared Error)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rmse-root-mean-squared-error" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RMSE (Root Mean Squared Error)
       
     </span>
   </a>
@@ -2058,121 +2035,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#migrating-from-testing-library-component-testing" class="md-nav__link">
+  <a href="#summary" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Migrating from Testing Library (Component Testing)
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Migrating from Testing Library (Component Testing)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#principles_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Principles
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cheat-sheet_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Cheat sheet
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tips" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Tips
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#docker-ci-notes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Docker &amp; CI Notes
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Docker &amp; CI Notes">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#docker" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Docker
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ci-best-practices" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        CI Best Practices
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ci-providers" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        CI Providers
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#selenium-grid-experimental" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Selenium Grid (Experimental)
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#supported-languages-tools" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Supported Languages &amp; Tools
+        Summary
       
     </span>
   </a>
@@ -2199,235 +2065,113 @@
   
 
 
-<h1 id="migration-guides-infrastructure-notes">Migration Guides &amp; Infrastructure Notes<a class="headerlink" href="#migration-guides-infrastructure-notes" title="Permanent link">&para;</a></h1>
-<h2 id="migrating-from-protractor">Migrating from Protractor<a class="headerlink" href="#migrating-from-protractor" title="Permanent link">&para;</a></h2>
-<h3 id="principles">Principles<a class="headerlink" href="#principles" title="Permanent link">&para;</a></h3>
+<!-- markdownlint-disable MD025 MD003 MD022 MD026 MD024 -->
+
+<h1 id="loss-functions">Loss Functions<a class="headerlink" href="#loss-functions" title="Permanent link">&para;</a></h1>
+<h2 id="what-is-loss">What is loss?<a class="headerlink" href="#what-is-loss" title="Permanent link">&para;</a></h2>
 <ul>
-<li>No <code>webdriver-manager</code>/Selenium server: Playwright Test talks directly to browsers.</li>
-<li><code>ElementFinder</code> &amp; <code>waitForAngular</code> concepts are replaced by <code>page.locator()</code> + auto-waiting.</li>
-<li>Always <code>await</code> Playwright calls.</li>
+<li><strong>Loss</strong> is a numeric metric that describes <strong>how wrong a model’s predictions are</strong></li>
+<li>It measures the <strong>distance between predictions and actual labels (Y)</strong></li>
+<li>A lower loss means better model performance</li>
 </ul>
-<h3 id="cheat-sheet">Cheat sheet<a class="headerlink" href="#cheat-sheet" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>Protractor</th>
-<th>Playwright Test</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>element(by.css('...'))</code></td>
-<td><code>page.locator('...')</code></td>
-</tr>
-<tr>
-<td><code>element(by.buttonText('…'))</code></td>
-<td><code>page.locator('button, input[type="button"], input[type="submit"] &gt;&gt; text="…"' )</code></td>
-</tr>
-<tr>
-<td><code>element(by.repeater('todo in todoList.todos'))</code></td>
-<td><code>page.locator('[ng-repeat="todo in todoList.todos"]')</code></td>
-</tr>
-<tr>
-<td><code>element.all</code></td>
-<td><code>page.locator(...)</code> (supports counts, nth, etc.)</td>
-</tr>
-<tr>
-<td><code>browser.get(url)</code></td>
-<td><code>await page.goto(url)</code></td>
-</tr>
-<tr>
-<td><code>browser.getCurrentUrl()</code></td>
-<td><code>page.url()</code></td>
-</tr>
-</tbody>
-</table>
-<h3 id="example-migration">Example migration<a class="headerlink" href="#example-migration" title="Permanent link">&para;</a></h3>
-<p>Protractor test becomes Playwright Test with:
-1. <code>test</code>/<code>expect</code> imports from <code>@playwright/test</code>.
-2. Async <code>test</code> functions with injected <code>page</code> fixture.
-3. <code>page.locator()</code> for DOM access and <code>expect(locator)</code> for assertions.
-4. No manual Angular waits because Playwright auto-waits, with optional <code>waitForAngular</code> polyfill when needed (use <code>protractor</code>’s client-side script or Angular Testabilities).</p>
-<h2 id="migrating-from-puppeteer">Migrating from Puppeteer<a class="headerlink" href="#migrating-from-puppeteer" title="Permanent link">&para;</a></h2>
-<h3 id="principles_1">Principles<a class="headerlink" href="#principles_1" title="Permanent link">&para;</a></h3>
+<p>Formally, loss compares:
+- <strong>Predicted value (ŷ)</strong>
+- <strong>Actual value (y)</strong></p>
+<hr />
+<h2 id="why-loss-is-important">Why loss is important<a class="headerlink" href="#why-loss-is-important" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Playwright is multi-browser; swap <code>puppeteer.launch()</code> for specific <code>playwright.chromium/firefox/webkit.launch()</code>.</li>
-<li>Prefer Playwright <code>Locator</code> + web-first assertions over <code>page.$</code>, <code>page.$eval</code>, and <code>ElementHandle</code>.</li>
-<li>Auto-wait removes most manual <code>waitFor*</code> calls, though <code>waitForLoadState()</code> or assertions with <code>await</code> are available.</li>
+<li>The main goal of training an ML model is <strong>minimizing the loss</strong></li>
+<li>During training, the model adjusts its parameters (weights and bias) to reduce this value</li>
+<li>Loss is optimized regardless of whether the prediction is higher or lower than the actual value</li>
 </ul>
-<h3 id="cheat-sheet_1">Cheat sheet<a class="headerlink" href="#cheat-sheet_1" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>Puppeteer</th>
-<th>Playwright Library</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>puppeteer.launch()</code></td>
-<td><code>playwright.chromium.launch()</code></td>
-</tr>
-<tr>
-<td><code>page.waitForSelector()</code></td>
-<td><code>locator.waitFor()</code> (or auto via <code>await locator.click()</code>)</td>
-</tr>
-<tr>
-<td><code>page.$eval()</code></td>
-<td><code>expect(locator).toHaveText()</code></td>
-</tr>
-<tr>
-<td><code>page.click(selector)</code></td>
-<td><code>page.locator(selector).click()</code></td>
-</tr>
-<tr>
-<td><code>page.type(...)</code></td>
-<td><code>.fill(...)</code></td>
-</tr>
-<tr>
-<td><code>page.waitForNavigation()</code></td>
-<td>usually unnecessary; use <code>await page.goto()</code> or <code>expect(page).toHaveURL()</code></td>
-</tr>
-<tr>
-<td><code>page.setViewport(...)</code></td>
-<td><code>page.setViewportSize(...)</code></td>
-</tr>
-<tr>
-<td><code>page.reload()</code></td>
-<td><code>await page.reload()</code> (auto-waiting)</td>
-</tr>
-</tbody>
-</table>
-<h3 id="example-migration_1">Example migration<a class="headerlink" href="#example-migration_1" title="Permanent link">&para;</a></h3>
+<hr />
+<h2 id="distance-between-prediction-and-actual-value">Distance between prediction and actual value<a class="headerlink" href="#distance-between-prediction-and-actual-value" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Replace Puppeteer/Jest script with Playwright Test: import <code>{ test, expect }</code>, use <code>test()</code> blocks receiving <code>{ page }</code>, and assert with <code>expect</code>.</li>
-<li>Drop manual <code>waitForSelector</code> in favor of <code>await expect(locator).toBeVisible()</code> or <code>toHaveCount</code>.</li>
-<li><code>setViewportSize</code>, <code>newContext</code>, <code>newPage</code>, and <code>auto-waited</code> locators replace the older flows.</li>
+<li>Loss focuses on <strong>distance</strong>, not direction</li>
+<li>The sign of the error does not matter</li>
+<li>That is why loss functions use:</li>
+<li><strong>Absolute values</strong>, or</li>
+<li><strong>Squared differences</strong></li>
 </ul>
-<h2 id="migrating-from-testing-library-component-testing">Migrating from Testing Library (Component Testing)<a class="headerlink" href="#migrating-from-testing-library-component-testing" title="Permanent link">&para;</a></h2>
-<h3 id="principles_2">Principles<a class="headerlink" href="#principles_2" title="Permanent link">&para;</a></h3>
+<p>Basic error:
+error = y - ŷ</p>
+<hr />
+<h2 id="common-ways-to-calculate-distance">Common ways to calculate distance<a class="headerlink" href="#common-ways-to-calculate-distance" title="Permanent link">&para;</a></h2>
+<h3 id="absolute-difference">Absolute difference<a class="headerlink" href="#absolute-difference" title="Permanent link">&para;</a></h3>
+<p>|y - ŷ|</p>
+<h3 id="squared-difference">Squared difference<a class="headerlink" href="#squared-difference" title="Permanent link">&para;</a></h3>
+<p>(y - ŷ)²</p>
+<hr />
+<h2 id="types-of-loss-functions">Types of loss functions<a class="headerlink" href="#types-of-loss-functions" title="Permanent link">&para;</a></h2>
+<h3 id="l1-loss">L1 Loss<a class="headerlink" href="#l1-loss" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Replace <code>render</code> + queries with <code>mount</code> and Playwright locators from <code>@playwright/experimental-ct-*</code>.</li>
-<li>Use Playwright actions/locators (<code>getByText</code>, <code>getByRole</code>, <code>fill</code>, <code>click</code>) instead of <code>screen</code> helpers.</li>
-<li>Assertions rely on <code>expect(locator)</code> (web-first) rather than DOM texts/<code>queryBy</code>.</li>
+<li>
+<p>Sum of absolute differences between actual and predicted values
+L1 = Σ |y - ŷ|</p>
+</li>
+<li>
+<p>Treats all errors linearly</p>
+</li>
+<li>Less sensitive to outliers than squared loss</li>
 </ul>
-<h3 id="cheat-sheet_2">Cheat sheet<a class="headerlink" href="#cheat-sheet_2" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th>Testing Library</th>
-<th>Playwright Component Testing</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>render(&lt;Component /&gt;)</code></td>
-<td><code>await mount(&lt;Component /&gt;)</code></td>
-</tr>
-<tr>
-<td><code>screen.getByText(...)</code></td>
-<td><code>component.getByText(...)</code></td>
-</tr>
-<tr>
-<td><code>user.click(...)</code></td>
-<td><code>locator.click()</code></td>
-</tr>
-<tr>
-<td><code>screen.findByText</code></td>
-<td><code>component.getByText(...)</code> (auto-waiting)</td>
-</tr>
-<tr>
-<td><code>screen.getByLabelText</code></td>
-<td><code>component.getByLabel('...')</code></td>
-</tr>
-<tr>
-<td><code>expect(...).toBeInTheDocument()</code></td>
-<td><code>await expect(locator).toBeVisible()</code></td>
-</tr>
-<tr>
-<td><code>within(...)</code></td>
-<td><code>locator.locator(...)</code></td>
-</tr>
-</tbody>
-</table>
-<h3 id="tips">Tips<a class="headerlink" href="#tips" title="Permanent link">&para;</a></h3>
+<hr />
+<h3 id="mae-mean-absolute-error">MAE (Mean Absolute Error)<a class="headerlink" href="#mae-mean-absolute-error" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Use <code>update()</code> to rerender with new props, <code>unmount()</code> to clean up, <code>hooksConfig</code> for dependencies (routing, stores).</li>
-<li>Component tests reuse fixtures and run in isolation via <code>mount</code>.</li>
+<li>Average of L1 loss over <code>n</code> examples</li>
 </ul>
-<h2 id="docker-ci-notes">Docker &amp; CI Notes<a class="headerlink" href="#docker-ci-notes" title="Permanent link">&para;</a></h2>
-<h3 id="docker">Docker<a class="headerlink" href="#docker" title="Permanent link">&para;</a></h3>
+<p>MAE = (1 / n) * Σ |y - ŷ|</p>
 <ul>
-<li>Prefer <code>mcr.microsoft.com/playwright:&lt;version&gt;-noble</code> containers; include <code>seccomp_profile.json</code> when running as non-root.</li>
-<li>Use recommended flags: <code>--init</code>, <code>--ipc=host</code>, <code>--cap-add=SYS_ADMIN</code> (during debugging), run headed tests with <code>xvfb-run</code>.</li>
-<li>Playwright Server: <code>npx playwright run-server --port ...</code> in container, connect from host via <code>PW_TEST_CONNECT_WS_ENDPOINT</code>.</li>
-<li>For scraping/untrusted code use separate user (<code>--user pwuser</code>) plus seccomp profile for Chromium sandbox support.</li>
+<li>Represents the <strong>average absolute error</strong></li>
+<li>Easy to interpret</li>
 </ul>
-<h3 id="ci-best-practices">CI Best Practices<a class="headerlink" href="#ci-best-practices" title="Permanent link">&para;</a></h3>
+<hr />
+<h3 id="l2-loss">L2 Loss<a class="headerlink" href="#l2-loss" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Install dependencies: <code>npm ci</code> + <code>npx playwright install --with-deps</code>.</li>
-<li>Prefer <code>workers: process.env.CI ? 1 : undefined</code>, but parallelize on powerful runners; use <code>--shard=x/y</code> or CI matrix for splitting.</li>
-<li>Use <code>--only-changed</code> for fail-fast previews, run full suite afterward.</li>
-<li>Upload <code>playwright-report</code>, traces, videos via <code>actions/upload-artifact</code>.</li>
-<li>Configure reporters like <code>[['junit', { outputFile: 'test-results/results.xml' }], ['html', { open: 'never' }]]</code>.</li>
-<li>Increase <code>globalTimeout</code>, <code>maxFailures</code>, or <code>retry</code> as needed for stability.</li>
-<li>Set <code>DEBUG=pw:browser*</code> for detailed logs when diagnosing grid/launch issues.</li>
+<li>Sum of squared differences between actual and predicted values</li>
 </ul>
-<h3 id="ci-providers">CI Providers<a class="headerlink" href="#ci-providers" title="Permanent link">&para;</a></h3>
+<p>L2 = Σ (y - ŷ)²</p>
 <ul>
-<li><strong>GitHub Actions</strong>: workflows described; use container image, deployment triggers, matrix/sharding, and publish artifacts.</li>
-<li><strong>Azure Pipelines</strong>: install Node.js (UseNode task), run <code>npx playwright test</code>, upload reports, optionally publish JUnit/artifacts.</li>
-<li><strong>CircleCI/GitLab/Bitbucket/Drone/Google Cloud Build</strong>: use <code>mcr.microsoft.com/playwright</code> image and run <code>npx playwright test</code>; use <code>parallel</code>/<code>matrix</code> for sharding.</li>
-<li><strong>Docker/CI</strong>: prefer caching? not necessary; let Playwright download browsers unless pinning is critical.</li>
-<li><strong>Fail-fast</strong>: run <code>npx playwright test --only-changed=$BASE_REF</code> on PRs before full suite.</li>
+<li>Penalizes large errors more strongly</li>
+<li>Commonly used in regression models</li>
 </ul>
-<h2 id="selenium-grid-experimental">Selenium Grid (Experimental)<a class="headerlink" href="#selenium-grid-experimental" title="Permanent link">&para;</a></h2>
+<hr />
+<h3 id="mse-mean-squared-error">MSE (Mean Squared Error)<a class="headerlink" href="#mse-mean-squared-error" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Playwright can connect to Selenium Grid 4 via <code>SELENIUM_REMOTE_URL</code> (Chromium/Edge only) and optional <code>SELENIUM_REMOTE_CAPABILITIES</code>/<code>SELENIUM_REMOTE_HEADERS</code>.</li>
-<li>Provide grid-specific env vars (<code>SE_NODE_GRID_URL</code>, <code>SE_EVENT_BUS_*</code>) when starting nodes.</li>
-<li>Use <code>DEBUG=pw:browser*</code> for low-level logs and include them when filing issues.</li>
-<li>Docker example: run standalone/node containers, then <code>SELENIUM_REMOTE_URL=http://hub:4444 npx playwright test</code>.</li>
-<li>Selenium 3 support is best-effort; direct grid access required because CDP is not exposed.</li>
+<li>Average of squared differences over <code>n</code> examples</li>
 </ul>
-<h2 id="supported-languages-tools">Supported Languages &amp; Tools<a class="headerlink" href="#supported-languages-tools" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Language</th>
-<th>Recommended Runner</th>
-<th>Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>JavaScript/TypeScript</td>
-<td><code>@playwright/test</code></td>
-<td>Built-in test runner with tracing, reporters, inspector, CLI.</td>
-</tr>
-<tr>
-<td>Python</td>
-<td><code>playwright pytest plugin</code></td>
-<td>Use <code>pytest</code> fixture helpers for browsers + parallelism.</td>
-</tr>
-<tr>
-<td>Java</td>
-<td>Any test framework (JUnit/TestNG)</td>
-<td>Use Playwright Java bindings with webdriver style.</td>
-</tr>
-<tr>
-<td>.NET</td>
-<td>MSTest/NUnit/xUnit</td>
-<td>Playwright for .NET offers base classes per runner.</td>
-</tr>
-</tbody>
-</table>
-<p>Include matching Playwright version across languages/containers for compatibility. If using Docker, ensure <code>npx playwright test</code> version matches browser binaries inside image.</p>
+<p>MSE = (1 / n) * Σ (y - ŷ)²</p>
+<ul>
+<li>Amplifies larger errors</li>
+<li>Smooth and differentiable, useful for optimization</li>
+</ul>
+<hr />
+<h3 id="rmse-root-mean-squared-error">RMSE (Root Mean Squared Error)<a class="headerlink" href="#rmse-root-mean-squared-error" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Square root of MSE</li>
+</ul>
+<p>RMSE = √MSE</p>
+<ul>
+<li>Brings error back to the <strong>same unit as the target variable</strong></li>
+<li>Easier to interpret than MSE</li>
+</ul>
+<hr />
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Loss measures how far predictions are from actual labels</li>
+<li>Training aims to minimize the loss</li>
+<li>Absolute and squared differences are the core building blocks</li>
+<li>MAE, MSE, and RMSE are the most common regression loss metrics</li>
+<li>Choice of loss affects how errors are penalized and optimized</li>
+</ul>
 
 
 
 
 
 
+
+  
+  
 
 
 
