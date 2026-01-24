@@ -87,6 +87,7 @@ nav:
       - Web3: web3.md
 
   - Machine Learning:
+      - Problem Framing: ML-problem-framing.md
       - Supervised Learning: ML-supervised-learning.md
       - Linear Regression: ML-linear-regression.md
       - Loss Functions: ML-loss.md
