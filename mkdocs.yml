@@ -91,6 +91,7 @@ nav:
       - Supervised Learning: ML-supervised-learning.md
       - Linear Regression: ML-linear-regression.md
       - Loss Functions: ML-loss.md
+      - Basic Statistics: ML-statistics.md
 
   - Programming:
       - JavaScript/TypeScript OOP: js-ts-oop-concepts.md
