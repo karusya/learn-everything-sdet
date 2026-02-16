@@ -27,7 +27,7 @@
     
     
       
-        <title>Train, Validation & Test Sets - Learn Everything For Me</title>
+        <title>Train, Validation, and Test Sets — Core Workflow - Learn Everything For Me</title>
       
     
     
@@ -79,6 +79,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#train-validation-and-test-sets" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -110,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Train, Validation & Test Sets
+              Train, Validation, and Test Sets — Core Workflow
             
           </span>
         </div>
@@ -1429,6 +1434,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Train, Validation & Test Sets
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -1446,6 +1471,113 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-dataset-splitting-is-necessary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why dataset splitting is necessary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-preparation-before-splitting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data preparation before splitting
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#training-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Training set
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#validation-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validation set
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Test set
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#criteria-for-a-good-validation-or-test-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Criteria for a good validation or test set
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workflow
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1766,6 +1898,104 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-dataset-splitting-is-necessary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why dataset splitting is necessary
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-preparation-before-splitting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data preparation before splitting
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#training-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Training set
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#validation-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validation set
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Test set
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#criteria-for-a-good-validation-or-test-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Criteria for a good validation or test set
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workflow
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1785,7 +2015,86 @@
   
 
 
-  <h1>Train, Validation & Test Sets</h1>
+<!-- markdownlint-disable MD025 MD003 MD022 MD026 MD024 -->
+
+<h1 id="train-validation-and-test-sets">Train, Validation, and Test Sets<a class="headerlink" href="#train-validation-and-test-sets" title="Permanent link">&para;</a></h1>
+<h2 id="why-dataset-splitting-is-necessary">Why dataset splitting is necessary<a class="headerlink" href="#why-dataset-splitting-is-necessary" title="Permanent link">&para;</a></h2>
+<p>To properly evaluate a machine learning model, data must be split into separate subsets.</p>
+<p>This prevents:
+- Overfitting
+- Overestimating performance
+- Data leakage</p>
+<p>The three standard subsets are:
+- Training set
+- Validation set
+- Test set</p>
+<hr />
+<h2 id="data-preparation-before-splitting">Data preparation before splitting<a class="headerlink" href="#data-preparation-before-splitting" title="Permanent link">&para;</a></h2>
+<p>Before creating dataset splits:</p>
+<ul>
+<li>Remove duplicate examples</li>
+<li>Clean corrupted or inconsistent records</li>
+<li>Ensure label correctness</li>
+</ul>
+<p>Duplicates must be removed because:
+- They can inflate evaluation metrics
+- They create data leakage between training and evaluation sets
+- They reduce the reliability of model validation</p>
+<hr />
+<h2 id="training-set">Training set<a class="headerlink" href="#training-set" title="Permanent link">&para;</a></h2>
+<p>The <strong>training set</strong> is the data the model learns from.</p>
+<p>During training:
+- The model sees both features and labels
+- The model updates its parameters
+- Loss is minimized</p>
+<p>The model directly fits patterns in this dataset.</p>
+<hr />
+<h2 id="validation-set">Validation set<a class="headerlink" href="#validation-set" title="Permanent link">&para;</a></h2>
+<p>The <strong>validation set</strong> is used during model development.</p>
+<p>Purpose:
+- Evaluate the model after training
+- Detect overfitting
+- Compare different model versions
+- Tune hyperparameters</p>
+<p>The model does not update its parameters using validation data.</p>
+<hr />
+<h2 id="test-set">Test set<a class="headerlink" href="#test-set" title="Permanent link">&para;</a></h2>
+<p>The <strong>test set</strong> is used at the final stage.</p>
+<p>Purpose:
+- Measure true generalization performance
+- Simulate unseen real-world data</p>
+<p>The test set must not influence model tuning.</p>
+<hr />
+<h2 id="criteria-for-a-good-validation-or-test-set">Criteria for a good validation or test set<a class="headerlink" href="#criteria-for-a-good-validation-or-test-set" title="Permanent link">&para;</a></h2>
+<p>A high-quality validation or test set must:</p>
+<ul>
+<li>Be large enough to produce statistically meaningful results</li>
+<li>Be representative of the overall dataset</li>
+<li>Be representative of real-world data the model will encounter</li>
+<li>Contain zero duplicated examples from the training set</li>
+</ul>
+<p>If these conditions are not met, evaluation results may be misleading.</p>
+<hr />
+<h2 id="workflow">Workflow<a class="headerlink" href="#workflow" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Clean data and remove duplicates</li>
+<li>Split into training, validation, and test sets</li>
+<li>Train the model on the training set</li>
+<li>Evaluate on the validation set</li>
+<li>Adjust the model if needed</li>
+<li>Select the best-performing version</li>
+<li>Evaluate once on the test set</li>
+</ol>
+<hr />
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Clean data before splitting</li>
+<li>Remove duplicates to avoid leakage</li>
+<li>Training set is for learning</li>
+<li>Validation set is for tuning</li>
+<li>Test set is for final evaluation</li>
+<li>Validation and test sets must be representative and independent</li>
+</ul>
 
 
 
@@ -1793,7 +2102,8 @@
 
 
 
-
+  
+  
 
 
 
