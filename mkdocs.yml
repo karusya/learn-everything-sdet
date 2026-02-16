@@ -92,6 +92,7 @@ nav:
       - Linear Regression: ML-linear-regression.md
       - Loss Functions: ML-loss.md
       - Basic Statistics: ML-statistics.md
+      - Train, Validation & Test Sets: ML-datasets.md
 
   - Programming:
       - JavaScript/TypeScript OOP: js-ts-oop-concepts.md
