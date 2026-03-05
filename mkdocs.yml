@@ -1,9 +1,9 @@
 site_name: Learn Everything For Me
 site_description: Knowledge base for SDET, Playwright, Selenium, API, and QA strategy by karusya
-site_url: https://karusya.github.io/learn-everything-for-me
+site_url: https://karusya.github.io/learn-everything-sdet
 
-repo_url: https://github.com/karusya/learn-everything-for-me
-repo_name: karusya/learn-everything-for-me
+repo_url: https://github.com/karusya/learn-everything-sdet
+repo_name: karusya/learn-everything-sdet
 
 docs_dir: docs
 site_dir: site
