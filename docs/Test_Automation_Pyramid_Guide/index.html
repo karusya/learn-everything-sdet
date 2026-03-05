@@ -1,0 +1,3129 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Knowledge base for SDET, Playwright, Selenium, API, and QA strategy by karusya">
+      
+      
+      
+        <link rel="canonical" href="https://karusya.github.io/learn-everything-sdet/Test_Automation_Pyramid_Guide/">
+      
+      
+        <link rel="prev" href="../api-testing/">
+      
+      
+        <link rel="next" href="../test-techniques/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/avatar-32.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Test Automation Pyramid - Learn Everything For Me</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#test-automation-pyramid-huong-dan-de-hieu" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Learn Everything For Me" class="md-header__button md-logo" aria-label="Learn Everything For Me" data-md-component="logo">
+      
+  <img src="../assets/avatar.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Learn Everything For Me
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Test Automation Pyramid
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="amber"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="pink" data-md-color-accent="amber"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/karusya/learn-everything-sdet" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    karusya/learn-everything-sdet
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Learn Everything For Me" class="md-nav__button md-logo" aria-label="Learn Everything For Me" data-md-component="logo">
+      
+  <img src="../assets/avatar.png" alt="logo">
+
+    </a>
+    Learn Everything For Me
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/karusya/learn-everything-sdet" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    karusya/learn-everything-sdet
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Playwright
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Playwright
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Playwright_Guide_Reorganized/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Playwright Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../playwright-agents/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Canary & Agentic Workflow
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../playwright-fixtures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fixtures & Config
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../playwright-assertions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Assertions Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../playwright-reporter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reporter API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../playwright-library/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Library vs Test Runner
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../migration-guides/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Migration Guides
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API Testing
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    API Testing
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api-testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API Testing Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Testing Strategy
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Testing Strategy
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test Automation Pyramid
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test Automation Pyramid
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#gioi-thieu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📖 Giới Thiệu
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bang-so-sanh-tong-quan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 Bảng So Sánh Tổng Quan
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tang-1-unit-tests-kiem-thu-on-vi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🥇 Tầng 1: Unit Tests (Kiểm Thử Đơn Vị)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🥇 Tầng 1: Unit Tests (Kiểm Thử Đơn Vị)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inh-nghia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Định Nghĩa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#muc-tieu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Mục Tiêu
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ac-iem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📈 Đặc Điểm
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loi-ich" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎁 Lợi Ích
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vi-du" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💡 Ví Dụ
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tang-2-integration-tests-kiem-thu-tich-hop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🥈 Tầng 2: Integration Tests (Kiểm Thử Tích Hợp)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🥈 Tầng 2: Integration Tests (Kiểm Thử Tích Hợp)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inh-nghia_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Định Nghĩa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#muc-tieu_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Mục Tiêu
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ac-iem_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 Đặc Điểm
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loi-ich_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎁 Lợi Ích
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vi-du_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💡 Ví Dụ
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tang-3-e2e-tests-end-to-end-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🥉 Tầng 3: E2E Tests (End-to-End Tests)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🥉 Tầng 3: E2E Tests (End-to-End Tests)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inh-nghia_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Định Nghĩa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#muc-tieu_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Mục Tiêu
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ac-iem_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🐌 Đặc Điểm
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loi-ich_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎁 Lợi Ích
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vi-du-playwright" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💡 Ví Dụ (Playwright)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#y-nghia-chien-luoc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Ý Nghĩa Chiến Lược
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 Ý Nghĩa Chiến Lược">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thong-iep-cot-loi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💡 Thông Điệp Cốt Lõi
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="💡 Thông Điệp Cốt Lõi">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-hieu-suat-efficiency" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1️⃣ Hiệu Suất (Efficiency)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-o-tin-cay-reliability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2️⃣ Độ Tin Cậy (Reliability)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-toi-uu-hoa-chi-phi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3️⃣ Tối Ưu Hóa Chi phí
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cong-thuc-thanh-cong" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 Công Thức Thành Công
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thuc-hien-trong-du-an" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛠️ Thực Hiện Trong Dự Án
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛠️ Thực Hiện Trong Dự Án">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#checklist-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📋 Checklist Setup
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📋 Checklist Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unit-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Unit Tests
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integration-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Integration Tests
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#e2e-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ E2E Tests
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Best Practices
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unit-tests_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔹 Unit Tests
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integration-tests_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔹 Integration Tests
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#e2e-tests_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔹 E2E Tests
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ket-luan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚀 Kết Luận
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚀 Kết Luận">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#loi-khuyen-cuoi-cung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💡 Lời Khuyên Cuối Cùng
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../test-techniques/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test Techniques
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Flaky_Test_Guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Flaky Test Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ui-api-pom-comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UI POM vs API POM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shift-left-testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Shift-Left Testing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mutation-testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mutation Testing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QA Resources
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    QA Resources
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../qa-sdet-roadmap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QA/SDET Transition Roadmap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../qa-roadmap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QA & Automation Roadmap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sdet-framework-foundation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Core Principles Framework
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../playwright-sdet-framework-intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SDET Framework Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../k6_performance_testing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    QA Load Test with K6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Resources
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Data Resources
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../elasticsearch-roadmap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Elasticsearch Roadmap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../elasticsearch-query-deepdive/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Elasticsearch Query Deep Dive
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../http-caching/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HTTP Caching Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../web3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Web3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Machine Learning
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Machine Learning
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ML-problem-framing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Problem Framing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ML-supervised-learning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Supervised Learning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ML-linear-regression/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Linear Regression
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ML-loss/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Loss Functions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ML-statistics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Basic Statistics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ML-datasets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Train, Validation & Test Sets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ML-production/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Production ML
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ML-crisp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CRISP-DM Framework
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Programming
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Programming
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../js-ts-oop-concepts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    JavaScript/TypeScript OOP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../k6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    K6 Performance Testing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sql-roadmap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SQL Roadmap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SDET Prep
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    SDET Prep
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SDET_Interview_Preparation_Guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SDET Interview Preparation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Experienced_Automation_Tester_QA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Experienced Automation Tester Q&A
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Automation_Interview_QA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Automation Interview Q&A
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#gioi-thieu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📖 Giới Thiệu
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bang-so-sanh-tong-quan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 Bảng So Sánh Tổng Quan
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tang-1-unit-tests-kiem-thu-on-vi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🥇 Tầng 1: Unit Tests (Kiểm Thử Đơn Vị)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🥇 Tầng 1: Unit Tests (Kiểm Thử Đơn Vị)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inh-nghia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Định Nghĩa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#muc-tieu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Mục Tiêu
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ac-iem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📈 Đặc Điểm
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loi-ich" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎁 Lợi Ích
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vi-du" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💡 Ví Dụ
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tang-2-integration-tests-kiem-thu-tich-hop" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🥈 Tầng 2: Integration Tests (Kiểm Thử Tích Hợp)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🥈 Tầng 2: Integration Tests (Kiểm Thử Tích Hợp)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inh-nghia_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Định Nghĩa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#muc-tieu_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Mục Tiêu
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ac-iem_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 Đặc Điểm
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loi-ich_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎁 Lợi Ích
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vi-du_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💡 Ví Dụ
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tang-3-e2e-tests-end-to-end-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🥉 Tầng 3: E2E Tests (End-to-End Tests)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🥉 Tầng 3: E2E Tests (End-to-End Tests)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inh-nghia_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Định Nghĩa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#muc-tieu_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Mục Tiêu
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ac-iem_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🐌 Đặc Điểm
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loi-ich_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎁 Lợi Ích
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vi-du-playwright" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💡 Ví Dụ (Playwright)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#y-nghia-chien-luoc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Ý Nghĩa Chiến Lược
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 Ý Nghĩa Chiến Lược">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#thong-iep-cot-loi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💡 Thông Điệp Cốt Lõi
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="💡 Thông Điệp Cốt Lõi">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-hieu-suat-efficiency" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1️⃣ Hiệu Suất (Efficiency)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-o-tin-cay-reliability" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2️⃣ Độ Tin Cậy (Reliability)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-toi-uu-hoa-chi-phi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3️⃣ Tối Ưu Hóa Chi phí
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cong-thuc-thanh-cong" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 Công Thức Thành Công
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thuc-hien-trong-du-an" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛠️ Thực Hiện Trong Dự Án
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛠️ Thực Hiện Trong Dự Án">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#checklist-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📋 Checklist Setup
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📋 Checklist Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unit-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Unit Tests
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integration-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Integration Tests
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#e2e-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ E2E Tests
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Best Practices
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 Best Practices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unit-tests_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔹 Unit Tests
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integration-tests_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔹 Integration Tests
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#e2e-tests_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔹 E2E Tests
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ket-luan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚀 Kết Luận
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚀 Kết Luận">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#loi-khuyen-cuoi-cung" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💡 Lời Khuyên Cuối Cùng
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="test-automation-pyramid-huong-dan-de-hieu">🏗️ Test Automation Pyramid - Hướng Dẫn Dễ Hiểu<a class="headerlink" href="#test-automation-pyramid-huong-dan-de-hieu" title="Permanent link">&para;</a></h1>
+<h2 id="gioi-thieu">📖 Giới Thiệu<a class="headerlink" href="#gioi-thieu" title="Permanent link">&para;</a></h2>
+<p><strong>Test Automation Pyramid</strong> (Tháp Tự Động Hóa Kiểm Thử) là một mô hình chiến lược giúp tổ chức các loại kiểm thử tự động một cách hiệu quả. Mô hình này được minh họa như một kim tự tháp với <strong>3 tầng chính</strong>, sắp xếp từ <strong>dưới lên trên</strong> theo thứ tự ưu tiên.</p>
+<div class="highlight"><pre><span></span><code>     🥉 E2E Tests (Ít nhất)
+        ↗️ Tích hợp Tests
+   🥇 Unit Tests (Nhiều nhất)
+</code></pre></div>
+<h2 id="bang-so-sanh-tong-quan">📊 Bảng So Sánh Tổng Quan<a class="headerlink" href="#bang-so-sanh-tong-quan" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Tầng</th>
+<th>Loại Kiểm Thử</th>
+<th>Tốc Độ</th>
+<th>Chi phí</th>
+<th>Số Lượng</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Đỉnh</strong></td>
+<td>End-to-End (E2E)</td>
+<td>🐌 Chậm</td>
+<td>💰 Cao</td>
+<td>📉 Ít nhất</td>
+</tr>
+<tr>
+<td><strong>Giữa</strong></td>
+<td>Integration</td>
+<td>⚡ Trung bình</td>
+<td>💰💰 Trung bình</td>
+<td>📊 Ít hơn</td>
+</tr>
+<tr>
+<td><strong>Đáy</strong></td>
+<td>Unit Tests</td>
+<td>🚀 Rất nhanh</td>
+<td>💚 Thấp</td>
+<td>📈 Nhiều nhất</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="tang-1-unit-tests-kiem-thu-on-vi">🥇 Tầng 1: Unit Tests (Kiểm Thử Đơn Vị)<a class="headerlink" href="#tang-1-unit-tests-kiem-thu-on-vi" title="Permanent link">&para;</a></h2>
+<h3 id="inh-nghia">🎯 Định Nghĩa<a class="headerlink" href="#inh-nghia" title="Permanent link">&para;</a></h3>
+<p>Kiểm thử các <strong>đơn vị mã nhỏ nhất</strong> của ứng dụng:
+- Một hàm (function)
+- Một phương thức (method)
+- Một lớp (class)</p>
+<h3 id="muc-tieu">✅ Mục Tiêu<a class="headerlink" href="#muc-tieu" title="Permanent link">&para;</a></h3>
+<p>Đảm bảo <strong>từng thành phần riêng lẻ</strong> hoạt động chính xác theo thiết kế.</p>
+<h3 id="ac-iem">📈 Đặc Điểm<a class="headerlink" href="#ac-iem" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Số lượng</strong>: 🏆 <strong>Lớn nhất</strong> - Là nền tảng của chiến lược kiểm thử</li>
+<li><strong>Tốc độ</strong>: 🚀 <strong>Rất nhanh</strong> - Chạy chỉ mất mili giây</li>
+<li><strong>Chi phí</strong>: 💚 <strong>Thấp nhất</strong> - Dễ viết, dễ bảo trì</li>
+</ul>
+<h3 id="loi-ich">🎁 Lợi Ích<a class="headerlink" href="#loi-ich" title="Permanent link">&para;</a></h3>
+<ul>
+<li>✅ Bắt lỗi <strong>chính xác</strong> ngay khi được tạo ra</li>
+<li>✅ Giúp lập trình viên <strong>sửa lỗi nhanh chóng</strong></li>
+<li>✅ <strong>Tự tin tái cấu trúc</strong> mã (refactoring)</li>
+<li>✅ <strong>Chạy thường xuyên</strong> trong CI/CD pipeline</li>
+</ul>
+<h3 id="vi-du">💡 Ví Dụ<a class="headerlink" href="#vi-du" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1">// Unit Test cho một hàm tính tổng</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">sum</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">b</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// Test case</span>
+<span class="nx">test</span><span class="p">(</span><span class="s1">&#39;sum adds two numbers correctly&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">expect</span><span class="p">(</span><span class="nx">sum</span><span class="p">(</span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">)).</span><span class="nx">toBe</span><span class="p">(</span><span class="mf">5</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">expect</span><span class="p">(</span><span class="nx">sum</span><span class="p">(</span><span class="o">-</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">)).</span><span class="nx">toBe</span><span class="p">(</span><span class="mf">0</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">expect</span><span class="p">(</span><span class="nx">sum</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">)).</span><span class="nx">toBe</span><span class="p">(</span><span class="mf">0</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div>
+<hr />
+<h2 id="tang-2-integration-tests-kiem-thu-tich-hop">🥈 Tầng 2: Integration Tests (Kiểm Thử Tích Hợp)<a class="headerlink" href="#tang-2-integration-tests-kiem-thu-tich-hop" title="Permanent link">&para;</a></h2>
+<h3 id="inh-nghia_1">🎯 Định Nghĩa<a class="headerlink" href="#inh-nghia_1" title="Permanent link">&para;</a></h3>
+<p>Kiểm thử <strong>sự tương tác giữa các thành phần</strong> của ứng dụng:
+- Giao tiếp giữa mã nguồn và cơ sở dữ liệu
+- Liên kết giữa các microservice
+- Kết nối giữa front-end và back-end
+- API calls giữa các hệ thống</p>
+<h3 id="muc-tieu_1">✅ Mục Tiêu<a class="headerlink" href="#muc-tieu_1" title="Permanent link">&para;</a></h3>
+<p>Đảm bảo <strong>các thành phần khi làm việc cùng nhau</strong> vẫn hoạt động đúng.</p>
+<h3 id="ac-iem_1">📊 Đặc Điểm<a class="headerlink" href="#ac-iem_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Số lượng</strong>: 📊 <strong>Ít hơn Unit Test</strong> - Tập trung vào các điểm tích hợp quan trọng</li>
+<li><strong>Tốc độ</strong>: ⚡ <strong>Trung bình</strong> - Chậm hơn Unit Test do liên quan đến I/O</li>
+<li><strong>Chi phí</strong>: 💰💰 <strong>Trung bình</strong> - Cần setup môi trường test phức tạp hơn</li>
+</ul>
+<h3 id="loi-ich_1">🎁 Lợi Ích<a class="headerlink" href="#loi-ich_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>✅ Kiểm tra <strong>vấn đề về giao diện</strong> giữa các thành phần</li>
+<li>✅ Phát hiện lỗi <strong>định dạng dữ liệu</strong></li>
+<li>✅ Xác minh <strong>kết nối mạng</strong> và <strong>API calls</strong></li>
+<li>✅ Đảm bảo <strong>data flow</strong> giữa các hệ thống</li>
+</ul>
+<h3 id="vi-du_1">💡 Ví Dụ<a class="headerlink" href="#vi-du_1" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1">// Integration Test cho API call</span>
+<span class="nx">test</span><span class="p">(</span><span class="s1">&#39;user API integration&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// Setup test database</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">testUser</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;John&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">email</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;john@test.com&#39;</span><span class="w"> </span><span class="p">};</span>
+
+<span class="w">  </span><span class="c1">// Test API endpoint</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">request</span><span class="p">(</span><span class="nx">app</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">&#39;/api/users&#39;</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">testUser</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">expect</span><span class="p">(</span><span class="mf">201</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// Verify database</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">savedUser</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">User</span><span class="p">.</span><span class="nx">findById</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">id</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">expect</span><span class="p">(</span><span class="nx">savedUser</span><span class="p">.</span><span class="nx">name</span><span class="p">).</span><span class="nx">toBe</span><span class="p">(</span><span class="nx">testUser</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
+<span class="w">  </span><span class="nx">expect</span><span class="p">(</span><span class="nx">savedUser</span><span class="p">.</span><span class="nx">email</span><span class="p">).</span><span class="nx">toBe</span><span class="p">(</span><span class="nx">testUser</span><span class="p">.</span><span class="nx">email</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div>
+<hr />
+<h2 id="tang-3-e2e-tests-end-to-end-tests">🥉 Tầng 3: E2E Tests (End-to-End Tests)<a class="headerlink" href="#tang-3-e2e-tests-end-to-end-tests" title="Permanent link">&para;</a></h2>
+<h3 id="inh-nghia_2">🎯 Định Nghĩa<a class="headerlink" href="#inh-nghia_2" title="Permanent link">&para;</a></h3>
+<p>Kiểm thử <strong>toàn bộ luồng công việc</strong> của người dùng:
+- Từ giao diện người dùng (UI) đến cuối cùng
+- Ví dụ: Đăng nhập → Thêm sản phẩm → Thanh toán → Xác nhận đơn hàng</p>
+<h3 id="muc-tieu_2">✅ Mục Tiêu<a class="headerlink" href="#muc-tieu_2" title="Permanent link">&para;</a></h3>
+<p>Xác nhận <strong>toàn bộ hệ thống hoạt động</strong> như một ứng dụng hoàn chỉnh trong môi trường mô phỏng thực tế.</p>
+<h3 id="ac-iem_2">🐌 Đặc Điểm<a class="headerlink" href="#ac-iem_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Số lượng</strong>: 📉 <strong>Ít nhất</strong> - Chỉ tập trung vào kịch bản quan trọng</li>
+<li><strong>Tốc độ</strong>: 🐌 <strong>Chậm nhất</strong> - Thao tác qua UI rất tốn thời gian</li>
+<li><strong>Chi phí</strong>: 💰💰💰 <strong>Cao nhất</strong> - Khó viết, dễ bị lỗi (flaky), khó bảo trì</li>
+</ul>
+<h3 id="loi-ich_2">🎁 Lợi Ích<a class="headerlink" href="#loi-ich_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>✅ Mang lại <strong>sự tự tin cao nhất</strong> về trải nghiệm người dùng</li>
+<li>✅ Kiểm tra <strong>luồng công việc hoàn chỉnh</strong></li>
+<li>✅ Phát hiện vấn đề <strong>cross-cutting</strong> (như authentication, navigation)</li>
+</ul>
+<h3 id="vi-du-playwright">💡 Ví Dụ (Playwright)<a class="headerlink" href="#vi-du-playwright" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1">// E2E Test cho quy trình mua hàng</span>
+<span class="nx">test</span><span class="p">(</span><span class="s1">&#39;complete purchase flow&#39;</span><span class="p">,</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">({</span><span class="w"> </span><span class="nx">page</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// Đăng nhập</span>
+<span class="w">  </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="kr">goto</span><span class="p">(</span><span class="s1">&#39;/login&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">fill</span><span class="p">(</span><span class="s1">&#39;[data-testid=&quot;email&quot;]&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;user@test.com&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">fill</span><span class="p">(</span><span class="s1">&#39;[data-testid=&quot;password&quot;]&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;password123&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">click</span><span class="p">(</span><span class="s1">&#39;[data-testid=&quot;login-button&quot;]&#39;</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// Thêm sản phẩm vào giỏ</span>
+<span class="w">  </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="kr">goto</span><span class="p">(</span><span class="s1">&#39;/products&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">click</span><span class="p">(</span><span class="s1">&#39;[data-testid=&quot;product-1-add&quot;]&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">click</span><span class="p">(</span><span class="s1">&#39;[data-testid=&quot;view-cart&quot;]&#39;</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// Thanh toán</span>
+<span class="w">  </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">click</span><span class="p">(</span><span class="s1">&#39;[data-testid=&quot;checkout&quot;]&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">fill</span><span class="p">(</span><span class="s1">&#39;[data-testid=&quot;card-number&quot;]&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;4111111111111111&#39;</span><span class="p">);</span>
+<span class="w">  </span><span class="k">await</span><span class="w"> </span><span class="nx">page</span><span class="p">.</span><span class="nx">click</span><span class="p">(</span><span class="s1">&#39;[data-testid=&quot;complete-purchase&quot;]&#39;</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// Xác nhận</span>
+<span class="w">  </span><span class="k">await</span><span class="w"> </span><span class="nx">expect</span><span class="p">(</span><span class="nx">page</span><span class="p">.</span><span class="nx">locator</span><span class="p">(</span><span class="s1">&#39;[data-testid=&quot;success-message&quot;]&#39;</span><span class="p">))</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">toContainText</span><span class="p">(</span><span class="s1">&#39;Order completed successfully&#39;</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div>
+<hr />
+<h2 id="y-nghia-chien-luoc">🎯 Ý Nghĩa Chiến Lược<a class="headerlink" href="#y-nghia-chien-luoc" title="Permanent link">&para;</a></h2>
+<h3 id="thong-iep-cot-loi">💡 Thông Điệp Cốt Lõi<a class="headerlink" href="#thong-iep-cot-loi" title="Permanent link">&para;</a></h3>
+<p><strong>Test Automation Pyramid</strong> nhấn mạnh:</p>
+<h4 id="1-hieu-suat-efficiency">1️⃣ <strong>Hiệu Suất (Efficiency)</strong><a class="headerlink" href="#1-hieu-suat-efficiency" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Tập trung <strong>80% effort</strong> vào Unit Tests (nhanh và rẻ)</li>
+<li>Sử dụng <strong>20% còn lại</strong> cho Integration + E2E Tests</li>
+</ul>
+<h4 id="2-o-tin-cay-reliability">2️⃣ <strong>Độ Tin Cậy (Reliability)</strong><a class="headerlink" href="#2-o-tin-cay-reliability" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Giảm thiểu E2E Tests</strong> vì chúng thường "flaky" (không ổn định)</li>
+<li>E2E Tests dễ bị ảnh hưởng bởi:</li>
+<li>Thay đổi UI/UX</li>
+<li>Network issues</li>
+<li>Browser compatibility</li>
+<li>Third-party services</li>
+</ul>
+<h4 id="3-toi-uu-hoa-chi-phi">3️⃣ <strong>Tối Ưu Hóa Chi phí</strong><a class="headerlink" href="#3-toi-uu-hoa-chi-phi" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Phát hiện lỗi ở <strong>tầng dưới</strong> → Tiết kiệm <strong>gấp nhiều lần</strong> chi phí</li>
+<li>Sửa lỗi trong development → Rẻ hơn production bugs</li>
+</ul>
+<h3 id="cong-thuc-thanh-cong">📊 Công Thức Thành Công<a class="headerlink" href="#cong-thuc-thanh-cong" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>Unit Tests (70-80%) + Integration Tests (15-20%) + E2E Tests (5-10%) = 🚀 Efficient Test Suite
+</code></pre></div>
+<hr />
+<h2 id="thuc-hien-trong-du-an">🛠️ Thực Hiện Trong Dự Án<a class="headerlink" href="#thuc-hien-trong-du-an" title="Permanent link">&para;</a></h2>
+<h3 id="checklist-setup">📋 Checklist Setup<a class="headerlink" href="#checklist-setup" title="Permanent link">&para;</a></h3>
+<h4 id="unit-tests">✅ Unit Tests<a class="headerlink" href="#unit-tests" title="Permanent link">&para;</a></h4>
+<ul>
+<li>[ ] Chọn testing framework (Jest, JUnit, pytest, etc.)</li>
+<li>[ ] Setup test runners và reporters</li>
+<li>[ ] Viết tests cho business logic</li>
+<li>[ ] Integrate với CI/CD (run on every commit)</li>
+</ul>
+<h4 id="integration-tests">✅ Integration Tests<a class="headerlink" href="#integration-tests" title="Permanent link">&para;</a></h4>
+<ul>
+<li>[ ] Setup test database (in-memory hoặc containerized)</li>
+<li>[ ] Mock external services khi cần</li>
+<li>[ ] Test API endpoints</li>
+<li>[ ] Test database operations</li>
+</ul>
+<h4 id="e2e-tests">✅ E2E Tests<a class="headerlink" href="#e2e-tests" title="Permanent link">&para;</a></h4>
+<ul>
+<li>[ ] Chọn tool phù hợp (Playwright, Cypress, Selenium)</li>
+<li>[ ] Setup test environment (staging giống production nhất có thể)</li>
+<li>[ ] Chỉ test <strong>critical user journeys</strong></li>
+<li>[ ] Run <strong>daily/weekly</strong> thay vì on every commit</li>
+</ul>
+<h3 id="best-practices">🎯 Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h3>
+<h4 id="unit-tests_1">🔹 Unit Tests<a class="headerlink" href="#unit-tests_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Test <strong>isolated logic</strong> (không phụ thuộc external)</li>
+<li>Sử dụng <strong>mocks/stubs</strong> cho dependencies</li>
+<li>Viết <strong>descriptive test names</strong></li>
+<li>Aim for <strong>high coverage</strong> (&gt;80%)</li>
+</ul>
+<h4 id="integration-tests_1">🔹 Integration Tests<a class="headerlink" href="#integration-tests_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Test <strong>real dependencies</strong> khi có thể</li>
+<li>Sử dụng <strong>test containers</strong> (Docker)</li>
+<li><strong>Parallel execution</strong> để tăng tốc độ</li>
+<li><strong>Clean up</strong> data sau mỗi test</li>
+</ul>
+<h4 id="e2e-tests_1">🔹 E2E Tests<a class="headerlink" href="#e2e-tests_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Minimize số lượng</strong> (chỉ critical flows)</li>
+<li><strong>Stable selectors</strong> (data-testid, not CSS classes)</li>
+<li><strong>Retry mechanisms</strong> cho flaky tests</li>
+<li><strong>Visual regression testing</strong> nếu cần</li>
+</ul>
+<hr />
+<h2 id="ket-luan">🚀 Kết Luận<a class="headerlink" href="#ket-luan" title="Permanent link">&para;</a></h2>
+<p><strong>Test Automation Pyramid</strong> không phải là quy tắc cứng nhắc mà là <strong>kim chỉ nam</strong> để:</p>
+<ol>
+<li><strong>Tối ưu hóa tài nguyên</strong>: Tập trung vào tests mang lại giá trị cao nhất</li>
+<li><strong>Cân bằng tốc độ vs độ tin cậy</strong>: Nhanh để feedback sớm, đáng tin cậy để confidence cao</li>
+<li><strong>Scalable testing strategy</strong>: Có thể áp dụng cho projects từ nhỏ đến lớn</li>
+</ol>
+<h3 id="loi-khuyen-cuoi-cung">💡 Lời Khuyên Cuối Cùng<a class="headerlink" href="#loi-khuyen-cuoi-cung" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>Hãy xây dựng <strong>nền móng vững chắc</strong> với Unit Tests, <strong>hỗ trợ</strong> bằng Integration Tests, và chỉ dùng E2E Tests như <strong>lá chắn cuối cùng</strong> cho những luồng quan trọng nhất của người dùng.</p>
+</blockquote>
+<p><strong>Nhớ</strong>: Một test suite tốt không phải là có nhiều tests, mà là <strong>tests đúng chỗ, đúng lúc</strong>! 🎯</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.expand", "navigation.sections", "navigation.top", "content.code.copy", "content.code.annotate", "search.highlight", "search.suggest"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
