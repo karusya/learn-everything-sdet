@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://karusya.github.io/learn-everything-for-me/http-caching/">
+        <link rel="canonical" href="https://karusya.github.io/learn-everything-for-me/ML-production/">
       
       
-        <link rel="prev" href="../elasticsearch-query-deepdive/">
+        <link rel="prev" href="../ML-datasets/">
       
       
-        <link rel="next" href="../web3/">
+        <link rel="next" href="../ML-crisp/">
       
       
         
@@ -27,7 +27,7 @@
     
     
       
-        <title>HTTP Caching Guide - Learn Everything For Me</title>
+        <title>ML Production Cycle — Main Stages - Learn Everything For Me</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#http-caching-guide" class="md-skip">
+        <a href="#ml-production-cycle" class="md-skip">
           Skip to content
         </a>
       
@@ -115,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              HTTP Caching Guide
+              ML Production Cycle — Main Stages
             
           </span>
         </div>
@@ -1058,8 +1058,6 @@
       
   
   
-    
-  
   
   
     
@@ -1072,11 +1070,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
@@ -1097,7 +1097,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1168,37 +1168,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    HTTP Caching Guide
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../http-caching/" class="md-nav__link">
         
   
   
@@ -1214,142 +1187,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#why-cache" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Why cache?
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#core-terms" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Core terms
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cache-locations" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Cache locations
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#key-headers" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Key headers
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Key headers">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#cache-control-directives" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Cache-Control directives
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#validators" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Validators
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#server-side-caching" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Server-side caching
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#recommendations" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Recommendations
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Summary
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#caching-is-a-balancing-actgive-static-files-long-ttls-while-validating-dynamic-responses-and-use-headers-strategically-to-guide-browsers-proxies-and-reverse-proxies" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Caching is a balancing act—give static files long TTLs while validating dynamic responses, and use headers strategically to guide browsers, proxies, and reverse proxies.
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1394,8 +1231,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -1406,13 +1245,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
         
           
           <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
@@ -1433,7 +1270,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1616,10 +1453,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../ML-production/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Production ML
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1635,6 +1499,103 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-project-scoping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Project scoping
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-data-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Data management
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-ml-model-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. ML model development
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Deployment
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-monitoring-and-maintenance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Monitoring and maintenance
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-business-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Business analysis
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1992,10 +1953,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#why-cache" class="md-nav__link">
+  <a href="#1-project-scoping" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Why cache?
+        1. Project scoping
       
     </span>
   </a>
@@ -2003,10 +1964,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#core-terms" class="md-nav__link">
+  <a href="#2-data-management" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Core terms
+        2. Data management
       
     </span>
   </a>
@@ -2014,10 +1975,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#cache-locations" class="md-nav__link">
+  <a href="#3-ml-model-development" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Cache locations
+        3. ML model development
       
     </span>
   </a>
@@ -2025,49 +1986,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#key-headers" class="md-nav__link">
+  <a href="#4-deployment" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Key headers
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Key headers">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#cache-control-directives" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Cache-Control directives
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#validators" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Validators
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#server-side-caching" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Server-side caching
+        4. Deployment
       
     </span>
   </a>
@@ -2075,10 +1997,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#recommendations" class="md-nav__link">
+  <a href="#5-monitoring-and-maintenance" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Recommendations
+        5. Monitoring and maintenance
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-business-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Business analysis
       
     </span>
   </a>
@@ -2090,17 +2023,6 @@
     <span class="md-ellipsis">
       
         Summary
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#caching-is-a-balancing-actgive-static-files-long-ttls-while-validating-dynamic-responses-and-use-headers-strategically-to-guide-browsers-proxies-and-reverse-proxies" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Caching is a balancing act—give static files long TTLs while validating dynamic responses, and use headers strategically to guide browsers, proxies, and reverse proxies.
       
     </span>
   </a>
@@ -2127,120 +2049,91 @@
   
 
 
-<!-- markdownlint-disable MD025 MD003 MD022 MD026 MD024 MD012 -->
+<!-- markdownlint-disable MD025 MD003 MD022 MD026 MD024 -->
 
-<h1 id="http-caching-guide">HTTP Caching Guide<a class="headerlink" href="#http-caching-guide" title="Permanent link">&para;</a></h1>
-<h2 id="why-cache">Why cache?<a class="headerlink" href="#why-cache" title="Permanent link">&para;</a></h2>
-<p>Caching speeds page loads, reduces server load/bandwidth, and improves UX by serving buffers from intermediate stores instead of origin.</p>
-<h2 id="core-terms">Core terms<a class="headerlink" href="#core-terms" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>Client</strong>: browser/app requesting resources.</li>
-<li><strong>Origin server</strong>: source of truth content.</li>
-<li><strong>Stale content</strong>: expired cache entry.</li>
-<li><strong>Fresh content</strong>: cache entry still within TTL.</li>
-<li><strong>Cache validation</strong>: re-checking origin before serving expired content.</li>
-<li><strong>Cache invalidation</strong>: removing stale entries.</li>
-</ul>
-<h2 id="cache-locations">Cache locations<a class="headerlink" href="#cache-locations" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>Browser cache</strong>: per-user, stores private responses. Hitting “Back” often serves cached content.</li>
-<li><strong>Proxy cache</strong>: shared caches (ISPs) serving many users.</li>
-<li><strong>Reverse proxy cache</strong>: sits near origin to offload server traffic; controlled by admins.</li>
-</ul>
-<p>Browsers/proxies auto-cache defaults you can’t fully control; ensure your headers guide them correctly.</p>
-<h2 id="key-headers">Key headers<a class="headerlink" href="#key-headers" title="Permanent link">&para;</a></h2>
-<h3 id="cache-control-directives">Cache-Control directives<a class="headerlink" href="#cache-control-directives" title="Permanent link">&para;</a></h3>
-<ul>
-<li><code>private/public</code></li>
-<li><code>no-store</code>, <code>no-cache</code></li>
-<li><code>max-age=seconds</code>, <code>s-maxage=seconds</code></li>
-<li><code>must-revalidate</code>, <code>proxy-revalidate</code></li>
-<li>Combine directives carefully; <code>no-store</code> overrides <code>no-cache</code>, <code>s-maxage</code> overrides <code>max-age</code> for shared caches.</li>
-</ul>
-<h3 id="validators">Validators<a class="headerlink" href="#validators" title="Permanent link">&para;</a></h3>
-<ul>
-<li><code>ETag</code> (strong/weak): conditional <code>If-None-Match</code>.</li>
-<li><code>Last-Modified</code>: conditional <code>If-Modified-Since</code>.</li>
-<li>Servers should include both validators whenever practical and respond with <code>304 Not Modified</code>.</li>
-</ul>
-<h2 id="server-side-caching">Server-side caching<a class="headerlink" href="#server-side-caching" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Configure Apache (<code>Header set Cache-Control ...</code>) or Nginx to emit cache directives per file type (images for a year, CSS/JS for a month).</li>
-<li>Fingerprint static assets (e.g. <code>style.hash.css</code>) so long TTLs work safely.</li>
-</ul>
-<h2 id="recommendations">Recommendations<a class="headerlink" href="#recommendations" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Aggressive caching on static assets (max 1 year).</li>
-<li>Cache dynamic content only if safe; prefer shorter TTLs.</li>
-<li>Always include validators (ETag/Last-Modified).</li>
-<li>Control visibility (<code>private</code> for user-specific, <code>public</code> for shared resources).</li>
-<li>Separate frequently changing vs stable content.</li>
-<li>Monitor headers with browser dev tools or <code>curl -I</code>.</li>
-</ul>
-<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
-<h2 id="caching-is-a-balancing-actgive-static-files-long-ttls-while-validating-dynamic-responses-and-use-headers-strategically-to-guide-browsers-proxies-and-reverse-proxies">Caching is a balancing act—give static files long TTLs while validating dynamic responses, and use headers strategically to guide browsers, proxies, and reverse proxies.<a class="headerlink" href="#caching-is-a-balancing-actgive-static-files-long-ttls-while-validating-dynamic-responses-and-use-headers-strategically-to-guide-browsers-proxies-and-reverse-proxies" title="Permanent link">&para;</a></h2>
-<p>title: HTTP Caching Guide
-summary: Concepts, headers, caching locations, and best practices for controlling web cache behavior.</p>
+<h1 id="ml-production-cycle">ML Production Cycle<a class="headerlink" href="#ml-production-cycle" title="Permanent link">&para;</a></h1>
+<p>Machine learning systems follow a <strong>production cycle</strong> that includes several stages from planning to deployment and evaluation.</p>
+<p>The production cycle ensures that ML solutions:
+- Solve real business problems
+- Use reliable data
+- Are monitored and maintained after deployment</p>
+<p>There are <strong>six main steps</strong> in the ML production cycle.</p>
 <hr />
-<h1 id="http-caching-guide_1">HTTP Caching Guide<a class="headerlink" href="#http-caching-guide_1" title="Permanent link">&para;</a></h1>
-<h2 id="why-caching-matters">Why caching matters<a class="headerlink" href="#why-caching-matters" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Reduces latency, speeds page loads, cuts bandwidth, lowers server load.</li>
-<li>Caches sit between client &amp; server to reuse responses when requests repeat.</li>
-</ul>
-<h2 id="key-players">Key players<a class="headerlink" href="#key-players" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>Client</strong>: browser or application making the request.</li>
-<li><strong>Origin server</strong>: source of truth delivering responses.</li>
-<li><strong>Fresh content</strong>: cached item still valid.</li>
-<li><strong>Stale content</strong>: cached item expired.</li>
-<li><strong>Cache validation</strong>: server check to confirm content remains valid.</li>
-<li><strong>Cache invalidation</strong>: removing stale entries when policies change.</li>
-</ul>
-<h2 id="caching-locations">Caching locations<a class="headerlink" href="#caching-locations" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>Browser cache</strong>: per-user, stores private responses.</li>
-<li><strong>Proxy cache</strong>: shared across users, operated by ISPs or organizations.</li>
-<li><strong>Reverse proxy cache</strong>: controlled near origin servers to reduce load.</li>
-</ul>
-<p>You can’t control browser/proxy caches directly—your headers must guide them.</p>
-<h2 id="controlling-caches-via-headers">Controlling caches via headers<a class="headerlink" href="#controlling-caches-via-headers" title="Permanent link">&para;</a></h2>
-<h3 id="expires">Expires<a class="headerlink" href="#expires" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Pre-HTTP/1.1 header giving an absolute expiry date (GMT). Duration limited to 1 year.</li>
-</ul>
-<h3 id="cache-control">Cache-Control<a class="headerlink" href="#cache-control" title="Permanent link">&para;</a></h3>
-<p>HTTP/1.1 replacement for Expires. You can combine directives:</p>
-<ul>
-<li><code>public</code>/<code>private</code>: public caches allowed, private limits to client.</li>
-<li><code>no-store</code>: never cache.</li>
-<li><code>no-cache</code>: must revalidate before reuse.</li>
-<li><code>max-age</code>: lifespan in seconds.</li>
-<li><code>s-maxage</code>: overrides <code>max-age</code> for shared caches.</li>
-<li><code>must-revalidate</code>: stale content must be validated before serving.</li>
-<li><code>proxy-revalidate</code>: same as <code>must-revalidate</code> but for shared caches.</li>
-</ul>
-<h3 id="validators_1">Validators<a class="headerlink" href="#validators_1" title="Permanent link">&para;</a></h3>
-<ul>
-<li><code>ETag</code>: strong or weak identifiers. Clients send <code>If-None-Match</code> to avoid full downloads when unchanged.</li>
-<li><code>Last-Modified</code>: timestamp; clients send <code>If-Modified-Since</code>.</li>
-<li>Use both for strong validation; any mismatch triggers a full download.</li>
-</ul>
-<h2 id="practical-recommendations">Practical recommendations<a class="headerlink" href="#practical-recommendations" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Cache static assets aggressively (fingerprint filenames).</li>
-<li>Avoid caching sensitive data publicly; prefer <code>private</code>.</li>
-<li>Use validators (ETag) for dynamic responses.</li>
-<li>Separate frequently changing content.</li>
-<li>Monitor headers with browser devtools or <code>curl -I</code>.</li>
-<li>Implement server policies via Apache <code>.htaccess</code> or Nginx <code>location</code>/<code>server</code> blocks (examples given).</li>
-</ul>
-<h2 id="tools-concepts">Tools &amp; concepts<a class="headerlink" href="#tools-concepts" title="Permanent link">&para;</a></h2>
-<ul>
-<li><code>.htaccess</code> and server configs can set caching without touching application code.</li>
-<li>Directives can combine via <code>filesMatch</code> to tailor caching per file type.</li>
-<li>When unsure about caching, lean toward no-cache/no-store.</li>
-</ul>
+<h2 id="1-project-scoping">1. Project scoping<a class="headerlink" href="#1-project-scoping" title="Permanent link">&para;</a></h2>
+<p>The project begins with defining the <strong>problem and objectives</strong>.</p>
+<p>Key activities:
+- Define goals and expected outcomes
+- Define constraints (cost, time, infrastructure)
+- Establish evaluation criteria
+- Identify stakeholders
+- Involve stakeholders in planning
+- Estimate and allocate resources</p>
+<p>This stage ensures the project solves the <strong>correct problem</strong> and aligns with business needs.</p>
+<hr />
+<h2 id="2-data-management">2. Data management<a class="headerlink" href="#2-data-management" title="Permanent link">&para;</a></h2>
+<p>Data management focuses on organizing and preparing data used for machine learning.</p>
+<p>This includes:
+- Identifying data sources
+- Managing data formats
+- Data processing and cleaning
+- Data quality control
+- Data storage and accessibility</p>
+<p>Effective data management is critical because <strong>data quality directly affects model performance</strong>.</p>
+<hr />
+<h2 id="3-ml-model-development">3. ML model development<a class="headerlink" href="#3-ml-model-development" title="Permanent link">&para;</a></h2>
+<p>In this stage, raw data is transformed into usable datasets and models are trained.</p>
+<p>Main steps:
+- Prepare datasets (training, validation, and test sets)
+- Label data when required
+- Generate and select features
+- Train the model
+- Evaluate model performance
+- Test model behavior</p>
+<p>The goal is to create a model that generalizes well to unseen data.</p>
+<hr />
+<h2 id="4-deployment">4. Deployment<a class="headerlink" href="#4-deployment" title="Permanent link">&para;</a></h2>
+<p>Deployment moves the trained model into a <strong>production environment</strong>.</p>
+<p>This allows the model to:
+- Process real-world data
+- Generate predictions or outputs
+- Integrate with applications or systems</p>
+<p>Deployment often involves:
+- APIs
+- Cloud services
+- Batch or real-time inference pipelines</p>
+<hr />
+<h2 id="5-monitoring-and-maintenance">5. Monitoring and maintenance<a class="headerlink" href="#5-monitoring-and-maintenance" title="Permanent link">&para;</a></h2>
+<p>Once the model is in production, it must be continuously monitored.</p>
+<p>Monitoring focuses on:
+- Model performance
+- Prediction errors
+- Data drift
+- Model decay over time</p>
+<p>Maintenance activities include:
+- Updating the model
+- Retraining with new data
+- Adjusting to new environments or requirements</p>
+<hr />
+<h2 id="6-business-analysis">6. Business analysis<a class="headerlink" href="#6-business-analysis" title="Permanent link">&para;</a></h2>
+<p>The final step evaluates how the model performs relative to <strong>business goals</strong>.</p>
+<p>This includes:
+- Measuring impact on business metrics
+- Identifying insights from predictions
+- Assessing return on investment
+- Deciding whether further improvements are needed</p>
+<p>Model performance should always be evaluated in terms of <strong>business value</strong>, not only technical metrics.</p>
+<hr />
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<p>The ML production cycle consists of:</p>
+<ol>
+<li>Project scoping</li>
+<li>Data management</li>
+<li>Model development</li>
+<li>Deployment</li>
+<li>Monitoring and maintenance</li>
+<li>Business analysis</li>
+</ol>
+<p>Following this cycle helps ensure that ML systems remain reliable, useful, and aligned with business objectives.</p>
 
 
 

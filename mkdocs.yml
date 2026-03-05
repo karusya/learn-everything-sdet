@@ -93,6 +93,8 @@ nav:
       - Loss Functions: ML-loss.md
       - Basic Statistics: ML-statistics.md
       - Train, Validation & Test Sets: ML-datasets.md
+      - Production ML: ML-production.md
+      - CRISP-DM Framework: ML-crisp.md
 
   - Programming:
       - JavaScript/TypeScript OOP: js-ts-oop-concepts.md
