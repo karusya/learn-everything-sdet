@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://karusya.github.io/learn-everything-for-me/http-caching/">
+        <link rel="canonical" href="https://karusya.github.io/learn-everything-for-me/ML-crisp/">
       
       
-        <link rel="prev" href="../elasticsearch-query-deepdive/">
+        <link rel="prev" href="../ML-production/">
       
       
-        <link rel="next" href="../web3/">
+        <link rel="next" href="../js-ts-oop-concepts/">
       
       
         
@@ -27,7 +27,7 @@
     
     
       
-        <title>HTTP Caching Guide - Learn Everything For Me</title>
+        <title>CRISP-DM — Data Mining Process Framework - Learn Everything For Me</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#http-caching-guide" class="md-skip">
+        <a href="#crisp-dm" class="md-skip">
           Skip to content
         </a>
       
@@ -115,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              HTTP Caching Guide
+              CRISP-DM — Data Mining Process Framework
             
           </span>
         </div>
@@ -1058,8 +1058,6 @@
       
   
   
-    
-  
   
   
     
@@ -1072,11 +1070,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
@@ -1097,7 +1097,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1168,37 +1168,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    HTTP Caching Guide
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../http-caching/" class="md-nav__link">
         
   
   
@@ -1214,142 +1187,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#why-cache" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Why cache?
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#core-terms" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Core terms
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cache-locations" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Cache locations
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#key-headers" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Key headers
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Key headers">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#cache-control-directives" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Cache-Control directives
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#validators" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Validators
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#server-side-caching" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Server-side caching
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#recommendations" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Recommendations
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Summary
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#caching-is-a-balancing-actgive-static-files-long-ttls-while-validating-dynamic-responses-and-use-headers-strategically-to-guide-browsers-proxies-and-reverse-proxies" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Caching is a balancing act—give static files long TTLs while validating dynamic responses, and use headers strategically to guide browsers, proxies, and reverse proxies.
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1394,8 +1231,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -1406,13 +1245,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
         
           
           <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
@@ -1433,7 +1270,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1644,10 +1481,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../ML-crisp/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CRISP-DM Framework
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1663,6 +1527,37 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-crisp-dm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is CRISP-DM?
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1992,115 +1887,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#why-cache" class="md-nav__link">
+  <a href="#what-is-crisp-dm" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Why cache?
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#core-terms" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Core terms
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cache-locations" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Cache locations
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#key-headers" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Key headers
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Key headers">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#cache-control-directives" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Cache-Control directives
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#validators" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Validators
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#server-side-caching" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Server-side caching
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#recommendations" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Recommendations
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Summary
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#caching-is-a-balancing-actgive-static-files-long-ttls-while-validating-dynamic-responses-and-use-headers-strategically-to-guide-browsers-proxies-and-reverse-proxies" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Caching is a balancing act—give static files long TTLs while validating dynamic responses, and use headers strategically to guide browsers, proxies, and reverse proxies.
+        What is CRISP-DM?
       
     </span>
   </a>
@@ -2127,120 +1917,145 @@
   
 
 
-<!-- markdownlint-disable MD025 MD003 MD022 MD026 MD024 MD012 -->
+<!-- markdownlint-disable MD025 MD003 MD022 MD026 MD024 -->
 
-<h1 id="http-caching-guide">HTTP Caching Guide<a class="headerlink" href="#http-caching-guide" title="Permanent link">&para;</a></h1>
-<h2 id="why-cache">Why cache?<a class="headerlink" href="#why-cache" title="Permanent link">&para;</a></h2>
-<p>Caching speeds page loads, reduces server load/bandwidth, and improves UX by serving buffers from intermediate stores instead of origin.</p>
-<h2 id="core-terms">Core terms<a class="headerlink" href="#core-terms" title="Permanent link">&para;</a></h2>
+<h1 id="crisp-dm">CRISP-DM<a class="headerlink" href="#crisp-dm" title="Permanent link">&para;</a></h1>
+<h2 id="what-is-crisp-dm">What is CRISP-DM?<a class="headerlink" href="#what-is-crisp-dm" title="Permanent link">&para;</a></h2>
+<p><strong>CRISP-DM</strong> stands for:</p>
 <ul>
-<li><strong>Client</strong>: browser/app requesting resources.</li>
-<li><strong>Origin server</strong>: source of truth content.</li>
-<li><strong>Stale content</strong>: expired cache entry.</li>
-<li><strong>Fresh content</strong>: cache entry still within TTL.</li>
-<li><strong>Cache validation</strong>: re-checking origin before serving expired content.</li>
-<li><strong>Cache invalidation</strong>: removing stale entries.</li>
+<li><strong>Cross</strong></li>
+<li><strong>Industry</strong></li>
+<li><strong>Standard</strong></li>
+<li><strong>Process</strong></li>
+<li><strong>for</strong></li>
+<li><strong>Data Mining</strong></li>
 </ul>
-<h2 id="cache-locations">Cache locations<a class="headerlink" href="#cache-locations" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>Browser cache</strong>: per-user, stores private responses. Hitting “Back” often serves cached content.</li>
-<li><strong>Proxy cache</strong>: shared caches (ISPs) serving many users.</li>
-<li><strong>Reverse proxy cache</strong>: sits near origin to offload server traffic; controlled by admins.</li>
-</ul>
-<p>Browsers/proxies auto-cache defaults you can’t fully control; ensure your headers guide them correctly.</p>
-<h2 id="key-headers">Key headers<a class="headerlink" href="#key-headers" title="Permanent link">&para;</a></h2>
-<h3 id="cache-control-directives">Cache-Control directives<a class="headerlink" href="#cache-control-directives" title="Permanent link">&para;</a></h3>
-<ul>
-<li><code>private/public</code></li>
-<li><code>no-store</code>, <code>no-cache</code></li>
-<li><code>max-age=seconds</code>, <code>s-maxage=seconds</code></li>
-<li><code>must-revalidate</code>, <code>proxy-revalidate</code></li>
-<li>Combine directives carefully; <code>no-store</code> overrides <code>no-cache</code>, <code>s-maxage</code> overrides <code>max-age</code> for shared caches.</li>
-</ul>
-<h3 id="validators">Validators<a class="headerlink" href="#validators" title="Permanent link">&para;</a></h3>
-<ul>
-<li><code>ETag</code> (strong/weak): conditional <code>If-None-Match</code>.</li>
-<li><code>Last-Modified</code>: conditional <code>If-Modified-Since</code>.</li>
-<li>Servers should include both validators whenever practical and respond with <code>304 Not Modified</code>.</li>
-</ul>
-<h2 id="server-side-caching">Server-side caching<a class="headerlink" href="#server-side-caching" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Configure Apache (<code>Header set Cache-Control ...</code>) or Nginx to emit cache directives per file type (images for a year, CSS/JS for a month).</li>
-<li>Fingerprint static assets (e.g. <code>style.hash.css</code>) so long TTLs work safely.</li>
-</ul>
-<h2 id="recommendations">Recommendations<a class="headerlink" href="#recommendations" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Aggressive caching on static assets (max 1 year).</li>
-<li>Cache dynamic content only if safe; prefer shorter TTLs.</li>
-<li>Always include validators (ETag/Last-Modified).</li>
-<li>Control visibility (<code>private</code> for user-specific, <code>public</code> for shared resources).</li>
-<li>Separate frequently changing vs stable content.</li>
-<li>Monitor headers with browser dev tools or <code>curl -I</code>.</li>
-</ul>
-<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
-<h2 id="caching-is-a-balancing-actgive-static-files-long-ttls-while-validating-dynamic-responses-and-use-headers-strategically-to-guide-browsers-proxies-and-reverse-proxies">Caching is a balancing act—give static files long TTLs while validating dynamic responses, and use headers strategically to guide browsers, proxies, and reverse proxies.<a class="headerlink" href="#caching-is-a-balancing-actgive-static-files-long-ttls-while-validating-dynamic-responses-and-use-headers-strategically-to-guide-browsers-proxies-and-reverse-proxies" title="Permanent link">&para;</a></h2>
-<p>title: HTTP Caching Guide
-summary: Concepts, headers, caching locations, and best practices for controlling web cache behavior.</p>
+<p>It is a widely used framework that defines a <strong>structured process for data mining and machine learning projects</strong>.</p>
+<p>The methodology breaks a project into several stages that guide teams from understanding the problem to deploying a solution.</p>
 <hr />
-<h1 id="http-caching-guide_1">HTTP Caching Guide<a class="headerlink" href="#http-caching-guide_1" title="Permanent link">&para;</a></h1>
-<h2 id="why-caching-matters">Why caching matters<a class="headerlink" href="#why-caching-matters" title="Permanent link">&para;</a></h2>
+<h1 id="crisp-dm-stages">CRISP-DM Stages<a class="headerlink" href="#crisp-dm-stages" title="Permanent link">&para;</a></h1>
+<p>The process consists of the following main stages:</p>
+<ol>
+<li>Business understanding  </li>
+<li>Data understanding  </li>
+<li>Data preparation  </li>
+<li>Modeling  </li>
+<li>Evaluation  </li>
+<li>Deployment  </li>
+</ol>
+<hr />
+<h1 id="1-business-understanding">1. Business understanding<a class="headerlink" href="#1-business-understanding" title="Permanent link">&para;</a></h1>
+<p>This phase focuses on understanding the <strong>business context and goals</strong>.</p>
+<p>Main activities:</p>
 <ul>
-<li>Reduces latency, speeds page loads, cuts bandwidth, lowers server load.</li>
-<li>Caches sit between client &amp; server to reuse responses when requests repeat.</li>
+<li>Determine business objectives</li>
+<li>Assess the current situation</li>
+<li>Define data mining goals</li>
+<li>Produce a project plan</li>
 </ul>
-<h2 id="key-players">Key players<a class="headerlink" href="#key-players" title="Permanent link">&para;</a></h2>
+<p>The purpose is to align the technical work with <strong>business needs and constraints</strong>.</p>
+<hr />
+<h1 id="2-data-understanding">2. Data understanding<a class="headerlink" href="#2-data-understanding" title="Permanent link">&para;</a></h1>
+<p>In this phase, the team becomes familiar with the available data.</p>
+<p>Steps include:</p>
+<ol>
+<li>Collect initial data</li>
+<li>Describe the data</li>
+<li>Explore the data</li>
+<li>Verify data quality</li>
+</ol>
+<p>This stage helps identify:
+- Data issues
+- Missing values
+- Outliers
+- Data patterns</p>
+<hr />
+<h1 id="3-data-preparation">3. Data preparation<a class="headerlink" href="#3-data-preparation" title="Permanent link">&para;</a></h1>
+<p>Data preparation transforms raw data into a dataset suitable for modeling.</p>
+<p>Key tasks:</p>
 <ul>
-<li><strong>Client</strong>: browser or application making the request.</li>
-<li><strong>Origin server</strong>: source of truth delivering responses.</li>
-<li><strong>Fresh content</strong>: cached item still valid.</li>
-<li><strong>Stale content</strong>: cached item expired.</li>
-<li><strong>Cache validation</strong>: server check to confirm content remains valid.</li>
-<li><strong>Cache invalidation</strong>: removing stale entries when policies change.</li>
+<li>Select relevant data</li>
+<li>Clean the data</li>
+<li>Construct new data features</li>
+<li>Integrate data from different sources</li>
+<li>Format data into a usable structure</li>
 </ul>
-<h2 id="caching-locations">Caching locations<a class="headerlink" href="#caching-locations" title="Permanent link">&para;</a></h2>
+<p>This phase often takes the <strong>largest portion of the project time</strong>.</p>
+<hr />
+<h1 id="4-modeling">4. Modeling<a class="headerlink" href="#4-modeling" title="Permanent link">&para;</a></h1>
+<p>In the modeling stage, machine learning techniques are applied.</p>
+<p>Main steps:</p>
+<ol>
+<li>Select modeling techniques</li>
+<li>Generate test design</li>
+<li>Build the model</li>
+<li>Assess the model</li>
+</ol>
+<p>Different algorithms may be tested and compared.</p>
+<hr />
+<h1 id="5-evaluation">5. Evaluation<a class="headerlink" href="#5-evaluation" title="Permanent link">&para;</a></h1>
+<p>Evaluation ensures the model meets both <strong>technical and business objectives</strong>.</p>
+<p>Steps include:</p>
 <ul>
-<li><strong>Browser cache</strong>: per-user, stores private responses.</li>
-<li><strong>Proxy cache</strong>: shared across users, operated by ISPs or organizations.</li>
-<li><strong>Reverse proxy cache</strong>: controlled near origin servers to reduce load.</li>
+<li>Evaluate model results</li>
+<li>Review the full process</li>
+<li>Determine next steps</li>
 </ul>
-<p>You can’t control browser/proxy caches directly—your headers must guide them.</p>
-<h2 id="controlling-caches-via-headers">Controlling caches via headers<a class="headerlink" href="#controlling-caches-via-headers" title="Permanent link">&para;</a></h2>
-<h3 id="expires">Expires<a class="headerlink" href="#expires" title="Permanent link">&para;</a></h3>
+<p>At this stage, teams decide whether the model is ready for deployment.</p>
+<hr />
+<h1 id="6-deployment">6. Deployment<a class="headerlink" href="#6-deployment" title="Permanent link">&para;</a></h1>
+<p>Deployment makes the model available for real-world use.</p>
+<p>Deployment may involve:</p>
 <ul>
-<li>Pre-HTTP/1.1 header giving an absolute expiry date (GMT). Duration limited to 1 year.</li>
+<li>Integrating the model into applications</li>
+<li>Creating APIs</li>
+<li>Generating reports or automated predictions</li>
 </ul>
-<h3 id="cache-control">Cache-Control<a class="headerlink" href="#cache-control" title="Permanent link">&para;</a></h3>
-<p>HTTP/1.1 replacement for Expires. You can combine directives:</p>
-<ul>
-<li><code>public</code>/<code>private</code>: public caches allowed, private limits to client.</li>
-<li><code>no-store</code>: never cache.</li>
-<li><code>no-cache</code>: must revalidate before reuse.</li>
-<li><code>max-age</code>: lifespan in seconds.</li>
-<li><code>s-maxage</code>: overrides <code>max-age</code> for shared caches.</li>
-<li><code>must-revalidate</code>: stale content must be validated before serving.</li>
-<li><code>proxy-revalidate</code>: same as <code>must-revalidate</code> but for shared caches.</li>
-</ul>
-<h3 id="validators_1">Validators<a class="headerlink" href="#validators_1" title="Permanent link">&para;</a></h3>
-<ul>
-<li><code>ETag</code>: strong or weak identifiers. Clients send <code>If-None-Match</code> to avoid full downloads when unchanged.</li>
-<li><code>Last-Modified</code>: timestamp; clients send <code>If-Modified-Since</code>.</li>
-<li>Use both for strong validation; any mismatch triggers a full download.</li>
-</ul>
-<h2 id="practical-recommendations">Practical recommendations<a class="headerlink" href="#practical-recommendations" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Cache static assets aggressively (fingerprint filenames).</li>
-<li>Avoid caching sensitive data publicly; prefer <code>private</code>.</li>
-<li>Use validators (ETag) for dynamic responses.</li>
-<li>Separate frequently changing content.</li>
-<li>Monitor headers with browser devtools or <code>curl -I</code>.</li>
-<li>Implement server policies via Apache <code>.htaccess</code> or Nginx <code>location</code>/<code>server</code> blocks (examples given).</li>
-</ul>
-<h2 id="tools-concepts">Tools &amp; concepts<a class="headerlink" href="#tools-concepts" title="Permanent link">&para;</a></h2>
-<ul>
-<li><code>.htaccess</code> and server configs can set caching without touching application code.</li>
-<li>Directives can combine via <code>filesMatch</code> to tailor caching per file type.</li>
-<li>When unsure about caching, lean toward no-cache/no-store.</li>
-</ul>
+<p>The goal is to ensure the model delivers <strong>practical value</strong>.</p>
+<hr />
+<h1 id="benefits-of-crisp-dm">Benefits of CRISP-DM<a class="headerlink" href="#benefits-of-crisp-dm" title="Permanent link">&para;</a></h1>
+<ol>
+<li>
+<p><strong>Generalizable</strong><br />
+   Can be applied across different industries and problem types.</p>
+</li>
+<li>
+<p><strong>Common-sense structure</strong><br />
+   Provides a logical workflow for ML and data mining projects.</p>
+</li>
+<li>
+<p><strong>Clear starting point</strong><br />
+   Emphasizes understanding the business problem before modeling.</p>
+</li>
+</ol>
+<hr />
+<h1 id="weaknesses-of-crisp-dm">Weaknesses of CRISP-DM<a class="headerlink" href="#weaknesses-of-crisp-dm" title="Permanent link">&para;</a></h1>
+<ol>
+<li>
+<p><strong>Rigid and documentation-heavy</strong><br />
+   The process can involve extensive documentation.</p>
+</li>
+<li>
+<p><strong>Not designed for modern ML workflows</strong><br />
+   Developed before current MLOps practices.</p>
+</li>
+<li>
+<p><strong>Limited project management guidance</strong><br />
+   Does not fully address project management or iterative development.</p>
+</li>
+</ol>
+<hr />
+<h1 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h1>
+<p>CRISP-DM is a structured framework for data mining projects that organizes work into six stages:</p>
+<ol>
+<li>Business understanding  </li>
+<li>Data understanding  </li>
+<li>Data preparation  </li>
+<li>Modeling  </li>
+<li>Evaluation  </li>
+<li>Deployment  </li>
+</ol>
+<p>Despite some limitations, it remains one of the most recognized methodologies for guiding data science and machine learning projects.</p>
 
 
 
