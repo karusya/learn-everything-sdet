@@ -93,6 +93,7 @@ nav:
       - Loss Functions: ML-loss.md
       - Basic Statistics: ML-statistics.md
       - Train, Validation & Test Sets: ML-datasets.md
+      - Numerical Data & Feature Vectors: ML-numerical.data.md
       - Production ML: ML-production.md
       - CRISP-DM Framework: ML-crisp.md
 
