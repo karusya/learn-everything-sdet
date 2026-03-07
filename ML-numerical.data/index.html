@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://karusya.github.io/learn-everything-sdet/ML-loss/">
+        <link rel="canonical" href="https://karusya.github.io/learn-everything-sdet/ML-numerical.data/">
       
       
-        <link rel="prev" href="../ML-linear-regression/">
+        <link rel="prev" href="../ML-datasets/">
       
       
-        <link rel="next" href="../ML-statistics/">
+        <link rel="next" href="../ML-production/">
       
       
         
@@ -27,7 +27,7 @@
     
     
       
-        <title>Loss Functions — Core Notes - Learn Everything For Me</title>
+        <title>Numerical Data and Feature Vectors - Learn Everything For Me</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#loss-functions" class="md-skip">
+        <a href="#numerical-data-and-feature-vectors" class="md-skip">
           Skip to content
         </a>
       
@@ -115,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Loss Functions — Core Notes
+              Numerical Data and Feature Vectors
             
           </span>
         </div>
@@ -1369,37 +1369,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Loss Functions
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../ML-loss/" class="md-nav__link">
         
   
   
@@ -1415,181 +1388,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#what-is-loss" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        What is loss?
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#why-loss-is-important" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Why loss is important
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#distance-between-prediction-and-actual-value" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Distance between prediction and actual value
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#common-ways-to-calculate-distance" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Common ways to calculate distance
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Common ways to calculate distance">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#absolute-difference" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Absolute difference
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#squared-difference" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Squared difference
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#types-of-loss-functions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Types of loss functions
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Types of loss functions">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#l1-loss" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        L1 Loss
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mae-mean-absolute-error" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        MAE (Mean Absolute Error)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#l2-loss" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        L2 Loss
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mse-mean-squared-error" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        MSE (Mean Squared Error)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rmse-root-mean-squared-error" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        RMSE (Root Mean Squared Error)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Summary
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1655,10 +1453,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../ML-numerical.data/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Numerical Data & Feature Vectors
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1674,6 +1499,37 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#numerical-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Numerical data
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2059,154 +1915,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-is-loss" class="md-nav__link">
+  <a href="#numerical-data" class="md-nav__link">
     <span class="md-ellipsis">
       
-        What is loss?
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#why-loss-is-important" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Why loss is important
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#distance-between-prediction-and-actual-value" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Distance between prediction and actual value
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#common-ways-to-calculate-distance" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Common ways to calculate distance
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Common ways to calculate distance">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#absolute-difference" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Absolute difference
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#squared-difference" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Squared difference
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#types-of-loss-functions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Types of loss functions
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Types of loss functions">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#l1-loss" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        L1 Loss
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mae-mean-absolute-error" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        MAE (Mean Absolute Error)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#l2-loss" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        L2 Loss
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mse-mean-squared-error" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        MSE (Mean Squared Error)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rmse-root-mean-squared-error" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        RMSE (Root Mean Squared Error)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Summary
+        Numerical data
       
     </span>
   </a>
@@ -2235,102 +1947,260 @@
 
 <!-- markdownlint-disable MD025 MD003 MD022 MD026 MD024 -->
 
-<h1 id="loss-functions">Loss Functions<a class="headerlink" href="#loss-functions" title="Permanent link">&para;</a></h1>
-<h2 id="what-is-loss">What is loss?<a class="headerlink" href="#what-is-loss" title="Permanent link">&para;</a></h2>
-<ul>
-<li><strong>Loss</strong> is a numeric metric that describes <strong>how wrong a model’s predictions are</strong></li>
-<li>It measures the <strong>distance between predictions and actual labels (Y)</strong></li>
-<li>A lower loss means better model performance</li>
-</ul>
-<p>Formally, loss compares:
-- <strong>Predicted value (ŷ)</strong>
-- <strong>Actual value (y)</strong></p>
+<h1 id="numerical-data-and-feature-vectors">Numerical Data and Feature Vectors<a class="headerlink" href="#numerical-data-and-feature-vectors" title="Permanent link">&para;</a></h1>
+<h2 id="numerical-data">Numerical data<a class="headerlink" href="#numerical-data" title="Permanent link">&para;</a></h2>
+<p><strong>Numerical data</strong> represents measurable quantities expressed as numbers.</p>
+<p>These values can be used directly in mathematical calculations and machine learning models.</p>
+<p>Examples of numerical data:
+- Temperature
+- Weight
+- Height
+- Age
+- Price
+- Distance</p>
+<p>Numerical data is commonly used as <strong>input features</strong> for machine learning models.</p>
 <hr />
-<h2 id="why-loss-is-important">Why loss is important<a class="headerlink" href="#why-loss-is-important" title="Permanent link">&para;</a></h2>
+<h1 id="feature-vectors">Feature vectors<a class="headerlink" href="#feature-vectors" title="Permanent link">&para;</a></h1>
+<p>A <strong>feature vector</strong> is a collection (array) of numerical values that represents an example in a machine learning model.</p>
+<p>In practice:
+- Each example in a dataset is converted into a vector
+- Each element of the vector represents one feature
+- Values are typically stored as <strong>floating-point numbers</strong></p>
+<p>Example feature vector:</p>
+<p>[temperature, humidity, wind_speed, pressure]
+[22.5, 0.65, 12.3, 1013.2]</p>
+<p>This numerical representation allows machine learning models to process and learn patterns from the data.</p>
+<hr />
+<h1 id="feature-engineering">Feature engineering<a class="headerlink" href="#feature-engineering" title="Permanent link">&para;</a></h1>
+<p><strong>Feature engineering</strong> is the process of transforming raw data into a representation that a machine learning model can learn from effectively.</p>
+<p>Goals of feature engineering:
+- Improve model performance
+- Convert raw data into numerical form
+- Highlight useful patterns for the model</p>
+<p>Feature engineering often involves:
+- Transforming raw values
+- Scaling data
+- Creating new derived features</p>
+<hr />
+<h1 id="common-feature-engineering-techniques">Common feature engineering techniques<a class="headerlink" href="#common-feature-engineering-techniques" title="Permanent link">&para;</a></h1>
+<h2 id="normalization">Normalization<a class="headerlink" href="#normalization" title="Permanent link">&para;</a></h2>
+<p><strong>Normalization</strong> converts numerical values into a <strong>standard range</strong>, typically between 0 and 1.</p>
+<p>Purpose:
+- Prevent features with large scales from dominating the model
+- Improve training stability</p>
+<p>Example:</p>
+<p>Original values: [0, 50, 100]
+Normalized values: [0.0, 0.5, 1.0]</p>
+<hr />
+<h2 id="binning">Binning<a class="headerlink" href="#binning" title="Permanent link">&para;</a></h2>
+<p><strong>Binning</strong> converts numerical values into <strong>ranges (buckets)</strong>.</p>
+<p>Purpose:
+- Simplify continuous data
+- Reduce noise
+- Capture broader patterns</p>
+<p>Example:
+Age values → bins</p>
+<p>0–18   → child
+19–35  → young adult
+36–60  → adult
+60+    → senior</p>
+<p>This transformation can make patterns easier for some models to learn.</p>
+<hr />
+<h1 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h1>
 <ul>
-<li>The main goal of training an ML model is <strong>minimizing the loss</strong></li>
-<li>During training, the model adjusts its parameters (weights and bias) to reduce this value</li>
-<li>Loss is optimized regardless of whether the prediction is higher or lower than the actual value</li>
+<li>Numerical data represents measurable quantities expressed as numbers</li>
+<li>A feature vector is an array of numerical values describing one example</li>
+<li>Feature engineering transforms raw data into model-friendly representations</li>
+<li>Normalization scales values into a standard range</li>
+<li>Binning groups numerical values into ranges</li>
+</ul>
+<h1 id="data-preprocessing">Data Preprocessing<a class="headerlink" href="#data-preprocessing" title="Permanent link">&para;</a></h1>
+<h2 id="what-is-data-preprocessing">What is data preprocessing?<a class="headerlink" href="#what-is-data-preprocessing" title="Permanent link">&para;</a></h2>
+<p><strong>Data preprocessing</strong> is the process of preparing raw data so that it can be effectively used by a machine learning model.</p>
+<p>It typically involves:
+- Cleaning the data
+- Transforming feature values
+- Handling missing or incorrect values
+- Scaling or normalizing data
+- Creating additional features</p>
+<p>The goal is to convert raw datasets into <strong>high-quality, model-ready data</strong>.</p>
+<hr />
+<h1 id="outliers">Outliers<a class="headerlink" href="#outliers" title="Permanent link">&para;</a></h1>
+<h2 id="what-is-an-outlier">What is an outlier?<a class="headerlink" href="#what-is-an-outlier" title="Permanent link">&para;</a></h2>
+<p>An <strong>outlier</strong> is a value that is significantly distant from most other values in a feature or label.</p>
+<p>Outliers can negatively affect:
+- Model training
+- Statistical estimates
+- Model stability</p>
+<h3 id="types-of-outliers">Types of outliers<a class="headerlink" href="#types-of-outliers" title="Permanent link">&para;</a></h3>
+<p>Outliers can be categorized as:</p>
+<p><strong>1. Outliers caused by mistakes</strong>
+- Measurement errors
+- Incorrect data entry
+- Sensor malfunction</p>
+<p>These should usually be <strong>removed or corrected</strong>.</p>
+<p><strong>2. Legitimate outliers</strong>
+- Rare but valid observations
+- Natural extreme values</p>
+<p>These may contain important information and should be <strong>carefully evaluated</strong> before removal.</p>
+<hr />
+<h1 id="normalization_1">Normalization<a class="headerlink" href="#normalization_1" title="Permanent link">&para;</a></h1>
+<h2 id="why-normalization-is-needed">Why normalization is needed<a class="headerlink" href="#why-normalization-is-needed" title="Permanent link">&para;</a></h2>
+<p>Normalization transforms feature values so they exist on a <strong>similar scale</strong>.</p>
+<p>Benefits include:</p>
+<ul>
+<li>Helps models converge faster during training</li>
+<li>Prevents features with large values from dominating others</li>
+<li>Improves prediction stability</li>
+<li>Reduces numerical instability (such as NaN values)</li>
+<li>Helps the model learn appropriate weights for each feature</li>
 </ul>
 <hr />
-<h2 id="distance-between-prediction-and-actual-value">Distance between prediction and actual value<a class="headerlink" href="#distance-between-prediction-and-actual-value" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Loss focuses on <strong>distance</strong>, not direction</li>
-<li>The sign of the error does not matter</li>
-<li>That is why loss functions use:</li>
-<li><strong>Absolute values</strong>, or</li>
-<li><strong>Squared differences</strong></li>
-</ul>
-<p>Basic error:
-error = y - ŷ</p>
+<h1 id="common-normalization-methods">Common normalization methods<a class="headerlink" href="#common-normalization-methods" title="Permanent link">&para;</a></h1>
+<h2 id="linear-scaling">Linear scaling<a class="headerlink" href="#linear-scaling" title="Permanent link">&para;</a></h2>
+<p>Linear scaling transforms values from their original range into a <strong>normalized range</strong>.</p>
+<p>Two common approaches:</p>
+<h3 id="minmax-scaling">Min–Max scaling<a class="headerlink" href="#minmax-scaling" title="Permanent link">&para;</a></h3>
+<p>Rescales values to a fixed interval (often 0–1):
+X_scaled = (X - min) / (max - min)</p>
+<h3 id="mean-normalization">Mean normalization<a class="headerlink" href="#mean-normalization" title="Permanent link">&para;</a></h3>
+<p>Centers values around the mean:
+X_scaled = (X - mean) / (max - min)</p>
+<h3 id="when-to-use-linear-scaling">When to use linear scaling<a class="headerlink" href="#when-to-use-linear-scaling" title="Permanent link">&para;</a></h3>
+<p>Best used when:
+- Feature bounds do not change significantly over time
+- The dataset contains few or no outliers
+- Values are roughly uniformly distributed</p>
 <hr />
-<h2 id="common-ways-to-calculate-distance">Common ways to calculate distance<a class="headerlink" href="#common-ways-to-calculate-distance" title="Permanent link">&para;</a></h2>
-<h3 id="absolute-difference">Absolute difference<a class="headerlink" href="#absolute-difference" title="Permanent link">&para;</a></h3>
-<p>|y - ŷ|</p>
-<h3 id="squared-difference">Squared difference<a class="headerlink" href="#squared-difference" title="Permanent link">&para;</a></h3>
-<p>(y - ŷ)²</p>
+<h2 id="z-score-scaling-standardization">Z-score scaling (standardization)<a class="headerlink" href="#z-score-scaling-standardization" title="Permanent link">&para;</a></h2>
+<p>Z-score scaling converts values into <strong>standard deviation units</strong> from the mean.</p>
+<p>Formula:
+Z = (X - μ) / σ</p>
+<p>Where:
+- μ = mean
+- σ = standard deviation</p>
+<p>This transformation represents how many standard deviations a value is from the mean.</p>
+<h3 id="when-to-use-z-score-scaling">When to use Z-score scaling<a class="headerlink" href="#when-to-use-z-score-scaling" title="Permanent link">&para;</a></h3>
+<p>Best when:
+- Data follows a <strong>normal or near-normal distribution</strong>
+- Features have different units or ranges</p>
 <hr />
-<h2 id="types-of-loss-functions">Types of loss functions<a class="headerlink" href="#types-of-loss-functions" title="Permanent link">&para;</a></h2>
-<h3 id="l1-loss">L1 Loss<a class="headerlink" href="#l1-loss" title="Permanent link">&para;</a></h3>
+<h2 id="log-scaling">Log scaling<a class="headerlink" href="#log-scaling" title="Permanent link">&para;</a></h2>
+<p>Log scaling applies the logarithm to the raw value.
+X_scaled = log(X)</p>
+<h3 id="when-log-scaling-is-useful">When log scaling is useful<a class="headerlink" href="#when-log-scaling-is-useful" title="Permanent link">&para;</a></h3>
+<p>Log scaling is helpful when the data follows a <strong>power-law distribution</strong>, meaning:</p>
 <ul>
-<li>
-<p>Sum of absolute differences between actual and predicted values
-L1 = Σ |y - ŷ|</p>
-</li>
-<li>
-<p>Treats all errors linearly</p>
-</li>
-<li>Less sensitive to outliers than squared loss</li>
+<li>Small values occur very frequently</li>
+<li>Large values occur rarely</li>
+<li>Values span several orders of magnitude</li>
 </ul>
+<p>Example:
+- Movie ratings counts
+- Website traffic
+- Income distribution</p>
 <hr />
-<h3 id="mae-mean-absolute-error">MAE (Mean Absolute Error)<a class="headerlink" href="#mae-mean-absolute-error" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Average of L1 loss over <code>n</code> examples</li>
-</ul>
-<p>MAE = (1 / n) * Σ |y - ŷ|</p>
-<ul>
-<li>Represents the <strong>average absolute error</strong></li>
-<li>Easy to interpret</li>
-</ul>
+<h1 id="handling-outliers">Handling outliers<a class="headerlink" href="#handling-outliers" title="Permanent link">&para;</a></h1>
+<h2 id="clipping">Clipping<a class="headerlink" href="#clipping" title="Permanent link">&para;</a></h2>
+<p><strong>Clipping</strong> limits extreme values to a specified maximum or minimum threshold.</p>
+<p>Example:
+If value &gt; threshold → set value = threshold</p>
+<p>Purpose:
+- Reduce influence of extreme outliers
+- Improve model stability</p>
 <hr />
-<h3 id="l2-loss">L2 Loss<a class="headerlink" href="#l2-loss" title="Permanent link">&para;</a></h3>
+<h1 id="binning-bucketing">Binning (Bucketing)<a class="headerlink" href="#binning-bucketing" title="Permanent link">&para;</a></h1>
+<p><strong>Binning</strong> converts numerical values into categorical ranges (bins).</p>
+<p>Example:</p>
+<p>Income
+0–20k
+20k–50k
+50k–100k
+100k+</p>
+<h3 id="when-to-use-binning">When to use binning<a class="headerlink" href="#when-to-use-binning" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Sum of squared differences between actual and predicted values</li>
-</ul>
-<p>L2 = Σ (y - ŷ)²</p>
-<ul>
-<li>Penalizes large errors more strongly</li>
-<li>Commonly used in regression models</li>
-</ul>
-<hr />
-<h3 id="mse-mean-squared-error">MSE (Mean Squared Error)<a class="headerlink" href="#mse-mean-squared-error" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Average of squared differences over <code>n</code> examples</li>
-</ul>
-<p>MSE = (1 / n) * Σ (y - ŷ)²</p>
-<ul>
-<li>Amplifies larger errors</li>
-<li>Smooth and differentiable, useful for optimization</li>
-</ul>
-<hr />
-<h3 id="rmse-root-mean-squared-error">RMSE (Root Mean Squared Error)<a class="headerlink" href="#rmse-root-mean-squared-error" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Square root of MSE</li>
-</ul>
-<p>RMSE = √MSE</p>
-<ul>
-<li>Brings error back to the <strong>same unit as the target variable</strong></li>
-<li>Easier to interpret than MSE</li>
+<li>When the relationship between feature and label is weak or nonlinear</li>
+<li>When feature values cluster naturally</li>
+<li>When interpretability is important</li>
 </ul>
 <hr />
-<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<h2 id="quantile-bucketing">Quantile bucketing<a class="headerlink" href="#quantile-bucketing" title="Permanent link">&para;</a></h2>
+<p>Quantile bucketing creates bins such that <strong>each bin contains roughly the same number of examples</strong>.</p>
+<p>Benefits:
+- Helps balance the dataset across bins
+- Reduces the influence of extreme outliers</p>
+<hr />
+<h1 id="data-scrubbing-data-cleaning">Data scrubbing (data cleaning)<a class="headerlink" href="#data-scrubbing-data-cleaning" title="Permanent link">&para;</a></h1>
+<p><strong>Data scrubbing</strong> removes unreliable examples from datasets.</p>
+<p>Common problems include:</p>
+<table>
+<thead>
+<tr>
+<th>Problem</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Omitted values</td>
+<td>Missing age in a census record</td>
+</tr>
+<tr>
+<td>Duplicate examples</td>
+<td>Logs uploaded twice</td>
+</tr>
+<tr>
+<td>Out-of-range values</td>
+<td>Typing an extra digit</td>
+</tr>
+<tr>
+<td>Incorrect labels</td>
+<td>Mislabeling an image</td>
+</tr>
+</tbody>
+</table>
+<p>Scripts or data pipelines can detect:</p>
 <ul>
-<li>Loss measures how far predictions are from actual labels</li>
-<li>Training aims to minimize the loss</li>
-<li>Absolute and squared differences are the core building blocks</li>
-<li>MAE, MSE, and RMSE are the most common regression loss metrics</li>
-<li>Choice of loss affects how errors are penalized and optimized</li>
+<li>Missing values</li>
+<li>Duplicate entries</li>
+<li>Invalid feature ranges</li>
 </ul>
+<hr />
+<h1 id="qualities-of-good-numerical-features">Qualities of good numerical features<a class="headerlink" href="#qualities-of-good-numerical-features" title="Permanent link">&para;</a></h1>
+<p>Good numerical features should be:</p>
+<ul>
+<li><strong>Clearly named</strong></li>
+<li><strong>Validated before training</strong></li>
+<li><strong>Sensible and meaningful</strong></li>
+<li><strong>Consistent across the dataset</strong></li>
+</ul>
+<p>High-quality features improve model accuracy and reliability.</p>
+<hr />
+<h1 id="polynomial-feature-transformations">Polynomial feature transformations<a class="headerlink" href="#polynomial-feature-transformations" title="Permanent link">&para;</a></h1>
+<p>Sometimes it is useful to create <strong>synthetic features</strong> from existing numerical features.</p>
+<p>Example:</p>
+<p>Original feature:
+x</p>
+<p>Polynomial features:
+x²
+x³</p>
+<p>Purpose:
+- Capture nonlinear relationships
+- Improve model expressiveness
+- Allow linear models to learn more complex patterns</p>
+<hr />
+<h1 id="summary_1">Summary<a class="headerlink" href="#summary_1" title="Permanent link">&para;</a></h1>
+<p>Data preprocessing prepares raw data for machine learning models.</p>
+<p>Key techniques include:</p>
+<ul>
+<li>Detecting and handling outliers</li>
+<li>Normalizing feature values</li>
+<li>Applying transformations like log scaling</li>
+<li>Using binning and quantile bucketing</li>
+<li>Cleaning unreliable data</li>
+<li>Creating synthetic features such as polynomial features</li>
+</ul>
+<p>Effective preprocessing significantly improves <strong>model performance and stability</strong>.</p>
 
 
 
