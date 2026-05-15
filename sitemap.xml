@@ -2,158 +2,166 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://karusya.github.io/learn-everything-sdet/</loc>
-         <lastmod>2026-03-07</lastmod>
+         <lastmod>2026-05-15</lastmod>
     </url>
     <url>
          <loc>https://karusya.github.io/learn-everything-sdet/Automation_Interview_QA/</loc>
-         <lastmod>2026-03-07</lastmod>
+         <lastmod>2026-05-15</lastmod>
+    </url>
+    <url>
+         <loc>https://karusya.github.io/learn-everything-sdet/BigO-notation/</loc>
+         <lastmod>2026-05-15</lastmod>
     </url>
     <url>
          <loc>https://karusya.github.io/learn-everything-sdet/Experienced_Automation_Tester_QA/</loc>
-         <lastmod>2026-03-07</lastmod>
+         <lastmod>2026-05-15</lastmod>
     </url>
     <url>
          <loc>https://karusya.github.io/learn-everything-sdet/Flaky_Test_Guide/</loc>
-         <lastmod>2026-03-07</lastmod>
+         <lastmod>2026-05-15</lastmod>
     </url>
     <url>
          <loc>https://karusya.github.io/learn-everything-sdet/ML-crisp/</loc>
-         <lastmod>2026-03-07</lastmod>
+         <lastmod>2026-05-15</lastmod>
     </url>
     <url>
          <loc>https://karusya.github.io/learn-everything-sdet/ML-datasets/</loc>
-         <lastmod>2026-03-07</lastmod>
+         <lastmod>2026-05-15</lastmod>
     </url>
     <url>
          <loc>https://karusya.github.io/learn-everything-sdet/ML-linear-regression/</loc>
-         <lastmod>2026-03-07</lastmod>
+         <lastmod>2026-05-15</lastmod>
     </url>
     <url>
          <loc>https://karusya.github.io/learn-everything-sdet/ML-loss/</loc>
-         <lastmod>2026-03-07</lastmod>
+         <lastmod>2026-05-15</lastmod>
     </url>
     <url>
          <loc>https://karusya.github.io/learn-everything-sdet/ML-numerical.data/</loc>
-         <lastmod>2026-03-07</lastmod>
+         <lastmod>2026-05-15</lastmod>
     </url>
     <url>
          <loc>https://karusya.github.io/learn-everything-sdet/ML-problem-framing/</loc>
-         <lastmod>2026-03-07</lastmod>
+         <lastmod>2026-05-15</lastmod>
     </url>
     <url>
          <loc>https://karusya.github.io/learn-everything-sdet/ML-production/</loc>
-         <lastmod>2026-03-07</lastmod>
+         <lastmod>2026-05-15</lastmod>
     </url>
     <url>
          <loc>https://karusya.github.io/learn-everything-sdet/ML-statistics/</loc>
-         <lastmod>2026-03-07</lastmod>
+         <lastmod>2026-05-15</lastmod>
     </url>
     <url>
          <loc>https://karusya.github.io/learn-everything-sdet/ML-supervised-learning/</loc>
-         <lastmod>2026-03-07</lastmod>
+         <lastmod>2026-05-15</lastmod>
     </url>
     <url>
          <loc>https://karusya.github.io/learn-everything-sdet/Playwright_Guide_Reorganized/</loc>
-         <lastmod>2026-03-07</lastmod>
+         <lastmod>2026-05-15</lastmod>
     </url>
     <url>
          <loc>https://karusya.github.io/learn-everything-sdet/SDET_Interview_Preparation_Guide/</loc>
-         <lastmod>2026-03-07</lastmod>
+         <lastmod>2026-05-15</lastmod>
     </url>
     <url>
          <loc>https://karusya.github.io/learn-everything-sdet/Test_Automation_Pyramid_Guide/</loc>
-         <lastmod>2026-03-07</lastmod>
+         <lastmod>2026-05-15</lastmod>
     </url>
     <url>
          <loc>https://karusya.github.io/learn-everything-sdet/api-testing/</loc>
-         <lastmod>2026-03-07</lastmod>
+         <lastmod>2026-05-15</lastmod>
+    </url>
+    <url>
+         <loc>https://karusya.github.io/learn-everything-sdet/creational-patterns/</loc>
+         <lastmod>2026-05-15</lastmod>
     </url>
     <url>
          <loc>https://karusya.github.io/learn-everything-sdet/elasticsearch-query-deepdive/</loc>
-         <lastmod>2026-03-07</lastmod>
+         <lastmod>2026-05-15</lastmod>
     </url>
     <url>
          <loc>https://karusya.github.io/learn-everything-sdet/elasticsearch-roadmap/</loc>
-         <lastmod>2026-03-07</lastmod>
+         <lastmod>2026-05-15</lastmod>
     </url>
     <url>
          <loc>https://karusya.github.io/learn-everything-sdet/http-caching/</loc>
-         <lastmod>2026-03-07</lastmod>
+         <lastmod>2026-05-15</lastmod>
     </url>
     <url>
          <loc>https://karusya.github.io/learn-everything-sdet/js-ts-oop-concepts/</loc>
-         <lastmod>2026-03-07</lastmod>
+         <lastmod>2026-05-15</lastmod>
     </url>
     <url>
          <loc>https://karusya.github.io/learn-everything-sdet/k6/</loc>
-         <lastmod>2026-03-07</lastmod>
+         <lastmod>2026-05-15</lastmod>
     </url>
     <url>
          <loc>https://karusya.github.io/learn-everything-sdet/k6_performance_testing/</loc>
-         <lastmod>2026-03-07</lastmod>
+         <lastmod>2026-05-15</lastmod>
     </url>
     <url>
          <loc>https://karusya.github.io/learn-everything-sdet/migration-guides/</loc>
-         <lastmod>2026-03-07</lastmod>
+         <lastmod>2026-05-15</lastmod>
     </url>
     <url>
          <loc>https://karusya.github.io/learn-everything-sdet/mutation-testing/</loc>
-         <lastmod>2026-03-07</lastmod>
+         <lastmod>2026-05-15</lastmod>
     </url>
     <url>
          <loc>https://karusya.github.io/learn-everything-sdet/playwright-agents/</loc>
-         <lastmod>2026-03-07</lastmod>
+         <lastmod>2026-05-15</lastmod>
     </url>
     <url>
          <loc>https://karusya.github.io/learn-everything-sdet/playwright-assertions/</loc>
-         <lastmod>2026-03-07</lastmod>
+         <lastmod>2026-05-15</lastmod>
     </url>
     <url>
          <loc>https://karusya.github.io/learn-everything-sdet/playwright-fixtures/</loc>
-         <lastmod>2026-03-07</lastmod>
+         <lastmod>2026-05-15</lastmod>
     </url>
     <url>
          <loc>https://karusya.github.io/learn-everything-sdet/playwright-library/</loc>
-         <lastmod>2026-03-07</lastmod>
+         <lastmod>2026-05-15</lastmod>
     </url>
     <url>
          <loc>https://karusya.github.io/learn-everything-sdet/playwright-reporter/</loc>
-         <lastmod>2026-03-07</lastmod>
+         <lastmod>2026-05-15</lastmod>
     </url>
     <url>
          <loc>https://karusya.github.io/learn-everything-sdet/playwright-sdet-framework-intro/</loc>
-         <lastmod>2026-03-07</lastmod>
+         <lastmod>2026-05-15</lastmod>
     </url>
     <url>
          <loc>https://karusya.github.io/learn-everything-sdet/qa-roadmap/</loc>
-         <lastmod>2026-03-07</lastmod>
+         <lastmod>2026-05-15</lastmod>
     </url>
     <url>
          <loc>https://karusya.github.io/learn-everything-sdet/qa-sdet-roadmap/</loc>
-         <lastmod>2026-03-07</lastmod>
+         <lastmod>2026-05-15</lastmod>
     </url>
     <url>
          <loc>https://karusya.github.io/learn-everything-sdet/sdet-framework-foundation/</loc>
-         <lastmod>2026-03-07</lastmod>
+         <lastmod>2026-05-15</lastmod>
     </url>
     <url>
          <loc>https://karusya.github.io/learn-everything-sdet/shift-left-testing/</loc>
-         <lastmod>2026-03-07</lastmod>
+         <lastmod>2026-05-15</lastmod>
     </url>
     <url>
          <loc>https://karusya.github.io/learn-everything-sdet/sql-roadmap/</loc>
-         <lastmod>2026-03-07</lastmod>
+         <lastmod>2026-05-15</lastmod>
     </url>
     <url>
          <loc>https://karusya.github.io/learn-everything-sdet/test-techniques/</loc>
-         <lastmod>2026-03-07</lastmod>
+         <lastmod>2026-05-15</lastmod>
     </url>
     <url>
          <loc>https://karusya.github.io/learn-everything-sdet/ui-api-pom-comparison/</loc>
-         <lastmod>2026-03-07</lastmod>
+         <lastmod>2026-05-15</lastmod>
     </url>
     <url>
          <loc>https://karusya.github.io/learn-everything-sdet/web3/</loc>
-         <lastmod>2026-03-07</lastmod>
+         <lastmod>2026-05-15</lastmod>
     </url>
 </urlset>
