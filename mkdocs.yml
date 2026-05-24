@@ -102,7 +102,10 @@ nav:
       - K6 Performance Testing: k6.md
       - SQL Roadmap: sql-roadmap.md
       - Big O Notation: BigO-notation.md
+      - Recursion: recursion.md
       - Creational Design Patterns: creational-patterns.md
+      - Structural Design Patterns: structural-patterns.md
+      - Enterprise Patterns: enterprise-patterns.md
 
   - SDET Prep:
       - SDET Interview Preparation: SDET_Interview_Preparation_Guide.md
