@@ -105,6 +105,7 @@ nav:
       - SQL Roadmap: sql-roadmap.md
       - Big O Notation: BigO-notation.md
       - Recursion: recursion.md
+      - Linked Lists: linked-list.md
       - Two Pointers: two-pointers.md
       - Binary Trees: binary-trees.md
       - Heaps: heaps.md
