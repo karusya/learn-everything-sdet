@@ -98,6 +98,7 @@ nav:
       - CRISP-DM Framework: ML-crisp.md
       - ML by Data Domain: ml-by-data-domain.md
       - ML by Learning Paradigm: ml-by-learning-paradigm.md
+      - Gradient Descent: gradient-descent.md
 
   - Programming:
       - JavaScript/TypeScript OOP: js-ts-oop-concepts.md
@@ -109,6 +110,7 @@ nav:
       - Two Pointers: two-pointers.md
       - Binary Trees: binary-trees.md
       - Heaps: heaps.md
+      - Queues: queues.md
       - Dynamic Programming: dynamic-programming.md
       - Creational Design Patterns: creational-patterns.md
       - Structural Design Patterns: structural-patterns.md
