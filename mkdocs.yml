@@ -99,6 +99,7 @@ nav:
       - ML by Data Domain: ml-by-data-domain.md
       - ML by Learning Paradigm: ml-by-learning-paradigm.md
       - Gradient Descent: gradient-descent.md
+      - Data Leakage: data-leakage.md
 
   - Programming:
       - JavaScript/TypeScript OOP: js-ts-oop-concepts.md
