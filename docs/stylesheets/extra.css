@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Mono:wght@300;400;500&display=swap');
-
 /* ── Palette variables ── */
 :root {
   --sage:         #4a7c59;
@@ -50,23 +48,18 @@
 /* ── Typography ── */
 body,
 .md-typeset {
-  font-family: 'DM Mono', monospace;
   font-size: 0.78rem;
   color: var(--text);
-  letter-spacing: 0.01em;
 }
 
 .md-typeset h1,
 .md-typeset h2,
 .md-typeset h3,
 .md-typeset h4 {
-  font-family: 'Cormorant Garamond', serif;
-  font-weight: 400;
-  letter-spacing: 0.02em;
   color: var(--text);
 }
 
-.md-typeset h1 { font-size: 2.2rem; font-weight: 300; }
+.md-typeset h1 { font-size: 2.2rem; }
 .md-typeset h2 { font-size: 1.5rem; }
 .md-typeset h3 { font-size: 1.15rem; }
 
@@ -86,10 +79,7 @@ body,
 
 .md-header__title,
 .md-header__topic {
-  font-family: 'Cormorant Garamond', serif;
-  font-weight: 300;
   color: var(--text);
-  letter-spacing: 0.05em;
 }
 
 [data-md-color-scheme="slate"] .md-header {
@@ -105,10 +95,7 @@ body,
 /* ── Navigation ── */
 .md-nav__title,
 .md-nav__link {
-  font-family: 'DM Mono', monospace;
   font-size: 0.7rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
 }
 
 .md-nav__link--active,
@@ -138,7 +125,6 @@ body,
 /* ── Code blocks ── */
 .md-typeset code,
 .md-typeset pre {
-  font-family: 'DM Mono', monospace;
   font-size: 0.75rem;
   border-radius: 0;
   border: 1px solid var(--stone-dark);
@@ -171,7 +157,6 @@ body,
 
 /* ── Search ── */
 .md-search__input {
-  font-family: 'DM Mono', monospace;
   font-size: 0.75rem;
   border-radius: 0;
   background-color: var(--stone);
@@ -185,9 +170,7 @@ body,
 .md-footer {
   background-color: var(--charcoal);
   color: var(--stone-mid);
-  font-family: 'DM Mono', monospace;
   font-size: 0.65rem;
-  letter-spacing: 0.08em;
 }
 
 .md-footer-meta {
@@ -203,9 +186,7 @@ body,
 
 .md-typeset table:not([class]) th {
   background-color: var(--bg-card);
-  font-family: 'Cormorant Garamond', serif;
   font-weight: 500;
-  letter-spacing: 0.05em;
   border-bottom: 1px solid var(--stone-dark);
 }
 

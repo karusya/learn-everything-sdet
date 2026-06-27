@@ -24,10 +24,6 @@ theme:
     - search.highlight
     - search.suggest
 
-  font:
-    text: DM Mono
-    code: DM Mono
-
   palette:
     - scheme: default
       primary: custom
