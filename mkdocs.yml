@@ -101,6 +101,7 @@ nav:
       - Gradient Descent: gradient-descent.md
       - Data Leakage: data-leakage.md
       - Missing Data, Outliers & Skewed Data: missing-data-outliers-skewed.md
+      - Feature Engineering: feature-engineering.md
 
   - Programming:
       - JavaScript/TypeScript OOP: js-ts-oop-concepts.md
