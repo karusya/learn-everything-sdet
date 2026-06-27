@@ -1,10 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Mono:wght@300;400;500&display=swap');
+
+/* ── Palette variables ── */
 :root {
-  --md-primary-fg-color: #ec4899;
-  --md-accent-fg-color: #facc15;
+  --sage:         #4a7c59;
+  --sage-light:   #6a9e78;
+  --sage-muted:   #3d6b45;
+  --stone:        #e8e6e0;
+  --stone-dark:   #d4d1c9;
+  --stone-mid:    #b8b5ac;
+  --charcoal:     #1c1e19;
+  --charcoal-soft:#2d302a;
+  --text:         #2c2e28;
+  --text-muted:   #6b6e63;
+  --bg:           #f2f0ea;
+  --bg-card:      #eceae4;
+  --white:        #faf9f6;
+
+  /* MkDocs Material overrides — light */
+  --md-primary-fg-color:        var(--sage);
+  --md-primary-fg-color--light: var(--sage-light);
+  --md-primary-fg-color--dark:  var(--sage-muted);
+  --md-primary-bg-color:        var(--white);
+  --md-accent-fg-color:         var(--sage);
+  --md-default-bg-color:        var(--bg);
+  --md-default-fg-color:        var(--text);
+  --md-default-fg-color--light: var(--text-muted);
+  --md-typeset-color:           var(--text);
+  --md-typeset-a-color:         var(--sage);
+  --md-code-bg-color:           var(--bg-card);
+  --md-code-fg-color:           var(--text);
 }
 
+/* ── Dark scheme ── */
 [data-md-color-scheme="slate"] {
-  --md-primary-fg-color: #f472b6;
-  --md-accent-fg-color: #fde047;
+  --md-primary-fg-color:        var(--sage-light);
+  --md-primary-fg-color--light: var(--sage);
+  --md-primary-fg-color--dark:  var(--sage-muted);
+  --md-primary-bg-color:        var(--white);
+  --md-accent-fg-color:         var(--sage-light);
+  --md-default-bg-color:        var(--charcoal);
+  --md-default-fg-color:        var(--white);
+  --md-default-fg-color--light: var(--stone-mid);
+  --md-typeset-color:           var(--white);
+  --md-typeset-a-color:         var(--sage-light);
+  --md-code-bg-color:           var(--charcoal-soft);
+  --md-code-fg-color:           var(--stone);
 }
 
+/* ── Typography ── */
+body,
+.md-typeset {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.78rem;
+  color: var(--text);
+  letter-spacing: 0.01em;
+}
+
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: var(--text);
+}
+
+.md-typeset h1 { font-size: 2.2rem; font-weight: 300; }
+.md-typeset h2 { font-size: 1.5rem; }
+.md-typeset h3 { font-size: 1.15rem; }
+
+[data-md-color-scheme="slate"] .md-typeset h1,
+[data-md-color-scheme="slate"] .md-typeset h2,
+[data-md-color-scheme="slate"] .md-typeset h3,
+[data-md-color-scheme="slate"] .md-typeset h4 {
+  color: var(--white);
+}
+
+/* ── Header ── */
+.md-header {
+  background-color: var(--bg);
+  border-bottom: 1px solid var(--stone-dark);
+  box-shadow: none;
+}
+
+.md-header__title,
+.md-header__topic {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+  color: var(--text);
+  letter-spacing: 0.05em;
+}
+
+[data-md-color-scheme="slate"] .md-header {
+  background-color: var(--charcoal);
+  border-bottom-color: var(--charcoal-soft);
+}
+
+[data-md-color-scheme="slate"] .md-header__title,
+[data-md-color-scheme="slate"] .md-header__topic {
+  color: var(--white);
+}
+
+/* ── Navigation ── */
+.md-nav__title,
+.md-nav__link {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.md-nav__link--active,
+.md-nav__link:hover {
+  color: var(--sage) !important;
+}
+
+.md-sidebar {
+  background-color: var(--bg-card);
+  border-right: 1px solid var(--stone-dark);
+}
+
+[data-md-color-scheme="slate"] .md-sidebar {
+  background-color: var(--charcoal-soft);
+  border-right-color: var(--charcoal);
+}
+
+/* ── Content area ── */
+.md-content {
+  background-color: var(--bg);
+}
+
+[data-md-color-scheme="slate"] .md-content {
+  background-color: var(--charcoal);
+}
+
+/* ── Code blocks ── */
+.md-typeset code,
+.md-typeset pre {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.75rem;
+  border-radius: 0;
+  border: 1px solid var(--stone-dark);
+}
+
+[data-md-color-scheme="slate"] .md-typeset code,
+[data-md-color-scheme="slate"] .md-typeset pre {
+  border-color: var(--charcoal-soft);
+}
+
+/* ── Links ── */
+.md-typeset a {
+  color: var(--sage);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.md-typeset a:hover {
+  color: var(--sage-muted);
+  border-bottom-color: var(--sage-muted);
+}
+
+/* ── Admonitions ── */
+.md-typeset .admonition,
+.md-typeset details {
+  border-radius: 0;
+  border-left: 3px solid var(--sage);
+}
+
+/* ── Search ── */
+.md-search__input {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.75rem;
+  border-radius: 0;
+  background-color: var(--stone);
+}
+
+[data-md-color-scheme="slate"] .md-search__input {
+  background-color: var(--charcoal-soft);
+}
+
+/* ── Footer ── */
+.md-footer {
+  background-color: var(--charcoal);
+  color: var(--stone-mid);
+  font-family: 'DM Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+}
+
+.md-footer-meta {
+  background-color: var(--charcoal);
+}
+
+/* ── Tables ── */
+.md-typeset table:not([class]) {
+  border-radius: 0;
+  border: 1px solid var(--stone-dark);
+  font-size: 0.75rem;
+}
+
+.md-typeset table:not([class]) th {
+  background-color: var(--bg-card);
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid var(--stone-dark);
+}
+
+.md-typeset table:not([class]) td {
+  border-bottom: 1px solid var(--stone-dark);
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: var(--bg-card); }
+::-webkit-scrollbar-thumb { background: var(--stone-mid); }

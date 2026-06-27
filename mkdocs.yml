@@ -24,13 +24,17 @@ theme:
     - search.highlight
     - search.suggest
 
+  font:
+    text: DM Mono
+    code: DM Mono
+
   palette:
     - scheme: default
-      primary: pink
-      accent: amber
+      primary: custom
+      accent: custom
     - scheme: slate
-      primary: pink
-      accent: amber
+      primary: custom
+      accent: custom
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
